@@ -4,7 +4,7 @@ Imports System.Security.Cryptography
 
 Public Class Login
 																				'Change to the path where the database is located at 
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + ""
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Brandon\Desktop\Fire Department Project\ExampleDB.accdb"
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean
@@ -178,6 +178,14 @@ Public Class Login
 
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim PasswordReset As InitialPasswordReset
+        PasswordReset = New InitialPasswordReset()
+
+        PasswordReset.Show()
+        PasswordReset = Nothing
+        Me.Close()
+    End Sub
 End Class
 
 

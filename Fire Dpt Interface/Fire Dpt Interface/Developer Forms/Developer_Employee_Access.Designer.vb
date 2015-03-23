@@ -242,6 +242,8 @@ Partial Class All_Employees
         Me.Emp_ListTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_ListTableAdapter()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.PrintButton = New System.Windows.Forms.Button()
+        Me.EmployeeInformationBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmployeeInformationBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EmpInfo.SuspendLayout()
@@ -253,6 +255,8 @@ Partial Class All_Employees
         CType(Me.EmployeeInformationBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeInformationBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeInformationBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeInformationBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -292,7 +296,7 @@ Partial Class All_Employees
         'Name_Textbox
         '
         Me.Name_Textbox.BackColor = System.Drawing.SystemColors.Window
-        Me.Name_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Name", True))
+        Me.Name_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource3, "Name", True))
         Me.Name_Textbox.Location = New System.Drawing.Point(106, 33)
         Me.Name_Textbox.Name = "Name_Textbox"
         Me.Name_Textbox.Size = New System.Drawing.Size(208, 20)
@@ -729,7 +733,7 @@ Partial Class All_Employees
         'Address_Textbox
         '
         Me.Address_Textbox.BackColor = System.Drawing.SystemColors.Window
-        Me.Address_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Address", True))
+        Me.Address_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource4, "Address", True))
         Me.Address_Textbox.Location = New System.Drawing.Point(131, 27)
         Me.Address_Textbox.Name = "Address_Textbox"
         Me.Address_Textbox.Size = New System.Drawing.Size(192, 20)
@@ -840,7 +844,7 @@ Partial Class All_Employees
         Me.ReceivedCertsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ReceivedCertsLabel.Location = New System.Drawing.Point(880, 7)
         Me.ReceivedCertsLabel.Name = "ReceivedCertsLabel"
-        Me.ReceivedCertsLabel.Size = New System.Drawing.Size(77, 18)
+        Me.ReceivedCertsLabel.Size = New System.Drawing.Size(78, 18)
         Me.ReceivedCertsLabel.TabIndex = 90
         Me.ReceivedCertsLabel.Text = "Received"
         '
@@ -954,7 +958,7 @@ Partial Class All_Employees
         Me.CertCourseLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.CertCourseLabel.Location = New System.Drawing.Point(718, 7)
         Me.CertCourseLabel.Name = "CertCourseLabel"
-        Me.CertCourseLabel.Size = New System.Drawing.Size(141, 18)
+        Me.CertCourseLabel.Size = New System.Drawing.Size(146, 18)
         Me.CertCourseLabel.TabIndex = 79
         Me.CertCourseLabel.Text = "Certificate Courses"
         '
@@ -1173,7 +1177,7 @@ Partial Class All_Employees
         Me.IFSACLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.IFSACLabel.Location = New System.Drawing.Point(591, 7)
         Me.IFSACLabel.Name = "IFSACLabel"
-        Me.IFSACLabel.Size = New System.Drawing.Size(95, 16)
+        Me.IFSACLabel.Size = New System.Drawing.Size(103, 16)
         Me.IFSACLabel.TabIndex = 53
         Me.IFSACLabel.Text = "IFSAC Seals"
         '
@@ -1184,7 +1188,7 @@ Partial Class All_Employees
         Me.ExpirationLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ExpirationLabel.Location = New System.Drawing.Point(482, 7)
         Me.ExpirationLabel.Name = "ExpirationLabel"
-        Me.ExpirationLabel.Size = New System.Drawing.Size(77, 16)
+        Me.ExpirationLabel.Size = New System.Drawing.Size(78, 16)
         Me.ExpirationLabel.TabIndex = 52
         Me.ExpirationLabel.Text = "Expiration"
         '
@@ -1293,7 +1297,7 @@ Partial Class All_Employees
         Me.ReceivedLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ReceivedLabel.Location = New System.Drawing.Point(358, 7)
         Me.ReceivedLabel.Name = "ReceivedLabel"
-        Me.ReceivedLabel.Size = New System.Drawing.Size(75, 16)
+        Me.ReceivedLabel.Size = New System.Drawing.Size(76, 16)
         Me.ReceivedLabel.TabIndex = 37
         Me.ReceivedLabel.Text = "Received"
         '
@@ -1511,7 +1515,7 @@ Partial Class All_Employees
         Me.LevelLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.LevelLabel.Location = New System.Drawing.Point(229, 7)
         Me.LevelLabel.Name = "LevelLabel"
-        Me.LevelLabel.Size = New System.Drawing.Size(46, 16)
+        Me.LevelLabel.Size = New System.Drawing.Size(47, 16)
         Me.LevelLabel.TabIndex = 15
         Me.LevelLabel.Text = "Level"
         '
@@ -1532,7 +1536,7 @@ Partial Class All_Employees
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(15, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 16)
+        Me.Label1.Size = New System.Drawing.Size(148, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "TCFP Certifications"
         '
@@ -2383,6 +2387,16 @@ Partial Class All_Employees
         Me.PrintButton.Text = "Print"
         Me.PrintButton.UseVisualStyleBackColor = True
         '
+        'EmployeeInformationBindingSource3
+        '
+        Me.EmployeeInformationBindingSource3.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource3.DataSource = Me.Training_RecordsDataSet
+        '
+        'EmployeeInformationBindingSource4
+        '
+        Me.EmployeeInformationBindingSource4.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource4.DataSource = Me.Training_RecordsDataSet
+        '
         'All_Employees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2419,6 +2433,8 @@ Partial Class All_Employees
         CType(Me.EmployeeInformationBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeInformationBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeInformationBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeInformationBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2642,4 +2658,6 @@ Partial Class All_Employees
     Friend WithEvents CheckBox20 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox21 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox22 As System.Windows.Forms.CheckBox
+    Friend WithEvents EmployeeInformationBindingSource3 As System.Windows.Forms.BindingSource
+    Friend WithEvents EmployeeInformationBindingSource4 As System.Windows.Forms.BindingSource
 End Class
