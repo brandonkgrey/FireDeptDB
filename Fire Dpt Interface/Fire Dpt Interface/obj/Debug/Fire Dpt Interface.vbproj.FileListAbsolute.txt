@@ -1,0 +1,12 @@
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\bin\Debug\Fire Dpt Interface.exe.config
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.Form1.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.Resources.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire Dpt Interface.vbproj.GenerateResource.Cache
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\bin\Debug\Fire Dpt Interface.exe
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\bin\Debug\Fire Dpt Interface.pdb
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\bin\Debug\Fire Dpt Interface.xml
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire Dpt Interface.exe
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire Dpt Interface.xml
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire Dpt Interface.pdb
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.MainMenu.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.Login.resources
