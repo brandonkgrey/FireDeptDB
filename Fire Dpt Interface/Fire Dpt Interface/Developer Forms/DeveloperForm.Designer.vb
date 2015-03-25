@@ -23,6 +23,7 @@ Partial Class DeveloperForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeveloperForm))
         Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_RecordsDataSet()
         Me.Emp_Info_AllBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Emp_Info_AllTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_Info_AllTableAdapter()
@@ -35,8 +36,10 @@ Partial Class DeveloperForm
         Me.Class_Information_Button = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -81,7 +84,7 @@ Partial Class DeveloperForm
         '
         'Emp_Info_Button
         '
-        Me.Emp_Info_Button.Location = New System.Drawing.Point(128, 68)
+        Me.Emp_Info_Button.Location = New System.Drawing.Point(12, 68)
         Me.Emp_Info_Button.Name = "Emp_Info_Button"
         Me.Emp_Info_Button.Size = New System.Drawing.Size(103, 46)
         Me.Emp_Info_Button.TabIndex = 0
@@ -90,7 +93,7 @@ Partial Class DeveloperForm
         '
         'LogOut_Button
         '
-        Me.LogOut_Button.Location = New System.Drawing.Point(372, 196)
+        Me.LogOut_Button.Location = New System.Drawing.Point(358, 218)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 1
@@ -99,7 +102,7 @@ Partial Class DeveloperForm
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(372, 132)
+        Me.Button2.Location = New System.Drawing.Point(358, 154)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 46)
         Me.Button2.TabIndex = 3
@@ -108,7 +111,7 @@ Partial Class DeveloperForm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(372, 68)
+        Me.Button3.Location = New System.Drawing.Point(358, 90)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(103, 46)
         Me.Button3.TabIndex = 4
@@ -127,7 +130,7 @@ Partial Class DeveloperForm
         '
         'Class_Information_Button
         '
-        Me.Class_Information_Button.Location = New System.Drawing.Point(128, 132)
+        Me.Class_Information_Button.Location = New System.Drawing.Point(12, 132)
         Me.Class_Information_Button.Name = "Class_Information_Button"
         Me.Class_Information_Button.Size = New System.Drawing.Size(103, 46)
         Me.Class_Information_Button.TabIndex = 9
@@ -136,7 +139,7 @@ Partial Class DeveloperForm
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(128, 196)
+        Me.Button5.Location = New System.Drawing.Point(12, 196)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(103, 46)
         Me.Button5.TabIndex = 10
@@ -145,18 +148,29 @@ Partial Class DeveloperForm
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(128, 261)
+        Me.Button6.Location = New System.Drawing.Point(12, 261)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
         Me.Button6.TabIndex = 11
         Me.Button6.Text = "Employee Information"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(175, 126)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(129, 116)
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
         'DeveloperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(697, 339)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(473, 339)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Class_Information_Button)
@@ -169,6 +183,7 @@ Partial Class DeveloperForm
         Me.Text = "Main Menu"
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -185,4 +200,5 @@ Partial Class DeveloperForm
     Friend WithEvents Class_Information_Button As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

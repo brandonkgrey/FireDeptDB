@@ -61,6 +61,7 @@ Partial Class InitialPasswordReset
         Me.NewPassword.AcceptsReturn = True
         Me.NewPassword.Location = New System.Drawing.Point(245, 61)
         Me.NewPassword.Name = "NewPassword"
+        Me.NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.NewPassword.Size = New System.Drawing.Size(175, 20)
         Me.NewPassword.TabIndex = 2
         '
@@ -86,6 +87,7 @@ Partial Class InitialPasswordReset
         '
         Me.ConfirmPassword.Location = New System.Drawing.Point(245, 109)
         Me.ConfirmPassword.Name = "ConfirmPassword"
+        Me.ConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.ConfirmPassword.Size = New System.Drawing.Size(175, 20)
         Me.ConfirmPassword.TabIndex = 5
         '
@@ -99,6 +101,7 @@ Partial Class InitialPasswordReset
         Me.ValidLable.Size = New System.Drawing.Size(103, 13)
         Me.ValidLable.TabIndex = 6
         Me.ValidLable.Text = "Invalid Password"
+        Me.ValidLable.Visible = False
         '
         'LogoIPR
         '
@@ -124,13 +127,14 @@ Partial Class InitialPasswordReset
         Me.CancelButtonIPR.Name = "CancelButtonIPR"
         Me.CancelButtonIPR.Size = New System.Drawing.Size(94, 23)
         Me.CancelButtonIPR.TabIndex = 9
-        Me.CancelButtonIPR.Text = "CancelButton"
+        Me.CancelButtonIPR.Text = "Cancel"
         Me.CancelButtonIPR.UseVisualStyleBackColor = True
         '
         'InitialPasswordReset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(442, 188)
         Me.Controls.Add(Me.CancelButtonIPR)
         Me.Controls.Add(Me.SubmitButtonIPR)
