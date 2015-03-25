@@ -5,6 +5,7 @@ Imports System.Security.Cryptography
 Public Class Login
 																				'Change to the path where the database is located at 
     Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Brandon\Desktop\Fire Department Project\ExampleDB.accdb"
+    Public Shared sharedUsername As String
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean
@@ -41,6 +42,37 @@ Public Class Login
             str_return &= b.ToString("x2")
         Next
         Return str_return
+    End Function
+
+    Public Function checkFirst(ByVal username As String) As String
+        'Value to be returned
+        Dim check As Boolean = False
+
+        'Set up a connection to the access database
+        Dim Dbconn As New OleDbConnection(Dbstring)
+        Dbconn.Open()
+
+        'Check to see if there is a connection to the database, exit app if there is none 
+        Try
+            If Dbconn.State = ConnectionState.Closed Then
+                MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
+                System.Threading.Thread.Sleep(500)
+                Application.Exit()
+            End If
+        Catch ex As Exception
+        End Try
+
+        'Get user's password
+        Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Username] ='" + username + "'", Dbconn)
+        Dim currPass As Object = command.ExecuteScalar()
+
+        Dim usernameHash As String = getHash(username)
+
+        If currPass = usernameHash Then
+            check = True
+        End If
+
+        Return check
     End Function
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
@@ -133,8 +165,17 @@ Public Class Login
         Catch ex As Exception
         End Try
 
-        'correct credentials were entered 
-        If successLogin And accesslvl = "1" Then
+        Dim firstLogin As Boolean = checkFirst(username)
+
+        'It's the users first login
+        If firstLogin And successLogin = 1 Then
+            Dim initialReset As InitialPasswordReset = New InitialPasswordReset()
+            initialReset.Show()
+            initialReset = Nothing
+            sharedUsername = username
+            Me.Close()
+            'correct credentials were entered 
+        ElseIf successLogin And accesslvl = "1" Then
             'Successful login, launch the basic menu 
             BasicMenu.Show()
             BasicMenu = Nothing

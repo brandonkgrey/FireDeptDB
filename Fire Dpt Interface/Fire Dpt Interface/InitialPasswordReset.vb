@@ -6,7 +6,6 @@ Imports System.Security.Cryptography
 Public Class InitialPasswordReset
 
     Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Brandon\Desktop\Fire Department Project\ExampleDB.accdb"
-       
 
     Public Function getHash(ByVal number As String) As String
         Dim ASCIIENC As New ASCIIEncoding
@@ -85,11 +84,8 @@ Public Class InitialPasswordReset
             Dim newPass As String = NewPassword.Text
             Dim newPassHash As String = getHash(newPass)
 
-            Dim username As String
-            username = "Brandon"
 
-
-            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Username]='" + username + "'", Dbconn)
+            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Username]='" + Login.sharedUsername + "'", Dbconn)
             Command.ExecuteScalar()
 
             MsgBox("Password has been changed! Please login with new password.", MsgBoxStyle.Information, "Password Update Success")
