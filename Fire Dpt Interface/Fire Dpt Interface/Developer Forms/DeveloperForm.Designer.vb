@@ -84,6 +84,12 @@ Partial Class DeveloperForm
         '
         'Emp_Info_Button
         '
+        Me.Emp_Info_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Emp_Info_Button.FlatAppearance.BorderSize = 2
+        Me.Emp_Info_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Emp_Info_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Emp_Info_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Emp_Info_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Emp_Info_Button.Location = New System.Drawing.Point(12, 68)
         Me.Emp_Info_Button.Name = "Emp_Info_Button"
         Me.Emp_Info_Button.Size = New System.Drawing.Size(103, 46)
@@ -93,6 +99,12 @@ Partial Class DeveloperForm
         '
         'LogOut_Button
         '
+        Me.LogOut_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LogOut_Button.FlatAppearance.BorderSize = 2
+        Me.LogOut_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LogOut_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogOut_Button.Location = New System.Drawing.Point(358, 218)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
@@ -102,6 +114,12 @@ Partial Class DeveloperForm
         '
         'Button2
         '
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 2
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(358, 154)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 46)
@@ -111,6 +129,12 @@ Partial Class DeveloperForm
         '
         'Button3
         '
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 2
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(358, 90)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(103, 46)
@@ -121,15 +145,21 @@ Partial Class DeveloperForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(32, 22)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(142, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(332, 31)
+        Me.Label1.Size = New System.Drawing.Size(189, 38)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Welcome: Username Here"
+        Me.Label1.Text = "Main Menu"
         '
         'Class_Information_Button
         '
+        Me.Class_Information_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Class_Information_Button.FlatAppearance.BorderSize = 2
+        Me.Class_Information_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Class_Information_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Class_Information_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Class_Information_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Class_Information_Button.Location = New System.Drawing.Point(12, 132)
         Me.Class_Information_Button.Name = "Class_Information_Button"
         Me.Class_Information_Button.Size = New System.Drawing.Size(103, 46)
@@ -139,6 +169,12 @@ Partial Class DeveloperForm
         '
         'Button5
         '
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.FlatAppearance.BorderSize = 2
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(12, 196)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(103, 46)
@@ -148,6 +184,12 @@ Partial Class DeveloperForm
         '
         'Button6
         '
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button6.FlatAppearance.BorderSize = 2
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(12, 261)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
@@ -157,6 +199,7 @@ Partial Class DeveloperForm
         '
         'PictureBox1
         '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(175, 126)
         Me.PictureBox1.Name = "PictureBox1"
@@ -180,7 +223,6 @@ Partial Class DeveloperForm
         Me.Controls.Add(Me.LogOut_Button)
         Me.Controls.Add(Me.Emp_Info_Button)
         Me.Name = "DeveloperForm"
-        Me.Text = "Main Menu"
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -88,18 +88,6 @@ Public Class Login
         Dim successLogin As Integer = 0
         Dim verifyHex As Boolean = False
 
-        'menu for basic users 
-        Dim BasicMenu As BasicForm
-        BasicMenu = New BasicForm()
-
-        'menu for supervisors 
-        Dim SupervisorMenu As SupervisorForm
-        SupervisorMenu = New SupervisorForm()
-
-        'menu for administrators
-        Dim AdminMenu As AdministratorForm
-        AdminMenu = New AdministratorForm()
-
         'menu for developers
         Dim DevMenu As DeveloperForm
         DevMenu = New DeveloperForm()
@@ -134,24 +122,30 @@ Public Class Login
             verifyHex = IsHex(authPass)
             If verifyHex = False And authPass = password Then
                 Dim hashentry As String = getHash(authPass)
+
                 'Hash the plaintext password and update it in the database 
                 command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Username]='" + username + "'", Dbconn)
                 command.ExecuteScalar()
+
                 'Check if the update was successful by retrieving username associated with it 
                 command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 authobj = command.ExecuteScalar()
+
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
+
                 'Get users authorization level Authorization
                 command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 accessobj = command.ExecuteScalar()
                 accesslvl = accessobj.ToString()
+
             Else
                 'the password is already hashed, to we issue a query with the hashed password 
                 command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 authobj = command.ExecuteScalar()
                 command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 accessobj = command.ExecuteScalar()
+
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
                 accesslvl = accessobj.ToString()
@@ -174,31 +168,42 @@ Public Class Login
             initialReset = Nothing
             sharedUsername = username
             Me.Close()
+
             'correct credentials were entered 
         ElseIf successLogin And accesslvl = "1" Then
             'Successful login, launch the basic menu 
+            Dim BasicMenu As BasicForm
+            BasicMenu = New BasicForm()
             BasicMenu.Show()
             BasicMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "2" Then
             'Successful login, launch the supervisor menu 
+            Dim SupervisorMenu As SupervisorForm
+            SupervisorMenu = New SupervisorForm()
             SupervisorMenu.Show()
             SupervisorMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "3" Then
             'Successful login, launch the admin menu 
+            Dim AdminMenu As AdministratorForm
+            AdminMenu = New AdministratorForm()
             AdminMenu.Show()
             AdminMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "4" Then
             'Successful login, launch the developer menu 
             DevMenu.Show()
             DevMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         Else
             Invalid_Cred.Visible = True
         End If
@@ -208,17 +213,6 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    End Sub
-
-    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs) Handles UsernameLabel.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Invalid_Cred.Click
-
-    End Sub
-
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Dim PasswordReset As InitialPasswordReset
         PasswordReset = New InitialPasswordReset()
@@ -226,6 +220,14 @@ Public Class Login
         PasswordReset.Show()
         PasswordReset = Nothing
         Me.Close()
+    End Sub
+
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles UsernameTextBox.TextChanged
+        Invalid_Cred.Hide()
+    End Sub
+
+    Private Sub PasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles PasswordTextBox.TextChanged
+        Invalid_Cred.Hide()
     End Sub
 End Class
 

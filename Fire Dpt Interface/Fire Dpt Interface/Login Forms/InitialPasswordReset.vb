@@ -62,6 +62,11 @@ Public Class InitialPasswordReset
         ElseIf NewPassword.Text.Length < 6 Then
             MsgBox("Password is not long enough. Please input a new password with at least 6 characters.", MsgBoxStyle.Critical, "Error")
 
+            
+        ElseIf NewPassword.Text = Login.sharedUsername Then
+            MsgBox("Password cannot be the same as your username. Please try a different password.", MsgBoxStyle.Critical, "Error")
+
+
             'Successful Password Change
         Else
             'Set up a connection to the access database

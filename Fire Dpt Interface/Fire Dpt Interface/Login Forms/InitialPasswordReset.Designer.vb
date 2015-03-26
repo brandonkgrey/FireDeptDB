@@ -39,12 +39,12 @@ Partial Class InitialPasswordReset
         'DescriptionIPR
         '
         Me.DescriptionIPR.AutoSize = True
-        Me.DescriptionIPR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescriptionIPR.Location = New System.Drawing.Point(151, 9)
+        Me.DescriptionIPR.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescriptionIPR.Location = New System.Drawing.Point(12, 8)
         Me.DescriptionIPR.Name = "DescriptionIPR"
-        Me.DescriptionIPR.Size = New System.Drawing.Size(269, 20)
+        Me.DescriptionIPR.Size = New System.Drawing.Size(419, 18)
         Me.DescriptionIPR.TabIndex = 0
-        Me.DescriptionIPR.Text = "You must change your password"
+        Me.DescriptionIPR.Text = "Welcome first time user, please your password"
         '
         'PasswordRequirementsIPR
         '
@@ -59,36 +59,40 @@ Partial Class InitialPasswordReset
         'NewPassword
         '
         Me.NewPassword.AcceptsReturn = True
-        Me.NewPassword.Location = New System.Drawing.Point(245, 61)
+        Me.NewPassword.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewPassword.Location = New System.Drawing.Point(255, 61)
         Me.NewPassword.Name = "NewPassword"
         Me.NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.NewPassword.Size = New System.Drawing.Size(175, 20)
+        Me.NewPassword.Size = New System.Drawing.Size(175, 21)
         Me.NewPassword.TabIndex = 2
         '
         'NewPasswordIPR
         '
         Me.NewPasswordIPR.AutoSize = True
-        Me.NewPasswordIPR.Location = New System.Drawing.Point(142, 64)
+        Me.NewPasswordIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewPasswordIPR.Location = New System.Drawing.Point(151, 64)
         Me.NewPasswordIPR.Name = "NewPasswordIPR"
-        Me.NewPasswordIPR.Size = New System.Drawing.Size(84, 13)
+        Me.NewPasswordIPR.Size = New System.Drawing.Size(89, 13)
         Me.NewPasswordIPR.TabIndex = 3
-        Me.NewPasswordIPR.Text = "New Password: "
+        Me.NewPasswordIPR.Text = "&New Password"
         '
         'ConfirmPasswordIPR
         '
         Me.ConfirmPasswordIPR.AutoSize = True
+        Me.ConfirmPasswordIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConfirmPasswordIPR.Location = New System.Drawing.Point(142, 116)
         Me.ConfirmPasswordIPR.Name = "ConfirmPasswordIPR"
-        Me.ConfirmPasswordIPR.Size = New System.Drawing.Size(97, 13)
+        Me.ConfirmPasswordIPR.Size = New System.Drawing.Size(111, 13)
         Me.ConfirmPasswordIPR.TabIndex = 4
-        Me.ConfirmPasswordIPR.Text = "Confirm Password: "
+        Me.ConfirmPasswordIPR.Text = "&Confirm Password"
         '
         'ConfirmPassword
         '
-        Me.ConfirmPassword.Location = New System.Drawing.Point(245, 109)
+        Me.ConfirmPassword.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConfirmPassword.Location = New System.Drawing.Point(255, 113)
         Me.ConfirmPassword.Name = "ConfirmPassword"
         Me.ConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.ConfirmPassword.Size = New System.Drawing.Size(175, 20)
+        Me.ConfirmPassword.Size = New System.Drawing.Size(175, 21)
         Me.ConfirmPassword.TabIndex = 5
         '
         'ValidLable
@@ -96,7 +100,7 @@ Partial Class InitialPasswordReset
         Me.ValidLable.AutoSize = True
         Me.ValidLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ValidLable.ForeColor = System.Drawing.Color.Red
-        Me.ValidLable.Location = New System.Drawing.Point(277, 84)
+        Me.ValidLable.Location = New System.Drawing.Point(287, 85)
         Me.ValidLable.Name = "ValidLable"
         Me.ValidLable.Size = New System.Drawing.Size(103, 13)
         Me.ValidLable.TabIndex = 6
@@ -114,15 +118,31 @@ Partial Class InitialPasswordReset
         '
         'SubmitButtonIPR
         '
+        Me.SubmitButtonIPR.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SubmitButtonIPR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.SubmitButtonIPR.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SubmitButtonIPR.FlatAppearance.BorderSize = 2
+        Me.SubmitButtonIPR.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SubmitButtonIPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SubmitButtonIPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SubmitButtonIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SubmitButtonIPR.ForeColor = System.Drawing.SystemColors.ControlText
         Me.SubmitButtonIPR.Location = New System.Drawing.Point(186, 152)
         Me.SubmitButtonIPR.Name = "SubmitButtonIPR"
         Me.SubmitButtonIPR.Size = New System.Drawing.Size(94, 23)
         Me.SubmitButtonIPR.TabIndex = 8
         Me.SubmitButtonIPR.Text = "Submit"
-        Me.SubmitButtonIPR.UseVisualStyleBackColor = True
+        Me.SubmitButtonIPR.UseVisualStyleBackColor = False
         '
         'CancelButtonIPR
         '
+        Me.CancelButtonIPR.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CancelButtonIPR.FlatAppearance.BorderSize = 2
+        Me.CancelButtonIPR.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CancelButtonIPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CancelButtonIPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelButtonIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelButtonIPR.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CancelButtonIPR.Location = New System.Drawing.Point(286, 152)
         Me.CancelButtonIPR.Name = "CancelButtonIPR"
         Me.CancelButtonIPR.Size = New System.Drawing.Size(94, 23)
@@ -148,7 +168,7 @@ Partial Class InitialPasswordReset
         Me.Controls.Add(Me.DescriptionIPR)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "InitialPasswordReset"
-        Me.Text = "InitialPasswordReset"
+        Me.Text = "Initial Password Reset"
         CType(Me.LogoIPR, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

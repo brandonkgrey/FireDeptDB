@@ -33,5 +33,4 @@ C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\F
 C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.SupervisorForm.resources
 C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire Dpt Interface.vbproj.GenerateResource.Cache
 C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\Fire Dpt Interface\bin\Release\ExampleDB.accdb
-C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.passwordReset.resources
 C:\Users\Brandon\Desktop\Fire Department Project\FireDeptDB\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.InitialPasswordReset.resources
