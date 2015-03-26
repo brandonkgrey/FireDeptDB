@@ -29,4 +29,36 @@ Public Class DeveloperForm
         ClassInfoMenu = Nothing
         Me.Close()
     End Sub
+
+    Private Sub Dev_CE_Reports_Button_Click(sender As Object, e As EventArgs) Handles Dev_CE_Reports_Button.Click
+        Dim CEReportsMenu As Developer_CE_Reports
+        CEReportsMenu = New Developer_CE_Reports()
+        CEReportsMenu.Show()
+        CEReportsMenu = Nothing
+        Me.Close()
+    End Sub
+
+    Private Sub Dev_Cert_List_Button_Click(sender As Object, e As EventArgs) Handles Dev_Cert_List_Button.Click
+        Dim CertListsMenu As Developer_Certifications_List
+        CertListsMenu = New Developer_Certifications_List()
+        CertListsMenu.Show()
+        CertListsMenu = Nothing
+        Me.Close()
+    End Sub
+
+    Private Sub Dev_EMS_Cert_Button_Click(sender As Object, e As EventArgs) Handles Dev_EMS_Cert_Button.Click
+        Dim EMSCertMenu As Dev_EMS_Certifications_Expirations
+        EMSCertMenu = New Dev_EMS_Certifications_Expirations()
+        EMSCertMenu.Show()
+        EMSCertMenu = Nothing
+        Me.Close()
+    End Sub
+
+    Private Sub Dev_Train_Reports_Button_Click(sender As Object, e As EventArgs) Handles Dev_Train_Reports_Button.Click
+        Dim TrainReportsMenu As Developer_Training_Reports
+        TrainReportsMenu = New Developer_Training_Reports()
+        TrainReportsMenu.Show()
+        TrainReportsMenu = Nothing
+        Me.Close()
+    End Sub
 End Class

@@ -39,7 +39,6 @@ Partial Class Login
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.Invalid_Cred = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -107,22 +106,12 @@ Partial Class Login
         Me.Invalid_Cred.AutoSize = True
         Me.Invalid_Cred.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Invalid_Cred.ForeColor = System.Drawing.Color.Red
-        Me.Invalid_Cred.Location = New System.Drawing.Point(218, 135)
+        Me.Invalid_Cred.Location = New System.Drawing.Point(212, 135)
         Me.Invalid_Cred.Name = "Invalid_Cred"
         Me.Invalid_Cred.Size = New System.Drawing.Size(150, 13)
         Me.Invalid_Cred.TabIndex = 6
         Me.Invalid_Cred.Text = "Invalid Username or Password"
         Me.Invalid_Cred.Visible = False
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(209, 197)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(174, 13)
-        Me.LinkLabel1.TabIndex = 7
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Forgot Your Username or Password"
         '
         'Login
         '
@@ -132,7 +121,6 @@ Partial Class Login
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(476, 219)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Invalid_Cred)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
@@ -154,6 +142,5 @@ Partial Class Login
 
     End Sub
     Friend WithEvents Invalid_Cred As System.Windows.Forms.Label
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 
 End Class

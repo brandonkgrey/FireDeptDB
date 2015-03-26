@@ -23,23 +23,20 @@ Partial Class DeveloperForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeveloperForm))
         Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_RecordsDataSet()
         Me.Emp_Info_AllBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Emp_Info_AllTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_Info_AllTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.TableAdapterManager()
         Me.Emp_Info_Button = New System.Windows.Forms.Button()
         Me.LogOut_Button = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Dev_Cert_List_Button = New System.Windows.Forms.Button()
+        Me.Dev_EMS_Cert_Button = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Class_Information_Button = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Dev_CE_Reports_Button = New System.Windows.Forms.Button()
+        Me.Dev_Train_Reports_Button = New System.Windows.Forms.Button()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -84,7 +81,7 @@ Partial Class DeveloperForm
         '
         'Emp_Info_Button
         '
-        Me.Emp_Info_Button.Location = New System.Drawing.Point(12, 68)
+        Me.Emp_Info_Button.Location = New System.Drawing.Point(128, 68)
         Me.Emp_Info_Button.Name = "Emp_Info_Button"
         Me.Emp_Info_Button.Size = New System.Drawing.Size(103, 46)
         Me.Emp_Info_Button.TabIndex = 0
@@ -93,30 +90,30 @@ Partial Class DeveloperForm
         '
         'LogOut_Button
         '
-        Me.LogOut_Button.Location = New System.Drawing.Point(358, 218)
+        Me.LogOut_Button.Location = New System.Drawing.Point(372, 196)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 1
         Me.LogOut_Button.Text = "Log Out"
         Me.LogOut_Button.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Dev_Cert_List_Button
         '
-        Me.Button2.Location = New System.Drawing.Point(358, 154)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 46)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Certification Lists"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Dev_Cert_List_Button.Location = New System.Drawing.Point(372, 132)
+        Me.Dev_Cert_List_Button.Name = "Dev_Cert_List_Button"
+        Me.Dev_Cert_List_Button.Size = New System.Drawing.Size(103, 46)
+        Me.Dev_Cert_List_Button.TabIndex = 3
+        Me.Dev_Cert_List_Button.Text = "Certification Lists"
+        Me.Dev_Cert_List_Button.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Dev_EMS_Cert_Button
         '
-        Me.Button3.Location = New System.Drawing.Point(358, 90)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 46)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "EMS Certification Expiration"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Dev_EMS_Cert_Button.Location = New System.Drawing.Point(372, 68)
+        Me.Dev_EMS_Cert_Button.Name = "Dev_EMS_Cert_Button"
+        Me.Dev_EMS_Cert_Button.Size = New System.Drawing.Size(103, 46)
+        Me.Dev_EMS_Cert_Button.TabIndex = 4
+        Me.Dev_EMS_Cert_Button.Text = "EMS Certification Expiration"
+        Me.Dev_EMS_Cert_Button.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -130,60 +127,48 @@ Partial Class DeveloperForm
         '
         'Class_Information_Button
         '
-        Me.Class_Information_Button.Location = New System.Drawing.Point(12, 132)
+        Me.Class_Information_Button.Location = New System.Drawing.Point(128, 132)
         Me.Class_Information_Button.Name = "Class_Information_Button"
         Me.Class_Information_Button.Size = New System.Drawing.Size(103, 46)
         Me.Class_Information_Button.TabIndex = 9
         Me.Class_Information_Button.Text = "Class Information"
         Me.Class_Information_Button.UseVisualStyleBackColor = True
         '
-        'Button5
+        'Dev_CE_Reports_Button
         '
-        Me.Button5.Location = New System.Drawing.Point(12, 196)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(103, 46)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "CE Reports"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Dev_CE_Reports_Button.Location = New System.Drawing.Point(128, 196)
+        Me.Dev_CE_Reports_Button.Name = "Dev_CE_Reports_Button"
+        Me.Dev_CE_Reports_Button.Size = New System.Drawing.Size(103, 46)
+        Me.Dev_CE_Reports_Button.TabIndex = 10
+        Me.Dev_CE_Reports_Button.Text = "CE Reports"
+        Me.Dev_CE_Reports_Button.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Dev_Train_Reports_Button
         '
-        Me.Button6.Location = New System.Drawing.Point(12, 261)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(103, 46)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "Employee Information"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(175, 126)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(129, 116)
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
+        Me.Dev_Train_Reports_Button.Location = New System.Drawing.Point(128, 261)
+        Me.Dev_Train_Reports_Button.Name = "Dev_Train_Reports_Button"
+        Me.Dev_Train_Reports_Button.Size = New System.Drawing.Size(103, 46)
+        Me.Dev_Train_Reports_Button.TabIndex = 11
+        Me.Dev_Train_Reports_Button.Text = "Training Reports" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Dev_Train_Reports_Button.UseVisualStyleBackColor = True
         '
         'DeveloperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(473, 339)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
+        Me.ClientSize = New System.Drawing.Size(697, 339)
+        Me.Controls.Add(Me.Dev_Train_Reports_Button)
+        Me.Controls.Add(Me.Dev_CE_Reports_Button)
         Me.Controls.Add(Me.Class_Information_Button)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Dev_EMS_Cert_Button)
+        Me.Controls.Add(Me.Dev_Cert_List_Button)
         Me.Controls.Add(Me.LogOut_Button)
         Me.Controls.Add(Me.Emp_Info_Button)
         Me.Name = "DeveloperForm"
         Me.Text = "Main Menu"
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -194,11 +179,10 @@ Partial Class DeveloperForm
     Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Emp_Info_Button As System.Windows.Forms.Button
     Friend WithEvents LogOut_Button As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Dev_Cert_List_Button As System.Windows.Forms.Button
+    Friend WithEvents Dev_EMS_Cert_Button As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Class_Information_Button As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Dev_CE_Reports_Button As System.Windows.Forms.Button
+    Friend WithEvents Dev_Train_Reports_Button As System.Windows.Forms.Button
 End Class

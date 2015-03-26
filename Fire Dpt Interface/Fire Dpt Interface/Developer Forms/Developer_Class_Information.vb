@@ -59,22 +59,4 @@
     Private Sub MultiJurCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles MultiJurCheckbox.CheckedChanged
 
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 End Class
