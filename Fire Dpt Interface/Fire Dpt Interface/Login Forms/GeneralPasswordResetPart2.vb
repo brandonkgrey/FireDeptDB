@@ -35,7 +35,7 @@ Public Class GeneralPasswordResetPart2
 
 
 
-    Private Sub SubmitButtonGPR2_Click(sender As Object, e As EventArgs) Handles SubmitButtonGPR2.Click
+    Private Sub SubmitButtonGPR2_Click(sender As Object, e As EventArgs) Handles OKButtonGPR2.Click
 
         If TempPassGPR2.Text <> GeneralPasswordReset.tempPass Then
             'count the number of times they attempt to try to guess the temporary password

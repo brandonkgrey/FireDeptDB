@@ -24,7 +24,7 @@ Partial Class GeneralPasswordReset
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GeneralPasswordReset))
         Me.CancelButtonGPR = New System.Windows.Forms.Button()
-        Me.SubmitButtonGPR = New System.Windows.Forms.Button()
+        Me.OKButtonGPR = New System.Windows.Forms.Button()
         Me.LogoGPR = New System.Windows.Forms.PictureBox()
         Me.TitleGPR = New System.Windows.Forms.Label()
         Me.DescriptionGPR = New System.Windows.Forms.Label()
@@ -49,20 +49,20 @@ Partial Class GeneralPasswordReset
         Me.CancelButtonGPR.Text = "Cancel"
         Me.CancelButtonGPR.UseVisualStyleBackColor = True
         '
-        'SubmitButtonGPR
+        'OKButtonGPR
         '
-        Me.SubmitButtonGPR.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SubmitButtonGPR.FlatAppearance.BorderSize = 2
-        Me.SubmitButtonGPR.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SubmitButtonGPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SubmitButtonGPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SubmitButtonGPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SubmitButtonGPR.Location = New System.Drawing.Point(270, 132)
-        Me.SubmitButtonGPR.Name = "SubmitButtonGPR"
-        Me.SubmitButtonGPR.Size = New System.Drawing.Size(94, 23)
-        Me.SubmitButtonGPR.TabIndex = 1
-        Me.SubmitButtonGPR.Text = "&Submit"
-        Me.SubmitButtonGPR.UseVisualStyleBackColor = True
+        Me.OKButtonGPR.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OKButtonGPR.FlatAppearance.BorderSize = 2
+        Me.OKButtonGPR.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OKButtonGPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OKButtonGPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OKButtonGPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OKButtonGPR.Location = New System.Drawing.Point(270, 132)
+        Me.OKButtonGPR.Name = "OKButtonGPR"
+        Me.OKButtonGPR.Size = New System.Drawing.Size(94, 23)
+        Me.OKButtonGPR.TabIndex = 1
+        Me.OKButtonGPR.Text = "&OK"
+        Me.OKButtonGPR.UseVisualStyleBackColor = True
         '
         'LogoGPR
         '
@@ -125,7 +125,7 @@ Partial Class GeneralPasswordReset
         '
         'GeneralPasswordReset
         '
-        Me.AcceptButton = Me.SubmitButtonGPR
+        Me.AcceptButton = Me.OKButtonGPR
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -136,7 +136,7 @@ Partial Class GeneralPasswordReset
         Me.Controls.Add(Me.DescriptionGPR)
         Me.Controls.Add(Me.TitleGPR)
         Me.Controls.Add(Me.LogoGPR)
-        Me.Controls.Add(Me.SubmitButtonGPR)
+        Me.Controls.Add(Me.OKButtonGPR)
         Me.Controls.Add(Me.CancelButtonGPR)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "GeneralPasswordReset"
@@ -147,7 +147,7 @@ Partial Class GeneralPasswordReset
 
     End Sub
     Friend WithEvents CancelButtonGPR As System.Windows.Forms.Button
-    Friend WithEvents SubmitButtonGPR As System.Windows.Forms.Button
+    Friend WithEvents OKButtonGPR As System.Windows.Forms.Button
     Friend WithEvents LogoGPR As System.Windows.Forms.PictureBox
     Friend WithEvents TitleGPR As System.Windows.Forms.Label
     Friend WithEvents DescriptionGPR As System.Windows.Forms.Label

@@ -21,7 +21,7 @@ Public Class GeneralPasswordReset
         Me.Close()
     End Sub
 
-    Private Sub SubmitButtonGPR_Click(sender As Object, e As EventArgs) Handles SubmitButtonGPR.Click
+    Private Sub SubmitButtonGPR_Click(sender As Object, e As EventArgs) Handles OKButtonGPR.Click
         Dim inputUsername As String = UsernameGPR.Text
         tempUsername = inputUsername
 

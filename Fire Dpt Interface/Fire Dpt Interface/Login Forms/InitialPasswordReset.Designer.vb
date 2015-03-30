@@ -131,7 +131,7 @@ Partial Class InitialPasswordReset
         Me.SubmitButtonIPR.Name = "SubmitButtonIPR"
         Me.SubmitButtonIPR.Size = New System.Drawing.Size(94, 23)
         Me.SubmitButtonIPR.TabIndex = 8
-        Me.SubmitButtonIPR.Text = "&Submit"
+        Me.SubmitButtonIPR.Text = "&OK"
         Me.SubmitButtonIPR.UseVisualStyleBackColor = False
         '
         'CancelButtonIPR

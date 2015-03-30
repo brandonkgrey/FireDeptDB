@@ -26,7 +26,7 @@ Partial Class GeneralPasswordResetPart2
         Me.LogoGPR2 = New System.Windows.Forms.PictureBox()
         Me.TitleGPR2 = New System.Windows.Forms.Label()
         Me.CancelButtonGPR2 = New System.Windows.Forms.Button()
-        Me.SubmitButtonGPR2 = New System.Windows.Forms.Button()
+        Me.OKButtonGPR2 = New System.Windows.Forms.Button()
         Me.TempPassGPR2 = New System.Windows.Forms.TextBox()
         Me.TempPassLableGPR = New System.Windows.Forms.Label()
         Me.PasswordBox1GPR2 = New System.Windows.Forms.TextBox()
@@ -71,19 +71,19 @@ Partial Class GeneralPasswordResetPart2
         Me.CancelButtonGPR2.Text = "Cancel"
         Me.CancelButtonGPR2.UseVisualStyleBackColor = True
         '
-        'SubmitButtonGPR2
+        'OKButtonGPR2
         '
-        Me.SubmitButtonGPR2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SubmitButtonGPR2.FlatAppearance.BorderSize = 2
-        Me.SubmitButtonGPR2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SubmitButtonGPR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SubmitButtonGPR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SubmitButtonGPR2.Location = New System.Drawing.Point(334, 185)
-        Me.SubmitButtonGPR2.Name = "SubmitButtonGPR2"
-        Me.SubmitButtonGPR2.Size = New System.Drawing.Size(94, 23)
-        Me.SubmitButtonGPR2.TabIndex = 3
-        Me.SubmitButtonGPR2.Text = "&Submit"
-        Me.SubmitButtonGPR2.UseVisualStyleBackColor = True
+        Me.OKButtonGPR2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OKButtonGPR2.FlatAppearance.BorderSize = 2
+        Me.OKButtonGPR2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OKButtonGPR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OKButtonGPR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OKButtonGPR2.Location = New System.Drawing.Point(334, 185)
+        Me.OKButtonGPR2.Name = "OKButtonGPR2"
+        Me.OKButtonGPR2.Size = New System.Drawing.Size(94, 23)
+        Me.OKButtonGPR2.TabIndex = 3
+        Me.OKButtonGPR2.Text = "&OK"
+        Me.OKButtonGPR2.UseVisualStyleBackColor = True
         '
         'TempPassGPR2
         '
@@ -149,7 +149,7 @@ Partial Class GeneralPasswordResetPart2
         '
         'GeneralPasswordResetPart2
         '
-        Me.AcceptButton = Me.SubmitButtonGPR2
+        Me.AcceptButton = Me.OKButtonGPR2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -161,7 +161,7 @@ Partial Class GeneralPasswordResetPart2
         Me.Controls.Add(Me.PasswordBox1GPR2)
         Me.Controls.Add(Me.TempPassLableGPR)
         Me.Controls.Add(Me.TempPassGPR2)
-        Me.Controls.Add(Me.SubmitButtonGPR2)
+        Me.Controls.Add(Me.OKButtonGPR2)
         Me.Controls.Add(Me.CancelButtonGPR2)
         Me.Controls.Add(Me.TitleGPR2)
         Me.Controls.Add(Me.LogoGPR2)
@@ -177,7 +177,7 @@ Partial Class GeneralPasswordResetPart2
     Friend WithEvents LogoGPR2 As System.Windows.Forms.PictureBox
     Friend WithEvents TitleGPR2 As System.Windows.Forms.Label
     Friend WithEvents CancelButtonGPR2 As System.Windows.Forms.Button
-    Friend WithEvents SubmitButtonGPR2 As System.Windows.Forms.Button
+    Friend WithEvents OKButtonGPR2 As System.Windows.Forms.Button
     Friend WithEvents TempPassGPR2 As System.Windows.Forms.TextBox
     Friend WithEvents TempPassLableGPR As System.Windows.Forms.Label
     Friend WithEvents PasswordBox1GPR2 As System.Windows.Forms.TextBox
