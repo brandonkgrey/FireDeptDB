@@ -65,6 +65,9 @@ Public Class GeneralPasswordResetPart2
 
 
             'Successful Password Change
+
+        ElseIf PasswordBox1GPR2.Text = GeneralPasswordReset.tempUsername Then
+            MsgBox("Password cannot be the same as the username.", MsgBoxStyle.Critical, "Error")
         Else
             'Set up a connection to the access database
             Dim Dbconn As New OleDbConnection(Dbstring)

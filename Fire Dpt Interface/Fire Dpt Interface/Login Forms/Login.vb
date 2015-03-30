@@ -92,6 +92,9 @@ Public Class Login
         Dim DevMenu As DeveloperForm
         DevMenu = New DeveloperForm()
 
+        'share the username with other forms
+        sharedUsername = username
+
         'Set up a connection to the access database
         Dim Dbconn As New OleDbConnection(Dbstring)
         Dbconn.Open()
@@ -166,7 +169,6 @@ Public Class Login
             Dim initialReset As InitialPasswordReset = New InitialPasswordReset()
             initialReset.Show()
             initialReset = Nothing
-            sharedUsername = username
             Me.Close()
 
             'correct credentials were entered 

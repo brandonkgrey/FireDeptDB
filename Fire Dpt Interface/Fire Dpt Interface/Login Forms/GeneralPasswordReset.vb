@@ -56,10 +56,8 @@ Public Class GeneralPasswordReset
                 Smtp_Server.Host = "smtp.gmail.com"
 
                 'the random number to be used to reset the password
-                Dim startDate As New DateTime(1970, 1, 1)
-                Dim currentDate As DateTime = DateTime.Now()
-                Dim numOfSeconds = (currentDate - startDate).TotalSeconds
-                tempPass = CStr(numOfSeconds)
+                Dim numOfSeconds = CLng((DateTime.Now() - New DateTime(1970, 1, 1)).TotalMilliseconds).ToString()
+                tempPass = numOfSeconds.Substring(numOfSeconds.Length - 6)
 
                 'sends the email containing the temporary password
                 e_mail = New MailMessage()
