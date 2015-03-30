@@ -23,6 +23,7 @@ Partial Class BasicForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BasicForm))
         Me.Personal_Info = New System.Windows.Forms.Button()
         Me.Certificates = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Button()
@@ -33,14 +34,23 @@ Partial Class BasicForm
         Me.TableAdapterManager = New Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.TableAdapterManager()
         Me.CollegeInfoButton = New System.Windows.Forms.Button()
         Me.AssignmentsButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.ExampleDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Employee_InformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Personal_Info
         '
         Me.Personal_Info.BackColor = System.Drawing.Color.Transparent
-        Me.Personal_Info.Location = New System.Drawing.Point(137, 92)
+        Me.Personal_Info.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Personal_Info.FlatAppearance.BorderSize = 2
+        Me.Personal_Info.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Personal_Info.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Personal_Info.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Personal_Info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Personal_Info.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Personal_Info.Location = New System.Drawing.Point(27, 83)
         Me.Personal_Info.Name = "Personal_Info"
         Me.Personal_Info.Size = New System.Drawing.Size(101, 43)
         Me.Personal_Info.TabIndex = 0
@@ -49,7 +59,14 @@ Partial Class BasicForm
         '
         'Certificates
         '
-        Me.Certificates.Location = New System.Drawing.Point(137, 149)
+        Me.Certificates.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Certificates.FlatAppearance.BorderSize = 2
+        Me.Certificates.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Certificates.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Certificates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Certificates.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Certificates.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Certificates.Location = New System.Drawing.Point(27, 140)
         Me.Certificates.Name = "Certificates"
         Me.Certificates.Size = New System.Drawing.Size(101, 43)
         Me.Certificates.TabIndex = 1
@@ -58,7 +75,15 @@ Partial Class BasicForm
         '
         'Logout
         '
-        Me.Logout.Location = New System.Drawing.Point(349, 153)
+        Me.Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Logout.FlatAppearance.BorderSize = 2
+        Me.Logout.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Logout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Logout.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Logout.ForeColor = System.Drawing.Color.Red
+        Me.Logout.Location = New System.Drawing.Point(162, 217)
         Me.Logout.Name = "Logout"
         Me.Logout.Size = New System.Drawing.Size(101, 39)
         Me.Logout.TabIndex = 2
@@ -68,12 +93,12 @@ Partial Class BasicForm
         'UsernameLabel
         '
         Me.UsernameLabel.AutoSize = True
-        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameLabel.Location = New System.Drawing.Point(33, 19)
+        Me.UsernameLabel.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.Location = New System.Drawing.Point(116, 9)
         Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(392, 37)
+        Me.UsernameLabel.Size = New System.Drawing.Size(189, 38)
         Me.UsernameLabel.TabIndex = 3
-        Me.UsernameLabel.Text = "Welcome: Username Here"
+        Me.UsernameLabel.Text = "Main Menu"
         Me.UsernameLabel.Visible = False
         '
         'ExampleDBDataSet
@@ -98,7 +123,14 @@ Partial Class BasicForm
         '
         'CollegeInfoButton
         '
-        Me.CollegeInfoButton.Location = New System.Drawing.Point(349, 92)
+        Me.CollegeInfoButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CollegeInfoButton.FlatAppearance.BorderSize = 2
+        Me.CollegeInfoButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CollegeInfoButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CollegeInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CollegeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CollegeInfoButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CollegeInfoButton.Location = New System.Drawing.Point(296, 83)
         Me.CollegeInfoButton.Name = "CollegeInfoButton"
         Me.CollegeInfoButton.Size = New System.Drawing.Size(101, 41)
         Me.CollegeInfoButton.TabIndex = 4
@@ -107,18 +139,37 @@ Partial Class BasicForm
         '
         'AssignmentsButton
         '
-        Me.AssignmentsButton.Location = New System.Drawing.Point(137, 211)
+        Me.AssignmentsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.AssignmentsButton.FlatAppearance.BorderSize = 2
+        Me.AssignmentsButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AssignmentsButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AssignmentsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.AssignmentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AssignmentsButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AssignmentsButton.Location = New System.Drawing.Point(296, 140)
         Me.AssignmentsButton.Name = "AssignmentsButton"
         Me.AssignmentsButton.Size = New System.Drawing.Size(101, 41)
         Me.AssignmentsButton.TabIndex = 5
         Me.AssignmentsButton.Text = "My Assignments"
         Me.AssignmentsButton.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(148, 73)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(128, 120)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'BasicForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(697, 339)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(439, 289)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.AssignmentsButton)
         Me.Controls.Add(Me.CollegeInfoButton)
         Me.Controls.Add(Me.UsernameLabel)
@@ -129,6 +180,7 @@ Partial Class BasicForm
         Me.Text = "Main Menu"
         CType(Me.ExampleDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Employee_InformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -143,4 +195,5 @@ Partial Class BasicForm
     Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CollegeInfoButton As System.Windows.Forms.Button
     Friend WithEvents AssignmentsButton As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

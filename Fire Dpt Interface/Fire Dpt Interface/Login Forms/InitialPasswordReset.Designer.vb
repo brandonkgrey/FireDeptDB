@@ -127,11 +127,11 @@ Partial Class InitialPasswordReset
         Me.SubmitButtonIPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SubmitButtonIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SubmitButtonIPR.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.SubmitButtonIPR.Location = New System.Drawing.Point(186, 152)
+        Me.SubmitButtonIPR.Location = New System.Drawing.Point(290, 153)
         Me.SubmitButtonIPR.Name = "SubmitButtonIPR"
         Me.SubmitButtonIPR.Size = New System.Drawing.Size(94, 23)
         Me.SubmitButtonIPR.TabIndex = 8
-        Me.SubmitButtonIPR.Text = "Submit"
+        Me.SubmitButtonIPR.Text = "&Submit"
         Me.SubmitButtonIPR.UseVisualStyleBackColor = False
         '
         'CancelButtonIPR
@@ -143,7 +143,7 @@ Partial Class InitialPasswordReset
         Me.CancelButtonIPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelButtonIPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelButtonIPR.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.CancelButtonIPR.Location = New System.Drawing.Point(286, 152)
+        Me.CancelButtonIPR.Location = New System.Drawing.Point(176, 153)
         Me.CancelButtonIPR.Name = "CancelButtonIPR"
         Me.CancelButtonIPR.Size = New System.Drawing.Size(94, 23)
         Me.CancelButtonIPR.TabIndex = 9
@@ -152,6 +152,7 @@ Partial Class InitialPasswordReset
         '
         'InitialPasswordReset
         '
+        Me.AcceptButton = Me.SubmitButtonIPR
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption

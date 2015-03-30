@@ -105,7 +105,8 @@ Partial Class DeveloperForm
         Me.LogOut_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogOut_Button.Location = New System.Drawing.Point(358, 218)
+        Me.LogOut_Button.ForeColor = System.Drawing.Color.Red
+        Me.LogOut_Button.Location = New System.Drawing.Point(193, 251)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 1
@@ -120,7 +121,7 @@ Partial Class DeveloperForm
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(358, 154)
+        Me.Button2.Location = New System.Drawing.Point(358, 132)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 46)
         Me.Button2.TabIndex = 3
@@ -135,7 +136,7 @@ Partial Class DeveloperForm
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(358, 90)
+        Me.Button3.Location = New System.Drawing.Point(358, 68)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(103, 46)
         Me.Button3.TabIndex = 4
@@ -190,7 +191,7 @@ Partial Class DeveloperForm
         Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(12, 261)
+        Me.Button6.Location = New System.Drawing.Point(358, 196)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
         Me.Button6.TabIndex = 11
@@ -201,7 +202,7 @@ Partial Class DeveloperForm
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(175, 126)
+        Me.PictureBox1.Location = New System.Drawing.Point(177, 95)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(129, 116)
         Me.PictureBox1.TabIndex = 12
@@ -212,7 +213,7 @@ Partial Class DeveloperForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(473, 339)
+        Me.ClientSize = New System.Drawing.Size(473, 315)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)

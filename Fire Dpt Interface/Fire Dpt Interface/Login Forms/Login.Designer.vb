@@ -78,17 +78,19 @@ Partial Class Login
         'UsernameTextBox
         '
         Me.UsernameTextBox.BackColor = System.Drawing.Color.White
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameTextBox.Location = New System.Drawing.Point(212, 61)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 21)
         Me.UsernameTextBox.TabIndex = 1
         '
         'PasswordTextBox
         '
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordTextBox.Location = New System.Drawing.Point(212, 95)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 21)
         Me.PasswordTextBox.TabIndex = 3
         '
         'OK
@@ -97,7 +99,8 @@ Partial Class Login
         Me.OK.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
         Me.OK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.OK.Location = New System.Drawing.Point(219, 154)
+        Me.OK.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OK.Location = New System.Drawing.Point(323, 154)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(94, 23)
         Me.OK.TabIndex = 4
@@ -111,7 +114,8 @@ Partial Class Login
         Me.Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Cancel.Location = New System.Drawing.Point(322, 154)
+        Me.Cancel.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(212, 154)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 23)
         Me.Cancel.TabIndex = 5
@@ -120,11 +124,11 @@ Partial Class Login
         'Invalid_Cred
         '
         Me.Invalid_Cred.AutoSize = True
-        Me.Invalid_Cred.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Invalid_Cred.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Invalid_Cred.ForeColor = System.Drawing.Color.Red
-        Me.Invalid_Cred.Location = New System.Drawing.Point(239, 135)
+        Me.Invalid_Cred.Location = New System.Drawing.Point(224, 135)
         Me.Invalid_Cred.Name = "Invalid_Cred"
-        Me.Invalid_Cred.Size = New System.Drawing.Size(150, 13)
+        Me.Invalid_Cred.Size = New System.Drawing.Size(182, 13)
         Me.Invalid_Cred.TabIndex = 6
         Me.Invalid_Cred.Text = "Invalid Username or Password"
         Me.Invalid_Cred.Visible = False
@@ -132,9 +136,10 @@ Partial Class Login
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(35, 154)
+        Me.LinkLabel1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(26, 154)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(86, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(101, 13)
         Me.LinkLabel1.TabIndex = 7
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Forgot Password"

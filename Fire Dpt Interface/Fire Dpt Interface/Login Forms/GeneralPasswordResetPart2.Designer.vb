@@ -64,9 +64,9 @@ Partial Class GeneralPasswordResetPart2
         Me.CancelButtonGPR2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CancelButtonGPR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CancelButtonGPR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CancelButtonGPR2.Location = New System.Drawing.Point(225, 185)
+        Me.CancelButtonGPR2.Location = New System.Drawing.Point(213, 185)
         Me.CancelButtonGPR2.Name = "CancelButtonGPR2"
-        Me.CancelButtonGPR2.Size = New System.Drawing.Size(75, 23)
+        Me.CancelButtonGPR2.Size = New System.Drawing.Size(94, 23)
         Me.CancelButtonGPR2.TabIndex = 2
         Me.CancelButtonGPR2.Text = "Cancel"
         Me.CancelButtonGPR2.UseVisualStyleBackColor = True
@@ -78,11 +78,11 @@ Partial Class GeneralPasswordResetPart2
         Me.SubmitButtonGPR2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
         Me.SubmitButtonGPR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SubmitButtonGPR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SubmitButtonGPR2.Location = New System.Drawing.Point(314, 185)
+        Me.SubmitButtonGPR2.Location = New System.Drawing.Point(334, 185)
         Me.SubmitButtonGPR2.Name = "SubmitButtonGPR2"
-        Me.SubmitButtonGPR2.Size = New System.Drawing.Size(75, 23)
+        Me.SubmitButtonGPR2.Size = New System.Drawing.Size(94, 23)
         Me.SubmitButtonGPR2.TabIndex = 3
-        Me.SubmitButtonGPR2.Text = "Submit"
+        Me.SubmitButtonGPR2.Text = "&Submit"
         Me.SubmitButtonGPR2.UseVisualStyleBackColor = True
         '
         'TempPassGPR2
@@ -105,6 +105,7 @@ Partial Class GeneralPasswordResetPart2
         '
         Me.PasswordBox1GPR2.Location = New System.Drawing.Point(285, 95)
         Me.PasswordBox1GPR2.Name = "PasswordBox1GPR2"
+        Me.PasswordBox1GPR2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordBox1GPR2.Size = New System.Drawing.Size(188, 21)
         Me.PasswordBox1GPR2.TabIndex = 6
         '
@@ -112,6 +113,7 @@ Partial Class GeneralPasswordResetPart2
         '
         Me.PasswordBox2GPR2.Location = New System.Drawing.Point(286, 143)
         Me.PasswordBox2GPR2.Name = "PasswordBox2GPR2"
+        Me.PasswordBox2GPR2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordBox2GPR2.Size = New System.Drawing.Size(187, 21)
         Me.PasswordBox2GPR2.TabIndex = 7
         '
@@ -147,6 +149,7 @@ Partial Class GeneralPasswordResetPart2
         '
         'GeneralPasswordResetPart2
         '
+        Me.AcceptButton = Me.SubmitButtonGPR2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption

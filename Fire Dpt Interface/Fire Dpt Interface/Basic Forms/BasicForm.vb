@@ -17,6 +17,7 @@
     End Sub
 
     Private Sub BasicForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "Welcome " + Login.sharedUsername
     End Sub
 
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click

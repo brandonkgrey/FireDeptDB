@@ -70,10 +70,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministratorForm.Designer.vb">
+    <Compile Include="Administrator Forms\AdministratorForm.Designer.vb">
       <DependentUpon>AdministratorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdministratorForm.vb">
+    <Compile Include="Administrator Forms\AdministratorForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Basic Forms\BasicForm.Designer.vb">
@@ -106,12 +106,12 @@
     <Compile Include="Basic Forms\Basic_Info_View.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExampleDBDataSet.Designer.vb">
+    <Compile Include="Databases and Datasets\ExampleDBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ExampleDBDataSet1.Designer.vb">
+    <Compile Include="Databases and Datasets\ExampleDBDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
@@ -155,20 +155,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SupervisorForm.Designer.vb">
+    <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="SupervisorForm.vb">
+    <Compile Include="Supervisor Forms\SupervisorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Training_RecordsDataSet.Designer.vb">
+    <Compile Include="Databases and Datasets\Training_RecordsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AdministratorForm.resx">
+    <EmbeddedResource Include="Administrator Forms\AdministratorForm.resx">
       <DependentUpon>AdministratorForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\BasicForm.resx">
@@ -204,33 +204,33 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupervisorForm.resx">
+    <EmbeddedResource Include="Supervisor Forms\SupervisorForm.resx">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
-    <None Include="ExampleDBDataSet.xsc">
+    <None Include="Databases and Datasets\ExampleDBDataSet.xsc">
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ExampleDBDataSet.xsd">
+    <None Include="Databases and Datasets\ExampleDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ExampleDBDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ExampleDBDataSet.xss">
+    <None Include="Databases and Datasets\ExampleDBDataSet.xss">
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ExampleDBDataSet1.xsc">
+    <None Include="Databases and Datasets\ExampleDBDataSet1.xsc">
       <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="ExampleDBDataSet1.xsd">
+    <None Include="Databases and Datasets\ExampleDBDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ExampleDBDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ExampleDBDataSet1.xss">
+    <None Include="Databases and Datasets\ExampleDBDataSet1.xss">
       <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
@@ -243,20 +243,20 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Training_RecordsDataSet.xsc">
+    <None Include="Databases and Datasets\Training_RecordsDataSet.xsc">
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Training_RecordsDataSet.xsd">
+    <None Include="Databases and Datasets\Training_RecordsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Training_RecordsDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Training_RecordsDataSet.xss">
+    <None Include="Databases and Datasets\Training_RecordsDataSet.xss">
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ExampleDB.accdb">
+    <Content Include="Databases and Datasets\ExampleDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

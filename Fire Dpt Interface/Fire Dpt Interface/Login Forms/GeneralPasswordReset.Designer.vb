@@ -42,9 +42,9 @@ Partial Class GeneralPasswordReset
         Me.CancelButtonGPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CancelButtonGPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelButtonGPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelButtonGPR.Location = New System.Drawing.Point(180, 132)
+        Me.CancelButtonGPR.Location = New System.Drawing.Point(158, 132)
         Me.CancelButtonGPR.Name = "CancelButtonGPR"
-        Me.CancelButtonGPR.Size = New System.Drawing.Size(75, 23)
+        Me.CancelButtonGPR.Size = New System.Drawing.Size(94, 23)
         Me.CancelButtonGPR.TabIndex = 0
         Me.CancelButtonGPR.Text = "Cancel"
         Me.CancelButtonGPR.UseVisualStyleBackColor = True
@@ -57,11 +57,11 @@ Partial Class GeneralPasswordReset
         Me.SubmitButtonGPR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SubmitButtonGPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SubmitButtonGPR.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SubmitButtonGPR.Location = New System.Drawing.Point(279, 132)
+        Me.SubmitButtonGPR.Location = New System.Drawing.Point(270, 132)
         Me.SubmitButtonGPR.Name = "SubmitButtonGPR"
-        Me.SubmitButtonGPR.Size = New System.Drawing.Size(75, 23)
+        Me.SubmitButtonGPR.Size = New System.Drawing.Size(94, 23)
         Me.SubmitButtonGPR.TabIndex = 1
-        Me.SubmitButtonGPR.Text = "Submit"
+        Me.SubmitButtonGPR.Text = "&Submit"
         Me.SubmitButtonGPR.UseVisualStyleBackColor = True
         '
         'LogoGPR
@@ -125,6 +125,7 @@ Partial Class GeneralPasswordReset
         '
         'GeneralPasswordReset
         '
+        Me.AcceptButton = Me.SubmitButtonGPR
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
