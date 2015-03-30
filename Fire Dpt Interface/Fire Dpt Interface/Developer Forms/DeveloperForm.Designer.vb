@@ -37,9 +37,11 @@ Partial Class DeveloperForm
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BannerDF = New System.Windows.Forms.Panel()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BannerDF.SuspendLayout()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -90,7 +92,7 @@ Partial Class DeveloperForm
         Me.Emp_Info_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Emp_Info_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Emp_Info_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Emp_Info_Button.Location = New System.Drawing.Point(12, 68)
+        Me.Emp_Info_Button.Location = New System.Drawing.Point(38, 170)
         Me.Emp_Info_Button.Name = "Emp_Info_Button"
         Me.Emp_Info_Button.Size = New System.Drawing.Size(103, 46)
         Me.Emp_Info_Button.TabIndex = 0
@@ -106,7 +108,7 @@ Partial Class DeveloperForm
         Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogOut_Button.ForeColor = System.Drawing.Color.Red
-        Me.LogOut_Button.Location = New System.Drawing.Point(193, 251)
+        Me.LogOut_Button.Location = New System.Drawing.Point(325, 293)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 1
@@ -121,7 +123,7 @@ Partial Class DeveloperForm
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(358, 132)
+        Me.Button2.Location = New System.Drawing.Point(624, 170)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 46)
         Me.Button2.TabIndex = 3
@@ -136,7 +138,7 @@ Partial Class DeveloperForm
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(358, 68)
+        Me.Button3.Location = New System.Drawing.Point(325, 222)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(103, 46)
         Me.Button3.TabIndex = 4
@@ -146,12 +148,13 @@ Partial Class DeveloperForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(142, 9)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(193, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(189, 38)
+        Me.Label1.Size = New System.Drawing.Size(428, 59)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Main Menu"
+        Me.Label1.Text = "Training Records"
         '
         'Class_Information_Button
         '
@@ -161,7 +164,7 @@ Partial Class DeveloperForm
         Me.Class_Information_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Class_Information_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Class_Information_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Class_Information_Button.Location = New System.Drawing.Point(12, 132)
+        Me.Class_Information_Button.Location = New System.Drawing.Point(38, 222)
         Me.Class_Information_Button.Name = "Class_Information_Button"
         Me.Class_Information_Button.Size = New System.Drawing.Size(103, 46)
         Me.Class_Information_Button.TabIndex = 9
@@ -176,7 +179,7 @@ Partial Class DeveloperForm
         Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(12, 196)
+        Me.Button5.Location = New System.Drawing.Point(325, 170)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(103, 46)
         Me.Button5.TabIndex = 10
@@ -191,7 +194,7 @@ Partial Class DeveloperForm
         Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(358, 196)
+        Me.Button6.Location = New System.Drawing.Point(624, 222)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
         Me.Button6.TabIndex = 11
@@ -202,33 +205,44 @@ Partial Class DeveloperForm
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(177, 95)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(129, 116)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
+        '
+        'BannerDF
+        '
+        Me.BannerDF.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BannerDF.Controls.Add(Me.PictureBox1)
+        Me.BannerDF.Controls.Add(Me.Label1)
+        Me.BannerDF.Location = New System.Drawing.Point(0, 0)
+        Me.BannerDF.Name = "BannerDF"
+        Me.BannerDF.Size = New System.Drawing.Size(741, 145)
+        Me.BannerDF.TabIndex = 13
         '
         'DeveloperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(473, 315)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(739, 351)
+        Me.Controls.Add(Me.BannerDF)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Class_Information_Button)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LogOut_Button)
         Me.Controls.Add(Me.Emp_Info_Button)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "DeveloperForm"
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BannerDF.ResumeLayout(False)
+        Me.BannerDF.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Training_RecordsDataSet As Fire_Dpt_Interface.Training_RecordsDataSet
@@ -244,4 +258,5 @@ Partial Class DeveloperForm
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents BannerDF As System.Windows.Forms.Panel
 End Class

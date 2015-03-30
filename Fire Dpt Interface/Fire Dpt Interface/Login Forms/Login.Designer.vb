@@ -158,6 +158,7 @@ Partial Class Login
         'Login
         '
         Me.AcceptButton = Me.OK
+        Me.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption

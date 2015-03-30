@@ -166,7 +166,7 @@ Partial Class GeneralPasswordResetPart2
         Me.Controls.Add(Me.TitleGPR2)
         Me.Controls.Add(Me.LogoGPR2)
         Me.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "GeneralPasswordResetPart2"
         Me.Text = "Reset Password"
         CType(Me.LogoGPR2, System.ComponentModel.ISupportInitialize).EndInit()

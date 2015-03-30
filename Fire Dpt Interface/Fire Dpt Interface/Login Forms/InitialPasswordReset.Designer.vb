@@ -167,7 +167,7 @@ Partial Class InitialPasswordReset
         Me.Controls.Add(Me.NewPassword)
         Me.Controls.Add(Me.PasswordRequirementsIPR)
         Me.Controls.Add(Me.DescriptionIPR)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "InitialPasswordReset"
         Me.Text = "Initial Password Reset"
         CType(Me.LogoIPR, System.ComponentModel.ISupportInitialize).EndInit()

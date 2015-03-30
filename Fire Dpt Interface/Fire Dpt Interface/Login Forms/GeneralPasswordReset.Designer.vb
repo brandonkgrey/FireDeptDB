@@ -138,7 +138,7 @@ Partial Class GeneralPasswordReset
         Me.Controls.Add(Me.LogoGPR)
         Me.Controls.Add(Me.OKButtonGPR)
         Me.Controls.Add(Me.CancelButtonGPR)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "GeneralPasswordReset"
         Me.Text = "Reset Password"
         CType(Me.LogoGPR, System.ComponentModel.ISupportInitialize).EndInit()

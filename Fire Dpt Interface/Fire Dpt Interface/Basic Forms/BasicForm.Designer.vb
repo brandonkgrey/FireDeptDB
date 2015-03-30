@@ -176,6 +176,7 @@ Partial Class BasicForm
         Me.Controls.Add(Me.Logout)
         Me.Controls.Add(Me.Certificates)
         Me.Controls.Add(Me.Personal_Info)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "BasicForm"
         Me.Text = "Main Menu"
         CType(Me.ExampleDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
