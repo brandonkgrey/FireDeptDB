@@ -214,8 +214,8 @@ Public Class Login
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim PasswordReset As InitialPasswordReset
-        PasswordReset = New InitialPasswordReset()
+        Dim PasswordReset As GeneralPasswordReset
+        PasswordReset = New GeneralPasswordReset()
 
         PasswordReset.Show()
         PasswordReset = Nothing

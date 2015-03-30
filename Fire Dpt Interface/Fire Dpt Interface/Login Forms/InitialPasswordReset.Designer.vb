@@ -39,12 +39,12 @@ Partial Class InitialPasswordReset
         'DescriptionIPR
         '
         Me.DescriptionIPR.AutoSize = True
-        Me.DescriptionIPR.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescriptionIPR.Location = New System.Drawing.Point(12, 8)
+        Me.DescriptionIPR.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescriptionIPR.Location = New System.Drawing.Point(12, 9)
         Me.DescriptionIPR.Name = "DescriptionIPR"
-        Me.DescriptionIPR.Size = New System.Drawing.Size(419, 18)
+        Me.DescriptionIPR.Size = New System.Drawing.Size(406, 16)
         Me.DescriptionIPR.TabIndex = 0
-        Me.DescriptionIPR.Text = "Welcome first time user, please your password"
+        Me.DescriptionIPR.Text = "Welcome first time user, please change your password"
         '
         'PasswordRequirementsIPR
         '

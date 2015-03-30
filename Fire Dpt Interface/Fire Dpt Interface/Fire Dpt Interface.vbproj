@@ -116,6 +116,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Login Forms\GeneralPasswordReset.Designer.vb">
+      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordReset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordResetPart2.Designer.vb">
+      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordResetPart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login Forms\InitialPasswordReset.Designer.vb">
       <DependentUpon>InitialPasswordReset.vb</DependentUpon>
     </Compile>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\Basic_Info_View.resx">
       <DependentUpon>Basic_Info_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\GeneralPasswordReset.resx">
+      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\GeneralPasswordResetPart2.resx">
+      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Forms\InitialPasswordReset.resx">
       <DependentUpon>InitialPasswordReset.vb</DependentUpon>
