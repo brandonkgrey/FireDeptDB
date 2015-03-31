@@ -82,34 +82,52 @@
     <Compile Include="Basic Forms\BasicForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Certifications_List.Designer.vb">
-      <DependentUpon>Developer_Certifications_List.vb</DependentUpon>
+    <Compile Include="Developer Forms\CE Reports\Dev_ARFF_CE_Report.Designer.vb">
+      <DependentUpon>Dev_ARFF_CE_Report.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Certifications_List.vb">
+    <Compile Include="Developer Forms\CE Reports\Dev_ARFF_CE_Report.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_CE_Reports.Designer.vb">
+    <Compile Include="Developer Forms\CE Reports\Dev_EMS_CE_Report.Designer.vb">
+      <DependentUpon>Dev_EMS_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_EMS_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_Safety_CE_Report.Designer.vb">
+      <DependentUpon>Dev_Safety_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_Safety_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Dev_Certification_Lists.Designer.vb">
+      <DependentUpon>Dev_Certification_Lists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Dev_Certification_Lists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Developer_CE_Reports.Designer.vb">
       <DependentUpon>Developer_CE_Reports.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_CE_Reports.vb">
+    <Compile Include="Developer Forms\CE Reports\Developer_CE_Reports.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Class_Information.Designer.vb">
+    <Compile Include="Developer Forms\Class Information\Developer_Class_Information.Designer.vb">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Class_Information.vb">
+    <Compile Include="Developer Forms\Class Information\Developer_Class_Information.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.Designer.vb">
+    <Compile Include="Developer Forms\Employee Information\Developer_Employee_Access.Designer.vb">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.vb">
+    <Compile Include="Developer Forms\Employee Information\Developer_Employee_Access.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\DeveloperForm.Designer.vb">
+    <Compile Include="Developer Forms\Main\DeveloperForm.Designer.vb">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\DeveloperForm.vb">
+    <Compile Include="Developer Forms\Main\DeveloperForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Basic Forms\Basic_Info_View.Designer.vb">
@@ -118,16 +136,82 @@
     <Compile Include="Basic Forms\Basic_Info_View.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Dev_EMS_Certifications_Expirations.Designer.vb">
+    <Compile Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.Designer.vb">
       <DependentUpon>Dev_EMS_Certifications_Expirations.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Dev_EMS_Certifications_Expirations.vb">
+    <Compile Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Training_Reports.Designer.vb">
+    <Compile Include="Developer Forms\Training Reports\Developer_Training_Reports.Designer.vb">
       <DependentUpon>Developer_Training_Reports.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Training_Reports.vb">
+    <Compile Include="Developer Forms\Training Reports\Developer_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_Fire_CE_Reports.Designer.vb">
+      <DependentUpon>Dev_Fire_CE_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_Fire_CE_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_HazMat_CE_Report.Designer.vb">
+      <DependentUpon>Dev_HazMat_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_HazMat_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_TCFP_CE_Report.Designer.vb">
+      <DependentUpon>Dev_TCFP_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Dev_TCFP_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_ARFF_12_Month_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_ARFF_12_Month_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_ARFF_12_Month_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_ARFF_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_ARFF_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_ARFF_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_EMS_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_EMS_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_EMS_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Fire_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Fire_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Fire_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_HazMat_All_Techs_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_HazMat_All_Techs_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_HazMat_All_Techs_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_HazMat_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_HazMat_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_HazMat_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Other_Courses_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Other_Courses_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Other_Courses_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Safety_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Safety_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Dev_Safety_Training_Reports.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExampleDBDataSet.Designer.vb">
@@ -135,10 +219,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Login.Designer.vb">
+    <Compile Include="Login Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="Login Forms\Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -156,10 +240,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SupervisorForm.Designer.vb">
+    <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="SupervisorForm.vb">
+    <Compile Include="Supervisor Forms\SupervisorForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Training_RecordsDataSet.Designer.vb">
@@ -175,31 +259,73 @@
     <EmbeddedResource Include="Basic Forms\BasicForm.resx">
       <DependentUpon>BasicForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Certifications_List.resx">
-      <DependentUpon>Developer_Certifications_List.vb</DependentUpon>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_ARFF_CE_Report.resx">
+      <DependentUpon>Dev_ARFF_CE_Report.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_CE_Reports.resx">
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_EMS_CE_Report.resx">
+      <DependentUpon>Dev_EMS_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_Fire_CE_Reports.resx">
+      <DependentUpon>Dev_Fire_CE_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_HazMat_CE_Report.resx">
+      <DependentUpon>Dev_HazMat_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_TCFP_CE_Report.resx">
+      <DependentUpon>Dev_TCFP_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Dev_Safety_CE_Report.resx">
+      <DependentUpon>Dev_Safety_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Dev_Certification_Lists.resx">
+      <DependentUpon>Dev_Certification_Lists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Developer_CE_Reports.resx">
       <DependentUpon>Developer_CE_Reports.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Class_Information.resx">
+    <EmbeddedResource Include="Developer Forms\Class Information\Developer_Class_Information.resx">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Employee_Access.resx">
+    <EmbeddedResource Include="Developer Forms\Employee Information\Developer_Employee_Access.resx">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\DeveloperForm.resx">
+    <EmbeddedResource Include="Developer Forms\Main\DeveloperForm.resx">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\Basic_Info_View.resx">
       <DependentUpon>Basic_Info_View.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Training_Reports.resx">
+    <EmbeddedResource Include="Developer Forms\Training Reports\Developer_Training_Reports.resx">
       <DependentUpon>Developer_Training_Reports.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Dev_EMS_Certifications_Expirations.resx">
+    <EmbeddedResource Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.resx">
       <DependentUpon>Dev_EMS_Certifications_Expirations.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_ARFF_12_Month_Training_Reports.resx">
+      <DependentUpon>Dev_ARFF_12_Month_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_ARFF_Training_Reports.resx">
+      <DependentUpon>Dev_ARFF_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_EMS_Training_Reports.resx">
+      <DependentUpon>Dev_EMS_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_Fire_Training_Reports.resx">
+      <DependentUpon>Dev_Fire_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_HazMat_All_Techs_Training_Reports.resx">
+      <DependentUpon>Dev_HazMat_All_Techs_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_HazMat_Training_Reports.resx">
+      <DependentUpon>Dev_HazMat_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_Other_Courses_Training_Reports.resx">
+      <DependentUpon>Dev_Other_Courses_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Dev_Safety_Training_Reports.resx">
+      <DependentUpon>Dev_Safety_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -208,7 +334,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupervisorForm.resx">
+    <EmbeddedResource Include="Supervisor Forms\SupervisorForm.resx">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
