@@ -22,7 +22,8 @@ Partial Class Single_User_Information
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_RecordsDataSet()
+        Me.components = New System.ComponentModel.Container()
+        Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_Records_EncryptedDataSet()
         Me.Emp_Name = New System.Windows.Forms.Label()
         Me.Emp_ID = New System.Windows.Forms.Label()
         Me.Name_Textbox = New System.Windows.Forms.TextBox()
@@ -65,8 +66,11 @@ Partial Class Single_User_Information
         Me.Shift_TextBox = New System.Windows.Forms.TextBox()
         Me.Division_Textbox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Employee_InformationTableAdapter()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -97,6 +101,7 @@ Partial Class Single_User_Information
         'Name_Textbox
         '
         Me.Name_Textbox.BackColor = System.Drawing.SystemColors.Window
+        Me.Name_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Name", True))
         Me.Name_Textbox.Location = New System.Drawing.Point(106, 33)
         Me.Name_Textbox.Name = "Name_Textbox"
         Me.Name_Textbox.ReadOnly = True
@@ -511,6 +516,15 @@ Partial Class Single_User_Information
         Me.Panel1.Size = New System.Drawing.Size(956, 333)
         Me.Panel1.TabIndex = 45
         '
+        'EmployeeInformationBindingSource
+        '
+        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource.DataSource = Me.Training_RecordsDataSet
+        '
+        'Employee_InformationTableAdapter
+        '
+        Me.Employee_InformationTableAdapter.ClearBeforeFill = True
+        '
         'Single_User_Information
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -532,11 +546,12 @@ Partial Class Single_User_Information
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Training_RecordsDataSet As Fire_Dpt_Interface.Training_RecordsDataSet
+    Friend WithEvents Training_RecordsDataSet As Fire_Dpt_Interface.Training_Records_EncryptedDataSet
     Friend WithEvents Emp_Name As System.Windows.Forms.Label
     Friend WithEvents Emp_ID As System.Windows.Forms.Label
     Friend WithEvents Name_Textbox As System.Windows.Forms.TextBox
@@ -579,4 +594,6 @@ Partial Class Single_User_Information
     Friend WithEvents Shift_TextBox As System.Windows.Forms.TextBox
     Friend WithEvents Division_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents EmployeeInformationBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Employee_InformationTableAdapter As Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Employee_InformationTableAdapter
 End Class

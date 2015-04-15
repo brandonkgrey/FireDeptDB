@@ -2,7 +2,9 @@
 
 
     Private Sub Single_User_Information_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+        'TODO: This line of code loads data into the 'Training_RecordsDataSet.Employee_Information' table. You can move, or remove it, as needed.
+        Me.Employee_InformationTableAdapter.Fill(Me.Training_RecordsDataSet.Employee_Information)
+
     End Sub
 
     

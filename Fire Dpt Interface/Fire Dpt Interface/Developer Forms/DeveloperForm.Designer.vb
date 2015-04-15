@@ -24,10 +24,10 @@ Partial Class DeveloperForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeveloperForm))
-        Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_RecordsDataSet()
+        Me.Training_RecordsDataSet = New Fire_Dpt_Interface.Training_Records_EncryptedDataSet()
         Me.Emp_Info_AllBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Emp_Info_AllTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_Info_AllTableAdapter()
-        Me.TableAdapterManager = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.TableAdapterManager()
+        Me.Emp_Info_AllTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Emp_Info_AllTableAdapter()
+        Me.TableAdapterManager = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.TableAdapterManager()
         Me.Emp_Info_Button = New System.Windows.Forms.Button()
         Me.LogOut_Button = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -38,6 +38,7 @@ Partial Class DeveloperForm
         Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BannerDF = New System.Windows.Forms.Panel()
+        Me.OpenAccessFileDFButton = New System.Windows.Forms.Button()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,7 +83,7 @@ Partial Class DeveloperForm
         Me.TableAdapterManager.TCFP_Subject_AreaTableAdapter = Nothing
         Me.TableAdapterManager.TCLEOSE_Subject_AreaTableAdapter = Nothing
         Me.TableAdapterManager.Training_AgenciesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Emp_Info_Button
         '
@@ -108,7 +109,7 @@ Partial Class DeveloperForm
         Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogOut_Button.ForeColor = System.Drawing.Color.Red
-        Me.LogOut_Button.Location = New System.Drawing.Point(325, 293)
+        Me.LogOut_Button.Location = New System.Drawing.Point(483, 293)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 1
@@ -140,7 +141,7 @@ Partial Class DeveloperForm
         Me.Button3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(325, 222)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 46)
+        Me.Button3.Size = New System.Drawing.Size(103, 67)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "EMS Certification Expiration"
         Me.Button3.UseVisualStyleBackColor = True
@@ -221,12 +222,29 @@ Partial Class DeveloperForm
         Me.BannerDF.Size = New System.Drawing.Size(741, 145)
         Me.BannerDF.TabIndex = 13
         '
+        'OpenAccessFileDFButton
+        '
+        Me.OpenAccessFileDFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OpenAccessFileDFButton.FlatAppearance.BorderSize = 2
+        Me.OpenAccessFileDFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OpenAccessFileDFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OpenAccessFileDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OpenAccessFileDFButton.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OpenAccessFileDFButton.ForeColor = System.Drawing.Color.Blue
+        Me.OpenAccessFileDFButton.Location = New System.Drawing.Point(182, 293)
+        Me.OpenAccessFileDFButton.Name = "OpenAccessFileDFButton"
+        Me.OpenAccessFileDFButton.Size = New System.Drawing.Size(103, 46)
+        Me.OpenAccessFileDFButton.TabIndex = 14
+        Me.OpenAccessFileDFButton.Text = "Open Access DB"
+        Me.OpenAccessFileDFButton.UseVisualStyleBackColor = True
+        '
         'DeveloperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(739, 351)
+        Me.Controls.Add(Me.OpenAccessFileDFButton)
         Me.Controls.Add(Me.BannerDF)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -245,10 +263,10 @@ Partial Class DeveloperForm
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Training_RecordsDataSet As Fire_Dpt_Interface.Training_RecordsDataSet
+    Friend WithEvents Training_RecordsDataSet As Fire_Dpt_Interface.Training_Records_EncryptedDataSet
     Friend WithEvents Emp_Info_AllBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Emp_Info_AllTableAdapter As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_Info_AllTableAdapter
-    Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Emp_Info_AllTableAdapter As Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Emp_Info_AllTableAdapter
+    Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Emp_Info_Button As System.Windows.Forms.Button
     Friend WithEvents LogOut_Button As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -259,4 +277,5 @@ Partial Class DeveloperForm
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents BannerDF As System.Windows.Forms.Panel
+    Friend WithEvents OpenAccessFileDFButton As System.Windows.Forms.Button
 End Class

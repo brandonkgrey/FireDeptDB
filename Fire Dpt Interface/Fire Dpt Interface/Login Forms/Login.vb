@@ -4,8 +4,9 @@ Imports System.Security.Cryptography
 
 Public Class Login
 																				'Change to the path where the database is located at 
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Brandon\Desktop\Fire Department Project\ExampleDB.accdb"
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "C:\Users\Brandon\Desktop\Fire Department Project\ExampleDB.accdb;"
     Public Shared sharedUsername As String
+    Friend Shared Authorization_LVL As Integer
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean
@@ -141,6 +142,8 @@ Public Class Login
                 command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 accessobj = command.ExecuteScalar()
                 accesslvl = accessobj.ToString()
+                Authorization_LVL = CInt(accesslvl)
+                
 
             Else
                 'the password is already hashed, to we issue a query with the hashed password 
@@ -152,6 +155,8 @@ Public Class Login
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
                 accesslvl = accessobj.ToString()
+                Authorization_LVL = accessobj
+
             End If
 
             'was the username retrieved the same as the one entered in the form? if they are successful login 

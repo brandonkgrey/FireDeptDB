@@ -50,6 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -76,10 +77,21 @@
     <Compile Include="Administrator Forms\AdministratorForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Databases and Datasets\AuthLevelDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthLevelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Basic Forms\BasicForm.Designer.vb">
       <DependentUpon>BasicForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Basic Forms\BasicForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic Forms\Basic_Assignments.Designer.vb">
+      <DependentUpon>Basic_Assignments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Forms\Basic_Assignments.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Developer Forms\Developer_Class_Information.Designer.vb">
@@ -88,10 +100,10 @@
     <Compile Include="Developer Forms\Developer_Class_Information.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.Designer.vb">
-      <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
+    <Compile Include="Shared Forms\All_Employees.Designer.vb">
+      <DependentUpon>All_Employees.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.vb">
+    <Compile Include="Shared Forms\All_Employees.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Developer Forms\DeveloperForm.Designer.vb">
@@ -161,10 +173,11 @@
     <Compile Include="Supervisor Forms\SupervisorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Databases and Datasets\Training_RecordsDataSet.Designer.vb">
+    <Compile Include="Databases and Datasets\Training_Records_EncryptedDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
+      <DependentUpon>Training_Records_EncryptedDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -174,11 +187,14 @@
     <EmbeddedResource Include="Basic Forms\BasicForm.resx">
       <DependentUpon>BasicForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Basic Forms\Basic_Assignments.resx">
+      <DependentUpon>Basic_Assignments.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Developer Forms\Developer_Class_Information.resx">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Employee_Access.resx">
-      <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
+    <EmbeddedResource Include="Shared Forms\All_Employees.resx">
+      <DependentUpon>All_Employees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Developer Forms\DeveloperForm.resx">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
@@ -209,6 +225,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Databases and Datasets\AuthLevelDataSet.xsc">
+      <DependentUpon>AuthLevelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Databases and Datasets\AuthLevelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuthLevelDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Databases and Datasets\AuthLevelDataSet.xss">
+      <DependentUpon>AuthLevelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
     <None Include="Databases and Datasets\ExampleDBDataSet.xsc">
@@ -243,16 +270,19 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xsc">
-      <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
+    <None Include="Databases and Datasets\Training_Records_EncryptedDataSet.xsc">
+      <DependentUpon>Training_Records_EncryptedDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xsd">
+    <None Include="Databases and Datasets\Training_Records_EncryptedDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Training_RecordsDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>Training_Records_EncryptedDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xss">
-      <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
+    <None Include="Databases and Datasets\Training_Records_EncryptedDataSet.xss">
+      <DependentUpon>Training_Records_EncryptedDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
