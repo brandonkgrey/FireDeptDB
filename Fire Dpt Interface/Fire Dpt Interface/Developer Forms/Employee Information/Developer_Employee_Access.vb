@@ -2,16 +2,9 @@
 
 
     Private Sub All_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Fire_CertificationsTableAdapter.Fill(Me.Training_RecordsDataSet.Fire_Certifications)
         Me.Employee_InformationTableAdapter.Fill(Me.Training_RecordsDataSet.Employee_Information)
-    End Sub
-
-
-    Private Sub Emp_Name_Click(sender As Object, e As EventArgs) Handles Emp_Name.Click
-
-    End Sub
-
-    Private Sub Emp_ID_Click(sender As Object, e As EventArgs) Handles Emp_ID.Click
-
+        FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
     End Sub
 
 
@@ -35,11 +28,13 @@ SaveErr:
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click
         EmployeeInformationBindingSource.MovePrevious()
+        FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
 
     End Sub
 
     Private Sub Next_Button_Click(sender As Object, e As EventArgs) Handles Next_Button.Click
-        EmployeeInformationBindingSource.MoveNext()       
+        EmployeeInformationBindingSource.MoveNext()
+        'FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
     End Sub
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
@@ -48,32 +43,27 @@ SaveErr:
     End Sub
 
 
-    Private Sub FireCertifications_Click(sender As Object, e As EventArgs) Handles AeroOpsCheckbox.Click
+    Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles ReportButton.Click
+        '106017362
+        'Dim ID As Integer = 106017362
+        'QueryEmployeeInformationTableAdapter.FillEmployeeName(Me.Query_Indivual_Employee.QueryEmployeeInformation, ID)
+        'Dim table As DataTable = QueryEmployeeInformationTableAdapter.GetEmployeeName(ID)
+        ''Dim row1 As DataRow = table.Rows(0)
+        ''For Each item As Object In row1.ItemArray
+        ''If item IsNot Nothing Then
+        ''MessageBox.Show(item.ToString())
+        ''Else
+        ''MessageBox.Show("null")
+        ''End If
+        ''Next
+        Dim IndReport As Indivdual_Employee_Report_View
+        IndReport = New Indivdual_Employee_Report_View()
+        IndReport.Show()
+        IndReport = Nothing
+        Me.Close()
 
     End Sub
 
-    Private Sub EndDate_Textbox_TextChanged(sender As Object, e As EventArgs) Handles EndDate_Textbox.TextChanged
 
-    End Sub
-
-    Private Sub EndDateLabel_Click(sender As Object, e As EventArgs) Handles EndDateLabel.Click
-
-    End Sub
-
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
-
-    End Sub
-
-    Private Sub TCFP_PIN_Label_Click(sender As Object, e As EventArgs) Handles TCFP_PIN_Label.Click
-
-    End Sub
-
-
-
-
-
-
-
-
-
+   
 End Class

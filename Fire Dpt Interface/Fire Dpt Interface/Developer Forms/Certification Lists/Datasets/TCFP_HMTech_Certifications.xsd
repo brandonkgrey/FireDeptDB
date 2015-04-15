@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TCFP_HMTech_Certifications" targetNamespace="http://tempuri.org/TCFP_HMTech_Certifications.xsd" xmlns:mstns="http://tempuri.org/TCFP_HMTech_Certifications.xsd" xmlns="http://tempuri.org/TCFP_HMTech_Certifications.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Training_Records_for_TAMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Training_Records_for_TAMUConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fire_Dpt_Interface.My.MySettings.GlobalReference.Default.Training_Records_for_TAMUConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Query_HMTech_CertificationsTableAdapter" GeneratorDataComponentClassName="Query_HMTech_CertificationsTableAdapter" Name="Query_HMTech_Certifications" UserDataComponentName="Query_HMTech_CertificationsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Training_Records_for_TAMUConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Employee Information].Name, [Fire Certifications].HazMat, [Fire Certifications].[HazMat Level]
+FROM            ([Employee Information] INNER JOIN
+                         [Fire Certifications] ON [Employee Information].SSN = [Fire Certifications].SSN)
+WHERE        ([Fire Certifications].HazMat = True) AND ([Fire Certifications].[HazMat Level] = 'Technician') AND ([Employee Information].[End Date] IS NULL)
+ORDER BY [Employee Information].Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="HazMat" DataSetColumn="HazMat" />
+              <Mapping SourceColumn="HazMat Level" DataSetColumn="HazMat Level" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TCFP_HMTech_Certifications" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TCFP_HMTech_Certifications" msprop:Generator_UserDSName="TCFP_HMTech_Certifications">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Query_HMTech_Certifications" msprop:Generator_TableClassName="Query_HMTech_CertificationsDataTable" msprop:Generator_TableVarName="tableQuery_HMTech_Certifications" msprop:Generator_TablePropName="Query_HMTech_Certifications" msprop:Generator_RowDeletingName="Query_HMTech_CertificationsRowDeleting" msprop:Generator_RowChangingName="Query_HMTech_CertificationsRowChanging" msprop:Generator_RowEvHandlerName="Query_HMTech_CertificationsRowChangeEventHandler" msprop:Generator_RowDeletedName="Query_HMTech_CertificationsRowDeleted" msprop:Generator_UserTableName="Query_HMTech_Certifications" msprop:Generator_RowChangedName="Query_HMTech_CertificationsRowChanged" msprop:Generator_RowEvArgName="Query_HMTech_CertificationsRowChangeEvent" msprop:Generator_RowClassName="Query_HMTech_CertificationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HazMat" msprop:Generator_ColumnVarNameInTable="columnHazMat" msprop:Generator_ColumnPropNameInRow="HazMat" msprop:Generator_ColumnPropNameInTable="HazMatColumn" msprop:Generator_UserColumnName="HazMat" type="xs:boolean" minOccurs="0" />
+              <xs:element name="HazMat_x0020_Level" msprop:Generator_ColumnVarNameInTable="columnHazMat_Level" msprop:Generator_ColumnPropNameInRow="HazMat_Level" msprop:Generator_ColumnPropNameInTable="HazMat_LevelColumn" msprop:Generator_UserColumnName="HazMat Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

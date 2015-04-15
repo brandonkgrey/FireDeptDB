@@ -3,8 +3,9 @@ Imports System.Data.OleDb
 Imports System.Security.Cryptography
 
 Public Class Login
-    
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + ""
+    'Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
+    'Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean

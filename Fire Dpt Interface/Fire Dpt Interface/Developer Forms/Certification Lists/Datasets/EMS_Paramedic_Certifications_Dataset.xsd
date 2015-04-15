@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EMS_Paramedic_Certifications_Dataset" targetNamespace="http://tempuri.org/EMS_Paramedic_Certifications_Dataset.xsd" xmlns:mstns="http://tempuri.org/EMS_Paramedic_Certifications_Dataset.xsd" xmlns="http://tempuri.org/EMS_Paramedic_Certifications_Dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Training_Records_for_TAMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Training_Records_for_TAMUConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fire_Dpt_Interface.My.MySettings.GlobalReference.Default.Training_Records_for_TAMUConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Query_EMS_Paramedic_CertificationsTableAdapter" GeneratorDataComponentClassName="Query_EMS_Paramedic_CertificationsTableAdapter" Name="Query_EMS_Paramedic_Certifications" UserDataComponentName="Query_EMS_Paramedic_CertificationsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Training_Records_for_TAMUConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Employee Information].Name, [Employee Information].Employee_ID, [Employee Information].[End Date], [Employee Information].[TDH ID], [EMS Certifications].[TDH Level], 
+                         [EMS Certifications].[TDH Level Expiration Date], [Employee Information].Ops
+FROM            ([Employee Information] INNER JOIN
+                         [EMS Certifications] ON [Employee Information].Employee_ID = [EMS Certifications].Employee_ID)
+WHERE        ([Employee Information].[End Date] IS NULL) AND ([EMS Certifications].[TDH Level] = 'EMT-Paramedic') AND ([Employee Information].Ops = False) OR
+                         ([Employee Information].[End Date] IS NULL) AND ([EMS Certifications].[TDH Level] = 'Licensed Paramedic')
+ORDER BY [Employee Information].Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Employee_ID" DataSetColumn="Employee_ID" />
+              <Mapping SourceColumn="End Date" DataSetColumn="End Date" />
+              <Mapping SourceColumn="TDH ID" DataSetColumn="TDH ID" />
+              <Mapping SourceColumn="TDH Level" DataSetColumn="TDH Level" />
+              <Mapping SourceColumn="TDH Level Expiration Date" DataSetColumn="TDH Level Expiration Date" />
+              <Mapping SourceColumn="Ops" DataSetColumn="Ops" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EMS_Paramedic_Certifications_Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EMS_Paramedic_Certifications_Dataset" msprop:Generator_UserDSName="EMS_Paramedic_Certifications_Dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Query_EMS_Paramedic_Certifications" msprop:Generator_TableClassName="Query_EMS_Paramedic_CertificationsDataTable" msprop:Generator_TableVarName="tableQuery_EMS_Paramedic_Certifications" msprop:Generator_TablePropName="Query_EMS_Paramedic_Certifications" msprop:Generator_RowDeletingName="Query_EMS_Paramedic_CertificationsRowDeleting" msprop:Generator_RowChangingName="Query_EMS_Paramedic_CertificationsRowChanging" msprop:Generator_RowEvHandlerName="Query_EMS_Paramedic_CertificationsRowChangeEventHandler" msprop:Generator_RowDeletedName="Query_EMS_Paramedic_CertificationsRowDeleted" msprop:Generator_UserTableName="Query_EMS_Paramedic_Certifications" msprop:Generator_RowChangedName="Query_EMS_Paramedic_CertificationsRowChanged" msprop:Generator_RowEvArgName="Query_EMS_Paramedic_CertificationsRowChangeEvent" msprop:Generator_RowClassName="Query_EMS_Paramedic_CertificationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="End_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnEnd_Date" msprop:Generator_ColumnPropNameInRow="End_Date" msprop:Generator_ColumnPropNameInTable="End_DateColumn" msprop:Generator_UserColumnName="End Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TDH_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnTDH_ID" msprop:Generator_ColumnPropNameInRow="TDH_ID" msprop:Generator_ColumnPropNameInTable="TDH_IDColumn" msprop:Generator_UserColumnName="TDH ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level" msprop:Generator_ColumnVarNameInTable="columnTDH_Level" msprop:Generator_ColumnPropNameInRow="TDH_Level" msprop:Generator_ColumnPropNameInTable="TDH_LevelColumn" msprop:Generator_UserColumnName="TDH Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_Level_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH Level Expiration Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ops" msprop:Generator_ColumnVarNameInTable="columnOps" msprop:Generator_ColumnPropNameInRow="Ops" msprop:Generator_ColumnPropNameInTable="OpsColumn" msprop:Generator_UserColumnName="Ops" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

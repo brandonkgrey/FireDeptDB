@@ -148,6 +148,7 @@ Partial Class All_Employees
         Me.ARFFCheckBox = New System.Windows.Forms.CheckBox()
         Me.LevelLabel = New System.Windows.Forms.Label()
         Me.StructuredFirefighterCheckBox = New System.Windows.Forms.CheckBox()
+        Me.FireCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.EMSCertifications = New System.Windows.Forms.TabPage()
         Me.TextBox50 = New System.Windows.Forms.TextBox()
@@ -236,23 +237,27 @@ Partial Class All_Employees
         Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Employee_InformationTableAdapter()
         Me.EmployeeSearch = New System.Windows.Forms.Label()
         Me.Employee_List = New System.Windows.Forms.ComboBox()
-        Me.EmployeeInformationBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmployeeInformationBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Emp_ListTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_ListTableAdapter()
         Me.DeleteButton = New System.Windows.Forms.Button()
-        Me.PrintButton = New System.Windows.Forms.Button()
+        Me.ReportButton = New System.Windows.Forms.Button()
+        Me.Fire_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Fire_CertificationsTableAdapter()
+        Me.QueryEmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Query_Indivual_Employee = New Fire_Dpt_Interface.Query_Indivual_Employee()
+        Me.QueryEmployeeInformationTableAdapter = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter()
+        Me.TableAdapterManager = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager()
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EmpInfo.SuspendLayout()
         Me.EmployeeInfo.SuspendLayout()
         Me.AeroOpsCheckbox.SuspendLayout()
+        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EMSCertifications.SuspendLayout()
         Me.OtherCertifications.SuspendLayout()
         Me.Assignment.SuspendLayout()
-        CType(Me.EmployeeInformationBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmployeeInformationBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QueryEmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Query_Indivual_Employee, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_RecordsDataSet
@@ -356,6 +361,7 @@ Partial Class All_Employees
         '
         'EmployeeInfo
         '
+        Me.EmployeeInfo.AutoScroll = True
         Me.EmployeeInfo.BackColor = System.Drawing.Color.Silver
         Me.EmployeeInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.EmployeeInfo.Controls.Add(Me.NonOpsCheckbox)
@@ -1518,6 +1524,7 @@ Partial Class All_Employees
         'StructuredFirefighterCheckBox
         '
         Me.StructuredFirefighterCheckBox.AutoSize = True
+        Me.StructuredFirefighterCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Structure Firefighter", True))
         Me.StructuredFirefighterCheckBox.Location = New System.Drawing.Point(15, 29)
         Me.StructuredFirefighterCheckBox.Name = "StructuredFirefighterCheckBox"
         Me.StructuredFirefighterCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1525,6 +1532,11 @@ Partial Class All_Employees
         Me.StructuredFirefighterCheckBox.TabIndex = 1
         Me.StructuredFirefighterCheckBox.Text = ":Structured Firefighter"
         Me.StructuredFirefighterCheckBox.UseVisualStyleBackColor = True
+        '
+        'FireCertificationsBindingSource
+        '
+        Me.FireCertificationsBindingSource.DataMember = "Fire Certifications"
+        Me.FireCertificationsBindingSource.DataSource = Me.Training_RecordsDataSet
         '
         'Label1
         '
@@ -2346,16 +2358,6 @@ Partial Class All_Employees
         Me.Employee_List.Size = New System.Drawing.Size(176, 21)
         Me.Employee_List.TabIndex = 52
         '
-        'EmployeeInformationBindingSource2
-        '
-        Me.EmployeeInformationBindingSource2.DataMember = "Employee Information"
-        Me.EmployeeInformationBindingSource2.DataSource = Me.Training_RecordsDataSet
-        '
-        'EmployeeInformationBindingSource1
-        '
-        Me.EmployeeInformationBindingSource1.DataMember = "Employee Information"
-        Me.EmployeeInformationBindingSource1.DataSource = Me.Training_RecordsDataSet
-        '
         'EmpListBindingSource
         '
         Me.EmpListBindingSource.DataMember = "Emp List"
@@ -2374,21 +2376,45 @@ Partial Class All_Employees
         Me.DeleteButton.Text = "Delete"
         Me.DeleteButton.UseVisualStyleBackColor = True
         '
-        'PrintButton
+        'ReportButton
         '
-        Me.PrintButton.Location = New System.Drawing.Point(769, 434)
-        Me.PrintButton.Name = "PrintButton"
-        Me.PrintButton.Size = New System.Drawing.Size(82, 25)
-        Me.PrintButton.TabIndex = 54
-        Me.PrintButton.Text = "Print"
-        Me.PrintButton.UseVisualStyleBackColor = True
+        Me.ReportButton.Location = New System.Drawing.Point(769, 434)
+        Me.ReportButton.Name = "ReportButton"
+        Me.ReportButton.Size = New System.Drawing.Size(82, 25)
+        Me.ReportButton.TabIndex = 54
+        Me.ReportButton.Text = "Report"
+        Me.ReportButton.UseVisualStyleBackColor = True
+        '
+        'Fire_CertificationsTableAdapter
+        '
+        Me.Fire_CertificationsTableAdapter.ClearBeforeFill = True
+        '
+        'QueryEmployeeInformationBindingSource
+        '
+        Me.QueryEmployeeInformationBindingSource.DataMember = "QueryEmployeeInformation"
+        Me.QueryEmployeeInformationBindingSource.DataSource = Me.Query_Indivual_Employee
+        '
+        'Query_Indivual_Employee
+        '
+        Me.Query_Indivual_Employee.DataSetName = "Query_Indivual_Employee"
+        Me.Query_Indivual_Employee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'QueryEmployeeInformationTableAdapter
+        '
+        Me.QueryEmployeeInformationTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'All_Employees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 483)
-        Me.Controls.Add(Me.PrintButton)
+        Me.Controls.Add(Me.ReportButton)
         Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(Me.Employee_List)
         Me.Controls.Add(Me.EmployeeSearch)
@@ -2410,15 +2436,16 @@ Partial Class All_Employees
         Me.EmployeeInfo.PerformLayout()
         Me.AeroOpsCheckbox.ResumeLayout(False)
         Me.AeroOpsCheckbox.PerformLayout()
+        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EMSCertifications.ResumeLayout(False)
         Me.EMSCertifications.PerformLayout()
         Me.OtherCertifications.ResumeLayout(False)
         Me.OtherCertifications.PerformLayout()
         Me.Assignment.ResumeLayout(False)
         Me.Assignment.PerformLayout()
-        CType(Me.EmployeeInformationBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmployeeInformationBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QueryEmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Query_Indivual_Employee, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2480,10 +2507,8 @@ Partial Class All_Employees
     Friend WithEvents Employee_InformationTableAdapter As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Employee_InformationTableAdapter
     Friend WithEvents EmployeeSearch As System.Windows.Forms.Label
     Friend WithEvents Employee_List As System.Windows.Forms.ComboBox
-    Friend WithEvents EmployeeInformationBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents EmpListBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Emp_ListTableAdapter As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Emp_ListTableAdapter
-    Friend WithEvents EmployeeInformationBindingSource2 As System.Windows.Forms.BindingSource
     Friend WithEvents DeleteButton As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents WildlandFireCheckBox As System.Windows.Forms.CheckBox
@@ -2561,7 +2586,7 @@ Partial Class All_Employees
     Friend WithEvents SwiftWaterCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
-    Friend WithEvents PrintButton As System.Windows.Forms.Button
+    Friend WithEvents ReportButton As System.Windows.Forms.Button
     Friend WithEvents ReceivedCertsLabel As System.Windows.Forms.Label
     Friend WithEvents TextBox50 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox51 As System.Windows.Forms.TextBox
@@ -2642,4 +2667,10 @@ Partial Class All_Employees
     Friend WithEvents CheckBox20 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox21 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox22 As System.Windows.Forms.CheckBox
+    Friend WithEvents FireCertificationsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Fire_CertificationsTableAdapter As Fire_Dpt_Interface.Training_RecordsDataSetTableAdapters.Fire_CertificationsTableAdapter
+    Friend WithEvents Query_Indivual_Employee As Fire_Dpt_Interface.Query_Indivual_Employee
+    Friend WithEvents QueryEmployeeInformationBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents QueryEmployeeInformationTableAdapter As Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter
+    Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager
 End Class

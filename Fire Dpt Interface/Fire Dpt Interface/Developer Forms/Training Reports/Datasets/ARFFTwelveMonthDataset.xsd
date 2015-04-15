@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ARFFTwelveMonthDataset" targetNamespace="http://tempuri.org/ARFFTwelveMonthDataset.xsd" xmlns:mstns="http://tempuri.org/ARFFTwelveMonthDataset.xsd" xmlns="http://tempuri.org/ARFFTwelveMonthDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Training_RecordsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Training_RecordsConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fire_Dpt_Interface.My.MySettings.GlobalReference.Default.Training_RecordsConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ARFF12MonthTableAdapter" GeneratorDataComponentClassName="ARFF12MonthTableAdapter" Name="ARFF12Month" UserDataComponentName="ARFF12MonthTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Training_RecordsConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Employee Information].Name, [Employee Information].[End Date], [Assignment Pay].ARFF, [Class Information].[Start Date], [Class Information].[FAA Subject Area], [EMS Certifications].[TDH Level], 
+                         [EMS Certifications].[TDH Level Expiration Date], [Class Information].[Class Name], [Class Information].[Class Number], [Class Information].[CE Hours]
+FROM            (([ARFF Subject Area] INNER JOIN
+                         (([Employee Information] INNER JOIN
+                         ([Class Information] INNER JOIN
+                         [Class Attendance Information] ON [Class Information].[Class Number] = [Class Attendance Information].[Class Number]) ON [Employee Information].Employee_ID = [Class Attendance Information].Employee_ID) 
+                         INNER JOIN
+                         [Assignment Pay] ON [Employee Information].Employee_ID = [Assignment Pay].Employee_ID) ON [ARFF Subject Area].ARFF = [Class Information].[FAA Subject Area]) INNER JOIN
+                         [EMS Certifications] ON [Employee Information].Employee_ID = [EMS Certifications].Employee_ID)
+WHERE        ([Employee Information].[End Date] IS NULL) AND ([Assignment Pay].ARFF = True) AND ([Class Information].[Start Date] &gt; now - 365)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="End Date" DataSetColumn="End Date" />
+              <Mapping SourceColumn="ARFF" DataSetColumn="ARFF" />
+              <Mapping SourceColumn="Start Date" DataSetColumn="Start Date" />
+              <Mapping SourceColumn="FAA Subject Area" DataSetColumn="FAA Subject Area" />
+              <Mapping SourceColumn="TDH Level" DataSetColumn="TDH Level" />
+              <Mapping SourceColumn="TDH Level Expiration Date" DataSetColumn="TDH Level Expiration Date" />
+              <Mapping SourceColumn="Class Name" DataSetColumn="Class Name" />
+              <Mapping SourceColumn="Class Number" DataSetColumn="Class Number" />
+              <Mapping SourceColumn="CE Hours" DataSetColumn="CE Hours" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ARFFTwelveMonthDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ARFFTwelveMonthDataset" msprop:Generator_UserDSName="ARFFTwelveMonthDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ARFF12Month" msprop:Generator_TableClassName="ARFF12MonthDataTable" msprop:Generator_TableVarName="tableARFF12Month" msprop:Generator_TablePropName="ARFF12Month" msprop:Generator_RowDeletingName="ARFF12MonthRowDeleting" msprop:Generator_RowChangingName="ARFF12MonthRowChanging" msprop:Generator_RowEvHandlerName="ARFF12MonthRowChangeEventHandler" msprop:Generator_RowDeletedName="ARFF12MonthRowDeleted" msprop:Generator_UserTableName="ARFF12Month" msprop:Generator_RowChangedName="ARFF12MonthRowChanged" msprop:Generator_RowEvArgName="ARFF12MonthRowChangeEvent" msprop:Generator_RowClassName="ARFF12MonthRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="End_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnEnd_Date" msprop:Generator_ColumnPropNameInRow="End_Date" msprop:Generator_ColumnPropNameInTable="End_DateColumn" msprop:Generator_UserColumnName="End Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ARFF" msprop:Generator_ColumnVarNameInTable="columnARFF" msprop:Generator_ColumnPropNameInRow="ARFF" msprop:Generator_ColumnPropNameInTable="ARFFColumn" msprop:Generator_UserColumnName="ARFF" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Start_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnStart_Date" msprop:Generator_ColumnPropNameInRow="Start_Date" msprop:Generator_ColumnPropNameInTable="Start_DateColumn" msprop:Generator_UserColumnName="Start Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FAA_x0020_Subject_x0020_Area" msprop:Generator_ColumnVarNameInTable="columnFAA_Subject_Area" msprop:Generator_ColumnPropNameInRow="FAA_Subject_Area" msprop:Generator_ColumnPropNameInTable="FAA_Subject_AreaColumn" msprop:Generator_UserColumnName="FAA Subject Area" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level" msprop:Generator_ColumnVarNameInTable="columnTDH_Level" msprop:Generator_ColumnPropNameInRow="TDH_Level" msprop:Generator_ColumnPropNameInTable="TDH_LevelColumn" msprop:Generator_UserColumnName="TDH Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_Level_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH Level Expiration Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Class_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnClass_Name" msprop:Generator_ColumnPropNameInRow="Class_Name" msprop:Generator_ColumnPropNameInTable="Class_NameColumn" msprop:Generator_UserColumnName="Class Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Class_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnClass_Number" msprop:Generator_ColumnPropNameInRow="Class_Number" msprop:Generator_ColumnPropNameInTable="Class_NumberColumn" msprop:Generator_UserColumnName="Class Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CE_x0020_Hours" msprop:Generator_ColumnVarNameInTable="columnCE_Hours" msprop:Generator_ColumnPropNameInRow="CE_Hours" msprop:Generator_ColumnPropNameInTable="CE_HoursColumn" msprop:Generator_UserColumnName="CE Hours" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

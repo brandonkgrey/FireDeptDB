@@ -86,6 +86,18 @@ Namespace My
                 Return CType(Me("ExampleDBConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""C:\Users\Alejandro\Desktop\Fire De"& _ 
+            "partment DB\new\Training Records for TAMU.accdb"";Persist Security Info=True;Jet "& _ 
+            "OLEDB:Database Password=fdtrain")>  _
+        Public ReadOnly Property Training_Records_for_TAMUConnectionString() As String
+            Get
+                Return CType(Me("Training_Records_for_TAMUConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
