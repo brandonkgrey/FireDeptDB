@@ -124,6 +124,72 @@ Partial Class Developer_Class_Information
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.CourseContent = New System.Windows.Forms.TabPage()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.TextBox38 = New System.Windows.Forms.TextBox()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.StudentInfo = New System.Windows.Forms.TabPage()
         Me.PrintButton = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
@@ -141,20 +207,11 @@ Partial Class Developer_Class_Information
         Me.Class_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Class_InformationTableAdapter()
         Me.ClassInformationClassAttendanceInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Class_Attendance_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Class_Attendance_InformationTableAdapter()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.CheckBox23 = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Training_Records_EncryptedDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassInfoTabControl.SuspendLayout()
@@ -168,9 +225,11 @@ Partial Class Developer_Class_Information
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.CourseContent.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassInformationClassAttendanceInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox8.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -1413,6 +1472,9 @@ Partial Class Developer_Class_Information
         'CourseContent
         '
         Me.CourseContent.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CourseContent.Controls.Add(Me.CheckBox23)
+        Me.CourseContent.Controls.Add(Me.GroupBox10)
+        Me.CourseContent.Controls.Add(Me.GroupBox9)
         Me.CourseContent.Controls.Add(Me.Label25)
         Me.CourseContent.Controls.Add(Me.ComboBox7)
         Me.CourseContent.Controls.Add(Me.CheckBox22)
@@ -1425,6 +1487,685 @@ Partial Class Developer_Class_Information
         Me.CourseContent.Size = New System.Drawing.Size(1297, 299)
         Me.CourseContent.TabIndex = 2
         Me.CourseContent.Text = "Course Content"
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.Button2)
+        Me.GroupBox10.Controls.Add(Me.Button1)
+        Me.GroupBox10.Controls.Add(Me.Label74)
+        Me.GroupBox10.Controls.Add(Me.Label73)
+        Me.GroupBox10.Controls.Add(Me.Label71)
+        Me.GroupBox10.Controls.Add(Me.Label72)
+        Me.GroupBox10.Controls.Add(Me.TextBox37)
+        Me.GroupBox10.Controls.Add(Me.TextBox38)
+        Me.GroupBox10.Controls.Add(Me.Label63)
+        Me.GroupBox10.Controls.Add(Me.Label64)
+        Me.GroupBox10.Controls.Add(Me.Label65)
+        Me.GroupBox10.Controls.Add(Me.Label66)
+        Me.GroupBox10.Controls.Add(Me.Label67)
+        Me.GroupBox10.Controls.Add(Me.Label68)
+        Me.GroupBox10.Controls.Add(Me.Label69)
+        Me.GroupBox10.Controls.Add(Me.Label70)
+        Me.GroupBox10.Controls.Add(Me.TextBox31)
+        Me.GroupBox10.Controls.Add(Me.TextBox32)
+        Me.GroupBox10.Controls.Add(Me.TextBox33)
+        Me.GroupBox10.Controls.Add(Me.TextBox34)
+        Me.GroupBox10.Controls.Add(Me.TextBox35)
+        Me.GroupBox10.Controls.Add(Me.TextBox36)
+        Me.GroupBox10.Controls.Add(Me.Label62)
+        Me.GroupBox10.Controls.Add(Me.ComboBox9)
+        Me.GroupBox10.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox10.Location = New System.Drawing.Point(748, 3)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(508, 245)
+        Me.GroupBox10.TabIndex = 67
+        Me.GroupBox10.TabStop = False
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(262, 162)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(62, 13)
+        Me.Label71.TabIndex = 66
+        Me.Label71.Text = "Pediatrics"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Location = New System.Drawing.Point(262, 135)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(114, 13)
+        Me.Label72.TabIndex = 65
+        Me.Label72.Text = "Clinical Operations"
+        '
+        'TextBox37
+        '
+        Me.TextBox37.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Pediatrics", True))
+        Me.TextBox37.Location = New System.Drawing.Point(421, 158)
+        Me.TextBox37.Name = "TextBox37"
+        Me.TextBox37.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox37.TabIndex = 64
+        '
+        'TextBox38
+        '
+        Me.TextBox38.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Clinical Operations", True))
+        Me.TextBox38.Location = New System.Drawing.Point(421, 131)
+        Me.TextBox38.Name = "TextBox38"
+        Me.TextBox38.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox38.TabIndex = 63
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label63.ForeColor = System.Drawing.Color.White
+        Me.Label63.Location = New System.Drawing.Point(178, 60)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(78, 12)
+        Me.Label63.TabIndex = 62
+        Me.Label63.Text = "Content Hours"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label64.ForeColor = System.Drawing.Color.White
+        Me.Label64.Location = New System.Drawing.Point(21, 60)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(86, 12)
+        Me.Label64.TabIndex = 61
+        Me.Label64.Text = "Content Area(s)"
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.Location = New System.Drawing.Point(262, 107)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(137, 13)
+        Me.Label65.TabIndex = 60
+        Me.Label65.Text = "Special Considerations"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.Location = New System.Drawing.Point(21, 165)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(49, 13)
+        Me.Label66.TabIndex = 59
+        Me.Label66.Text = "Medical"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.Location = New System.Drawing.Point(262, 80)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(51, 13)
+        Me.Label67.TabIndex = 58
+        Me.Label67.Text = "Trauma"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label68.Location = New System.Drawing.Point(21, 138)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(118, 13)
+        Me.Label68.TabIndex = 57
+        Me.Label68.Text = "Patient Assessment"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Location = New System.Drawing.Point(21, 111)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(111, 13)
+        Me.Label69.TabIndex = 56
+        Me.Label69.Text = "Airway/Ventilation"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(21, 83)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(75, 13)
+        Me.Label70.TabIndex = 55
+        Me.Label70.Text = "Preparatory"
+        '
+        'TextBox31
+        '
+        Me.TextBox31.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Special Considerations", True))
+        Me.TextBox31.Location = New System.Drawing.Point(421, 103)
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox31.TabIndex = 54
+        '
+        'TextBox32
+        '
+        Me.TextBox32.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Trauma", True))
+        Me.TextBox32.Location = New System.Drawing.Point(421, 76)
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox32.TabIndex = 53
+        '
+        'TextBox33
+        '
+        Me.TextBox33.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Medical", True))
+        Me.TextBox33.Location = New System.Drawing.Point(189, 157)
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox33.TabIndex = 52
+        '
+        'TextBox34
+        '
+        Me.TextBox34.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Patient Assessment", True))
+        Me.TextBox34.Location = New System.Drawing.Point(189, 130)
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox34.TabIndex = 51
+        '
+        'TextBox35
+        '
+        Me.TextBox35.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Airway Mgmt/Vent", True))
+        Me.TextBox35.Location = New System.Drawing.Point(189, 103)
+        Me.TextBox35.Name = "TextBox35"
+        Me.TextBox35.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox35.TabIndex = 50
+        '
+        'TextBox36
+        '
+        Me.TextBox36.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Preparatory", True))
+        Me.TextBox36.Location = New System.Drawing.Point(189, 76)
+        Me.TextBox36.Name = "TextBox36"
+        Me.TextBox36.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox36.TabIndex = 49
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(18, 20)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(109, 13)
+        Me.Label62.TabIndex = 48
+        Me.Label62.Text = "EMS Subject Area"
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "EMS Subject Area", True))
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Location = New System.Drawing.Point(18, 36)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(229, 21)
+        Me.ComboBox9.TabIndex = 47
+        '
+        'GroupBox9
+        '
+        Me.GroupBox9.Controls.Add(Me.Label60)
+        Me.GroupBox9.Controls.Add(Me.Label59)
+        Me.GroupBox9.Controls.Add(Me.Label61)
+        Me.GroupBox9.Controls.Add(Me.Label58)
+        Me.GroupBox9.Controls.Add(Me.Label57)
+        Me.GroupBox9.Controls.Add(Me.Label56)
+        Me.GroupBox9.Controls.Add(Me.Label55)
+        Me.GroupBox9.Controls.Add(Me.Label54)
+        Me.GroupBox9.Controls.Add(Me.Label53)
+        Me.GroupBox9.Controls.Add(Me.Label52)
+        Me.GroupBox9.Controls.Add(Me.Label51)
+        Me.GroupBox9.Controls.Add(Me.Label50)
+        Me.GroupBox9.Controls.Add(Me.Label49)
+        Me.GroupBox9.Controls.Add(Me.Label30)
+        Me.GroupBox9.Controls.Add(Me.Label29)
+        Me.GroupBox9.Controls.Add(Me.Label28)
+        Me.GroupBox9.Controls.Add(Me.TextBox30)
+        Me.GroupBox9.Controls.Add(Me.TextBox29)
+        Me.GroupBox9.Controls.Add(Me.TextBox28)
+        Me.GroupBox9.Controls.Add(Me.TextBox27)
+        Me.GroupBox9.Controls.Add(Me.TextBox26)
+        Me.GroupBox9.Controls.Add(Me.TextBox25)
+        Me.GroupBox9.Controls.Add(Me.TextBox24)
+        Me.GroupBox9.Controls.Add(Me.TextBox23)
+        Me.GroupBox9.Controls.Add(Me.TextBox22)
+        Me.GroupBox9.Controls.Add(Me.TextBox12)
+        Me.GroupBox9.Controls.Add(Me.TextBox11)
+        Me.GroupBox9.Controls.Add(Me.TextBox10)
+        Me.GroupBox9.Controls.Add(Me.Label26)
+        Me.GroupBox9.Controls.Add(Me.ComboBox8)
+        Me.GroupBox9.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox9.Location = New System.Drawing.Point(261, 3)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(461, 245)
+        Me.GroupBox9.TabIndex = 46
+        Me.GroupBox9.TabStop = False
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.ForeColor = System.Drawing.Color.White
+        Me.Label60.Location = New System.Drawing.Point(246, 57)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(86, 12)
+        Me.Label60.TabIndex = 45
+        Me.Label60.Text = "Content Area(s)"
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.ForeColor = System.Drawing.Color.White
+        Me.Label59.Location = New System.Drawing.Point(365, 58)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(78, 12)
+        Me.Label59.TabIndex = 44
+        Me.Label59.Text = "Content Hours"
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.ForeColor = System.Drawing.Color.White
+        Me.Label61.Location = New System.Drawing.Point(152, 59)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(78, 12)
+        Me.Label61.TabIndex = 43
+        Me.Label61.Text = "Content Hours"
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.ForeColor = System.Drawing.Color.White
+        Me.Label58.Location = New System.Drawing.Point(16, 57)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(86, 12)
+        Me.Label58.TabIndex = 40
+        Me.Label58.Text = "Content Area(s)"
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label57.Location = New System.Drawing.Point(245, 216)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(86, 13)
+        Me.Label57.TabIndex = 39
+        Me.Label57.Text = "Head of Dept."
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Location = New System.Drawing.Point(245, 189)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(63, 13)
+        Me.Label56.TabIndex = 38
+        Me.Label56.Text = "Instructor"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(245, 164)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(44, 13)
+        Me.Label55.TabIndex = 37
+        Me.Label55.Text = "Safety"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.Location = New System.Drawing.Point(245, 135)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(55, 13)
+        Me.Label54.TabIndex = 36
+        Me.Label54.Text = "Wildland"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(245, 108)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(76, 13)
+        Me.Label53.TabIndex = 35
+        Me.Label53.Text = "Investigator"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(245, 81)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(67, 13)
+        Me.Label52.TabIndex = 34
+        Me.Label52.Text = "Inspectors"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(16, 216)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(48, 13)
+        Me.Label51.TabIndex = 33
+        Me.Label51.Text = "Rescue"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(16, 162)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(48, 13)
+        Me.Label50.TabIndex = 32
+        Me.Label50.Text = "HazMat"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(16, 189)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(35, 13)
+        Me.Label49.TabIndex = 31
+        Me.Label49.Text = "ARFF"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(16, 135)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(70, 13)
+        Me.Label30.TabIndex = 30
+        Me.Label30.Text = "Fire Officer"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(16, 108)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(99, 13)
+        Me.Label29.TabIndex = 29
+        Me.Label29.Text = "Driver/Operator"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(16, 80)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(125, 13)
+        Me.Label28.TabIndex = 28
+        Me.Label28.Text = "Structural Firefighter"
+        '
+        'TextBox30
+        '
+        Me.TextBox30.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Head of Department Hours", True))
+        Me.TextBox30.Location = New System.Drawing.Point(376, 209)
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox30.TabIndex = 27
+        '
+        'TextBox29
+        '
+        Me.TextBox29.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Instructor Hours", True))
+        Me.TextBox29.Location = New System.Drawing.Point(376, 182)
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox29.TabIndex = 26
+        '
+        'TextBox28
+        '
+        Me.TextBox28.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Safety Hours", True))
+        Me.TextBox28.Location = New System.Drawing.Point(376, 155)
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox28.TabIndex = 25
+        '
+        'TextBox27
+        '
+        Me.TextBox27.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Wildland Hours", True))
+        Me.TextBox27.Location = New System.Drawing.Point(376, 128)
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox27.TabIndex = 24
+        '
+        'TextBox26
+        '
+        Me.TextBox26.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Investigator Hours", True))
+        Me.TextBox26.Location = New System.Drawing.Point(376, 101)
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox26.TabIndex = 23
+        '
+        'TextBox25
+        '
+        Me.TextBox25.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Inspector Hours", True))
+        Me.TextBox25.Location = New System.Drawing.Point(376, 74)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox25.TabIndex = 22
+        '
+        'TextBox24
+        '
+        Me.TextBox24.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Rescue Hours", True))
+        Me.TextBox24.Location = New System.Drawing.Point(163, 210)
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox24.TabIndex = 21
+        '
+        'TextBox23
+        '
+        Me.TextBox23.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "ARFF Hours", True))
+        Me.TextBox23.Location = New System.Drawing.Point(163, 183)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox23.TabIndex = 20
+        '
+        'TextBox22
+        '
+        Me.TextBox22.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "HazMat Hours", True))
+        Me.TextBox22.Location = New System.Drawing.Point(163, 156)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox22.TabIndex = 19
+        '
+        'TextBox12
+        '
+        Me.TextBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Fire Officer Hours", True))
+        Me.TextBox12.Location = New System.Drawing.Point(163, 129)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox12.TabIndex = 18
+        '
+        'TextBox11
+        '
+        Me.TextBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Driver Hours", True))
+        Me.TextBox11.Location = New System.Drawing.Point(163, 102)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox11.TabIndex = 17
+        '
+        'TextBox10
+        '
+        Me.TextBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Structural FF Hours", True))
+        Me.TextBox10.Location = New System.Drawing.Point(163, 75)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(58, 21)
+        Me.TextBox10.TabIndex = 16
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(13, 17)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(114, 13)
+        Me.Label26.TabIndex = 15
+        Me.Label26.Text = "TFCP Subject Area"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "TCFP Subject Area", True))
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(16, 33)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(229, 21)
+        Me.ComboBox8.TabIndex = 14
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(74, 258)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(35, 13)
+        Me.Label25.TabIndex = 13
+        Me.Label25.Text = "Type"
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Drill Type", True))
+        Me.ComboBox7.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(115, 255)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox7.TabIndex = 12
+        '
+        'CheckBox22
+        '
+        Me.CheckBox22.AutoSize = True
+        Me.CheckBox22.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Drill", True))
+        Me.CheckBox22.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox22.Location = New System.Drawing.Point(28, 257)
+        Me.CheckBox22.Name = "CheckBox22"
+        Me.CheckBox22.Size = New System.Drawing.Size(49, 17)
+        Me.CheckBox22.TabIndex = 11
+        Me.CheckBox22.Text = "Drill"
+        Me.CheckBox22.UseVisualStyleBackColor = True
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.Label24)
+        Me.GroupBox8.Controls.Add(Me.Label23)
+        Me.GroupBox8.Controls.Add(Me.Label22)
+        Me.GroupBox8.Controls.Add(Me.Label21)
+        Me.GroupBox8.Controls.Add(Me.ComboBox6)
+        Me.GroupBox8.Controls.Add(Me.ComboBox5)
+        Me.GroupBox8.Controls.Add(Me.ComboBox4)
+        Me.GroupBox8.Controls.Add(Me.ComboBox3)
+        Me.GroupBox8.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox8.Location = New System.Drawing.Point(10, 3)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(223, 191)
+        Me.GroupBox8.TabIndex = 8
+        Me.GroupBox8.TabStop = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(15, 140)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(37, 13)
+        Me.Label24.TabIndex = 7
+        Me.Label24.Text = "NIMS"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(15, 100)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(138, 13)
+        Me.Label23.TabIndex = 6
+        Me.Label23.Text = "TCLEOSE Subject Area"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(15, 57)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(107, 13)
+        Me.Label22.TabIndex = 5
+        Me.Label22.Text = "FAA Subject Area"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(15, 17)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(126, 13)
+        Me.Label21.TabIndex = 4
+        Me.Label21.Text = "HazMat Subject Area"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "TCLEOSE Subject Area", True))
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(18, 116)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(182, 21)
+        Me.ComboBox6.TabIndex = 3
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "NIMS", True))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(18, 156)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(182, 21)
+        Me.ComboBox5.TabIndex = 2
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "FAA Subject Area", True))
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(18, 73)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(182, 21)
+        Me.ComboBox4.TabIndex = 1
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "HM Subject Area", True))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(18, 33)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(182, 21)
+        Me.ComboBox3.TabIndex = 0
+        '
+        'CheckBox21
+        '
+        Me.CheckBox21.AutoSize = True
+        Me.CheckBox21.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Night", True))
+        Me.CheckBox21.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox21.Location = New System.Drawing.Point(28, 234)
+        Me.CheckBox21.Name = "CheckBox21"
+        Me.CheckBox21.Size = New System.Drawing.Size(86, 17)
+        Me.CheckBox21.TabIndex = 10
+        Me.CheckBox21.Text = "Night Burn"
+        Me.CheckBox21.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        Me.CheckBox20.AutoSize = True
+        Me.CheckBox20.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Live Fire Training", True))
+        Me.CheckBox20.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox20.Location = New System.Drawing.Point(28, 211)
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.Size = New System.Drawing.Size(124, 17)
+        Me.CheckBox20.TabIndex = 9
+        Me.CheckBox20.Text = "Live Fire Training"
+        Me.CheckBox20.UseVisualStyleBackColor = True
         '
         'StudentInfo
         '
@@ -1579,136 +2320,57 @@ Partial Class Developer_Class_Information
         '
         Me.Class_Attendance_InformationTableAdapter.ClearBeforeFill = True
         '
-        'ComboBox3
+        'Label73
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(18, 33)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox3.TabIndex = 0
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.Color.White
+        Me.Label73.Location = New System.Drawing.Point(414, 61)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(78, 12)
+        Me.Label73.TabIndex = 67
+        Me.Label73.Text = "Content Hours"
         '
-        'ComboBox4
+        'Label74
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(18, 73)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox4.TabIndex = 1
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.ForeColor = System.Drawing.Color.White
+        Me.Label74.Location = New System.Drawing.Point(262, 61)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(86, 12)
+        Me.Label74.TabIndex = 68
+        Me.Label74.Text = "Content Area(s)"
         '
-        'ComboBox5
+        'CheckBox23
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(18, 156)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox5.TabIndex = 2
+        Me.CheckBox23.AutoSize = True
+        Me.CheckBox23.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "CTT ISO Credit", True))
+        Me.CheckBox23.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox23.Location = New System.Drawing.Point(28, 279)
+        Me.CheckBox23.Name = "CheckBox23"
+        Me.CheckBox23.Size = New System.Drawing.Size(114, 17)
+        Me.CheckBox23.TabIndex = 68
+        Me.CheckBox23.Text = "ISO CTT Credit"
+        Me.CheckBox23.UseVisualStyleBackColor = True
         '
-        'ComboBox6
+        'Button1
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(18, 116)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox6.TabIndex = 3
+        Me.Button1.Location = New System.Drawing.Point(150, 192)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(97, 37)
+        Me.Button1.TabIndex = 69
+        Me.Button1.Text = "Course Hour Breakdown"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label21
+        'Button2
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(15, 17)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(142, 13)
-        Me.Label21.TabIndex = 4
-        Me.Label21.Text = "HazMat Subject Area"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(15, 57)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(121, 13)
-        Me.Label22.TabIndex = 5
-        Me.Label22.Text = "FAA Subject Area"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(15, 100)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(151, 13)
-        Me.Label23.TabIndex = 6
-        Me.Label23.Text = "TCLEOSE Subject Area"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(15, 140)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(40, 13)
-        Me.Label24.TabIndex = 7
-        Me.Label24.Text = "NIMS"
-        '
-        'GroupBox8
-        '
-        Me.GroupBox8.Controls.Add(Me.Label24)
-        Me.GroupBox8.Controls.Add(Me.Label23)
-        Me.GroupBox8.Controls.Add(Me.Label22)
-        Me.GroupBox8.Controls.Add(Me.Label21)
-        Me.GroupBox8.Controls.Add(Me.ComboBox6)
-        Me.GroupBox8.Controls.Add(Me.ComboBox5)
-        Me.GroupBox8.Controls.Add(Me.ComboBox4)
-        Me.GroupBox8.Controls.Add(Me.ComboBox3)
-        Me.GroupBox8.Location = New System.Drawing.Point(10, 3)
-        Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(223, 191)
-        Me.GroupBox8.TabIndex = 8
-        Me.GroupBox8.TabStop = False
-        '
-        'CheckBox20
-        '
-        Me.CheckBox20.AutoSize = True
-        Me.CheckBox20.Location = New System.Drawing.Point(28, 230)
-        Me.CheckBox20.Name = "CheckBox20"
-        Me.CheckBox20.Size = New System.Drawing.Size(141, 17)
-        Me.CheckBox20.TabIndex = 9
-        Me.CheckBox20.Text = "Live Fire Training"
-        Me.CheckBox20.UseVisualStyleBackColor = True
-        '
-        'CheckBox21
-        '
-        Me.CheckBox21.AutoSize = True
-        Me.CheckBox21.Location = New System.Drawing.Point(28, 253)
-        Me.CheckBox21.Name = "CheckBox21"
-        Me.CheckBox21.Size = New System.Drawing.Size(94, 17)
-        Me.CheckBox21.TabIndex = 10
-        Me.CheckBox21.Text = "Night Burn"
-        Me.CheckBox21.UseVisualStyleBackColor = True
-        '
-        'CheckBox22
-        '
-        Me.CheckBox22.AutoSize = True
-        Me.CheckBox22.Location = New System.Drawing.Point(218, 230)
-        Me.CheckBox22.Name = "CheckBox22"
-        Me.CheckBox22.Size = New System.Drawing.Size(53, 17)
-        Me.CheckBox22.TabIndex = 11
-        Me.CheckBox22.Text = "Drill"
-        Me.CheckBox22.UseVisualStyleBackColor = True
-        '
-        'ComboBox7
-        '
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(291, 251)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox7.TabIndex = 12
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(215, 254)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(70, 13)
-        Me.Label25.TabIndex = 13
-        Me.Label25.Text = "Drill Type"
+        Me.Button2.Location = New System.Drawing.Point(265, 192)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(97, 37)
+        Me.Button2.TabIndex = 70
+        Me.Button2.Text = "Content Areas"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Developer_Class_Information
         '
@@ -1763,10 +2425,14 @@ Partial Class Developer_Class_Information
         Me.GroupBox4.PerformLayout()
         Me.CourseContent.ResumeLayout(False)
         Me.CourseContent.PerformLayout()
-        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClassInformationClassAttendanceInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
+        Me.GroupBox9.ResumeLayout(False)
+        Me.GroupBox9.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClassInformationClassAttendanceInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1903,4 +2569,61 @@ Partial Class Developer_Class_Information
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox21 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox20 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label63 As System.Windows.Forms.Label
+    Friend WithEvents Label64 As System.Windows.Forms.Label
+    Friend WithEvents Label65 As System.Windows.Forms.Label
+    Friend WithEvents Label66 As System.Windows.Forms.Label
+    Friend WithEvents Label67 As System.Windows.Forms.Label
+    Friend WithEvents Label68 As System.Windows.Forms.Label
+    Friend WithEvents Label69 As System.Windows.Forms.Label
+    Friend WithEvents Label70 As System.Windows.Forms.Label
+    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
+    Friend WithEvents Label62 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
+    Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label60 As System.Windows.Forms.Label
+    Friend WithEvents Label59 As System.Windows.Forms.Label
+    Friend WithEvents Label61 As System.Windows.Forms.Label
+    Friend WithEvents Label58 As System.Windows.Forms.Label
+    Friend WithEvents Label57 As System.Windows.Forms.Label
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents Label55 As System.Windows.Forms.Label
+    Friend WithEvents Label54 As System.Windows.Forms.Label
+    Friend WithEvents Label53 As System.Windows.Forms.Label
+    Friend WithEvents Label52 As System.Windows.Forms.Label
+    Friend WithEvents Label51 As System.Windows.Forms.Label
+    Friend WithEvents Label50 As System.Windows.Forms.Label
+    Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox28 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox23 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox22 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label71 As System.Windows.Forms.Label
+    Friend WithEvents Label72 As System.Windows.Forms.Label
+    Friend WithEvents TextBox37 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox38 As System.Windows.Forms.TextBox
+    Friend WithEvents CheckBox23 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label74 As System.Windows.Forms.Label
+    Friend WithEvents Label73 As System.Windows.Forms.Label
 End Class

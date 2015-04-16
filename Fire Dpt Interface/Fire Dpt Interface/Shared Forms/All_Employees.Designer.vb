@@ -1429,8 +1429,9 @@ Partial Class All_Employees
         '
         'ComboBox8
         '
-        Me.ComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "TCFP Wildland FF Level", True))
+        Me.ComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Wildland FF Level", True))
         Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox8.Location = New System.Drawing.Point(196, 324)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(90, 21)
@@ -1438,8 +1439,9 @@ Partial Class All_Employees
         '
         'ComboBox7
         '
-        Me.ComboBox7.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "HazMat Level", True))
+        Me.ComboBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat Level", True))
         Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"Awareness", "Operations", "Technician", "Specialist"})
         Me.ComboBox7.Location = New System.Drawing.Point(196, 189)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(90, 21)
@@ -1447,8 +1449,9 @@ Partial Class All_Employees
         '
         'ComboBox4
         '
-        Me.ComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "Fire Inspector Level", True))
+        Me.ComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "Fire Inspector Level", True))
         Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox4.Location = New System.Drawing.Point(196, 166)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(90, 21)
@@ -1457,7 +1460,9 @@ Partial Class All_Employees
         'ComboBox5
         '
         Me.ComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "FCOI Level", True))
+        Me.ComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FCOI Level", True))
         Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox5.Location = New System.Drawing.Point(196, 141)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(90, 21)
@@ -1465,8 +1470,9 @@ Partial Class All_Employees
         '
         'ComboBox6
         '
-        Me.ComboBox6.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "FAI Level", True))
+        Me.ComboBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FAI Level", True))
         Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox6.Location = New System.Drawing.Point(196, 116)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(90, 21)
@@ -1474,8 +1480,9 @@ Partial Class All_Employees
         '
         'ComboBox3
         '
-        Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "FI Level", True))
+        Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FI Level", True))
         Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"I", "II", "III", "IV", "Basic", "Intermediate", "Advanced", "Master", "Grandfather"})
         Me.ComboBox3.Location = New System.Drawing.Point(196, 73)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(90, 21)
@@ -1483,8 +1490,9 @@ Partial Class All_Employees
         '
         'ComboBox2
         '
-        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FireCertificationsBindingSource, "ARFF Level", True))
+        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ARFF Level", True))
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox2.Location = New System.Drawing.Point(196, 52)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(90, 21)
@@ -1493,9 +1501,8 @@ Partial Class All_Employees
         'ComboBox1
         '
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SF Level", True))
-        Me.ComboBox1.DataSource = Me.FireCertificationsBindingSource
-        Me.ComboBox1.DisplayMember = "SF Level"
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox1.Location = New System.Drawing.Point(196, 31)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(90, 21)
@@ -2280,6 +2287,7 @@ Partial Class All_Employees
         '
         Me.ComboBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "Rescue Level", True))
         Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox13.Location = New System.Drawing.Point(217, 119)
         Me.ComboBox13.Name = "ComboBox13"
         Me.ComboBox13.Size = New System.Drawing.Size(194, 21)
@@ -2305,6 +2313,7 @@ Partial Class All_Employees
         '
         Me.ComboBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA I Level", True))
         Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox12.Location = New System.Drawing.Point(217, 92)
         Me.ComboBox12.Name = "ComboBox12"
         Me.ComboBox12.Size = New System.Drawing.Size(194, 21)
@@ -2330,6 +2339,7 @@ Partial Class All_Employees
         '
         Me.ComboBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA Level", True))
         Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox11.Location = New System.Drawing.Point(217, 65)
         Me.ComboBox11.Name = "ComboBox11"
         Me.ComboBox11.Size = New System.Drawing.Size(194, 21)
@@ -2355,6 +2365,7 @@ Partial Class All_Employees
         '
         Me.ComboBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "TCLEOSE Level", True))
         Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox10.Location = New System.Drawing.Point(217, 38)
         Me.ComboBox10.Name = "ComboBox10"
         Me.ComboBox10.Size = New System.Drawing.Size(194, 21)

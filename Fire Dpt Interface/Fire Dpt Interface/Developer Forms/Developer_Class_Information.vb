@@ -35,11 +35,17 @@
     End Sub
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
-
+        ClassInformationBindingSource.RemoveCurrent()
+        MessageBox.Show("Deletion Complete!")
     End Sub
 
     Private Sub Save_Button_Click(sender As Object, e As EventArgs) Handles Save_Button.Click
-
+        On Error GoTo SaveErr
+        ClassInformationBindingSource.EndEdit()
+        Class_InformationTableAdapter.Update(Training_Records_EncryptedDataSet.Class_Information)
+        MessageBox.Show("Your modifications were saved!")
+SaveErr:
+        Exit Sub
     End Sub
 
     Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles PrintButton.Click
@@ -52,18 +58,6 @@
         DevForm.Show()
         DevForm = Nothing
         Me.Close()
-    End Sub
-
-    Private Sub Label16_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label29_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub MultiJurCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles MultiJurCheckbox.CheckedChanged
-
     End Sub
 
 End Class
