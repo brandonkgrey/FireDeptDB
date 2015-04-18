@@ -46,10 +46,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -70,11 +73,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator Forms\AdministratorForm.Designer.vb">
+    <Compile Include="Adminstrator Forms\AdministratorForm.Designer.vb">
       <DependentUpon>AdministratorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrator Forms\AdministratorForm.vb">
+    <Compile Include="Adminstrator Forms\AdministratorForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CE_ARFF_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.vb">
+      <DependentUpon>CE_ARFF_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Datasets\CE_EMS_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CE_EMS_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Datasets\CE_Fire_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CE_Fire_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_Fire_Report_View.Designer.vb">
+      <DependentUpon>CE_Fire_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_Fire_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_Safety_Report_View.Designer.vb">
+      <DependentUpon>CE_Safety_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_Safety_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_EMS_Report_View.Designer.vb">
+      <DependentUpon>CE_EMS_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_EMS_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\All_EMS_Cert_Datasetxsd.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>All_EMS_Cert_Datasetxsd.xsd</DependentUpon>
     </Compile>
     <Compile Include="Basic Forms\BasicForm.Designer.vb">
       <DependentUpon>BasicForm.vb</DependentUpon>
@@ -82,22 +126,123 @@
     <Compile Include="Basic Forms\BasicForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Class_Information.Designer.vb">
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_ARFF_CE_Report.Designer.vb">
+      <DependentUpon>Dev_ARFF_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_ARFF_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_EMS_CE_Report.Designer.vb">
+      <DependentUpon>Dev_EMS_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_EMS_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_Safety_CE_Report.Designer.vb">
+      <DependentUpon>Dev_Safety_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_Safety_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_ARFF_Report_View.Designer.vb">
+      <DependentUpon>CE_ARFF_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Report Views\CE_ARFF_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Main\Dev_Certification_Lists.Designer.vb">
+      <DependentUpon>Dev_Certification_Lists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Main\Dev_Certification_Lists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Developer_CE_Reports.Designer.vb">
+      <DependentUpon>Developer_CE_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Developer_CE_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMS_All_Certifications_View.Designer.vb">
+      <DependentUpon>EMS_All_Certifications_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMS_All_Certifications_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMTB_Report_View.Designer.vb">
+      <DependentUpon>EMTB_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMTB_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMTI_Report_View.Designer.vb">
+      <DependentUpon>EMTI_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMTI_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMS_Paramedic_Certificates_Report_View.Designer.vb">
+      <DependentUpon>EMS_Paramedic_Certificates_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\EMS_Paramedic_Certificates_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_HMIC_Certifications_Report_View.Designer.vb">
+      <DependentUpon>TCFP_HMIC_Certifications_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_HMIC_Certifications_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_HMTech_Certifications_Report_View.Designer.vb">
+      <DependentUpon>TCFP_HMTech_Certifications_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_HMTech_Certifications_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_Instructor_Certifications_Report_View.Designer.vb">
+      <DependentUpon>TCFP_Instructor_Certifications_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_Instructor_Certifications_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_Wildlife_Certifications_View.Designer.vb">
+      <DependentUpon>TCFP_Wildlife_Certifications_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_Wildlife_Certifications_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Class Information\Menus\Developer_Class_Information.Designer.vb">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Class_Information.vb">
+    <Compile Include="Developer Forms\Class Information\Menus\Developer_Class_Information.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.Designer.vb">
+    <Compile Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.Designer.vb">
+      <DependentUpon>Class_Information_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.Designer.vb">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Developer_Employee_Access.vb">
+    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\DeveloperForm.Designer.vb">
+    <Compile Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.Designer.vb">
+      <DependentUpon>Indivdual_Employee_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Main\DeveloperForm.Designer.vb">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\DeveloperForm.vb">
+    <Compile Include="Developer Forms\Main\DeveloperForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Basic Forms\Basic_Info_View.Designer.vb">
@@ -106,33 +251,166 @@
     <Compile Include="Basic Forms\Basic_Info_View.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Databases and Datasets\ExampleDBDataSet.Designer.vb">
+    <Compile Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.Designer.vb">
+      <DependentUpon>Dev_EMS_Certifications_Expirations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\ARFF_Training_Report_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARFF_Training_Report_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\EMS_Training_Report_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMS_Training_Report_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\Fire_Training_Report_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fire_Training_Report_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\HazMat_Training_Report_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HazMat_Training_Report_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\Training_Reports_Safety_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Training_Reports_Safety_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Developer_Training_Reports.Designer.vb">
+      <DependentUpon>Developer_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Developer_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_Fire_CE_Reports.Designer.vb">
+      <DependentUpon>Dev_Fire_CE_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_Fire_CE_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_HazMat_CE_Report.Designer.vb">
+      <DependentUpon>Dev_HazMat_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_HazMat_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_TCFP_CE_Report.Designer.vb">
+      <DependentUpon>Dev_TCFP_CE_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\CE Reports\Menus\Dev_TCFP_CE_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\ARFF_12_Month_Training_Report_View.Designer.vb">
+      <DependentUpon>ARFF_12_Month_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\ARFF_12_Month_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_ARFF_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_ARFF_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_ARFF_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_EMS_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_EMS_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_EMS_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Fire_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Fire_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Fire_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_HazMat_All_Techs_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_HazMat_All_Techs_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_HazMat_All_Techs_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_HazMat_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_HazMat_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_HazMat_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Other_Courses_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Other_Courses_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Other_Courses_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Safety_Training_Reports.Designer.vb">
+      <DependentUpon>Dev_Safety_Training_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Menus\Dev_Safety_Training_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\ARFF_Training_Report_View.Designer.vb">
+      <DependentUpon>ARFF_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\ARFF_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\EMS_Training_Report_View.Designer.vb">
+      <DependentUpon>EMS_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\EMS_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\Fire_Training_Report_View.Designer.vb">
+      <DependentUpon>Fire_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\Fire_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\HazMat_Training_Report_View.Designer.vb">
+      <DependentUpon>HazMat_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\HazMat_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\Safety_Training_Report_View.Designer.vb">
+      <DependentUpon>Safety_Training_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Report Views\Safety_Training_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\ARFFTwelveMonthDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARFFTwelveMonthDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Training Reports\Datasets\ARFFTwelveMonthDataset.vb">
+      <DependentUpon>ARFFTwelveMonthDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\EMS_Paramedic_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMS_Paramedic_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\EMTB_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMTB_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\EMTI_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMTI_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Databases and Datasets\ExampleDBDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Login Forms\GeneralPasswordReset.Designer.vb">
-      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login Forms\GeneralPasswordReset.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login Forms\GeneralPasswordResetPart2.Designer.vb">
-      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login Forms\GeneralPasswordResetPart2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login Forms\InitialPasswordReset.Designer.vb">
-      <DependentUpon>InitialPasswordReset.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login Forms\InitialPasswordReset.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
@@ -155,45 +433,202 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.vb">
+      <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Supervisor Forms\SupervisorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Databases and Datasets\Training_RecordsDataSet.Designer.vb">
+    <Compile Include="Developer Forms\Certification Lists\Datasets\TCFP_HMIC_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCFP_HMIC_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\TCFP_HMTech_Certifications.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCFP_HMTech_Certifications.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\TCFP_Instructor_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCFP_Instructor_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\TCFP_Instructor_Certifications_Dataset.vb">
+      <DependentUpon>TCFP_Instructor_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Training_RecordsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Training_Records_for_TAMUDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Training_Records_for_TAMUDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Administrator Forms\AdministratorForm.resx">
+    <EmbeddedResource Include="Adminstrator Forms\AdministratorForm.resx">
       <DependentUpon>AdministratorForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\BasicForm.resx">
       <DependentUpon>BasicForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Class_Information.resx">
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_ARFF_CE_Report.resx">
+      <DependentUpon>Dev_ARFF_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_EMS_CE_Report.resx">
+      <DependentUpon>Dev_EMS_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_Fire_CE_Reports.resx">
+      <DependentUpon>Dev_Fire_CE_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_HazMat_CE_Report.resx">
+      <DependentUpon>Dev_HazMat_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_TCFP_CE_Report.resx">
+      <DependentUpon>Dev_TCFP_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_Safety_CE_Report.resx">
+      <DependentUpon>Dev_Safety_CE_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Report Views\CE_ARFF_Report_View.resx">
+      <DependentUpon>CE_ARFF_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Report Views\CE_EMS_Report_View.resx">
+      <DependentUpon>CE_EMS_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Report Views\CE_Fire_Report_View.resx">
+      <DependentUpon>CE_Fire_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Report Views\CE_Safety_Report_View.resx">
+      <DependentUpon>CE_Safety_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Reports\Fire_CE_Individual_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\CE Reports\Reports\ARFF_CE_Individual_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\CE Reports\Reports\EMS_CE_Individual_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Main\Dev_Certification_Lists.resx">
+      <DependentUpon>Dev_Certification_Lists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Developer_CE_Reports.resx">
+      <DependentUpon>Developer_CE_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\EMS_All_Certifications_View.resx">
+      <DependentUpon>EMS_All_Certifications_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\EMTB_Report_View.resx">
+      <DependentUpon>EMTB_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\EMTB_Certificates_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\All_EMS_Certifications_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\EMTI_Report_View.resx">
+      <DependentUpon>EMTI_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\EMTI_Certifications_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\EMS_Paramedic_Certificates_Report_View.resx">
+      <DependentUpon>EMS_Paramedic_Certificates_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\EMS_Paramedic_Certifications_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\TCFP_HMTech_Certification_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\TCFP_HMIC_Certification_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\TCFP_HMIC_Certifications_Report_View.resx">
+      <DependentUpon>TCFP_HMIC_Certifications_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\TCFP_HMTech_Certifications_Report_View.resx">
+      <DependentUpon>TCFP_HMTech_Certifications_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\TCFP_Instructor_Certifications_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\TCFP_Instructor_Certifications_Report_View.resx">
+      <DependentUpon>TCFP_Instructor_Certifications_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Reports\TCFP_Wildlife_Certifications_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\TCFP_Wildlife_Certifications_View.resx">
+      <DependentUpon>TCFP_Wildlife_Certifications_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Class Information\Menus\Developer_Class_Information.resx">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Developer_Employee_Access.resx">
+    <EmbeddedResource Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.resx">
+      <DependentUpon>Class_Information_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Class Information\Reports\Class_Information_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.resx">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\DeveloperForm.resx">
+    <EmbeddedResource Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.resx">
+      <DependentUpon>Indivdual_Employee_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Employee Information\Reports\Employee_Inidividual_Information_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Main\DeveloperForm.resx">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\Basic_Info_View.resx">
       <DependentUpon>Basic_Info_View.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Forms\GeneralPasswordReset.resx">
-      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Developer_Training_Reports.resx">
+      <DependentUpon>Developer_Training_Reports.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Forms\GeneralPasswordResetPart2.resx">
-      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
+    <EmbeddedResource Include="Developer Forms\EMS Certification Expiration\Dev_EMS_Certifications_Expirations.resx">
+      <DependentUpon>Dev_EMS_Certifications_Expirations.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Forms\InitialPasswordReset.resx">
-      <DependentUpon>InitialPasswordReset.vb</DependentUpon>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\ARFF_12_Month_Training_Report_View.resx">
+      <DependentUpon>ARFF_12_Month_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_ARFF_Training_Reports.resx">
+      <DependentUpon>Dev_ARFF_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_EMS_Training_Reports.resx">
+      <DependentUpon>Dev_EMS_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_Fire_Training_Reports.resx">
+      <DependentUpon>Dev_Fire_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_HazMat_All_Techs_Training_Reports.resx">
+      <DependentUpon>Dev_HazMat_All_Techs_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_HazMat_Training_Reports.resx">
+      <DependentUpon>Dev_HazMat_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_Other_Courses_Training_Reports.resx">
+      <DependentUpon>Dev_Other_Courses_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Menus\Dev_Safety_Training_Reports.resx">
+      <DependentUpon>Dev_Safety_Training_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\ARFF_Training_Report_View.resx">
+      <DependentUpon>ARFF_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\EMS_Training_Report_View.resx">
+      <DependentUpon>EMS_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\Fire_Training_Report_View.resx">
+      <DependentUpon>Fire_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\HazMat_Training_Report_View.resx">
+      <DependentUpon>HazMat_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\Fire_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\HM_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\ARFF_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\ARFF_12_Month_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\EMS_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Reports\Safety_Training_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\Safety_Training_Report_View.resx">
+      <DependentUpon>Safety_Training_Report_View.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -209,29 +644,172 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.xsc">
+      <DependentUpon>CE_ARFF_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CE_ARFF_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.xss">
+      <DependentUpon>CE_ARFF_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_EMS_Dataset.xsc">
+      <DependentUpon>CE_EMS_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_EMS_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CE_EMS_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_EMS_Dataset.xss">
+      <DependentUpon>CE_EMS_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_Fire_Dataset.xsc">
+      <DependentUpon>CE_Fire_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_Fire_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CE_Fire_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\CE Reports\Datasets\CE_Fire_Dataset.xss">
+      <DependentUpon>CE_Fire_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\All_EMS_Cert_Datasetxsd.xsc">
+      <DependentUpon>All_EMS_Cert_Datasetxsd.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\All_EMS_Cert_Datasetxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>All_EMS_Cert_Datasetxsd.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\All_EMS_Cert_Datasetxsd.xss">
+      <DependentUpon>All_EMS_Cert_Datasetxsd.xsd</DependentUpon>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
-    <None Include="Databases and Datasets\ExampleDBDataSet.xsc">
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xsc">
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassInformation_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xss">
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFF_Training_Report_Dataset.xsc">
+      <DependentUpon>ARFF_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFF_Training_Report_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARFF_Training_Report_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFF_Training_Report_Dataset.xss">
+      <DependentUpon>ARFF_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\EMS_Training_Report_Dataset.xsc">
+      <DependentUpon>EMS_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\EMS_Training_Report_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMS_Training_Report_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\EMS_Training_Report_Dataset.xss">
+      <DependentUpon>EMS_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Fire_Training_Report_Dataset.xsc">
+      <DependentUpon>Fire_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Fire_Training_Report_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fire_Training_Report_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Fire_Training_Report_Dataset.xss">
+      <DependentUpon>Fire_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\HazMat_Training_Report_Dataset.xsc">
+      <DependentUpon>HazMat_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\HazMat_Training_Report_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HazMat_Training_Report_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\HazMat_Training_Report_Dataset.xss">
+      <DependentUpon>HazMat_Training_Report_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Training_Reports_Safety_Dataset.xsc">
+      <DependentUpon>Training_Reports_Safety_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Training_Reports_Safety_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Training_Reports_Safety_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\Training_Reports_Safety_Dataset.xss">
+      <DependentUpon>Training_Reports_Safety_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFFTwelveMonthDataset.xsc">
+      <DependentUpon>ARFFTwelveMonthDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFFTwelveMonthDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARFFTwelveMonthDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Training Reports\Datasets\ARFFTwelveMonthDataset.xss">
+      <DependentUpon>ARFFTwelveMonthDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMS_Paramedic_Certifications_Dataset.xsc">
+      <DependentUpon>EMS_Paramedic_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMS_Paramedic_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMS_Paramedic_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMS_Paramedic_Certifications_Dataset.xss">
+      <DependentUpon>EMS_Paramedic_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTB_Certifications_Dataset.xsc">
+      <DependentUpon>EMTB_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTB_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMTB_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTB_Certifications_Dataset.xss">
+      <DependentUpon>EMTB_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTI_Certifications_Dataset.xsc">
+      <DependentUpon>EMTI_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTI_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMTI_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\EMTI_Certifications_Dataset.xss">
+      <DependentUpon>EMTI_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="ExampleDBDataSet.xsc">
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Databases and Datasets\ExampleDBDataSet.xsd">
+    <None Include="ExampleDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ExampleDBDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Databases and Datasets\ExampleDBDataSet.xss">
+    <None Include="ExampleDBDataSet.xss">
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Databases and Datasets\ExampleDBDataSet1.xsc">
-      <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Databases and Datasets\ExampleDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ExampleDBDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Databases and Datasets\ExampleDBDataSet1.xss">
-      <DependentUpon>ExampleDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -243,23 +821,132 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xsc">
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xsc">
+      <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Query_Indivual_Employee.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xss">
+      <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMIC_Certifications_Dataset.xsc">
+      <DependentUpon>TCFP_HMIC_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMIC_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCFP_HMIC_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMIC_Certifications_Dataset.xss">
+      <DependentUpon>TCFP_HMIC_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMTech_Certifications.xsc">
+      <DependentUpon>TCFP_HMTech_Certifications.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMTech_Certifications.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCFP_HMTech_Certifications.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMTech_Certifications.xss">
+      <DependentUpon>TCFP_HMTech_Certifications.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Instructor_Certifications_Dataset.xsc">
+      <DependentUpon>TCFP_Instructor_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Instructor_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCFP_Instructor_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Instructor_Certifications_Dataset.xss">
+      <DependentUpon>TCFP_Instructor_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.xsc">
+      <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCFP_Wildlife_Certifications_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.xss">
+      <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Training_RecordsDataSet.xsc">
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xsd">
+    <None Include="Training_RecordsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Training_RecordsDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Databases and Datasets\Training_RecordsDataSet.xss">
+    <None Include="Training_RecordsDataSet.xss">
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Training_Records_for_TAMUDataSet.xsc">
+      <DependentUpon>Training_Records_for_TAMUDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Training_Records_for_TAMUDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Training_Records_for_TAMUDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Training_Records_for_TAMUDataSet.xss">
+      <DependentUpon>Training_Records_for_TAMUDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Databases and Datasets\ExampleDB.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <COMReference Include="ADODB">
+      <Guid>{00000205-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access">
+      <Guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

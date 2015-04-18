@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EMTI_Certifications_Dataset" targetNamespace="http://tempuri.org/EMTI_Certifications_Dataset.xsd" xmlns:mstns="http://tempuri.org/EMTI_Certifications_Dataset.xsd" xmlns="http://tempuri.org/EMTI_Certifications_Dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Training_Records_for_TAMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Training_Records_for_TAMUConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fire_Dpt_Interface.My.MySettings.GlobalReference.Default.Training_Records_for_TAMUConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Query_EMTI_CertTableAdapter" GeneratorDataComponentClassName="Query_EMTI_CertTableAdapter" Name="Query_EMTI_Cert" UserDataComponentName="Query_EMTI_CertTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Training_Records_for_TAMUConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Employee Information].Name, [Employee Information].Employee_ID, [Employee Information].SSN, [Employee Information].[TDH ID], [EMS Certifications].[TDH Level], 
+                         [EMS Certifications].[TDH Level Expiration Date], [EMS Certifications].[TDH Instructor], [EMS Certifications].[TDH Instructor Expiration Date], [EMS Certifications].[TDH Coordinator], 
+                         [EMS Certifications].[TDH C Expiration Date]
+FROM            ([Employee Information] INNER JOIN
+                         [EMS Certifications] ON [Employee Information].Employee_ID = [EMS Certifications].Employee_ID)
+WHERE        ([EMS Certifications].[TDH Level] = 'EMT-Intermediate') AND ([Employee Information].[End Date] IS NULL) AND ([Employee Information].Ops = False)
+ORDER BY [Employee Information].Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Employee_ID" DataSetColumn="Employee_ID" />
+              <Mapping SourceColumn="SSN" DataSetColumn="SSN" />
+              <Mapping SourceColumn="TDH ID" DataSetColumn="TDH ID" />
+              <Mapping SourceColumn="TDH Level" DataSetColumn="TDH Level" />
+              <Mapping SourceColumn="TDH Level Expiration Date" DataSetColumn="TDH Level Expiration Date" />
+              <Mapping SourceColumn="TDH Instructor" DataSetColumn="TDH Instructor" />
+              <Mapping SourceColumn="TDH Instructor Expiration Date" DataSetColumn="TDH Instructor Expiration Date" />
+              <Mapping SourceColumn="TDH Coordinator" DataSetColumn="TDH Coordinator" />
+              <Mapping SourceColumn="TDH C Expiration Date" DataSetColumn="TDH C Expiration Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EMTI_Certifications_Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EMTI_Certifications_Dataset" msprop:Generator_UserDSName="EMTI_Certifications_Dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Query_EMTI_Cert" msprop:Generator_TableClassName="Query_EMTI_CertDataTable" msprop:Generator_TableVarName="tableQuery_EMTI_Cert" msprop:Generator_TablePropName="Query_EMTI_Cert" msprop:Generator_RowDeletingName="Query_EMTI_CertRowDeleting" msprop:Generator_RowChangingName="Query_EMTI_CertRowChanging" msprop:Generator_RowEvHandlerName="Query_EMTI_CertRowChangeEventHandler" msprop:Generator_RowDeletedName="Query_EMTI_CertRowDeleted" msprop:Generator_UserTableName="Query_EMTI_Cert" msprop:Generator_RowChangedName="Query_EMTI_CertRowChanged" msprop:Generator_RowEvArgName="Query_EMTI_CertRowChangeEvent" msprop:Generator_RowClassName="Query_EMTI_CertRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="SSN" msprop:Generator_ColumnVarNameInTable="columnSSN" msprop:Generator_ColumnPropNameInRow="SSN" msprop:Generator_ColumnPropNameInTable="SSNColumn" msprop:Generator_UserColumnName="SSN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnTDH_ID" msprop:Generator_ColumnPropNameInRow="TDH_ID" msprop:Generator_ColumnPropNameInTable="TDH_IDColumn" msprop:Generator_UserColumnName="TDH ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level" msprop:Generator_ColumnVarNameInTable="columnTDH_Level" msprop:Generator_ColumnPropNameInRow="TDH_Level" msprop:Generator_ColumnPropNameInTable="TDH_LevelColumn" msprop:Generator_UserColumnName="TDH Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_Level_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH Level Expiration Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TDH_x0020_Instructor" msprop:Generator_ColumnVarNameInTable="columnTDH_Instructor" msprop:Generator_ColumnPropNameInRow="TDH_Instructor" msprop:Generator_ColumnPropNameInTable="TDH_InstructorColumn" msprop:Generator_UserColumnName="TDH Instructor" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TDH_x0020_Instructor_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_Instructor_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_Instructor_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_Instructor_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH Instructor Expiration Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TDH_x0020_Coordinator" msprop:Generator_ColumnVarNameInTable="columnTDH_Coordinator" msprop:Generator_ColumnPropNameInRow="TDH_Coordinator" msprop:Generator_ColumnPropNameInTable="TDH_CoordinatorColumn" msprop:Generator_UserColumnName="TDH Coordinator" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TDH_x0020_C_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_C_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_C_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_C_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH C Expiration Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

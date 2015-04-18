@@ -28,7 +28,7 @@ Partial Class SupervisorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 357)
+        Me.ClientSize = New System.Drawing.Size(993, 572)
         Me.Name = "SupervisorForm"
         Me.Text = "SupervisorForm"
         Me.ResumeLayout(False)
