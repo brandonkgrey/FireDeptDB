@@ -80,7 +80,7 @@ Partial Class AdministratorForm
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
         Me.Button6.TabIndex = 21
-        Me.Button6.Text = "Employee Information"
+        Me.Button6.Text = "Training Reports"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'CEReportsAFButton
@@ -123,7 +123,7 @@ Partial Class AdministratorForm
         Me.EMSCertsAFButton.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EMSCertsAFButton.Location = New System.Drawing.Point(326, 224)
         Me.EMSCertsAFButton.Name = "EMSCertsAFButton"
-        Me.EMSCertsAFButton.Size = New System.Drawing.Size(103, 46)
+        Me.EMSCertsAFButton.Size = New System.Drawing.Size(103, 67)
         Me.EMSCertsAFButton.TabIndex = 18
         Me.EMSCertsAFButton.Text = "EMS Certification Expiration"
         Me.EMSCertsAFButton.UseVisualStyleBackColor = True
@@ -152,7 +152,7 @@ Partial Class AdministratorForm
         Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogOut_Button.ForeColor = System.Drawing.Color.Red
-        Me.LogOut_Button.Location = New System.Drawing.Point(326, 293)
+        Me.LogOut_Button.Location = New System.Drawing.Point(326, 297)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 16

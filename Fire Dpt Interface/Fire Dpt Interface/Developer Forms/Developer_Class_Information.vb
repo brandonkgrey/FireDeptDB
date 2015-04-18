@@ -1,5 +1,7 @@
 ﻿Public Class Developer_Class_Information
 
+    Dim AuthLvl
+
     Private Sub Developer_Class_Information_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Training_Records_EncryptedDataSet.Class_Attendance_Information' table. You can move, or remove it, as needed.
         Me.Class_Attendance_InformationTableAdapter.Fill(Me.Training_Records_EncryptedDataSet.Class_Attendance_Information)
@@ -8,23 +10,9 @@
         'TODO: This line of code loads data into the 'Training_Records_EncryptedDataSet.Employee_Information' table. You can move, or remove it, as needed.
         Me.Employee_InformationTableAdapter.Fill(Me.Training_Records_EncryptedDataSet.Employee_Information)
 
-    End Sub
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub TCFP_PIN_Label_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub EndDateLabel_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub EndDate_Textbox_TextChanged(sender As Object, e As EventArgs)
-
+        AuthLvl = Login.Authorization_LVL
     End Sub
 
-    Private Sub ClassSearchbyName_Click(sender As Object, e As EventArgs) Handles ClassSearchbyName.Click
-
-    End Sub
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click
         ClassInformationBindingSource.MovePrevious()
@@ -53,11 +41,18 @@ SaveErr:
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        Dim DevForm As DeveloperForm
-        DevForm = New DeveloperForm()
-        DevForm.Show()
-        DevForm = Nothing
-        Me.Close()
+        If AuthLvl = 4 Then
+            Dim DevForm As DeveloperForm
+            DevForm = New DeveloperForm()
+            DevForm.Show()
+            DevForm = Nothing
+            Me.Close()
+        ElseIf AuthLvl = 3 Then
+            Dim AdminForm As AdministratorForm = New AdministratorForm()
+            AdminForm.Show()
+            AdminForm = Nothing
+            Me.Close()
+        End If
     End Sub
 
 End Class

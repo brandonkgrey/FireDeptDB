@@ -43,10 +43,13 @@ Partial Class Developer_Class_Information
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox25 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox24 = New System.Windows.Forms.CheckBox()
+        Me.TextBox39 = New System.Windows.Forms.TextBox()
         Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -124,7 +127,12 @@ Partial Class Developer_Class_Information
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.CourseContent = New System.Windows.Forms.TabPage()
+        Me.CheckBox23 = New System.Windows.Forms.CheckBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
         Me.Label71 = New System.Windows.Forms.Label()
         Me.Label72 = New System.Windows.Forms.Label()
         Me.TextBox37 = New System.Windows.Forms.TextBox()
@@ -202,22 +210,17 @@ Partial Class Developer_Class_Information
         Me.ClassSearchbyNumber = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Employee_InformationTableAdapter()
         Me.Class_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Class_InformationTableAdapter()
         Me.ClassInformationClassAttendanceInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Class_Attendance_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_EncryptedDataSetTableAdapters.Class_Attendance_InformationTableAdapter()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.CheckBox23 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Training_Records_EncryptedDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassInfoTabControl.SuspendLayout()
         Me.ClassInfo.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TrainingInfo.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -228,7 +231,6 @@ Partial Class Developer_Class_Information
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassInformationClassAttendanceInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -397,6 +399,7 @@ Partial Class Developer_Class_Information
         Me.GroupBox3.Controls.Add(Me.RadioButton1)
         Me.GroupBox3.Controls.Add(Me.RadioButton2)
         Me.GroupBox3.Controls.Add(Me.Label45)
+        Me.GroupBox3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(8, 156)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
@@ -409,11 +412,11 @@ Partial Class Developer_Class_Information
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.ClassInformationBindingSource, "Fire Credit", True))
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton1.Location = New System.Drawing.Point(105, 40)
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(53, 20)
+        Me.RadioButton1.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton1.TabIndex = 105
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Fire"
@@ -423,11 +426,11 @@ Partial Class Developer_Class_Information
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.ClassInformationBindingSource, "EMS Credit", True))
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton2.Location = New System.Drawing.Point(20, 40)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(58, 20)
+        Me.RadioButton2.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton2.TabIndex = 104
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "EMS"
@@ -436,31 +439,67 @@ Partial Class Developer_Class_Information
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.Location = New System.Drawing.Point(8, 17)
         Me.Label45.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(126, 16)
+        Me.Label45.Size = New System.Drawing.Size(118, 13)
         Me.Label45.TabIndex = 88
         Me.Label45.Text = "Type of Training:"
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.CheckBox25)
+        Me.GroupBox2.Controls.Add(Me.CheckBox24)
+        Me.GroupBox2.Controls.Add(Me.TextBox39)
         Me.GroupBox2.Controls.Add(Me.ComboBox10)
-        Me.GroupBox2.Controls.Add(Me.ComboBox11)
         Me.GroupBox2.Controls.Add(Me.ComboBox12)
         Me.GroupBox2.Controls.Add(Me.ComboBox13)
         Me.GroupBox2.Controls.Add(Me.Label27)
         Me.GroupBox2.Controls.Add(Me.Label31)
         Me.GroupBox2.Controls.Add(Me.Label32)
         Me.GroupBox2.Controls.Add(Me.Label46)
+        Me.GroupBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(204, 156)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox2.Size = New System.Drawing.Size(916, 72)
+        Me.GroupBox2.Size = New System.Drawing.Size(1085, 72)
         Me.GroupBox2.TabIndex = 125
         Me.GroupBox2.TabStop = False
+        '
+        'CheckBox25
+        '
+        Me.CheckBox25.AutoSize = True
+        Me.CheckBox25.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Credit", True))
+        Me.CheckBox25.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox25.Location = New System.Drawing.Point(938, 42)
+        Me.CheckBox25.Name = "CheckBox25"
+        Me.CheckBox25.Size = New System.Drawing.Size(65, 17)
+        Me.CheckBox25.TabIndex = 117
+        Me.CheckBox25.Text = "Credit"
+        Me.CheckBox25.UseVisualStyleBackColor = True
+        '
+        'CheckBox24
+        '
+        Me.CheckBox24.AutoSize = True
+        Me.CheckBox24.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "QI", True))
+        Me.CheckBox24.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox24.Location = New System.Drawing.Point(938, 20)
+        Me.CheckBox24.Name = "CheckBox24"
+        Me.CheckBox24.Size = New System.Drawing.Size(43, 17)
+        Me.CheckBox24.TabIndex = 116
+        Me.CheckBox24.Text = "QC"
+        Me.CheckBox24.UseVisualStyleBackColor = True
+        '
+        'TextBox39
+        '
+        Me.TextBox39.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Date Entered", True))
+        Me.TextBox39.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox39.Location = New System.Drawing.Point(213, 35)
+        Me.TextBox39.Name = "TextBox39"
+        Me.TextBox39.Size = New System.Drawing.Size(195, 21)
+        Me.TextBox39.TabIndex = 115
         '
         'ComboBox10
         '
@@ -468,6 +507,7 @@ Partial Class Developer_Class_Information
         Me.ComboBox10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Approval Number", True))
         Me.ComboBox10.DisplayMember = "Name"
+        Me.ComboBox10.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.Location = New System.Drawing.Point(213, 12)
         Me.ComboBox10.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -475,26 +515,15 @@ Partial Class Developer_Class_Information
         Me.ComboBox10.Size = New System.Drawing.Size(195, 21)
         Me.ComboBox10.TabIndex = 114
         '
-        'ComboBox11
-        '
-        Me.ComboBox11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ComboBox11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Date Entered", True))
-        Me.ComboBox11.DisplayMember = "Name"
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Location = New System.Drawing.Point(213, 37)
-        Me.ComboBox11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(195, 21)
-        Me.ComboBox11.TabIndex = 113
-        '
         'ComboBox12
         '
         Me.ComboBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Paperwork Filed", True))
         Me.ComboBox12.DisplayMember = "Name"
+        Me.ComboBox12.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"Yes", "No"})
         Me.ComboBox12.Location = New System.Drawing.Point(692, 12)
         Me.ComboBox12.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox12.Name = "ComboBox12"
@@ -506,7 +535,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Entered By", True))
+        Me.ComboBox13.DataSource = Me.EmployeeInformationBindingSource
         Me.ComboBox13.DisplayMember = "Name"
+        Me.ComboBox13.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox13.FormattingEnabled = True
         Me.ComboBox13.Location = New System.Drawing.Point(692, 40)
         Me.ComboBox13.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -514,47 +545,52 @@ Partial Class Developer_Class_Information
         Me.ComboBox13.Size = New System.Drawing.Size(195, 21)
         Me.ComboBox13.TabIndex = 111
         '
+        'EmployeeInformationBindingSource
+        '
+        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_EncryptedDataSet
+        '
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(12, 40)
         Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(103, 16)
+        Me.Label27.Size = New System.Drawing.Size(96, 13)
         Me.Label27.TabIndex = 103
         Me.Label27.Text = "Date Entered:"
         '
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.Location = New System.Drawing.Point(511, 17)
         Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(125, 16)
+        Me.Label31.Size = New System.Drawing.Size(117, 13)
         Me.Label31.TabIndex = 102
         Me.Label31.Text = "Paperwork Filed:"
         '
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(511, 40)
         Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(88, 16)
+        Me.Label32.Size = New System.Drawing.Size(82, 13)
         Me.Label32.TabIndex = 101
         Me.Label32.Text = "Entered By:"
         '
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.Location = New System.Drawing.Point(12, 15)
         Me.Label46.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(133, 16)
+        Me.Label46.Size = New System.Drawing.Size(125, 13)
         Me.Label46.TabIndex = 87
         Me.Label46.Text = "Approval Number:"
         '
@@ -588,6 +624,7 @@ Partial Class Developer_Class_Information
         Me.GroupBox1.Controls.Add(Me.Label44)
         Me.GroupBox1.Controls.Add(Me.Label47)
         Me.GroupBox1.Controls.Add(Me.Label48)
+        Me.GroupBox1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(9, 8)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
@@ -599,6 +636,7 @@ Partial Class Developer_Class_Information
         'TextBox13
         '
         Me.TextBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Location", True))
+        Me.TextBox13.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox13.Location = New System.Drawing.Point(169, 16)
         Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox13.Name = "TextBox13"
@@ -608,6 +646,7 @@ Partial Class Developer_Class_Information
         'TextBox14
         '
         Me.TextBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Number of Students", True))
+        Me.TextBox14.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox14.Location = New System.Drawing.Point(1133, 44)
         Me.TextBox14.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox14.Name = "TextBox14"
@@ -617,6 +656,7 @@ Partial Class Developer_Class_Information
         'TextBox15
         '
         Me.TextBox15.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Contact Hours", True))
+        Me.TextBox15.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox15.Location = New System.Drawing.Point(1133, 68)
         Me.TextBox15.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox15.Name = "TextBox15"
@@ -626,6 +666,7 @@ Partial Class Developer_Class_Information
         'TextBox16
         '
         Me.TextBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Number of Days", True))
+        Me.TextBox16.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox16.Location = New System.Drawing.Point(787, 45)
         Me.TextBox16.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox16.Name = "TextBox16"
@@ -635,6 +676,7 @@ Partial Class Developer_Class_Information
         'TextBox17
         '
         Me.TextBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "CE Hours", True))
+        Me.TextBox17.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox17.Location = New System.Drawing.Point(787, 70)
         Me.TextBox17.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox17.Name = "TextBox17"
@@ -644,6 +686,7 @@ Partial Class Developer_Class_Information
         'TextBox18
         '
         Me.TextBox18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Start Time", True))
+        Me.TextBox18.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox18.Location = New System.Drawing.Point(443, 44)
         Me.TextBox18.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox18.Name = "TextBox18"
@@ -653,6 +696,7 @@ Partial Class Developer_Class_Information
         'TextBox19
         '
         Me.TextBox19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "End Time", True))
+        Me.TextBox19.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox19.Location = New System.Drawing.Point(443, 70)
         Me.TextBox19.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox19.Name = "TextBox19"
@@ -662,6 +706,7 @@ Partial Class Developer_Class_Information
         'TextBox20
         '
         Me.TextBox20.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "End Date", True))
+        Me.TextBox20.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox20.Location = New System.Drawing.Point(119, 72)
         Me.TextBox20.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox20.Name = "TextBox20"
@@ -671,6 +716,7 @@ Partial Class Developer_Class_Information
         'TextBox21
         '
         Me.TextBox21.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Start Date", True))
+        Me.TextBox21.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox21.Location = New System.Drawing.Point(119, 46)
         Me.TextBox21.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox21.Name = "TextBox21"
@@ -683,7 +729,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Shift", True))
         Me.ComboBox14.DisplayMember = "Name"
+        Me.ComboBox14.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"A", "B", "C", "FA"})
         Me.ComboBox14.Location = New System.Drawing.Point(1133, 20)
         Me.ComboBox14.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox14.Name = "ComboBox14"
@@ -696,7 +744,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox15.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox15.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Inhouse", True))
         Me.ComboBox15.DisplayMember = "Name"
+        Me.ComboBox15.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Items.AddRange(New Object() {"Yes", "No"})
         Me.ComboBox15.Location = New System.Drawing.Point(787, 20)
         Me.ComboBox15.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox15.Name = "ComboBox15"
@@ -708,7 +758,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox16.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboBox16.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Officer in Charge", True))
+        Me.ComboBox16.DataSource = Me.EmployeeInformationBindingSource
         Me.ComboBox16.DisplayMember = "Name"
+        Me.ComboBox16.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox16.FormattingEnabled = True
         Me.ComboBox16.Location = New System.Drawing.Point(971, 106)
         Me.ComboBox16.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -721,7 +773,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboBox17.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Host", True))
+        Me.ComboBox17.DataSource = Me.EmployeeInformationBindingSource
         Me.ComboBox17.DisplayMember = "Name"
+        Me.ComboBox17.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox17.FormattingEnabled = True
         Me.ComboBox17.Location = New System.Drawing.Point(121, 106)
         Me.ComboBox17.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -734,7 +788,9 @@ Partial Class Developer_Class_Information
         Me.ComboBox18.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboBox18.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Lead Instructor", True))
+        Me.ComboBox18.DataSource = Me.EmployeeInformationBindingSource
         Me.ComboBox18.DisplayMember = "Name"
+        Me.ComboBox18.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox18.FormattingEnabled = True
         Me.ComboBox18.Location = New System.Drawing.Point(544, 106)
         Me.ComboBox18.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -745,11 +801,11 @@ Partial Class Developer_Class_Information
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(615, 20)
         Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(66, 16)
+        Me.Label33.Size = New System.Drawing.Size(64, 13)
         Me.Label33.TabIndex = 100
         Me.Label33.Text = "Inhouse:"
         '
@@ -767,55 +823,55 @@ Partial Class Developer_Class_Information
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.Location = New System.Drawing.Point(9, 48)
         Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(81, 16)
+        Me.Label35.Size = New System.Drawing.Size(77, 13)
         Me.Label35.TabIndex = 98
         Me.Label35.Text = "Start Date:"
         '
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(9, 72)
         Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(76, 16)
+        Me.Label36.Size = New System.Drawing.Size(69, 13)
         Me.Label36.TabIndex = 97
         Me.Label36.Text = "End Date:"
         '
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.Location = New System.Drawing.Point(324, 72)
         Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(82, 16)
+        Me.Label37.Size = New System.Drawing.Size(75, 13)
         Me.Label37.TabIndex = 96
         Me.Label37.Text = "End Time: "
         '
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.Location = New System.Drawing.Point(615, 49)
         Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(123, 16)
+        Me.Label38.Size = New System.Drawing.Size(115, 13)
         Me.Label38.TabIndex = 95
         Me.Label38.Text = "Number of Days:"
         '
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.Location = New System.Drawing.Point(615, 73)
         Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(77, 16)
+        Me.Label39.Size = New System.Drawing.Size(69, 13)
         Me.Label39.TabIndex = 94
         Me.Label39.Text = "CE Hours:"
         '
@@ -844,55 +900,55 @@ Partial Class Developer_Class_Information
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.Location = New System.Drawing.Point(9, 109)
         Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(87, 16)
+        Me.Label42.Size = New System.Drawing.Size(78, 13)
         Me.Label42.TabIndex = 91
         Me.Label42.Text = "Class Host:"
         '
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.Location = New System.Drawing.Point(384, 107)
         Me.Label43.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(114, 16)
+        Me.Label43.Size = New System.Drawing.Size(112, 13)
         Me.Label43.TabIndex = 90
         Me.Label43.Text = "Lead Instructor:"
         '
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label44.Location = New System.Drawing.Point(792, 109)
         Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(133, 16)
+        Me.Label44.Size = New System.Drawing.Size(129, 13)
         Me.Label44.TabIndex = 89
         Me.Label44.Text = "Officer-in-Charge: "
         '
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.Location = New System.Drawing.Point(324, 48)
         Me.Label47.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(83, 16)
+        Me.Label47.Size = New System.Drawing.Size(79, 13)
         Me.Label47.TabIndex = 86
         Me.Label47.Text = "Start Time:"
         '
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.Location = New System.Drawing.Point(9, 17)
         Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(114, 16)
+        Me.Label48.Size = New System.Drawing.Size(104, 13)
         Me.Label48.TabIndex = 85
         Me.Label48.Text = "Class Location:"
         '
@@ -1103,6 +1159,7 @@ Partial Class Developer_Class_Information
         Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "PDG", True))
         Me.ComboBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"EVOC Ambulance", "Courage to be Safe", "EVOC Pumper", "Driver/Operator - Pumper", "EMS NFIRS Basic", "Vehicle Extication", "ICS 100", "ICS 200", "NFIRS 5.0", "Supervisory Academy - Short", "Aerial Overview", "Supervisory Academy - Long", "Fire Instructor I", "Fire Officer I", "Fire Officer II", "Management Academy", "Fire Cause for CO", "ICS 300", "ICS 400", "Leadership Institute"})
         Me.ComboBox2.Location = New System.Drawing.Point(115, 39)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox2.Name = "ComboBox2"
@@ -1114,6 +1171,7 @@ Partial Class Developer_Class_Information
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Track", True))
         Me.ComboBox1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Level 1 | Continuing Education", "Level 2 | New Training"})
         Me.ComboBox1.Location = New System.Drawing.Point(115, 13)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox1.Name = "ComboBox1"
@@ -1488,6 +1546,18 @@ Partial Class Developer_Class_Information
         Me.CourseContent.TabIndex = 2
         Me.CourseContent.Text = "Course Content"
         '
+        'CheckBox23
+        '
+        Me.CheckBox23.AutoSize = True
+        Me.CheckBox23.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "CTT ISO Credit", True))
+        Me.CheckBox23.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox23.Location = New System.Drawing.Point(28, 279)
+        Me.CheckBox23.Name = "CheckBox23"
+        Me.CheckBox23.Size = New System.Drawing.Size(114, 17)
+        Me.CheckBox23.TabIndex = 68
+        Me.CheckBox23.Text = "ISO CTT Credit"
+        Me.CheckBox23.UseVisualStyleBackColor = True
+        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.Button2)
@@ -1520,6 +1590,46 @@ Partial Class Developer_Class_Information
         Me.GroupBox10.Size = New System.Drawing.Size(508, 245)
         Me.GroupBox10.TabIndex = 67
         Me.GroupBox10.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(265, 192)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(97, 37)
+        Me.Button2.TabIndex = 70
+        Me.Button2.Text = "Content Areas"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(150, 192)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(97, 37)
+        Me.Button1.TabIndex = 69
+        Me.Button1.Text = "Course Hour Breakdown"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.ForeColor = System.Drawing.Color.White
+        Me.Label74.Location = New System.Drawing.Point(262, 61)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(86, 12)
+        Me.Label74.TabIndex = 68
+        Me.Label74.Text = "Content Area(s)"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.Color.White
+        Me.Label73.Location = New System.Drawing.Point(414, 61)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(78, 12)
+        Me.Label73.TabIndex = 67
+        Me.Label73.Text = "Content Hours"
         '
         'Label71
         '
@@ -2017,6 +2127,7 @@ Partial Class Developer_Class_Information
         '
         Me.ComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "TCFP Subject Area", True))
         Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"101-5.1.1 Fire Behavior", "101-5.1.2 Protective Clothing", "101-5.3 Fireground Operations", "101-5.3.1 SCBA", "101-5.3.10 Fire Suppression - Interior Fires", "101-5.3.11 Horizontal Ventilation", "101-5.3.12 Vertical Ventilation", "101-5.3.13 Overhaul", "101-5.3.14 Property Conservation (Salvage)", "101-5.3.15 Water Supply", "101-5.3.16 Portable Fire Extinguishers", "101-5.3.17 Emergency Scene Lighting", "101-5.3.18 Utility Control", "101-5.3.19 Fire Suppression Wildland", "101-5.3.20 Ropes, Knots, and Hitches", "101-5.3.4 Forcible Entry", "101-5.3.6 Ladders", "101-5.3.7 Fire Suppression - Vehicle Fires", "101-5.3.8 Fire Suppression - Ext. Class A Fires", "101-5.3.9 Search and Rescue", "101-5.5 Preparedness and Maintenance", "101-5.5.2 Hose", "101-6.1.1 ICS/IMS", "101-6.2 Fire Department Communications", "101-6.3.2 Fire Streams and Hydraulics", "101-6.3.3 Fire Suppression Class B Fires", "101-6.4 Rescue Operations", "101-6.4.1 Vehicle Extrication", "101-6.4.2 Assisting Special Rescue Operations", "101-6.5 Fire and Life Safety", "101-6.5.1 Fire Safety Surveys", "101-6.5.2 Public Fire Safety Education", "101-65.3 Pre-Incident Planning", "200 Aircraft Fire Fighting / Rescue", "200-5.1 General", "200-5.2 Response", "200-5.3 Fire Suppression", "200-5.4 Rescue", "300 Marine Fire Suppression", "400 Fire Inspector", "500 Fire Investigator", "600 Hazardous Materials Training", "601 Hazardous Materials Awareness", "602 Hazardous Materials Operations", "603 Hazardous Materials Operations - Missions", "604 Hazardous Materials Technician", "605 Hazardous Materials Incident Commander", "700 Driver/Operator - Pumper", "", "", ""})
         Me.ComboBox8.Location = New System.Drawing.Point(16, 33)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(229, 21)
@@ -2037,6 +2148,7 @@ Partial Class Developer_Class_Information
         Me.ComboBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Drill Type", True))
         Me.ComboBox7.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"Single Company", "Multiple Company"})
         Me.ComboBox7.Location = New System.Drawing.Point(115, 255)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
@@ -2120,6 +2232,7 @@ Partial Class Developer_Class_Information
         '
         Me.ComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "NIMS", True))
         Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"100", "200", "300", "400", "700", "800"})
         Me.ComboBox5.Location = New System.Drawing.Point(18, 156)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(182, 21)
@@ -2129,6 +2242,7 @@ Partial Class Developer_Class_Information
         '
         Me.ComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "FAA Subject Area", True))
         Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"200 Basic Academy", "201 Airport Familiarization", "202 Aircraft Familiarization", "203 ARFF Personal Safety", "204 ARFF Communications", "205 Tools and Equipment", "206 ARFF Extinguishing Agents", "207 Aircraft Evacuation", "208 ARFF Operations - Tactics and Strategy", "209 ARFF-Structural Interface", "210 Dangerous Goods", "211 Airport Emergency Plan", "212 Aircraft Live Fire Training", "219 ARFF Driver/Operator"})
         Me.ComboBox4.Location = New System.Drawing.Point(18, 73)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(182, 21)
@@ -2298,11 +2412,6 @@ Partial Class Developer_Class_Information
         Me.Label9.TabIndex = 66
         Me.Label9.Text = "Letters and Numbers Only, No Spaces or Special Characters"
         '
-        'EmployeeInformationBindingSource
-        '
-        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
-        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_EncryptedDataSet
-        '
         'Employee_InformationTableAdapter
         '
         Me.Employee_InformationTableAdapter.ClearBeforeFill = True
@@ -2319,58 +2428,6 @@ Partial Class Developer_Class_Information
         'Class_Attendance_InformationTableAdapter
         '
         Me.Class_Attendance_InformationTableAdapter.ClearBeforeFill = True
-        '
-        'Label73
-        '
-        Me.Label73.AutoSize = True
-        Me.Label73.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.ForeColor = System.Drawing.Color.White
-        Me.Label73.Location = New System.Drawing.Point(414, 61)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(78, 12)
-        Me.Label73.TabIndex = 67
-        Me.Label73.Text = "Content Hours"
-        '
-        'Label74
-        '
-        Me.Label74.AutoSize = True
-        Me.Label74.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.ForeColor = System.Drawing.Color.White
-        Me.Label74.Location = New System.Drawing.Point(262, 61)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(86, 12)
-        Me.Label74.TabIndex = 68
-        Me.Label74.Text = "Content Area(s)"
-        '
-        'CheckBox23
-        '
-        Me.CheckBox23.AutoSize = True
-        Me.CheckBox23.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "CTT ISO Credit", True))
-        Me.CheckBox23.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox23.Location = New System.Drawing.Point(28, 279)
-        Me.CheckBox23.Name = "CheckBox23"
-        Me.CheckBox23.Size = New System.Drawing.Size(114, 17)
-        Me.CheckBox23.TabIndex = 68
-        Me.CheckBox23.Text = "ISO CTT Credit"
-        Me.CheckBox23.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(150, 192)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 37)
-        Me.Button1.TabIndex = 69
-        Me.Button1.Text = "Course Hour Breakdown"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(265, 192)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 37)
-        Me.Button2.TabIndex = 70
-        Me.Button2.Text = "Content Areas"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Developer_Class_Information
         '
@@ -2412,6 +2469,7 @@ Partial Class Developer_Class_Information
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TrainingInfo.ResumeLayout(False)
@@ -2431,7 +2489,6 @@ Partial Class Developer_Class_Information
         Me.GroupBox9.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
-        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClassInformationClassAttendanceInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -2474,7 +2531,6 @@ Partial Class Developer_Class_Information
     Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox13 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox14 As System.Windows.Forms.ComboBox
@@ -2626,4 +2682,7 @@ Partial Class Developer_Class_Information
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label74 As System.Windows.Forms.Label
     Friend WithEvents Label73 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox25 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox24 As System.Windows.Forms.CheckBox
+    Friend WithEvents TextBox39 As System.Windows.Forms.TextBox
 End Class

@@ -199,7 +199,7 @@ Partial Class DeveloperForm
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(103, 46)
         Me.Button6.TabIndex = 11
-        Me.Button6.Text = "Employee Information"
+        Me.Button6.Text = "Training Reports"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'PictureBox1
