@@ -27,10 +27,9 @@ Partial Class Dev_Fire_CE_Reports
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.FireCE_Print_Button = New System.Windows.Forms.Button()
-        Me.FireCE_Preview_Button = New System.Windows.Forms.Button()
-        Me.FireCE_StartDate_Textbox = New System.Windows.Forms.TextBox()
-        Me.FireCE_EndDate_Textbox = New System.Windows.Forms.TextBox()
+        Me.FireCE_Report_Button = New System.Windows.Forms.Button()
+        Me.FireCE_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.FireCE_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'ExitButton
@@ -80,47 +79,37 @@ Partial Class Dev_Fire_CE_Reports
         Me.Label3.TabIndex = 75
         Me.Label3.Text = "End Date:"
         '
-        'FireCE_Print_Button
+        'FireCE_Report_Button
         '
-        Me.FireCE_Print_Button.Location = New System.Drawing.Point(189, 157)
-        Me.FireCE_Print_Button.Name = "FireCE_Print_Button"
-        Me.FireCE_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.FireCE_Print_Button.TabIndex = 76
-        Me.FireCE_Print_Button.Text = "Print"
-        Me.FireCE_Print_Button.UseVisualStyleBackColor = True
+        Me.FireCE_Report_Button.Location = New System.Drawing.Point(347, 157)
+        Me.FireCE_Report_Button.Name = "FireCE_Report_Button"
+        Me.FireCE_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.FireCE_Report_Button.TabIndex = 77
+        Me.FireCE_Report_Button.Text = "Report"
+        Me.FireCE_Report_Button.UseVisualStyleBackColor = True
         '
-        'FireCE_Preview_Button
+        'FireCE_SDateTimePicker
         '
-        Me.FireCE_Preview_Button.Location = New System.Drawing.Point(311, 157)
-        Me.FireCE_Preview_Button.Name = "FireCE_Preview_Button"
-        Me.FireCE_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.FireCE_Preview_Button.TabIndex = 77
-        Me.FireCE_Preview_Button.Text = "Preview"
-        Me.FireCE_Preview_Button.UseVisualStyleBackColor = True
+        Me.FireCE_SDateTimePicker.Location = New System.Drawing.Point(189, 65)
+        Me.FireCE_SDateTimePicker.Name = "FireCE_SDateTimePicker"
+        Me.FireCE_SDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.FireCE_SDateTimePicker.TabIndex = 78
         '
-        'FireCE_StartDate_Textbox
+        'FireCE_EDateTimePicker
         '
-        Me.FireCE_StartDate_Textbox.Location = New System.Drawing.Point(189, 67)
-        Me.FireCE_StartDate_Textbox.Name = "FireCE_StartDate_Textbox"
-        Me.FireCE_StartDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_StartDate_Textbox.TabIndex = 78
-        '
-        'FireCE_EndDate_Textbox
-        '
-        Me.FireCE_EndDate_Textbox.Location = New System.Drawing.Point(189, 111)
-        Me.FireCE_EndDate_Textbox.Name = "FireCE_EndDate_Textbox"
-        Me.FireCE_EndDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_EndDate_Textbox.TabIndex = 79
+        Me.FireCE_EDateTimePicker.Location = New System.Drawing.Point(189, 108)
+        Me.FireCE_EDateTimePicker.Name = "FireCE_EDateTimePicker"
+        Me.FireCE_EDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.FireCE_EDateTimePicker.TabIndex = 79
         '
         'Dev_Fire_CE_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.FireCE_EndDate_Textbox)
-        Me.Controls.Add(Me.FireCE_StartDate_Textbox)
-        Me.Controls.Add(Me.FireCE_Preview_Button)
-        Me.Controls.Add(Me.FireCE_Print_Button)
+        Me.Controls.Add(Me.FireCE_EDateTimePicker)
+        Me.Controls.Add(Me.FireCE_SDateTimePicker)
+        Me.Controls.Add(Me.FireCE_Report_Button)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -137,8 +126,7 @@ Partial Class Dev_Fire_CE_Reports
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents FireCE_Print_Button As System.Windows.Forms.Button
-    Friend WithEvents FireCE_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents FireCE_StartDate_Textbox As System.Windows.Forms.TextBox
-    Friend WithEvents FireCE_EndDate_Textbox As System.Windows.Forms.TextBox
+    Friend WithEvents FireCE_Report_Button As System.Windows.Forms.Button
+    Friend WithEvents FireCE_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents FireCE_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

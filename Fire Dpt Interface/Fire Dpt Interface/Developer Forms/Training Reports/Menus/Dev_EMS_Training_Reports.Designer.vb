@@ -22,33 +22,23 @@ Partial Class Dev_EMS_Training_Reports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Safety_TR_Preview_Button = New System.Windows.Forms.Button()
-        Me.Safety_TR_Print_Button = New System.Windows.Forms.Button()
+        Me.EMS_TR_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ARFF_TR_End_Textbox = New System.Windows.Forms.TextBox()
-        Me.EMS_TR_Start_Textbox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.EMS_TR_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.EMS_TR_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
-        'Safety_TR_Preview_Button
+        'EMS_TR_Report_Button
         '
-        Me.Safety_TR_Preview_Button.Location = New System.Drawing.Point(330, 154)
-        Me.Safety_TR_Preview_Button.Name = "Safety_TR_Preview_Button"
-        Me.Safety_TR_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Preview_Button.TabIndex = 106
-        Me.Safety_TR_Preview_Button.Text = "Preview"
-        Me.Safety_TR_Preview_Button.UseVisualStyleBackColor = True
-        '
-        'Safety_TR_Print_Button
-        '
-        Me.Safety_TR_Print_Button.Location = New System.Drawing.Point(202, 154)
-        Me.Safety_TR_Print_Button.Name = "Safety_TR_Print_Button"
-        Me.Safety_TR_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Print_Button.TabIndex = 105
-        Me.Safety_TR_Print_Button.Text = "Print"
-        Me.Safety_TR_Print_Button.UseVisualStyleBackColor = True
+        Me.EMS_TR_Report_Button.Location = New System.Drawing.Point(330, 154)
+        Me.EMS_TR_Report_Button.Name = "EMS_TR_Report_Button"
+        Me.EMS_TR_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.EMS_TR_Report_Button.TabIndex = 106
+        Me.EMS_TR_Report_Button.Text = "Report"
+        Me.EMS_TR_Report_Button.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -68,20 +58,6 @@ Partial Class Dev_EMS_Training_Reports
         Me.Label3.Size = New System.Drawing.Size(247, 20)
         Me.Label3.TabIndex = 103
         Me.Label3.Text = "Enter Date Range For Report"
-        '
-        'ARFF_TR_End_Textbox
-        '
-        Me.ARFF_TR_End_Textbox.Location = New System.Drawing.Point(200, 114)
-        Me.ARFF_TR_End_Textbox.Name = "ARFF_TR_End_Textbox"
-        Me.ARFF_TR_End_Textbox.Size = New System.Drawing.Size(209, 20)
-        Me.ARFF_TR_End_Textbox.TabIndex = 102
-        '
-        'EMS_TR_Start_Textbox
-        '
-        Me.EMS_TR_Start_Textbox.Location = New System.Drawing.Point(200, 67)
-        Me.EMS_TR_Start_Textbox.Name = "EMS_TR_Start_Textbox"
-        Me.EMS_TR_Start_Textbox.Size = New System.Drawing.Size(209, 20)
-        Me.EMS_TR_Start_Textbox.TabIndex = 101
         '
         'Label2
         '
@@ -103,17 +79,30 @@ Partial Class Dev_EMS_Training_Reports
         Me.Label1.TabIndex = 99
         Me.Label1.Text = "Start:"
         '
+        'EMS_TR_SDateTimePicker
+        '
+        Me.EMS_TR_SDateTimePicker.Location = New System.Drawing.Point(158, 67)
+        Me.EMS_TR_SDateTimePicker.Name = "EMS_TR_SDateTimePicker"
+        Me.EMS_TR_SDateTimePicker.Size = New System.Drawing.Size(253, 20)
+        Me.EMS_TR_SDateTimePicker.TabIndex = 107
+        '
+        'EMS_TR_EDateTimePicker
+        '
+        Me.EMS_TR_EDateTimePicker.Location = New System.Drawing.Point(158, 113)
+        Me.EMS_TR_EDateTimePicker.Name = "EMS_TR_EDateTimePicker"
+        Me.EMS_TR_EDateTimePicker.Size = New System.Drawing.Size(253, 20)
+        Me.EMS_TR_EDateTimePicker.TabIndex = 108
+        '
         'Dev_EMS_Training_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.Safety_TR_Preview_Button)
-        Me.Controls.Add(Me.Safety_TR_Print_Button)
+        Me.Controls.Add(Me.EMS_TR_EDateTimePicker)
+        Me.Controls.Add(Me.EMS_TR_SDateTimePicker)
+        Me.Controls.Add(Me.EMS_TR_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ARFF_TR_End_Textbox)
-        Me.Controls.Add(Me.EMS_TR_Start_Textbox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Dev_EMS_Training_Reports"
@@ -122,12 +111,11 @@ Partial Class Dev_EMS_Training_Reports
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Safety_TR_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents Safety_TR_Print_Button As System.Windows.Forms.Button
+    Friend WithEvents EMS_TR_Report_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ARFF_TR_End_Textbox As System.Windows.Forms.TextBox
-    Friend WithEvents EMS_TR_Start_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents EMS_TR_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents EMS_TR_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

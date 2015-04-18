@@ -26,7 +26,6 @@ Partial Class Developer_Training_Reports
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.TRExitButton = New System.Windows.Forms.Button()
         Me.Fire_TR_Button = New System.Windows.Forms.Button()
-        Me.ARFF_12_Preview_Button = New System.Windows.Forms.Button()
         Me.Safety_TR_Button = New System.Windows.Forms.Button()
         Me.OtherCourses_TR_Button = New System.Windows.Forms.Button()
         Me.EMS_TR_Button = New System.Windows.Forms.Button()
@@ -70,15 +69,6 @@ Partial Class Developer_Training_Reports
         Me.Fire_TR_Button.Size = New System.Drawing.Size(46, 46)
         Me.Fire_TR_Button.TabIndex = 72
         Me.Fire_TR_Button.UseVisualStyleBackColor = True
-        '
-        'ARFF_12_Preview_Button
-        '
-        Me.ARFF_12_Preview_Button.Location = New System.Drawing.Point(344, 24)
-        Me.ARFF_12_Preview_Button.Name = "ARFF_12_Preview_Button"
-        Me.ARFF_12_Preview_Button.Size = New System.Drawing.Size(55, 46)
-        Me.ARFF_12_Preview_Button.TabIndex = 73
-        Me.ARFF_12_Preview_Button.Text = "Preview Report"
-        Me.ARFF_12_Preview_Button.UseVisualStyleBackColor = True
         '
         'Safety_TR_Button
         '
@@ -149,7 +139,7 @@ Partial Class Developer_Training_Reports
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(94, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 16)
+        Me.Label1.Size = New System.Drawing.Size(151, 16)
         Me.Label1.TabIndex = 81
         Me.Label1.Text = "Fire Training Report"
         '
@@ -159,7 +149,7 @@ Partial Class Developer_Training_Reports
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(94, 108)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(189, 16)
+        Me.Label2.Size = New System.Drawing.Size(198, 16)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "HazMat Report - All Techs"
         '
@@ -169,7 +159,7 @@ Partial Class Developer_Training_Reports
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(94, 171)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(176, 16)
+        Me.Label3.Size = New System.Drawing.Size(182, 16)
         Me.Label3.TabIndex = 83
         Me.Label3.Text = "HazMat Training Report "
         '
@@ -179,7 +169,7 @@ Partial Class Developer_Training_Reports
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(94, 245)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(159, 16)
+        Me.Label4.Size = New System.Drawing.Size(166, 16)
         Me.Label4.TabIndex = 84
         Me.Label4.Text = "ARFF Training Report"
         '
@@ -189,7 +179,7 @@ Partial Class Developer_Training_Reports
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(469, 108)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(152, 16)
+        Me.Label5.Size = New System.Drawing.Size(158, 16)
         Me.Label5.TabIndex = 85
         Me.Label5.Text = "EMS Training Report"
         '
@@ -199,7 +189,7 @@ Partial Class Developer_Training_Reports
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(469, 40)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(163, 16)
+        Me.Label6.Size = New System.Drawing.Size(174, 16)
         Me.Label6.TabIndex = 86
         Me.Label6.Text = "ARFF 12 Month Report"
         '
@@ -209,7 +199,7 @@ Partial Class Developer_Training_Reports
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(469, 245)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(218, 16)
+        Me.Label7.Size = New System.Drawing.Size(225, 16)
         Me.Label7.TabIndex = 87
         Me.Label7.Text = "Other Courses Training Report"
         '
@@ -219,7 +209,7 @@ Partial Class Developer_Training_Reports
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(469, 177)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(164, 16)
+        Me.Label8.Size = New System.Drawing.Size(168, 16)
         Me.Label8.TabIndex = 88
         Me.Label8.Text = "Safety Training Report"
         '
@@ -243,7 +233,6 @@ Partial Class Developer_Training_Reports
         Me.Controls.Add(Me.EMS_TR_Button)
         Me.Controls.Add(Me.OtherCourses_TR_Button)
         Me.Controls.Add(Me.Safety_TR_Button)
-        Me.Controls.Add(Me.ARFF_12_Preview_Button)
         Me.Controls.Add(Me.Fire_TR_Button)
         Me.Controls.Add(Me.TRExitButton)
         Me.Controls.Add(Me.ExitButton)
@@ -256,7 +245,6 @@ Partial Class Developer_Training_Reports
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents TRExitButton As System.Windows.Forms.Button
     Friend WithEvents Fire_TR_Button As System.Windows.Forms.Button
-    Friend WithEvents ARFF_12_Preview_Button As System.Windows.Forms.Button
     Friend WithEvents Safety_TR_Button As System.Windows.Forms.Button
     Friend WithEvents OtherCourses_TR_Button As System.Windows.Forms.Button
     Friend WithEvents EMS_TR_Button As System.Windows.Forms.Button

@@ -55,3 +55,4 @@ C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fir
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.CE_ARFF_Report_View.resources
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.CE_EMS_Report_View.resources
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.CE_Fire_Report_View.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.Class_Information_Report_View.resources

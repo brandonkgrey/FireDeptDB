@@ -7,7 +7,8 @@
         Me.Close()
     End Sub
 
-    Private Sub Dev_Safety_CE_Report_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+  
+    Private Sub Safety_CE_Report_Button_Click(sender As Object, e As EventArgs) Handles Safety_CE_Report_Button.Click
 
     End Sub
 End Class

@@ -7,7 +7,8 @@
         Me.Close()
     End Sub
 
-    Private Sub TCFP_CE_Preview_Button_Click(sender As Object, e As EventArgs) Handles TCFP_CE_Preview_Button.Click
+   
+    Private Sub TCFP_CE_Report_Button_Click(sender As Object, e As EventArgs) Handles TCFP_CE_Report_Button.Click
 
     End Sub
 End Class

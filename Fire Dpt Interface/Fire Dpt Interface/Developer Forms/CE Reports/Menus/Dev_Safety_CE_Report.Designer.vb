@@ -22,30 +22,15 @@ Partial Class Dev_Safety_CE_Report
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FireCE_EndDate_Textbox = New System.Windows.Forms.TextBox()
-        Me.FireCE_StartDate_Textbox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SelectEmp_ComboBox = New System.Windows.Forms.ComboBox()
-        Me.Safety_CE_Preview_Button = New System.Windows.Forms.Button()
-        Me.Safety_CE_Print_Button = New System.Windows.Forms.Button()
+        Me.Safety_CE_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.Safe_CE_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Safe_CE_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
-        '
-        'FireCE_EndDate_Textbox
-        '
-        Me.FireCE_EndDate_Textbox.Location = New System.Drawing.Point(193, 118)
-        Me.FireCE_EndDate_Textbox.Name = "FireCE_EndDate_Textbox"
-        Me.FireCE_EndDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_EndDate_Textbox.TabIndex = 101
-        '
-        'FireCE_StartDate_Textbox
-        '
-        Me.FireCE_StartDate_Textbox.Location = New System.Drawing.Point(193, 74)
-        Me.FireCE_StartDate_Textbox.Name = "FireCE_StartDate_Textbox"
-        Me.FireCE_StartDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_StartDate_Textbox.TabIndex = 100
         '
         'Label3
         '
@@ -85,23 +70,14 @@ Partial Class Dev_Safety_CE_Report
         Me.SelectEmp_ComboBox.Size = New System.Drawing.Size(297, 21)
         Me.SelectEmp_ComboBox.TabIndex = 96
         '
-        'Safety_CE_Preview_Button
+        'Safety_CE_Report_Button
         '
-        Me.Safety_CE_Preview_Button.Location = New System.Drawing.Point(320, 160)
-        Me.Safety_CE_Preview_Button.Name = "Safety_CE_Preview_Button"
-        Me.Safety_CE_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_CE_Preview_Button.TabIndex = 95
-        Me.Safety_CE_Preview_Button.Text = "Preview"
-        Me.Safety_CE_Preview_Button.UseVisualStyleBackColor = True
-        '
-        'Safety_CE_Print_Button
-        '
-        Me.Safety_CE_Print_Button.Location = New System.Drawing.Point(193, 160)
-        Me.Safety_CE_Print_Button.Name = "Safety_CE_Print_Button"
-        Me.Safety_CE_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_CE_Print_Button.TabIndex = 94
-        Me.Safety_CE_Print_Button.Text = "Print"
-        Me.Safety_CE_Print_Button.UseVisualStyleBackColor = True
+        Me.Safety_CE_Report_Button.Location = New System.Drawing.Point(352, 160)
+        Me.Safety_CE_Report_Button.Name = "Safety_CE_Report_Button"
+        Me.Safety_CE_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.Safety_CE_Report_Button.TabIndex = 95
+        Me.Safety_CE_Report_Button.Text = "Report"
+        Me.Safety_CE_Report_Button.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -112,19 +88,32 @@ Partial Class Dev_Safety_CE_Report
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
+        'Safe_CE_SDateTimePicker
+        '
+        Me.Safe_CE_SDateTimePicker.Location = New System.Drawing.Point(193, 72)
+        Me.Safe_CE_SDateTimePicker.Name = "Safe_CE_SDateTimePicker"
+        Me.Safe_CE_SDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.Safe_CE_SDateTimePicker.TabIndex = 100
+        '
+        'Safe_CE_EDateTimePicker
+        '
+        Me.Safe_CE_EDateTimePicker.Location = New System.Drawing.Point(193, 115)
+        Me.Safe_CE_EDateTimePicker.Name = "Safe_CE_EDateTimePicker"
+        Me.Safe_CE_EDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.Safe_CE_EDateTimePicker.TabIndex = 101
+        '
         'Dev_Safety_CE_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.FireCE_EndDate_Textbox)
-        Me.Controls.Add(Me.FireCE_StartDate_Textbox)
+        Me.Controls.Add(Me.Safe_CE_EDateTimePicker)
+        Me.Controls.Add(Me.Safe_CE_SDateTimePicker)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.SelectEmp_ComboBox)
-        Me.Controls.Add(Me.Safety_CE_Preview_Button)
-        Me.Controls.Add(Me.Safety_CE_Print_Button)
+        Me.Controls.Add(Me.Safety_CE_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Name = "Dev_Safety_CE_Report"
         Me.Text = "Safety CE Report Menu"
@@ -132,13 +121,12 @@ Partial Class Dev_Safety_CE_Report
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents FireCE_EndDate_Textbox As System.Windows.Forms.TextBox
-    Friend WithEvents FireCE_StartDate_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents SelectEmp_ComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents Safety_CE_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents Safety_CE_Print_Button As System.Windows.Forms.Button
+    Friend WithEvents Safety_CE_Report_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
+    Friend WithEvents Safe_CE_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Safe_CE_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

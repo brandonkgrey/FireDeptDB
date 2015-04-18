@@ -27,8 +27,8 @@ Partial Class Dev_Safety_Training_Reports
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Safety_TR_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
-        Me.StartDate_DateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.EndDate_DateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Safety_TR_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Safety_TR_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,27 +79,27 @@ Partial Class Dev_Safety_Training_Reports
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
-        'StartDate_DateTimePicker
+        'Safety_TR_SDateTimePicker
         '
-        Me.StartDate_DateTimePicker.Location = New System.Drawing.Point(160, 68)
-        Me.StartDate_DateTimePicker.Name = "StartDate_DateTimePicker"
-        Me.StartDate_DateTimePicker.Size = New System.Drawing.Size(251, 20)
-        Me.StartDate_DateTimePicker.TabIndex = 99
+        Me.Safety_TR_SDateTimePicker.Location = New System.Drawing.Point(160, 68)
+        Me.Safety_TR_SDateTimePicker.Name = "Safety_TR_SDateTimePicker"
+        Me.Safety_TR_SDateTimePicker.Size = New System.Drawing.Size(251, 20)
+        Me.Safety_TR_SDateTimePicker.TabIndex = 99
         '
-        'EndDate_DateTimePicker
+        'Safety_TR_EDateTimePicker
         '
-        Me.EndDate_DateTimePicker.Location = New System.Drawing.Point(160, 108)
-        Me.EndDate_DateTimePicker.Name = "EndDate_DateTimePicker"
-        Me.EndDate_DateTimePicker.Size = New System.Drawing.Size(251, 20)
-        Me.EndDate_DateTimePicker.TabIndex = 100
+        Me.Safety_TR_EDateTimePicker.Location = New System.Drawing.Point(160, 108)
+        Me.Safety_TR_EDateTimePicker.Name = "Safety_TR_EDateTimePicker"
+        Me.Safety_TR_EDateTimePicker.Size = New System.Drawing.Size(251, 20)
+        Me.Safety_TR_EDateTimePicker.TabIndex = 100
         '
         'Dev_Safety_Training_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.EndDate_DateTimePicker)
-        Me.Controls.Add(Me.StartDate_DateTimePicker)
+        Me.Controls.Add(Me.Safety_TR_EDateTimePicker)
+        Me.Controls.Add(Me.Safety_TR_SDateTimePicker)
         Me.Controls.Add(Me.Safety_TR_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.Label3)
@@ -116,6 +116,6 @@ Partial Class Dev_Safety_Training_Reports
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Safety_TR_Report_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
-    Friend WithEvents StartDate_DateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents EndDate_DateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Safety_TR_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Safety_TR_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

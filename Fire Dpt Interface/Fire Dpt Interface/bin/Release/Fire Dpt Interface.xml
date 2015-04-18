@@ -58,6 +58,58 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateUpdatedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateInsertedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateDeletedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateAll(Fire_Dpt_Interface.Query_Indivual_Employee)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
 </member><member name="T:Fire_Dpt_Interface.CE_EMS_Dataset.Query_EMS_CE_ReportDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -159,6 +211,58 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:Fire_Dpt_Interface.TCFP_HMIC_Certifications_DatasetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_Dataset.Query_ClassInfo_ReportDataTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_Dataset.Query_ClassInfo_ReportDataTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_Dataset.Query_ClassInfo_ReportDataTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_Dataset">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.Query_ClassInfo_ReportTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Fire_Dpt_Interface.ClassInformation_Dataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(Fire_Dpt_Interface.ClassInformation_Dataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(Fire_Dpt_Interface.ClassInformation_Dataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.UpdateAll(Fire_Dpt_Interface.ClassInformation_Dataset)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Fire_Dpt_Interface.ClassInformation_DatasetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
@@ -575,58 +679,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:Fire_Dpt_Interface.Fire_Training_Report_DatasetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee.QueryEmployeeInformationRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_Employee">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateUpdatedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateInsertedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateDeletedRows(Fire_Dpt_Interface.Query_Indivual_Employee,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateAll(Fire_Dpt_Interface.Query_Indivual_Employee)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="Training_RecordsConnectionString (MySettings)" DbObjectName="Employee Information" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillEmployeeName" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetEmployeeName" GeneratorSourceName="FillEmployeeName" GetMethodModifier="Public" GetMethodName="GetEmployeeName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetEmployeeName" UserSourceName="FillEmployeeName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Name, Address,Phone, Shift,  [Date of Birth], SSN, TDL, [DL CLass] ,CDL,  [Rank Date], [Hire Date]
+                    <CommandText>SELECT        Name, Address, Phone, Shift, [Date of Birth], SSN, TDL, [DL CLass], CDL, [Rank Date], [Hire Date]
 FROM            [Employee Information]
 WHERE        (Employee_ID = ?)</CommandText>
                     <Parameters>
@@ -45,7 +45,7 @@ WHERE        (Employee_ID = ?)</CommandText>
   <xs:element name="Query_Indivual_Employee" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Query_Indivual_Employee" msprop:Generator_UserDSName="Query_Indivual_Employee">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="QueryEmployeeInformation" msprop:Generator_TableClassName="QueryEmployeeInformationDataTable" msprop:Generator_TableVarName="tableQueryEmployeeInformation" msprop:Generator_TablePropName="QueryEmployeeInformation" msprop:Generator_RowDeletingName="QueryEmployeeInformationRowDeleting" msprop:Generator_RowChangingName="QueryEmployeeInformationRowChanging" msprop:Generator_RowEvHandlerName="QueryEmployeeInformationRowChangeEventHandler" msprop:Generator_RowDeletedName="QueryEmployeeInformationRowDeleted" msprop:Generator_UserTableName="QueryEmployeeInformation" msprop:Generator_RowChangedName="QueryEmployeeInformationRowChanged" msprop:Generator_RowEvArgName="QueryEmployeeInformationRowChangeEvent" msprop:Generator_RowClassName="QueryEmployeeInformationRow">
+        <xs:element name="QueryEmployeeInformation" msprop:Generator_TableClassName="QueryEmployeeInformationDataTable" msprop:Generator_TableVarName="tableQueryEmployeeInformation" msprop:Generator_RowChangedName="QueryEmployeeInformationRowChanged" msprop:Generator_TablePropName="QueryEmployeeInformation" msprop:Generator_RowDeletingName="QueryEmployeeInformationRowDeleting" msprop:Generator_RowChangingName="QueryEmployeeInformationRowChanging" msprop:Generator_RowEvHandlerName="QueryEmployeeInformationRowChangeEventHandler" msprop:Generator_RowDeletedName="QueryEmployeeInformationRowDeleted" msprop:Generator_RowClassName="QueryEmployeeInformationRow" msprop:Generator_UserTableName="QueryEmployeeInformation" msprop:Generator_RowEvArgName="QueryEmployeeInformationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">

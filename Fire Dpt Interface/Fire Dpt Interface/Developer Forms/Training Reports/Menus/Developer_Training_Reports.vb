@@ -72,7 +72,7 @@
         Me.Close()
     End Sub
 
-    Private Sub ARFF_12_Preview_Button_Click(sender As Object, e As EventArgs) Handles ARFF_12_Preview_Button.Click
+    Private Sub ARFF_12_Preview_Button_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -22,33 +22,23 @@ Partial Class Dev_Fire_Training_Reports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Safety_TR_Preview_Button = New System.Windows.Forms.Button()
-        Me.Safety_TR_Print_Button = New System.Windows.Forms.Button()
+        Me.Fire_TR_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Fire_TR_End_Textbox = New System.Windows.Forms.TextBox()
-        Me.Fire_TR_Start_Textbox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Fire_TR_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Fire_TR_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
-        'Safety_TR_Preview_Button
+        'Fire_TR_Report_Button
         '
-        Me.Safety_TR_Preview_Button.Location = New System.Drawing.Point(330, 154)
-        Me.Safety_TR_Preview_Button.Name = "Safety_TR_Preview_Button"
-        Me.Safety_TR_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Preview_Button.TabIndex = 116
-        Me.Safety_TR_Preview_Button.Text = "Preview"
-        Me.Safety_TR_Preview_Button.UseVisualStyleBackColor = True
-        '
-        'Safety_TR_Print_Button
-        '
-        Me.Safety_TR_Print_Button.Location = New System.Drawing.Point(202, 154)
-        Me.Safety_TR_Print_Button.Name = "Safety_TR_Print_Button"
-        Me.Safety_TR_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Print_Button.TabIndex = 115
-        Me.Safety_TR_Print_Button.Text = "Print"
-        Me.Safety_TR_Print_Button.UseVisualStyleBackColor = True
+        Me.Fire_TR_Report_Button.Location = New System.Drawing.Point(330, 154)
+        Me.Fire_TR_Report_Button.Name = "Fire_TR_Report_Button"
+        Me.Fire_TR_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.Fire_TR_Report_Button.TabIndex = 116
+        Me.Fire_TR_Report_Button.Text = "Report"
+        Me.Fire_TR_Report_Button.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -68,20 +58,6 @@ Partial Class Dev_Fire_Training_Reports
         Me.Label3.Size = New System.Drawing.Size(247, 20)
         Me.Label3.TabIndex = 113
         Me.Label3.Text = "Enter Date Range For Report"
-        '
-        'Fire_TR_End_Textbox
-        '
-        Me.Fire_TR_End_Textbox.Location = New System.Drawing.Point(200, 111)
-        Me.Fire_TR_End_Textbox.Name = "Fire_TR_End_Textbox"
-        Me.Fire_TR_End_Textbox.Size = New System.Drawing.Size(209, 20)
-        Me.Fire_TR_End_Textbox.TabIndex = 112
-        '
-        'Fire_TR_Start_Textbox
-        '
-        Me.Fire_TR_Start_Textbox.Location = New System.Drawing.Point(200, 67)
-        Me.Fire_TR_Start_Textbox.Name = "Fire_TR_Start_Textbox"
-        Me.Fire_TR_Start_Textbox.Size = New System.Drawing.Size(209, 20)
-        Me.Fire_TR_Start_Textbox.TabIndex = 111
         '
         'Label2
         '
@@ -103,17 +79,30 @@ Partial Class Dev_Fire_Training_Reports
         Me.Label1.TabIndex = 109
         Me.Label1.Text = "Start:"
         '
+        'Fire_TR_SDateTimePicker
+        '
+        Me.Fire_TR_SDateTimePicker.Location = New System.Drawing.Point(158, 67)
+        Me.Fire_TR_SDateTimePicker.Name = "Fire_TR_SDateTimePicker"
+        Me.Fire_TR_SDateTimePicker.Size = New System.Drawing.Size(253, 20)
+        Me.Fire_TR_SDateTimePicker.TabIndex = 117
+        '
+        'Fire_TR_EDateTimePicker
+        '
+        Me.Fire_TR_EDateTimePicker.Location = New System.Drawing.Point(158, 110)
+        Me.Fire_TR_EDateTimePicker.Name = "Fire_TR_EDateTimePicker"
+        Me.Fire_TR_EDateTimePicker.Size = New System.Drawing.Size(253, 20)
+        Me.Fire_TR_EDateTimePicker.TabIndex = 118
+        '
         'Dev_Fire_Training_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.Safety_TR_Preview_Button)
-        Me.Controls.Add(Me.Safety_TR_Print_Button)
+        Me.Controls.Add(Me.Fire_TR_EDateTimePicker)
+        Me.Controls.Add(Me.Fire_TR_SDateTimePicker)
+        Me.Controls.Add(Me.Fire_TR_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Fire_TR_End_Textbox)
-        Me.Controls.Add(Me.Fire_TR_Start_Textbox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Dev_Fire_Training_Reports"
@@ -122,12 +111,11 @@ Partial Class Dev_Fire_Training_Reports
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Safety_TR_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents Safety_TR_Print_Button As System.Windows.Forms.Button
+    Friend WithEvents Fire_TR_Report_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Fire_TR_End_Textbox As System.Windows.Forms.TextBox
-    Friend WithEvents Fire_TR_Start_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Fire_TR_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Fire_TR_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

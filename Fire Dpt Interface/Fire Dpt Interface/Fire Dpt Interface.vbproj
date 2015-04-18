@@ -210,16 +210,27 @@
     <Compile Include="Developer Forms\Certification Lists\Report Views\TCFP_Wildlife_Certifications_View.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Class Information\Developer_Class_Information.Designer.vb">
+    <Compile Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Class Information\Menus\Developer_Class_Information.Designer.vb">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Class Information\Developer_Class_Information.vb">
+    <Compile Include="Developer Forms\Class Information\Menus\Developer_Class_Information.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Employee Information\Developer_Employee_Access.Designer.vb">
+    <Compile Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.Designer.vb">
+      <DependentUpon>Class_Information_Report_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.Designer.vb">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Employee Information\Developer_Employee_Access.vb">
+    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.Designer.vb">
@@ -422,12 +433,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Query_Indivual_Employee.Designer.vb">
+    <Compile Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Query_Indivual_Employee.vb">
+    <Compile Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.vb">
       <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
     </Compile>
     <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
@@ -548,16 +559,20 @@
     <EmbeddedResource Include="Developer Forms\Certification Lists\Report Views\TCFP_Wildlife_Certifications_View.resx">
       <DependentUpon>TCFP_Wildlife_Certifications_View.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Class Information\Developer_Class_Information.resx">
+    <EmbeddedResource Include="Developer Forms\Class Information\Menus\Developer_Class_Information.resx">
       <DependentUpon>Developer_Class_Information.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Employee Information\Developer_Employee_Access.resx">
+    <EmbeddedResource Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.resx">
+      <DependentUpon>Class_Information_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Class Information\Reports\Class_Information_Report.rdlc" />
+    <EmbeddedResource Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.resx">
       <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer Forms\Employee Information\Report Views\Individual_Employee_Report.rdlc" />
     <EmbeddedResource Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.resx">
       <DependentUpon>Indivdual_Employee_Report_View.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Developer Forms\Employee Information\Reports\Employee_Inidividual_Information_Report.rdlc" />
     <EmbeddedResource Include="Developer Forms\Main\DeveloperForm.resx">
       <DependentUpon>DeveloperForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -675,6 +690,17 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xsc">
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassInformation_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Developer Forms\Class Information\Datasets\ClassInformation_Dataset.xss">
+      <DependentUpon>ClassInformation_Dataset.xsd</DependentUpon>
+    </None>
     <None Include="Developer Forms\Training Reports\Datasets\ARFF_Training_Report_Dataset.xsc">
       <DependentUpon>ARFF_Training_Report_Dataset.xsd</DependentUpon>
     </None>
@@ -795,15 +821,15 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Query_Indivual_Employee.xsc">
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xsc">
       <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
     </None>
-    <None Include="Query_Indivual_Employee.xsd">
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Query_Indivual_Employee.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Query_Indivual_Employee.xss">
+    <None Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.xss">
       <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
     </None>
     <None Include="Developer Forms\Certification Lists\Datasets\TCFP_HMIC_Certifications_Dataset.xsc">
@@ -920,9 +946,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Developer Forms\Employee Information\Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

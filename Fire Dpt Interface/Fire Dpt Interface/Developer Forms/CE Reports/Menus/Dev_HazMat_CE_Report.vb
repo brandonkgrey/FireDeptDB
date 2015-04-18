@@ -7,4 +7,7 @@
         Me.Close()
     End Sub
 
+    Private Sub HazMat_CE_Report_Button_Click(sender As Object, e As EventArgs) Handles HazMat_CE_Report_Button.Click
+
+    End Sub
 End Class

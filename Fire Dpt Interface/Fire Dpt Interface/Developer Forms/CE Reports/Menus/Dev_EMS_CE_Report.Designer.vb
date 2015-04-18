@@ -22,31 +22,15 @@ Partial Class Dev_EMS_CE_Report
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FireCE_EndDate_Textbox = New System.Windows.Forms.TextBox()
-        Me.FireCE_StartDate_Textbox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SelectEmp_ComboBox = New System.Windows.Forms.ComboBox()
-        Me.EMS_CE_Preview_Button = New System.Windows.Forms.Button()
-        Me.EMS_CE_Print_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
-        Me.EMS_CE_Outputfile_Button = New System.Windows.Forms.Button()
+        Me.EMS_CE_Report_Button = New System.Windows.Forms.Button()
+        Me.EMS_CE_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.EMS_CE_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
-        '
-        'FireCE_EndDate_Textbox
-        '
-        Me.FireCE_EndDate_Textbox.Location = New System.Drawing.Point(192, 114)
-        Me.FireCE_EndDate_Textbox.Name = "FireCE_EndDate_Textbox"
-        Me.FireCE_EndDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_EndDate_Textbox.TabIndex = 101
-        '
-        'FireCE_StartDate_Textbox
-        '
-        Me.FireCE_StartDate_Textbox.Location = New System.Drawing.Point(192, 70)
-        Me.FireCE_StartDate_Textbox.Name = "FireCE_StartDate_Textbox"
-        Me.FireCE_StartDate_Textbox.Size = New System.Drawing.Size(297, 20)
-        Me.FireCE_StartDate_Textbox.TabIndex = 100
         '
         'Label3
         '
@@ -86,24 +70,6 @@ Partial Class Dev_EMS_CE_Report
         Me.SelectEmp_ComboBox.Size = New System.Drawing.Size(297, 21)
         Me.SelectEmp_ComboBox.TabIndex = 96
         '
-        'EMS_CE_Preview_Button
-        '
-        Me.EMS_CE_Preview_Button.Location = New System.Drawing.Point(251, 154)
-        Me.EMS_CE_Preview_Button.Name = "EMS_CE_Preview_Button"
-        Me.EMS_CE_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.EMS_CE_Preview_Button.TabIndex = 95
-        Me.EMS_CE_Preview_Button.Text = "Preview"
-        Me.EMS_CE_Preview_Button.UseVisualStyleBackColor = True
-        '
-        'EMS_CE_Print_Button
-        '
-        Me.EMS_CE_Print_Button.Location = New System.Drawing.Point(145, 154)
-        Me.EMS_CE_Print_Button.Name = "EMS_CE_Print_Button"
-        Me.EMS_CE_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.EMS_CE_Print_Button.TabIndex = 94
-        Me.EMS_CE_Print_Button.Text = "Print"
-        Me.EMS_CE_Print_Button.UseVisualStyleBackColor = True
-        '
         'ExitButton
         '
         Me.ExitButton.Location = New System.Drawing.Point(458, 154)
@@ -113,29 +79,41 @@ Partial Class Dev_EMS_CE_Report
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
-        'EMS_CE_Outputfile_Button
+        'EMS_CE_Report_Button
         '
-        Me.EMS_CE_Outputfile_Button.Location = New System.Drawing.Point(358, 154)
-        Me.EMS_CE_Outputfile_Button.Name = "EMS_CE_Outputfile_Button"
-        Me.EMS_CE_Outputfile_Button.Size = New System.Drawing.Size(81, 25)
-        Me.EMS_CE_Outputfile_Button.TabIndex = 102
-        Me.EMS_CE_Outputfile_Button.Text = "Output File"
-        Me.EMS_CE_Outputfile_Button.UseVisualStyleBackColor = True
+        Me.EMS_CE_Report_Button.Location = New System.Drawing.Point(355, 154)
+        Me.EMS_CE_Report_Button.Name = "EMS_CE_Report_Button"
+        Me.EMS_CE_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.EMS_CE_Report_Button.TabIndex = 94
+        Me.EMS_CE_Report_Button.Text = "Report"
+        Me.EMS_CE_Report_Button.UseVisualStyleBackColor = True
+        '
+        'EMS_CE_SDateTimePicker
+        '
+        Me.EMS_CE_SDateTimePicker.Location = New System.Drawing.Point(192, 68)
+        Me.EMS_CE_SDateTimePicker.Name = "EMS_CE_SDateTimePicker"
+        Me.EMS_CE_SDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.EMS_CE_SDateTimePicker.TabIndex = 100
+        '
+        'EMS_CE_EDateTimePicker
+        '
+        Me.EMS_CE_EDateTimePicker.Location = New System.Drawing.Point(192, 111)
+        Me.EMS_CE_EDateTimePicker.Name = "EMS_CE_EDateTimePicker"
+        Me.EMS_CE_EDateTimePicker.Size = New System.Drawing.Size(297, 20)
+        Me.EMS_CE_EDateTimePicker.TabIndex = 101
         '
         'Dev_EMS_CE_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 191)
-        Me.Controls.Add(Me.EMS_CE_Outputfile_Button)
-        Me.Controls.Add(Me.FireCE_EndDate_Textbox)
-        Me.Controls.Add(Me.FireCE_StartDate_Textbox)
+        Me.Controls.Add(Me.EMS_CE_EDateTimePicker)
+        Me.Controls.Add(Me.EMS_CE_SDateTimePicker)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.SelectEmp_ComboBox)
-        Me.Controls.Add(Me.EMS_CE_Preview_Button)
-        Me.Controls.Add(Me.EMS_CE_Print_Button)
+        Me.Controls.Add(Me.EMS_CE_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Name = "Dev_EMS_CE_Report"
         Me.Text = "EMS CE Report Menu "
@@ -143,14 +121,12 @@ Partial Class Dev_EMS_CE_Report
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents FireCE_EndDate_Textbox As System.Windows.Forms.TextBox
-    Friend WithEvents FireCE_StartDate_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents SelectEmp_ComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents EMS_CE_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents EMS_CE_Print_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
-    Friend WithEvents EMS_CE_Outputfile_Button As System.Windows.Forms.Button
+    Friend WithEvents EMS_CE_Report_Button As System.Windows.Forms.Button
+    Friend WithEvents EMS_CE_SDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents EMS_CE_EDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

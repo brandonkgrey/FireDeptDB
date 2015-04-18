@@ -1,4 +1,6 @@
-﻿Public Class HazMat_Training_Report_View
+﻿Imports Microsoft.Reporting.WinForms
+
+Public Class HazMat_Training_Report_View
     Dim report_startdate As String
     Dim report_enddate As String
     Dim report_firecredit As Integer
@@ -13,6 +15,9 @@
         report_filter = Dev_HazMat_Training_Reports.Nofilter
         report_empID = Dev_HazMat_Training_Reports.emp_id
 
+        Dim START_DATE As New ReportParameter("START", report_startdate)
+        Dim END_DATE As New ReportParameter("END", report_enddate)
+
         If report_filter = 1 Then
             Me.Query_HazMat_Training_ReportTableAdapter.FillByNoFilter(Me.HazMat_Training_Report_Dataset.Query_HazMat_Training_Report, report_startdate, report_enddate)
         ElseIf report_firecredit = 1 Then
@@ -21,6 +26,8 @@
             Me.Query_HazMat_Training_ReportTableAdapter.FillbyFilter(Me.HazMat_Training_Report_Dataset.Query_HazMat_Training_Report, report_startdate, report_enddate, report_firecredit)
         End If
 
+        Me.HM_Training_ReportViewer.LocalReport.SetParameters(START_DATE)
+        Me.HM_Training_ReportViewer.LocalReport.SetParameters(END_DATE)
         Me.HM_Training_ReportViewer.RefreshReport()
 
     End Sub

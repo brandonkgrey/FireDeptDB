@@ -287,7 +287,7 @@
         <DataSetName>Safety_Training_Report</DataSetName>
         <Top>1.33507in</Top>
         <Height>0.38021in</Height>
-        <Width>7.45707in</Width>
+        <Width>7.4571in</Width>
         <Style>
           <Border>
             <Color>White</Color>
@@ -378,7 +378,28 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reporting Period:  Date Date </Value>
+                <Value>Reporting Period:  </Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!START.Value</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>  to  </Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!END.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -479,6 +500,20 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="START">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="END">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>3d2f8f72-6ba3-49f6-8387-4049db37c784</rd:ReportID>
 </Report>

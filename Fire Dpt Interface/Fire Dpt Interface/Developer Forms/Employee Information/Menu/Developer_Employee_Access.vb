@@ -1,5 +1,5 @@
 ﻿Public Class All_Employees
-
+    Friend Shared employeeID As Integer
 
     Private Sub All_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Fire_CertificationsTableAdapter.Fill(Me.Training_RecordsDataSet.Fire_Certifications)
@@ -44,18 +44,8 @@ SaveErr:
 
 
     Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles ReportButton.Click
-        '106017362
-        'Dim ID As Integer = 106017362
-        'QueryEmployeeInformationTableAdapter.FillEmployeeName(Me.Query_Indivual_Employee.QueryEmployeeInformation, ID)
-        'Dim table As DataTable = QueryEmployeeInformationTableAdapter.GetEmployeeName(ID)
-        ''Dim row1 As DataRow = table.Rows(0)
-        ''For Each item As Object In row1.ItemArray
-        ''If item IsNot Nothing Then
-        ''MessageBox.Show(item.ToString())
-        ''Else
-        ''MessageBox.Show("null")
-        ''End If
-        ''Next
+
+        employeeID = Convert.ToInt32(Emp_Textbox.Text)
         Dim IndReport As Indivdual_Employee_Report_View
         IndReport = New Indivdual_Employee_Report_View()
         IndReport.Show()

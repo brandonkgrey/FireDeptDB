@@ -22,8 +22,7 @@ Partial Class Dev_Other_Courses_Training_Reports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Safety_TR_Preview_Button = New System.Windows.Forms.Button()
-        Me.Safety_TR_Print_Button = New System.Windows.Forms.Button()
+        Me.Safety_TR_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.OC_TR_End_Textbox = New System.Windows.Forms.TextBox()
@@ -34,23 +33,14 @@ Partial Class Dev_Other_Courses_Training_Reports
         Me.OC_TR_ComboBox = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'Safety_TR_Preview_Button
+        'Safety_TR_Report_Button
         '
-        Me.Safety_TR_Preview_Button.Location = New System.Drawing.Point(333, 170)
-        Me.Safety_TR_Preview_Button.Name = "Safety_TR_Preview_Button"
-        Me.Safety_TR_Preview_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Preview_Button.TabIndex = 106
-        Me.Safety_TR_Preview_Button.Text = "Preview"
-        Me.Safety_TR_Preview_Button.UseVisualStyleBackColor = True
-        '
-        'Safety_TR_Print_Button
-        '
-        Me.Safety_TR_Print_Button.Location = New System.Drawing.Point(205, 170)
-        Me.Safety_TR_Print_Button.Name = "Safety_TR_Print_Button"
-        Me.Safety_TR_Print_Button.Size = New System.Drawing.Size(81, 25)
-        Me.Safety_TR_Print_Button.TabIndex = 105
-        Me.Safety_TR_Print_Button.Text = "Print"
-        Me.Safety_TR_Print_Button.UseVisualStyleBackColor = True
+        Me.Safety_TR_Report_Button.Location = New System.Drawing.Point(333, 170)
+        Me.Safety_TR_Report_Button.Name = "Safety_TR_Report_Button"
+        Me.Safety_TR_Report_Button.Size = New System.Drawing.Size(81, 25)
+        Me.Safety_TR_Report_Button.TabIndex = 106
+        Me.Safety_TR_Report_Button.Text = "Report"
+        Me.Safety_TR_Report_Button.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -130,8 +120,7 @@ Partial Class Dev_Other_Courses_Training_Reports
         Me.ClientSize = New System.Drawing.Size(554, 207)
         Me.Controls.Add(Me.OC_TR_ComboBox)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Safety_TR_Preview_Button)
-        Me.Controls.Add(Me.Safety_TR_Print_Button)
+        Me.Controls.Add(Me.Safety_TR_Report_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.OC_TR_End_Textbox)
@@ -144,8 +133,7 @@ Partial Class Dev_Other_Courses_Training_Reports
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Safety_TR_Preview_Button As System.Windows.Forms.Button
-    Friend WithEvents Safety_TR_Print_Button As System.Windows.Forms.Button
+    Friend WithEvents Safety_TR_Report_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents OC_TR_End_Textbox As System.Windows.Forms.TextBox
