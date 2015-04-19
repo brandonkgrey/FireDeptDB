@@ -14,13 +14,6 @@ Partial Class Login
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-    Friend WithEvents UsernameLabel As System.Windows.Forms.Label
-    Friend WithEvents PasswordLabel As System.Windows.Forms.Label
-    Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents OK As System.Windows.Forms.Button
-    Friend WithEvents Cancel As System.Windows.Forms.Button
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -31,87 +24,129 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.PasswordLabel = New System.Windows.Forms.Label()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.OK = New System.Windows.Forms.Button()
-        Me.Cancel = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ForgotPassLink = New System.Windows.Forms.LinkLabel()
         Me.Invalid_Cred = New System.Windows.Forms.Label()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'LogoPictureBox
+        'Label1
         '
-        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(21, 24)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(129, 124)
-        Me.LogoPictureBox.TabIndex = 0
-        Me.LogoPictureBox.TabStop = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(166, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(293, 38)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Database Login"
         '
-        'UsernameLabel
+        'ForgotPassLink
         '
-        Me.UsernameLabel.Location = New System.Drawing.Point(172, 24)
-        Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
-        Me.UsernameLabel.TabIndex = 0
-        Me.UsernameLabel.Text = "&User name"
-        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PasswordLabel
-        '
-        Me.PasswordLabel.Location = New System.Drawing.Point(172, 81)
-        Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
-        Me.PasswordLabel.TabIndex = 2
-        Me.PasswordLabel.Text = "&Password"
-        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'UsernameTextBox
-        '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(174, 44)
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
-        Me.UsernameTextBox.TabIndex = 1
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(174, 101)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
-        Me.PasswordTextBox.TabIndex = 3
-        '
-        'OK
-        '
-        Me.OK.Location = New System.Drawing.Point(197, 161)
-        Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(94, 23)
-        Me.OK.TabIndex = 4
-        Me.OK.Text = "&OK"
-        '
-        'Cancel
-        '
-        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.Location = New System.Drawing.Point(300, 161)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(94, 23)
-        Me.Cancel.TabIndex = 5
-        Me.Cancel.Text = "&Cancel"
+        Me.ForgotPassLink.AutoSize = True
+        Me.ForgotPassLink.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForgotPassLink.Location = New System.Drawing.Point(31, 170)
+        Me.ForgotPassLink.Name = "ForgotPassLink"
+        Me.ForgotPassLink.Size = New System.Drawing.Size(101, 13)
+        Me.ForgotPassLink.TabIndex = 17
+        Me.ForgotPassLink.TabStop = True
+        Me.ForgotPassLink.Text = "Forgot Password"
         '
         'Invalid_Cred
         '
         Me.Invalid_Cred.AutoSize = True
-        Me.Invalid_Cred.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Invalid_Cred.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Invalid_Cred.ForeColor = System.Drawing.Color.Red
-        Me.Invalid_Cred.Location = New System.Drawing.Point(212, 135)
+        Me.Invalid_Cred.Location = New System.Drawing.Point(229, 151)
         Me.Invalid_Cred.Name = "Invalid_Cred"
-        Me.Invalid_Cred.Size = New System.Drawing.Size(150, 13)
-        Me.Invalid_Cred.TabIndex = 6
+        Me.Invalid_Cred.Size = New System.Drawing.Size(182, 13)
+        Me.Invalid_Cred.TabIndex = 16
         Me.Invalid_Cred.Text = "Invalid Username or Password"
         Me.Invalid_Cred.Visible = False
+        '
+        'Cancel
+        '
+        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Cancel.FlatAppearance.BorderSize = 2
+        Me.Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(217, 170)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(94, 23)
+        Me.Cancel.TabIndex = 15
+        Me.Cancel.Text = "&Cancel"
+        '
+        'OK
+        '
+        Me.OK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OK.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OK.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OK.Location = New System.Drawing.Point(328, 170)
+        Me.OK.Name = "OK"
+        Me.OK.Size = New System.Drawing.Size(94, 23)
+        Me.OK.TabIndex = 14
+        Me.OK.Text = "&OK"
+        '
+        'PasswordTextBox
+        '
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordTextBox.Location = New System.Drawing.Point(217, 111)
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 21)
+        Me.PasswordTextBox.TabIndex = 13
+        '
+        'UsernameTextBox
+        '
+        Me.UsernameTextBox.BackColor = System.Drawing.Color.White
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameTextBox.Location = New System.Drawing.Point(217, 77)
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 21)
+        Me.UsernameTextBox.TabIndex = 11
+        '
+        'PasswordLabel
+        '
+        Me.PasswordLabel.ForeColor = System.Drawing.Color.Black
+        Me.PasswordLabel.Location = New System.Drawing.Point(152, 109)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
+        Me.PasswordLabel.TabIndex = 12
+        Me.PasswordLabel.Text = "&Password"
+        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'UsernameLabel
+        '
+        Me.UsernameLabel.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.ForeColor = System.Drawing.Color.Black
+        Me.UsernameLabel.Location = New System.Drawing.Point(152, 74)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(81, 23)
+        Me.UsernameLabel.TabIndex = 9
+        Me.UsernameLabel.Text = "&Username"
+        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogoPictureBox
+        '
+        Me.LogoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
+        Me.LogoPictureBox.Location = New System.Drawing.Point(17, 40)
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.Size = New System.Drawing.Size(129, 124)
+        Me.LogoPictureBox.TabIndex = 10
+        Me.LogoPictureBox.TabStop = False
         '
         'Login
         '
@@ -121,6 +156,8 @@ Partial Class Login
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(476, 219)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ForgotPassLink)
         Me.Controls.Add(Me.Invalid_Cred)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
@@ -131,7 +168,6 @@ Partial Class Login
         Me.Controls.Add(Me.LogoPictureBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "Login"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -141,6 +177,15 @@ Partial Class Login
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ForgotPassLink As System.Windows.Forms.LinkLabel
     Friend WithEvents Invalid_Cred As System.Windows.Forms.Label
+    Friend WithEvents Cancel As System.Windows.Forms.Button
+    Friend WithEvents OK As System.Windows.Forms.Button
+    Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents PasswordLabel As System.Windows.Forms.Label
+    Friend WithEvents UsernameLabel As System.Windows.Forms.Label
+    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
 
 End Class

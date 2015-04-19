@@ -7,7 +7,7 @@ Public Class Indivdual_Employee_Report_View
 
     Private Sub Indivdual_Employee_Report_View(sender As Object, e As EventArgs) Handles MyBase.Load
         'temp value needs to be SSN or ID of the user (pass through global variable)
-        Dim ID As Integer = All_Employees.employeeID
+        Dim ID As Integer = All_Employees.Employee_ID
         Me.QueryEmployeeInformationTableAdapter.FillEmployeeName(Me.Query_Indivual_Employee.QueryEmployeeInformation, ID)
         Me.Emp_InfoReportViewer.RefreshReport()
     End Sub

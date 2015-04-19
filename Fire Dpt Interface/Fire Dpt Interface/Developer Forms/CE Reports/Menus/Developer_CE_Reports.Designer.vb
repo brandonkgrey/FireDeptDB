@@ -23,7 +23,6 @@ Partial Class Developer_CE_Reports
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Developer_CE_Reports))
-        Me.ExitButton = New System.Windows.Forms.Button()
         Me.Fire_CE_Button = New System.Windows.Forms.Button()
         Me.TCFP_CE_Button = New System.Windows.Forms.Button()
         Me.HazMat_Report_Button = New System.Windows.Forms.Button()
@@ -39,19 +38,10 @@ Partial Class Developer_CE_Reports
         Me.CEExitButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ExitButton
-        '
-        Me.ExitButton.Location = New System.Drawing.Point(897, 452)
-        Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(81, 25)
-        Me.ExitButton.TabIndex = 56
-        Me.ExitButton.Text = "Exit"
-        Me.ExitButton.UseVisualStyleBackColor = True
-        '
         'Fire_CE_Button
         '
         Me.Fire_CE_Button.Image = CType(resources.GetObject("Fire_CE_Button.Image"), System.Drawing.Image)
-        Me.Fire_CE_Button.Location = New System.Drawing.Point(75, 34)
+        Me.Fire_CE_Button.Location = New System.Drawing.Point(24, 26)
         Me.Fire_CE_Button.Name = "Fire_CE_Button"
         Me.Fire_CE_Button.Size = New System.Drawing.Size(46, 46)
         Me.Fire_CE_Button.TabIndex = 57
@@ -60,7 +50,7 @@ Partial Class Developer_CE_Reports
         'TCFP_CE_Button
         '
         Me.TCFP_CE_Button.Image = CType(resources.GetObject("TCFP_CE_Button.Image"), System.Drawing.Image)
-        Me.TCFP_CE_Button.Location = New System.Drawing.Point(75, 104)
+        Me.TCFP_CE_Button.Location = New System.Drawing.Point(24, 96)
         Me.TCFP_CE_Button.Name = "TCFP_CE_Button"
         Me.TCFP_CE_Button.Size = New System.Drawing.Size(46, 50)
         Me.TCFP_CE_Button.TabIndex = 58
@@ -69,7 +59,7 @@ Partial Class Developer_CE_Reports
         'HazMat_Report_Button
         '
         Me.HazMat_Report_Button.Image = CType(resources.GetObject("HazMat_Report_Button.Image"), System.Drawing.Image)
-        Me.HazMat_Report_Button.Location = New System.Drawing.Point(75, 172)
+        Me.HazMat_Report_Button.Location = New System.Drawing.Point(24, 164)
         Me.HazMat_Report_Button.Name = "HazMat_Report_Button"
         Me.HazMat_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.HazMat_Report_Button.TabIndex = 59
@@ -78,7 +68,7 @@ Partial Class Developer_CE_Reports
         'ARFF_Report_Button
         '
         Me.ARFF_Report_Button.Image = CType(resources.GetObject("ARFF_Report_Button.Image"), System.Drawing.Image)
-        Me.ARFF_Report_Button.Location = New System.Drawing.Point(75, 243)
+        Me.ARFF_Report_Button.Location = New System.Drawing.Point(432, 26)
         Me.ARFF_Report_Button.Name = "ARFF_Report_Button"
         Me.ARFF_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.ARFF_Report_Button.TabIndex = 60
@@ -87,7 +77,7 @@ Partial Class Developer_CE_Reports
         'EMS_CE_Report_Button
         '
         Me.EMS_CE_Report_Button.Image = CType(resources.GetObject("EMS_CE_Report_Button.Image"), System.Drawing.Image)
-        Me.EMS_CE_Report_Button.Location = New System.Drawing.Point(75, 312)
+        Me.EMS_CE_Report_Button.Location = New System.Drawing.Point(432, 95)
         Me.EMS_CE_Report_Button.Name = "EMS_CE_Report_Button"
         Me.EMS_CE_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.EMS_CE_Report_Button.TabIndex = 61
@@ -96,7 +86,7 @@ Partial Class Developer_CE_Reports
         'Safety_CE_Button
         '
         Me.Safety_CE_Button.Image = CType(resources.GetObject("Safety_CE_Button.Image"), System.Drawing.Image)
-        Me.Safety_CE_Button.Location = New System.Drawing.Point(75, 384)
+        Me.Safety_CE_Button.Location = New System.Drawing.Point(432, 167)
         Me.Safety_CE_Button.Name = "Safety_CE_Button"
         Me.Safety_CE_Button.Size = New System.Drawing.Size(46, 46)
         Me.Safety_CE_Button.TabIndex = 62
@@ -106,7 +96,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(151, 46)
+        Me.Label1.Location = New System.Drawing.Point(100, 38)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 20)
         Me.Label1.TabIndex = 64
@@ -116,7 +106,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(151, 118)
+        Me.Label2.Location = New System.Drawing.Point(100, 110)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(251, 20)
         Me.Label2.TabIndex = 65
@@ -126,7 +116,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(151, 189)
+        Me.Label3.Location = New System.Drawing.Point(100, 181)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(273, 20)
         Me.Label3.TabIndex = 66
@@ -136,7 +126,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(151, 260)
+        Me.Label4.Location = New System.Drawing.Point(508, 43)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(258, 20)
         Me.Label4.TabIndex = 67
@@ -146,7 +136,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(151, 329)
+        Me.Label5.Location = New System.Drawing.Point(508, 112)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(245, 20)
         Me.Label5.TabIndex = 68
@@ -156,7 +146,7 @@ Partial Class Developer_CE_Reports
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(148, 401)
+        Me.Label6.Location = New System.Drawing.Point(505, 184)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(263, 20)
         Me.Label6.TabIndex = 69
@@ -164,7 +154,11 @@ Partial Class Developer_CE_Reports
         '
         'CEExitButton
         '
-        Me.CEExitButton.Location = New System.Drawing.Point(473, 435)
+        Me.CEExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CEExitButton.FlatAppearance.BorderSize = 2
+        Me.CEExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CEExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CEExitButton.Location = New System.Drawing.Point(623, 244)
         Me.CEExitButton.Name = "CEExitButton"
         Me.CEExitButton.Size = New System.Drawing.Size(81, 25)
         Me.CEExitButton.TabIndex = 70
@@ -175,7 +169,8 @@ Partial Class Developer_CE_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(566, 472)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(795, 296)
         Me.Controls.Add(Me.CEExitButton)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -189,14 +184,14 @@ Partial Class Developer_CE_Reports
         Me.Controls.Add(Me.HazMat_Report_Button)
         Me.Controls.Add(Me.TCFP_CE_Button)
         Me.Controls.Add(Me.Fire_CE_Button)
-        Me.Controls.Add(Me.ExitButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Developer_CE_Reports"
         Me.Text = "CE Reports Menu"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents Fire_CE_Button As System.Windows.Forms.Button
     Friend WithEvents TCFP_CE_Button As System.Windows.Forms.Button
     Friend WithEvents HazMat_Report_Button As System.Windows.Forms.Button

@@ -6,6 +6,8 @@ Public Class Login
     'Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
     'Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
     Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
+    Public Shared sharedUsername As String
+    Friend Shared Authorization_LVL As Integer
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean
@@ -44,6 +46,37 @@ Public Class Login
         Return str_return
     End Function
 
+    Public Function checkFirst(ByVal username As String) As String
+        'Value to be returned
+        Dim check As Boolean = False
+
+        'Set up a connection to the access database
+        Dim Dbconn As New OleDbConnection(Dbstring)
+        Dbconn.Open()
+
+        'Check to see if there is a connection to the database, exit app if there is none 
+        Try
+            If Dbconn.State = ConnectionState.Closed Then
+                MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
+                System.Threading.Thread.Sleep(500)
+                Application.Exit()
+            End If
+        Catch ex As Exception
+        End Try
+
+        'Get user's password
+        Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Username] ='" + username + "'", Dbconn)
+        Dim currPass As Object = command.ExecuteScalar()
+
+        Dim usernameHash As String = getHash(username)
+
+        If currPass = usernameHash Then
+            check = True
+        End If
+
+        Return check
+    End Function
+
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
 
         'retrieve the input from the username and password text box 
@@ -57,21 +90,12 @@ Public Class Login
         Dim successLogin As Integer = 0
         Dim verifyHex As Boolean = False
 
-        'menu for basic users 
-        Dim BasicMenu As BasicForm
-        BasicMenu = New BasicForm()
-
-        'menu for supervisors 
-        Dim SupervisorMenu As SupervisorForm
-        SupervisorMenu = New SupervisorForm()
-
-        'menu for administrators
-        Dim AdminMenu As AdministratorForm
-        AdminMenu = New AdministratorForm()
-
         'menu for developers
         Dim DevMenu As DeveloperForm
         DevMenu = New DeveloperForm()
+
+        'share the username with other forms
+        sharedUsername = username
 
         'Set up a connection to the access database
         Dim Dbconn As New OleDbConnection(Dbstring)
@@ -91,7 +115,7 @@ Public Class Login
         Try
             Dim authUser As String = "x"
             Dim authPass As String = "x"
-          
+
 
             'Checks for authentic password with correspoding username 
             Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Username] ='" + username + "'", Dbconn)
@@ -103,27 +127,37 @@ Public Class Login
             verifyHex = IsHex(authPass)
             If verifyHex = False And authPass = password Then
                 Dim hashentry As String = getHash(authPass)
+
                 'Hash the plaintext password and update it in the database 
                 command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Username]='" + username + "'", Dbconn)
                 command.ExecuteScalar()
+
                 'Check if the update was successful by retrieving username associated with it 
                 command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 authobj = command.ExecuteScalar()
+
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
+
                 'Get users authorization level Authorization
                 command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 accessobj = command.ExecuteScalar()
                 accesslvl = accessobj.ToString()
+                Authorization_LVL = CInt(accesslvl)
+
+
             Else
                 'the password is already hashed, to we issue a query with the hashed password 
                 command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 authobj = command.ExecuteScalar()
                 command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
                 accessobj = command.ExecuteScalar()
+
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
                 accesslvl = accessobj.ToString()
+                Authorization_LVL = accessobj
+
             End If
 
             'was the username retrieved the same as the one entered in the form? if they are successful login 
@@ -134,31 +168,50 @@ Public Class Login
         Catch ex As Exception
         End Try
 
-        'correct credentials were entered 
-        If successLogin And accesslvl = "1" Then
+        Dim firstLogin As Boolean = checkFirst(username)
+
+        'It's the users first login
+        If firstLogin And successLogin = 1 Then
+            Dim initialReset As InitialPasswordReset = New InitialPasswordReset()
+            initialReset.Show()
+            initialReset = Nothing
+            Me.Close()
+
+            'correct credentials were entered 
+        ElseIf successLogin And accesslvl = "1" Then
             'Successful login, launch the basic menu 
+            Dim BasicMenu As BasicForm
+            BasicMenu = New BasicForm()
             BasicMenu.Show()
             BasicMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "2" Then
             'Successful login, launch the supervisor menu 
+            Dim SupervisorMenu As SupervisorForm
+            SupervisorMenu = New SupervisorForm()
             SupervisorMenu.Show()
             SupervisorMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "3" Then
             'Successful login, launch the admin menu 
+            Dim AdminMenu As AdministratorForm
+            AdminMenu = New AdministratorForm()
             AdminMenu.Show()
             AdminMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         ElseIf successLogin And accesslvl = "4" Then
             'Successful login, launch the developer menu 
             DevMenu.Show()
             DevMenu = Nothing
             Me.Close()
             Dbconn.Close()
+
         Else
             Invalid_Cred.Visible = True
         End If
@@ -168,18 +221,18 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs)
+        Invalid_Cred.Hide()
     End Sub
 
-    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs) Handles UsernameLabel.Click
-
+    Private Sub PasswordTextBox_TextChanged(sender As Object, e As EventArgs)
+        Invalid_Cred.Hide()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Invalid_Cred.Click
-
+    Private Sub ForgotPassLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ForgotPassLink.LinkClicked
+        Dim PassReset As GeneralPasswordReset = New GeneralPasswordReset()
+        PassReset.Show()
+        PassReset = Nothing
+        Me.Close()
     End Sub
-
-
 End Class
-
-

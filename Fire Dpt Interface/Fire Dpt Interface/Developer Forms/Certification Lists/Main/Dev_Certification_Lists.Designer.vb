@@ -45,7 +45,12 @@ Partial Class Dev_Certification_Lists
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(345, 582)
+        Me.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatAppearance.BorderSize = 2
+        Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitButton.Location = New System.Drawing.Point(300, 310)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(81, 25)
         Me.ExitButton.TabIndex = 56
@@ -91,7 +96,7 @@ Partial Class Dev_Certification_Lists
         'TCFP_Haz_IC_List_Report_Button
         '
         Me.TCFP_Haz_IC_List_Report_Button.Image = CType(resources.GetObject("TCFP_Haz_IC_List_Report_Button.Image"), System.Drawing.Image)
-        Me.TCFP_Haz_IC_List_Report_Button.Location = New System.Drawing.Point(232, 457)
+        Me.TCFP_Haz_IC_List_Report_Button.Location = New System.Drawing.Point(585, 180)
         Me.TCFP_Haz_IC_List_Report_Button.Name = "TCFP_Haz_IC_List_Report_Button"
         Me.TCFP_Haz_IC_List_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.TCFP_Haz_IC_List_Report_Button.TabIndex = 91
@@ -100,7 +105,7 @@ Partial Class Dev_Certification_Lists
         'TCFP_Ins_List_Report_Button
         '
         Me.TCFP_Ins_List_Report_Button.Image = CType(resources.GetObject("TCFP_Ins_List_Report_Button.Image"), System.Drawing.Image)
-        Me.TCFP_Ins_List_Report_Button.Location = New System.Drawing.Point(232, 385)
+        Me.TCFP_Ins_List_Report_Button.Location = New System.Drawing.Point(585, 108)
         Me.TCFP_Ins_List_Report_Button.Name = "TCFP_Ins_List_Report_Button"
         Me.TCFP_Ins_List_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.TCFP_Ins_List_Report_Button.TabIndex = 88
@@ -109,7 +114,7 @@ Partial Class Dev_Certification_Lists
         'TCFP_Wild_Report_Button
         '
         Me.TCFP_Wild_Report_Button.Image = CType(resources.GetObject("TCFP_Wild_Report_Button.Image"), System.Drawing.Image)
-        Me.TCFP_Wild_Report_Button.Location = New System.Drawing.Point(232, 312)
+        Me.TCFP_Wild_Report_Button.Location = New System.Drawing.Point(585, 35)
         Me.TCFP_Wild_Report_Button.Name = "TCFP_Wild_Report_Button"
         Me.TCFP_Wild_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.TCFP_Wild_Report_Button.TabIndex = 85
@@ -118,7 +123,7 @@ Partial Class Dev_Certification_Lists
         'TCFP_Haz_Tec_Report_Button
         '
         Me.TCFP_Haz_Tec_Report_Button.Image = CType(resources.GetObject("TCFP_Haz_Tec_Report_Button.Image"), System.Drawing.Image)
-        Me.TCFP_Haz_Tec_Report_Button.Location = New System.Drawing.Point(232, 530)
+        Me.TCFP_Haz_Tec_Report_Button.Location = New System.Drawing.Point(585, 253)
         Me.TCFP_Haz_Tec_Report_Button.Name = "TCFP_Haz_Tec_Report_Button"
         Me.TCFP_Haz_Tec_Report_Button.Size = New System.Drawing.Size(46, 46)
         Me.TCFP_Haz_Tec_Report_Button.TabIndex = 94
@@ -158,7 +163,7 @@ Partial Class Dev_Certification_Lists
         '
         Me.TCFP_HazMat_Tech_List_Button.AutoSize = True
         Me.TCFP_HazMat_Tech_List_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TCFP_HazMat_Tech_List_Button.Location = New System.Drawing.Point(2, 541)
+        Me.TCFP_HazMat_Tech_List_Button.Location = New System.Drawing.Point(355, 264)
         Me.TCFP_HazMat_Tech_List_Button.Name = "TCFP_HazMat_Tech_List_Button"
         Me.TCFP_HazMat_Tech_List_Button.Size = New System.Drawing.Size(199, 15)
         Me.TCFP_HazMat_Tech_List_Button.TabIndex = 100
@@ -168,7 +173,7 @@ Partial Class Dev_Certification_Lists
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(55, 468)
+        Me.Label5.Location = New System.Drawing.Point(408, 191)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(135, 15)
         Me.Label5.TabIndex = 101
@@ -178,7 +183,7 @@ Partial Class Dev_Certification_Lists
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(55, 396)
+        Me.Label6.Location = New System.Drawing.Point(408, 119)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(136, 15)
         Me.Label6.TabIndex = 102
@@ -188,7 +193,7 @@ Partial Class Dev_Certification_Lists
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(63, 323)
+        Me.Label7.Location = New System.Drawing.Point(416, 46)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 15)
         Me.Label7.TabIndex = 103
@@ -208,7 +213,7 @@ Partial Class Dev_Certification_Lists
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(40, 9)
+        Me.Label4.Location = New System.Drawing.Point(166, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(368, 13)
         Me.Label4.TabIndex = 105
@@ -218,7 +223,8 @@ Partial Class Dev_Certification_Lists
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(429, 610)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(671, 358)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -237,6 +243,8 @@ Partial Class Dev_Certification_Lists
         Me.Controls.Add(Me.EMTB_Cert_Report_Button)
         Me.Controls.Add(Me.EMS_Cert_Report_Button)
         Me.Controls.Add(Me.ExitButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Dev_Certification_Lists"
         Me.Text = "Certification Lists Menu"
         Me.ResumeLayout(False)

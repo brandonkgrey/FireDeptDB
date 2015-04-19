@@ -79,6 +79,12 @@
     <Compile Include="Adminstrator Forms\AdministratorForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Basic Forms\Basic_Assignments.Designer.vb">
+      <DependentUpon>Basic_Assignments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Forms\Basic_Assignments.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Developer Forms\CE Reports\Datasets\CE_ARFF_Dataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,10 +233,10 @@
     <Compile Include="Developer Forms\Class Information\Report Views\Class_Information_Report_View.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.Designer.vb">
-      <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
+    <Compile Include="Shared Forms\All_Employees.Designer.vb">
+      <DependentUpon>All_Employees.vb</DependentUpon>
     </Compile>
-    <Compile Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.vb">
+    <Compile Include="Shared Forms\All_Employees.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.Designer.vb">
@@ -412,6 +418,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Login Forms\GeneralPasswordReset.Designer.vb">
+      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordReset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordResetPart2.Designer.vb">
+      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Forms\GeneralPasswordResetPart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Forms\InitialPasswordReset.Designer.vb">
+      <DependentUpon>InitialPasswordReset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Forms\InitialPasswordReset.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -487,6 +511,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Basic Forms\BasicForm.resx">
       <DependentUpon>BasicForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic Forms\Basic_Assignments.resx">
+      <DependentUpon>Basic_Assignments.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Developer Forms\CE Reports\Menus\Dev_ARFF_CE_Report.resx">
       <DependentUpon>Dev_ARFF_CE_Report.vb</DependentUpon>
@@ -566,8 +593,8 @@
       <DependentUpon>Class_Information_Report_View.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Developer Forms\Class Information\Reports\Class_Information_Report.rdlc" />
-    <EmbeddedResource Include="Developer Forms\Employee Information\Menu\Developer_Employee_Access.resx">
-      <DependentUpon>Developer_Employee_Access.vb</DependentUpon>
+    <EmbeddedResource Include="Shared Forms\All_Employees.resx">
+      <DependentUpon>All_Employees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Developer Forms\Employee Information\Report Views\Indivdual_Employee_Report_View.resx">
       <DependentUpon>Indivdual_Employee_Report_View.vb</DependentUpon>
@@ -629,6 +656,15 @@
     <EmbeddedResource Include="Developer Forms\Training Reports\Reports\Safety_Training_Report.rdlc" />
     <EmbeddedResource Include="Developer Forms\Training Reports\Report Views\Safety_Training_Report_View.resx">
       <DependentUpon>Safety_Training_Report_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\GeneralPasswordReset.resx">
+      <DependentUpon>GeneralPasswordReset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\GeneralPasswordResetPart2.resx">
+      <DependentUpon>GeneralPasswordResetPart2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Forms\InitialPasswordReset.resx">
+      <DependentUpon>InitialPasswordReset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -946,7 +982,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Alejandros Stuff\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
