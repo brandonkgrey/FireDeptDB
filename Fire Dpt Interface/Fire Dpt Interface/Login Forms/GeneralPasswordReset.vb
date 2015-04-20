@@ -6,7 +6,7 @@ Imports System.Net.Mail
 
 Public Class GeneralPasswordReset
 
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\new\Training Records for TAMU.accdb;Jet OLEDB:Database Password=fdtrain;"
     Public Shared tempPass As String
     Public Shared tempUsername As String
 
@@ -29,7 +29,7 @@ Public Class GeneralPasswordReset
         Dim Dbconn As New OleDbConnection(Dbstring)
         Dbconn.Open()
 
-        Dim command As New OleDbCommand("SELECT [username] FROM [Employee Information] WHERE [Username] ='" + inputUsername + "'", Dbconn)
+        Dim command As New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Employee_ID] ='" + inputUsername + "'", Dbconn)
         Dim authobj As Object = command.ExecuteScalar()
 
         If authobj = Nothing Then
@@ -40,7 +40,7 @@ Public Class GeneralPasswordReset
             InvalidUsernameGPR.Visible = False
 
             'get email connected to username'
-            command = New OleDbCommand("SELECT [Email] FROM [Employee Information] WHERE [Username] ='" + inputUsername + "'", Dbconn)
+            command = New OleDbCommand("SELECT [EMail] FROM [Employee Information] WHERE [Employee_ID] ='" + inputUsername + "'", Dbconn)
             authobj = command.ExecuteScalar()
             email = authobj.ToString()
             'MsgBox(email.ToString())

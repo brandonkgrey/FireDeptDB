@@ -465,6 +465,12 @@
     <Compile Include="Developer Forms\Employee Information\Datasets\Query_Indivual_Employee.vb">
       <DependentUpon>Query_Indivual_Employee.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Supervisor Forms\SupervisorEmployeeInformation.Designer.vb">
+      <DependentUpon>SupervisorEmployeeInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor Forms\SupervisorEmployeeInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </Compile>
@@ -493,6 +499,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorFilterDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupervisorFilterDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Training_RecordsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -674,6 +685,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supervisor Forms\SupervisorEmployeeInformation.resx">
+      <DependentUpon>SupervisorEmployeeInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supervisor Forms\SupervisorForm.resx">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
@@ -911,6 +925,17 @@
     </None>
     <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.xss">
       <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorFilterDataSet.xsc">
+      <DependentUpon>SupervisorFilterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorFilterDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupervisorFilterDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SupervisorFilterDataSet.xss">
+      <DependentUpon>SupervisorFilterDataSet.xsd</DependentUpon>
     </None>
     <None Include="Training_RecordsDataSet.xsc">
       <DependentUpon>Training_RecordsDataSet.xsd</DependentUpon>

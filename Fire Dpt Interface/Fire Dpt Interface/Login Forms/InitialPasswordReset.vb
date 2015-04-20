@@ -5,7 +5,7 @@ Imports System.Security.Cryptography
 
 Public Class InitialPasswordReset
 
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\new\Training Records for TAMU.accdb;Jet OLEDB:Database Password=fdtrain;"
 
     Public Function getHash(ByVal number As String) As String
         Dim ASCIIENC As New ASCIIEncoding

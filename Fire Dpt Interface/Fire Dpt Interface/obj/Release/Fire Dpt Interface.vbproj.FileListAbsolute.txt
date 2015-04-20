@@ -122,3 +122,4 @@ C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fir
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.GeneralPasswordReset.resources
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.GeneralPasswordResetPart2.resources
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.InitialPasswordReset.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.SupervisorEmployeeInformation.resources

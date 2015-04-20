@@ -4,16 +4,18 @@ Imports System.Data.OleDb
 Public Class All_Employees
     Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
     Dim Authorization_Level
-    Dim EmployeeID
-    Dim username
+    Dim employeeID
     Dim HiddenTabs As Stack(Of TabPage) = New Stack(Of TabPage)
     Dim choice As Integer
-    Friend Shared Employee_ID As String
+    Dim employeeName As String
+    Friend Shared currentID
+
 
     Private Sub AuthorizationFix(choice As Integer, AuthLvl As Integer)
         'Basic Authorization
         If (AuthLvl = 1) Then
 
+            EmployeeInformationBindingSource.Position = EmployeeInformationBindingSource.Find("Employee_ID", employeeID)
 
             If choice = 0 Then
                 EmpInfo.TabPages.RemoveAt(6)
@@ -66,7 +68,7 @@ Public Class All_Employees
             End If
 
             'get rid of their ability to edit data
-            'Next_Button.Visible = False
+            Next_Button.Visible = False
             Prev_Button.Visible = False
             DeleteButton.Visible = False
             Save_Button.Visible = False
@@ -94,9 +96,9 @@ Public Class All_Employees
 
 
         Authorization_Level = Login.Authorization_LVL
-        username = Login.sharedUsername
+        employeeID = Login.sharedUsername
         choice = BasicForm.tabSelect
-        'EmployeeID = Login.EmployeeIdentification
+        employeeName = Login.sharedName
         'Add this when we connect to the Fire Dept. DB
 
         EmployeeInformationBindingSource.Sort = "Name"
@@ -152,6 +154,8 @@ SaveErr:
         OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
 
+        currentID = Emp_Textbox.Text
+
     End Sub
 
     Private Sub Next_Button_Click(sender As Object, e As EventArgs) Handles Next_Button.Click
@@ -168,7 +172,7 @@ SaveErr:
         OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
 
-
+        currentID = Emp_Textbox.Text
     End Sub
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
@@ -177,7 +181,7 @@ SaveErr:
     End Sub
 
     Private Sub ALL_EMP_ReportButton_Click(sender As Object, e As EventArgs) Handles ALL_EMP_ReportButton.Click
-        Employee_ID = Convert.ToInt32(Emp_Textbox.Text)
+        currentID = Convert.ToInt32(Emp_Textbox.Text)
         Dim IndReport As Indivdual_Employee_Report_View
         IndReport = New Indivdual_Employee_Report_View()
         IndReport.Show()
@@ -185,4 +189,5 @@ SaveErr:
         Me.Close()
 
     End Sub
+
 End Class

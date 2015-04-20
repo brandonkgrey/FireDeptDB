@@ -4,7 +4,7 @@ Imports System.Security.Cryptography
 
 Public Class GeneralPasswordResetPart2
 
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\new\Training Records for TAMU.accdb;Jet OLEDB:Database Password=fdtrain;"
     Dim tempPassAttemptsCount As Integer = 0
 
     Public Function getHash(ByVal number As String) As String
@@ -92,7 +92,7 @@ Public Class GeneralPasswordResetPart2
             Dim newPassHash As String = getHash(newPass)
 
             'update the password in database with inputted password after a hash
-            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Username]='" + GeneralPasswordReset.tempUsername + "'", Dbconn)
+            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Employee_ID]='" + GeneralPasswordReset.tempUsername + "'", Dbconn)
             Command.ExecuteScalar()
 
             MsgBox("Password has been changed! Please login with new password.", MsgBoxStyle.Information, "Password Update Success")

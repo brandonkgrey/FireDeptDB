@@ -23,11 +23,12 @@ Partial Class All_Employees
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.AuthText = New System.Windows.Forms.TextBox()
         Me.EmpInfo = New System.Windows.Forms.TabControl()
         Me.EmployeeInfo = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.NonOpsCheckbox = New System.Windows.Forms.CheckBox()
+        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Training_Records_for_TAMUDataSet = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSet()
         Me.Division_Textbox = New System.Windows.Forms.TextBox()
         Me.Shift_TextBox = New System.Windows.Forms.TextBox()
         Me.EndDate_Textbox = New System.Windows.Forms.TextBox()
@@ -68,6 +69,7 @@ Partial Class All_Employees
         Me.AeroOpsCheckbox = New System.Windows.Forms.TabPage()
         Me.ReceivedCertsLabel = New System.Windows.Forms.Label()
         Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.FireCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.HazMatICSCheckBox = New System.Windows.Forms.CheckBox()
         Me.SafetyOffCheckBox = New System.Windows.Forms.CheckBox()
@@ -146,6 +148,7 @@ Partial Class All_Employees
         Me.EMSCertifications = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.EMSCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TextBox49 = New System.Windows.Forms.TextBox()
         Me.TextBox47 = New System.Windows.Forms.TextBox()
@@ -197,6 +200,7 @@ Partial Class All_Employees
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OtherCertifications = New System.Windows.Forms.TabPage()
         Me.TextBox68 = New System.Windows.Forms.TextBox()
+        Me.OtherCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TextBox69 = New System.Windows.Forms.TextBox()
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.TextBox66 = New System.Windows.Forms.TextBox()
@@ -219,6 +223,7 @@ Partial Class All_Employees
         Me.Assignment = New System.Windows.Forms.TabPage()
         Me.TypeLabel = New System.Windows.Forms.Label()
         Me.TextBox73 = New System.Windows.Forms.TextBox()
+        Me.AssignmentPayBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TextBox72 = New System.Windows.Forms.TextBox()
         Me.TextBox71 = New System.Windows.Forms.TextBox()
         Me.TextBox70 = New System.Windows.Forms.TextBox()
@@ -245,12 +250,6 @@ Partial Class All_Employees
         Me.EMS_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.EMS_CertificationsTableAdapter()
         Me.Other_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter()
         Me.Assignment_PayTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter()
-        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Training_Records_for_TAMUDataSet = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSet()
-        Me.FireCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EMSCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OtherCertificationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AssignmentPayBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.QueryEmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Query_Indivual_Employee = New Fire_Dpt_Interface.Query_Indivual_Employee()
         Me.QueryEmployeeInformationTableAdapter = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter()
@@ -258,29 +257,22 @@ Partial Class All_Employees
         Me.EmpInfo.SuspendLayout()
         Me.EmployeeInfo.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.AeroOpsCheckbox.SuspendLayout()
+        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EMSCertifications.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.OtherCertifications.SuspendLayout()
-        Me.Assignment.SuspendLayout()
-        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMSCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.OtherCertifications.SuspendLayout()
         CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Assignment.SuspendLayout()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QueryEmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Query_Indivual_Employee, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'AuthText
-        '
-        Me.AuthText.Location = New System.Drawing.Point(364, 21)
-        Me.AuthText.Name = "AuthText"
-        Me.AuthText.Size = New System.Drawing.Size(100, 20)
-        Me.AuthText.TabIndex = 61
         '
         'EmpInfo
         '
@@ -343,6 +335,16 @@ Partial Class All_Employees
         Me.NonOpsCheckbox.Size = New System.Drawing.Size(15, 14)
         Me.NonOpsCheckbox.TabIndex = 85
         Me.NonOpsCheckbox.UseVisualStyleBackColor = True
+        '
+        'EmployeeInformationBindingSource
+        '
+        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
+        'Training_Records_for_TAMUDataSet
+        '
+        Me.Training_Records_for_TAMUDataSet.DataSetName = "Training_Records_for_TAMUDataSet"
+        Me.Training_Records_for_TAMUDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Division_Textbox
         '
@@ -825,6 +827,11 @@ Partial Class All_Employees
         Me.TextBox32.Name = "TextBox32"
         Me.TextBox32.Size = New System.Drawing.Size(100, 20)
         Me.TextBox32.TabIndex = 89
+        '
+        'FireCertificationsBindingSource
+        '
+        Me.FireCertificationsBindingSource.DataMember = "Fire Certifications"
+        Me.FireCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
         '
         'TextBox33
         '
@@ -1682,6 +1689,11 @@ Partial Class All_Employees
         Me.TextBox36.Size = New System.Drawing.Size(100, 20)
         Me.TextBox36.TabIndex = 24
         '
+        'EMSCertificationsBindingSource
+        '
+        Me.EMSCertificationsBindingSource.DataMember = "EMS Certifications"
+        Me.EMSCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -2168,6 +2180,11 @@ Partial Class All_Employees
         Me.TextBox68.Size = New System.Drawing.Size(163, 20)
         Me.TextBox68.TabIndex = 38
         '
+        'OtherCertificationsBindingSource
+        '
+        Me.OtherCertificationsBindingSource.DataMember = "Other Certifications"
+        Me.OtherCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
         'TextBox69
         '
         Me.TextBox69.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "Rescue Received Date", True))
@@ -2385,6 +2402,11 @@ Partial Class All_Employees
         Me.TextBox73.Name = "TextBox73"
         Me.TextBox73.Size = New System.Drawing.Size(163, 20)
         Me.TextBox73.TabIndex = 32
+        '
+        'AssignmentPayBindingSource
+        '
+        Me.AssignmentPayBindingSource.DataMember = "Assignment Pay"
+        Me.AssignmentPayBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
         '
         'TextBox72
         '
@@ -2638,36 +2660,6 @@ Partial Class All_Employees
         '
         Me.Assignment_PayTableAdapter.ClearBeforeFill = True
         '
-        'EmployeeInformationBindingSource
-        '
-        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
-        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
-        '
-        'Training_Records_for_TAMUDataSet
-        '
-        Me.Training_Records_for_TAMUDataSet.DataSetName = "Training_Records_for_TAMUDataSet"
-        Me.Training_Records_for_TAMUDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FireCertificationsBindingSource
-        '
-        Me.FireCertificationsBindingSource.DataMember = "Fire Certifications"
-        Me.FireCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
-        '
-        'EMSCertificationsBindingSource
-        '
-        Me.EMSCertificationsBindingSource.DataMember = "EMS Certifications"
-        Me.EMSCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
-        '
-        'OtherCertificationsBindingSource
-        '
-        Me.OtherCertificationsBindingSource.DataMember = "Other Certifications"
-        Me.OtherCertificationsBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
-        '
-        'AssignmentPayBindingSource
-        '
-        Me.AssignmentPayBindingSource.DataMember = "Assignment Pay"
-        Me.AssignmentPayBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
-        '
         'QueryEmployeeInformationBindingSource
         '
         Me.QueryEmployeeInformationBindingSource.DataMember = "QueryEmployeeInformation"
@@ -2701,7 +2693,6 @@ Partial Class All_Employees
         Me.Controls.Add(Me.Prev_Button)
         Me.Controls.Add(Me.Save_Button)
         Me.Controls.Add(Me.ExitButton)
-        Me.Controls.Add(Me.AuthText)
         Me.Controls.Add(Me.EmpInfo)
         Me.Controls.Add(Me.Emp_Textbox)
         Me.Controls.Add(Me.Name_Textbox)
@@ -2715,25 +2706,25 @@ Partial Class All_Employees
         Me.EmployeeInfo.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.AeroOpsCheckbox.ResumeLayout(False)
         Me.AeroOpsCheckbox.PerformLayout()
+        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EMSCertifications.ResumeLayout(False)
         Me.EMSCertifications.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.EMSCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.OtherCertifications.ResumeLayout(False)
         Me.OtherCertifications.PerformLayout()
+        CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Assignment.ResumeLayout(False)
         Me.Assignment.PerformLayout()
-        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FireCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EMSCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QueryEmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Query_Indivual_Employee, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2745,7 +2736,6 @@ Partial Class All_Employees
     Friend WithEvents QueryEmployeeInformationBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents QueryEmployeeInformationTableAdapter As Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter
     Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager
-    Friend WithEvents AuthText As System.Windows.Forms.TextBox
     Friend WithEvents EmpInfo As System.Windows.Forms.TabControl
     Friend WithEvents EmployeeInfo As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox

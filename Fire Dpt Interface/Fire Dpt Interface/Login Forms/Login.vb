@@ -4,10 +4,14 @@ Imports System.Security.Cryptography
 
 Public Class Login
     'Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
-    'Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\Backup\Training Records.accdb"
-    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
-    Public Shared sharedUsername As String
+    '"C:\Users\Alejandro\Desktop\Fire Department DB\new\Training Records for TAMU.accdb"
+
+    ''old connection "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\ExampleDb.accdb"
+
+    Dim Dbstring As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + "C:\Users\Alejandro\Desktop\Fire Department DB\new\Training Records for TAMU.accdb;Jet OLEDB:Database Password=fdtrain;"
+    Friend Shared sharedUsername As String
     Friend Shared Authorization_LVL As Integer
+    Friend Shared sharedName As String
 
     'check if the password in the database is/isnt hashed already (in hex)
     Public Function IsHex(password As String) As Boolean
@@ -65,7 +69,7 @@ Public Class Login
         End Try
 
         'Get user's password
-        Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Username] ='" + username + "'", Dbconn)
+        Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
         Dim currPass As Object = command.ExecuteScalar()
 
         Dim usernameHash As String = getHash(username)
@@ -80,11 +84,12 @@ Public Class Login
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
 
         'retrieve the input from the username and password text box 
-        Dim username As String = UsernameTextBox.Text
+        Dim username As String = Convert.ToInt32(UsernameTextBox.Text)  'ERROR: catch strings'
         Dim password As String = PasswordTextBox.Text
         Dim hashedPass As String = getHash(password)
         Dim accessobj As Object = ""
         Dim accesslvl As String = "x"
+        Dim getName As Object
 
         'Flags for login in procedure 
         Dim successLogin As Integer = 0
@@ -118,7 +123,7 @@ Public Class Login
 
 
             'Checks for authentic password with correspoding username 
-            Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Username] ='" + username + "'", Dbconn)
+            Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
             Dim authobj As Object = command.ExecuteScalar()
             authPass = authobj.ToString()
 
@@ -129,34 +134,41 @@ Public Class Login
                 Dim hashentry As String = getHash(authPass)
 
                 'Hash the plaintext password and update it in the database 
-                command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Username]='" + username + "'", Dbconn)
+
+                command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Employee_ID]=" + username, Dbconn)
                 command.ExecuteScalar()
 
                 'Check if the update was successful by retrieving username associated with it 
-                command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
+                command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
                 authobj = command.ExecuteScalar()
 
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
 
                 'Get users authorization level Authorization
-                command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
+                command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
                 accessobj = command.ExecuteScalar()
+                command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                getName = command.ExecuteScalar()
                 accesslvl = accessobj.ToString()
                 Authorization_LVL = CInt(accesslvl)
+                sharedName = getName.ToString()
 
 
             Else
                 'the password is already hashed, to we issue a query with the hashed password 
-                command = New OleDbCommand("SELECT [Username] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
+                command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
                 authobj = command.ExecuteScalar()
-                command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Username] ='" + username + "'", Dbconn)
+                command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
                 accessobj = command.ExecuteScalar()
+                command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                getName = command.ExecuteScalar()
 
                 'store the user who was retrieved from the query command 
                 authUser = authobj.ToString()
                 accesslvl = accessobj.ToString()
                 Authorization_LVL = accessobj
+                sharedName = getName.ToString
 
             End If
 
@@ -189,8 +201,8 @@ Public Class Login
 
         ElseIf successLogin And accesslvl = "2" Then
             'Successful login, launch the supervisor menu 
-            Dim SupervisorMenu As SupervisorForm
-            SupervisorMenu = New SupervisorForm()
+            Dim SupervisorMenu As SupervisorEmployeeInformation
+            SupervisorMenu = New SupervisorEmployeeInformation()
             SupervisorMenu.Show()
             SupervisorMenu = Nothing
             Me.Close()

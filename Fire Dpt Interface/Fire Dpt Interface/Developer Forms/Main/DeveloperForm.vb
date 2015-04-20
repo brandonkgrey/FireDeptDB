@@ -5,7 +5,7 @@ Public Class DeveloperForm
     Dim EmpMenu As All_Employees = New All_Employees()
 
     Private Sub DeveloperForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Welcome " + Login.sharedUsername
+        Me.Text = "Welcome " + Login.sharedName
 
     End Sub
 
