@@ -31,12 +31,11 @@ Partial Class Developer_Class_Information
         Me.ClassSearchbyNumber = New System.Windows.Forms.ComboBox()
         Me.Employee_List = New System.Windows.Forms.ComboBox()
         Me.ClassSearchbyName = New System.Windows.Forms.Label()
-        Me.PrintButton = New System.Windows.Forms.Button()
+        Me.ReportButton = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.Next_Button = New System.Windows.Forms.Button()
         Me.Prev_Button = New System.Windows.Forms.Button()
         Me.Save_Button = New System.Windows.Forms.Button()
-        Me.ExitButton = New System.Windows.Forms.Button()
         Me.ClassInfoTabControl = New System.Windows.Forms.TabControl()
         Me.ClassInfo = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -199,6 +198,12 @@ Partial Class Developer_Class_Information
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.StudentInfo = New System.Windows.Forms.TabPage()
+        Me.Class_Attendance_InformationDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Class_Attendance_InformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -210,6 +215,9 @@ Partial Class Developer_Class_Information
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.Class_Attendance_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Class_Attendance_InformationTableAdapter()
+        Me.TableAdapterManager = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager()
         CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassInfoTabControl.SuspendLayout()
@@ -226,6 +234,9 @@ Partial Class Developer_Class_Information
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
+        Me.StudentInfo.SuspendLayout()
+        CType(Me.Class_Attendance_InformationDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Class_Attendance_InformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Training_Records_for_TAMUDataSet
@@ -303,18 +314,28 @@ Partial Class Developer_Class_Information
         Me.ClassSearchbyName.TabIndex = 85
         Me.ClassSearchbyName.Text = "Class Search by Name"
         '
-        'PrintButton
+        'ReportButton
         '
-        Me.PrintButton.Location = New System.Drawing.Point(1028, 416)
-        Me.PrintButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PrintButton.Name = "PrintButton"
-        Me.PrintButton.Size = New System.Drawing.Size(109, 25)
-        Me.PrintButton.TabIndex = 84
-        Me.PrintButton.Text = "Print"
-        Me.PrintButton.UseVisualStyleBackColor = True
+        Me.ReportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ReportButton.FlatAppearance.BorderSize = 2
+        Me.ReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.ReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ReportButton.Location = New System.Drawing.Point(1028, 416)
+        Me.ReportButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ReportButton.Name = "ReportButton"
+        Me.ReportButton.Size = New System.Drawing.Size(109, 25)
+        Me.ReportButton.TabIndex = 84
+        Me.ReportButton.Text = "Report"
+        Me.ReportButton.UseVisualStyleBackColor = True
         '
         'DeleteButton
         '
+        Me.DeleteButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DeleteButton.FlatAppearance.BorderSize = 2
+        Me.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteButton.Location = New System.Drawing.Point(758, 416)
         Me.DeleteButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DeleteButton.Name = "DeleteButton"
@@ -325,6 +346,11 @@ Partial Class Developer_Class_Information
         '
         'Next_Button
         '
+        Me.Next_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Next_Button.FlatAppearance.BorderSize = 2
+        Me.Next_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.Next_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Next_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Next_Button.Location = New System.Drawing.Point(512, 416)
         Me.Next_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Next_Button.Name = "Next_Button"
@@ -335,6 +361,11 @@ Partial Class Developer_Class_Information
         '
         'Prev_Button
         '
+        Me.Prev_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Prev_Button.FlatAppearance.BorderSize = 2
+        Me.Prev_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.Prev_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Prev_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Prev_Button.Location = New System.Drawing.Point(338, 416)
         Me.Prev_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Prev_Button.Name = "Prev_Button"
@@ -345,6 +376,11 @@ Partial Class Developer_Class_Information
         '
         'Save_Button
         '
+        Me.Save_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Save_Button.FlatAppearance.BorderSize = 2
+        Me.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.Save_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Save_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Save_Button.Location = New System.Drawing.Point(896, 416)
         Me.Save_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Save_Button.Name = "Save_Button"
@@ -352,16 +388,6 @@ Partial Class Developer_Class_Information
         Me.Save_Button.TabIndex = 80
         Me.Save_Button.Text = "Save"
         Me.Save_Button.UseVisualStyleBackColor = True
-        '
-        'ExitButton
-        '
-        Me.ExitButton.Location = New System.Drawing.Point(1220, 416)
-        Me.ExitButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(108, 25)
-        Me.ExitButton.TabIndex = 79
-        Me.ExitButton.Text = "Exit"
-        Me.ExitButton.UseVisualStyleBackColor = True
         '
         'ClassInfoTabControl
         '
@@ -2271,12 +2297,53 @@ Partial Class Developer_Class_Information
         'StudentInfo
         '
         Me.StudentInfo.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.StudentInfo.Controls.Add(Me.Class_Attendance_InformationDataGridView)
         Me.StudentInfo.Location = New System.Drawing.Point(4, 22)
         Me.StudentInfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.StudentInfo.Name = "StudentInfo"
         Me.StudentInfo.Size = New System.Drawing.Size(1297, 299)
         Me.StudentInfo.TabIndex = 3
         Me.StudentInfo.Text = "Student Information"
+        '
+        'Class_Attendance_InformationDataGridView
+        '
+        Me.Class_Attendance_InformationDataGridView.AutoGenerateColumns = False
+        Me.Class_Attendance_InformationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Class_Attendance_InformationDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.Class_Attendance_InformationDataGridView.DataSource = Me.Class_Attendance_InformationBindingSource
+        Me.Class_Attendance_InformationDataGridView.Location = New System.Drawing.Point(3, 3)
+        Me.Class_Attendance_InformationDataGridView.Name = "Class_Attendance_InformationDataGridView"
+        Me.Class_Attendance_InformationDataGridView.Size = New System.Drawing.Size(433, 249)
+        Me.Class_Attendance_InformationDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Class Number"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Class Number"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Employee_ID"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Employee_ID"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "CE Hours"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "CE Hours"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Grade"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Grade"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'Class_Attendance_InformationBindingSource
+        '
+        Me.Class_Attendance_InformationBindingSource.DataMember = "Class Attendance Information"
+        Me.Class_Attendance_InformationBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
         '
         'Label8
         '
@@ -2340,6 +2407,7 @@ Partial Class Developer_Class_Information
         '
         'TextBox3
         '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Number", True))
         Me.TextBox3.ForeColor = System.Drawing.Color.Red
         Me.TextBox3.Location = New System.Drawing.Point(1150, 10)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -2349,7 +2417,7 @@ Partial Class Developer_Class_Information
         '
         'TextBox2
         '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Number", True))
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "AutoCount", True))
         Me.TextBox2.Location = New System.Drawing.Point(950, 38)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
@@ -2401,6 +2469,51 @@ Partial Class Developer_Class_Information
         Me.Label1.TabIndex = 67
         Me.Label1.Text = "College Station Fire Department "
         '
+        'ExitButton
+        '
+        Me.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatAppearance.BorderSize = 2
+        Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitButton.Location = New System.Drawing.Point(1220, 416)
+        Me.ExitButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(108, 25)
+        Me.ExitButton.TabIndex = 79
+        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.UseVisualStyleBackColor = True
+        '
+        'Class_Attendance_InformationTableAdapter
+        '
+        Me.Class_Attendance_InformationTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.ARFF_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Assignment_PayTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CertificatesTableAdapter = Nothing
+        Me.TableAdapterManager.Certification_Name_ListTableAdapter = Nothing
+        Me.TableAdapterManager.Class_Attendance_InformationTableAdapter = Me.Class_Attendance_InformationTableAdapter
+        Me.TableAdapterManager.Class_InformationTableAdapter = Me.Class_InformationTableAdapter
+        Me.TableAdapterManager.CollegeTableAdapter = Nothing
+        Me.TableAdapterManager.Employee_InformationTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_Certification_TypeTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_CertificationsTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager.FFIII_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager.Fire_and_EMS_OrganizationsTableAdapter = Nothing
+        Me.TableAdapterManager.Fire_CertificationsTableAdapter = Nothing
+        Me.TableAdapterManager.HM_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Non_FD_AttendanceTableAdapter = Nothing
+        Me.TableAdapterManager.Other_CertificationsTableAdapter = Nothing
+        Me.TableAdapterManager.TCFP_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.TCLEOSE_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Training_AgenciesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Developer_Class_Information
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2411,7 +2524,7 @@ Partial Class Developer_Class_Information
         Me.Controls.Add(Me.ClassSearchbyNumber)
         Me.Controls.Add(Me.Employee_List)
         Me.Controls.Add(Me.ClassSearchbyName)
-        Me.Controls.Add(Me.PrintButton)
+        Me.Controls.Add(Me.ReportButton)
         Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(Me.Next_Button)
         Me.Controls.Add(Me.Prev_Button)
@@ -2460,6 +2573,9 @@ Partial Class Developer_Class_Information
         Me.GroupBox9.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        Me.StudentInfo.ResumeLayout(False)
+        CType(Me.Class_Attendance_InformationDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Class_Attendance_InformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2472,12 +2588,11 @@ Partial Class Developer_Class_Information
     Friend WithEvents ClassSearchbyNumber As System.Windows.Forms.ComboBox
     Friend WithEvents Employee_List As System.Windows.Forms.ComboBox
     Friend WithEvents ClassSearchbyName As System.Windows.Forms.Label
-    Friend WithEvents PrintButton As System.Windows.Forms.Button
+    Friend WithEvents ReportButton As System.Windows.Forms.Button
     Friend WithEvents DeleteButton As System.Windows.Forms.Button
     Friend WithEvents Next_Button As System.Windows.Forms.Button
     Friend WithEvents Prev_Button As System.Windows.Forms.Button
     Friend WithEvents Save_Button As System.Windows.Forms.Button
-    Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents ClassInfoTabControl As System.Windows.Forms.TabControl
     Friend WithEvents ClassInfo As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
@@ -2651,4 +2766,13 @@ Partial Class Developer_Class_Information
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ExitButton As System.Windows.Forms.Button
+    Friend WithEvents Class_Attendance_InformationBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Class_Attendance_InformationTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Class_Attendance_InformationTableAdapter
+    Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Class_Attendance_InformationDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

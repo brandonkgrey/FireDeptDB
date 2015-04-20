@@ -14,6 +14,7 @@ Public Class All_Employees
         'Basic Authorization
         If (AuthLvl = 1) Then
 
+
             If choice = 0 Then
                 EmpInfo.TabPages.RemoveAt(6)
                 EmpInfo.TabPages.RemoveAt(5)
@@ -138,8 +139,7 @@ Public Class All_Employees
 
     Private Sub Save_Button_Click(sender As Object, e As EventArgs) Handles Save_Button.Click
         On Error GoTo SaveErr
-        'EmployeeInformationBindingSource.EndEdit()
-        'Employee_InformationTableAdapter.Update(Training_Records_EncryptedDataSet.Employee_Information)
+        Employee_InformationTableAdapter.Update(Training_Records_for_TAMUDataSet)
         MessageBox.Show("Your modifications were saved!")
 SaveErr:
         Exit Sub

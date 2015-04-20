@@ -118,3 +118,7 @@ C:\Users\Alejandro\Desktop\Alejandro Fire Dpt Interface\Fire Dpt Interface\obj\R
 C:\Users\Alejandro\Desktop\Alejandro Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire Dpt Interface.vbproj.GenerateResource.Cache
 C:\Users\Alejandro\Desktop\Alejandro Fire Dpt Interface\Fire Dpt Interface\obj\Release\RdlCompile.cache
 C:\Users\Alejandro\Desktop\Alejandro Fire Dpt Interface\Fire Dpt Interface\obj\Release\RdlCompile.compiled
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.Basic_Assignments.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.GeneralPasswordReset.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.GeneralPasswordResetPart2.resources
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Release\Fire_Dpt_Interface.InitialPasswordReset.resources
