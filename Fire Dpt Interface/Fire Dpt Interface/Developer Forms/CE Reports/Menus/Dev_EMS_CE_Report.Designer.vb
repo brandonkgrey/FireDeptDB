@@ -72,6 +72,11 @@ Partial Class Dev_EMS_CE_Report
         '
         'ExitButton
         '
+        Me.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatAppearance.BorderSize = 2
+        Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.Location = New System.Drawing.Point(458, 154)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(81, 25)
@@ -81,6 +86,11 @@ Partial Class Dev_EMS_CE_Report
         '
         'EMS_CE_Report_Button
         '
+        Me.EMS_CE_Report_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.EMS_CE_Report_Button.FlatAppearance.BorderSize = 2
+        Me.EMS_CE_Report_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.EMS_CE_Report_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.EMS_CE_Report_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EMS_CE_Report_Button.Location = New System.Drawing.Point(355, 154)
         Me.EMS_CE_Report_Button.Name = "EMS_CE_Report_Button"
         Me.EMS_CE_Report_Button.Size = New System.Drawing.Size(81, 25)
@@ -106,6 +116,7 @@ Partial Class Dev_EMS_CE_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(551, 191)
         Me.Controls.Add(Me.EMS_CE_EDateTimePicker)
         Me.Controls.Add(Me.EMS_CE_SDateTimePicker)
@@ -115,6 +126,8 @@ Partial Class Dev_EMS_CE_Report
         Me.Controls.Add(Me.SelectEmp_ComboBox)
         Me.Controls.Add(Me.EMS_CE_Report_Button)
         Me.Controls.Add(Me.ExitButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Dev_EMS_CE_Report"
         Me.Text = "EMS CE Report Menu "
         Me.ResumeLayout(False)
