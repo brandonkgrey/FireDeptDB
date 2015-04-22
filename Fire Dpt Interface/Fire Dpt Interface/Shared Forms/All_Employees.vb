@@ -9,6 +9,7 @@ Public Class All_Employees
     Dim choice As Integer
     Dim employeeName As String
     Friend Shared currentID
+    Friend Shared sendingForm As Boolean = False
 
 
     Private Sub AuthorizationFix(choice As Integer, AuthLvl As Integer)
@@ -182,12 +183,12 @@ SaveErr:
 
     Private Sub ALL_EMP_ReportButton_Click(sender As Object, e As EventArgs) Handles ALL_EMP_ReportButton.Click
         currentID = Convert.ToInt32(Emp_Textbox.Text)
+        sender = False
         Dim IndReport As Indivdual_Employee_Report_View
         IndReport = New Indivdual_Employee_Report_View()
         IndReport.Show()
         IndReport = Nothing
-        Me.Close()
-
+        sender = True
     End Sub
 
 End Class

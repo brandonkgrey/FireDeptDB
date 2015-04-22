@@ -60,3 +60,4 @@ C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.SupervisorForm.resources
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\RdlCompile.cache
 C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\RdlCompile.compiled
+C:\Users\Alejandro\Desktop\Fire Dpt Interface\Fire Dpt Interface\obj\Debug\Fire_Dpt_Interface.SupervisorEmployeeInformation.resources

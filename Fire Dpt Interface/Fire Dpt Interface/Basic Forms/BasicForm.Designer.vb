@@ -29,14 +29,14 @@ Partial Class BasicForm
         Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.Employee_InformationTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.TableAdapterManager()
         Me.BasicMenuTitle = New System.Windows.Forms.Label()
-        Me.EMSCertsBFButton = New System.Windows.Forms.Button()
-        Me.FireCertsBFButton = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.AssignmentsBFButton = New System.Windows.Forms.Button()
-        Me.OtherCertsBFButton = New System.Windows.Forms.Button()
         Me.LogoutBFButton = New System.Windows.Forms.Button()
-        Me.MyCertifcatesBFButton = New System.Windows.Forms.Button()
         Me.Personal_InfoBFButton = New System.Windows.Forms.Button()
+        Me.FireCertsBFButton = New System.Windows.Forms.Button()
+        Me.EMSCertsBFButton = New System.Windows.Forms.Button()
+        Me.MyCertifcatesBFButton = New System.Windows.Forms.Button()
+        Me.OtherCertsBFButton = New System.Windows.Forms.Button()
+        Me.AssignmentsBFButton = New System.Windows.Forms.Button()
         CType(Me.ExampleDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Employee_InformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,39 +72,6 @@ Partial Class BasicForm
         Me.BasicMenuTitle.TabIndex = 18
         Me.BasicMenuTitle.Text = "Main Menu"
         '
-        'EMSCertsBFButton
-        '
-        Me.EMSCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.EMSCertsBFButton.FlatAppearance.BorderSize = 2
-        Me.EMSCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.EMSCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.EMSCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.EMSCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.EMSCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMSCertsBFButton.Location = New System.Drawing.Point(16, 184)
-        Me.EMSCertsBFButton.Name = "EMSCertsBFButton"
-        Me.EMSCertsBFButton.Size = New System.Drawing.Size(101, 41)
-        Me.EMSCertsBFButton.TabIndex = 17
-        Me.EMSCertsBFButton.Text = "EMS Certifications"
-        Me.EMSCertsBFButton.UseVisualStyleBackColor = True
-        '
-        'FireCertsBFButton
-        '
-        Me.FireCertsBFButton.BackColor = System.Drawing.Color.Transparent
-        Me.FireCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.FireCertsBFButton.FlatAppearance.BorderSize = 2
-        Me.FireCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.FireCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.FireCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.FireCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.FireCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FireCertsBFButton.Location = New System.Drawing.Point(16, 135)
-        Me.FireCertsBFButton.Name = "FireCertsBFButton"
-        Me.FireCertsBFButton.Size = New System.Drawing.Size(101, 43)
-        Me.FireCertsBFButton.TabIndex = 16
-        Me.FireCertsBFButton.Text = "Fire Certifications"
-        Me.FireCertsBFButton.UseVisualStyleBackColor = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -114,38 +81,6 @@ Partial Class BasicForm
         Me.PictureBox1.Size = New System.Drawing.Size(128, 120)
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
-        '
-        'AssignmentsBFButton
-        '
-        Me.AssignmentsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.AssignmentsBFButton.FlatAppearance.BorderSize = 2
-        Me.AssignmentsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.AssignmentsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.AssignmentsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.AssignmentsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AssignmentsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AssignmentsBFButton.Location = New System.Drawing.Point(289, 182)
-        Me.AssignmentsBFButton.Name = "AssignmentsBFButton"
-        Me.AssignmentsBFButton.Size = New System.Drawing.Size(101, 41)
-        Me.AssignmentsBFButton.TabIndex = 14
-        Me.AssignmentsBFButton.Text = "My Assignments"
-        Me.AssignmentsBFButton.UseVisualStyleBackColor = True
-        '
-        'OtherCertsBFButton
-        '
-        Me.OtherCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.OtherCertsBFButton.FlatAppearance.BorderSize = 2
-        Me.OtherCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.OtherCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.OtherCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.OtherCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.OtherCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OtherCertsBFButton.Location = New System.Drawing.Point(289, 86)
-        Me.OtherCertsBFButton.Name = "OtherCertsBFButton"
-        Me.OtherCertsBFButton.Size = New System.Drawing.Size(101, 41)
-        Me.OtherCertsBFButton.TabIndex = 13
-        Me.OtherCertsBFButton.Text = "Other Certifications"
-        Me.OtherCertsBFButton.UseVisualStyleBackColor = True
         '
         'LogoutBFButton
         '
@@ -165,22 +100,6 @@ Partial Class BasicForm
         Me.LogoutBFButton.Text = "Log Out "
         Me.LogoutBFButton.UseVisualStyleBackColor = True
         '
-        'MyCertifcatesBFButton
-        '
-        Me.MyCertifcatesBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.MyCertifcatesBFButton.FlatAppearance.BorderSize = 2
-        Me.MyCertifcatesBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.MyCertifcatesBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.MyCertifcatesBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.MyCertifcatesBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MyCertifcatesBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MyCertifcatesBFButton.Location = New System.Drawing.Point(289, 133)
-        Me.MyCertifcatesBFButton.Name = "MyCertifcatesBFButton"
-        Me.MyCertifcatesBFButton.Size = New System.Drawing.Size(101, 43)
-        Me.MyCertifcatesBFButton.TabIndex = 11
-        Me.MyCertifcatesBFButton.Text = "My Certificates"
-        Me.MyCertifcatesBFButton.UseVisualStyleBackColor = True
-        '
         'Personal_InfoBFButton
         '
         Me.Personal_InfoBFButton.BackColor = System.Drawing.Color.Transparent
@@ -197,6 +116,87 @@ Partial Class BasicForm
         Me.Personal_InfoBFButton.TabIndex = 10
         Me.Personal_InfoBFButton.Text = "Personal Information"
         Me.Personal_InfoBFButton.UseVisualStyleBackColor = False
+        '
+        'FireCertsBFButton
+        '
+        Me.FireCertsBFButton.BackColor = System.Drawing.Color.Transparent
+        Me.FireCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FireCertsBFButton.FlatAppearance.BorderSize = 2
+        Me.FireCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.FireCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.FireCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FireCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.FireCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FireCertsBFButton.Location = New System.Drawing.Point(16, 135)
+        Me.FireCertsBFButton.Name = "FireCertsBFButton"
+        Me.FireCertsBFButton.Size = New System.Drawing.Size(101, 43)
+        Me.FireCertsBFButton.TabIndex = 16
+        Me.FireCertsBFButton.Text = "Fire Certifications"
+        Me.FireCertsBFButton.UseVisualStyleBackColor = False
+        '
+        'EMSCertsBFButton
+        '
+        Me.EMSCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.EMSCertsBFButton.FlatAppearance.BorderSize = 2
+        Me.EMSCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.EMSCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.EMSCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.EMSCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EMSCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMSCertsBFButton.Location = New System.Drawing.Point(16, 184)
+        Me.EMSCertsBFButton.Name = "EMSCertsBFButton"
+        Me.EMSCertsBFButton.Size = New System.Drawing.Size(101, 41)
+        Me.EMSCertsBFButton.TabIndex = 17
+        Me.EMSCertsBFButton.Text = "EMS Certifications"
+        Me.EMSCertsBFButton.UseVisualStyleBackColor = True
+        '
+        'MyCertifcatesBFButton
+        '
+        Me.MyCertifcatesBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MyCertifcatesBFButton.FlatAppearance.BorderSize = 2
+        Me.MyCertifcatesBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MyCertifcatesBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MyCertifcatesBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MyCertifcatesBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MyCertifcatesBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MyCertifcatesBFButton.Location = New System.Drawing.Point(289, 133)
+        Me.MyCertifcatesBFButton.Name = "MyCertifcatesBFButton"
+        Me.MyCertifcatesBFButton.Size = New System.Drawing.Size(101, 43)
+        Me.MyCertifcatesBFButton.TabIndex = 11
+        Me.MyCertifcatesBFButton.Text = "My Certificates"
+        Me.MyCertifcatesBFButton.UseVisualStyleBackColor = True
+        '
+        'OtherCertsBFButton
+        '
+        Me.OtherCertsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OtherCertsBFButton.FlatAppearance.BorderSize = 2
+        Me.OtherCertsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OtherCertsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OtherCertsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.OtherCertsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OtherCertsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OtherCertsBFButton.Location = New System.Drawing.Point(289, 86)
+        Me.OtherCertsBFButton.Name = "OtherCertsBFButton"
+        Me.OtherCertsBFButton.Size = New System.Drawing.Size(101, 41)
+        Me.OtherCertsBFButton.TabIndex = 13
+        Me.OtherCertsBFButton.Text = "Other Certifications"
+        Me.OtherCertsBFButton.UseVisualStyleBackColor = True
+        '
+        'AssignmentsBFButton
+        '
+        Me.AssignmentsBFButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.AssignmentsBFButton.FlatAppearance.BorderSize = 2
+        Me.AssignmentsBFButton.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AssignmentsBFButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AssignmentsBFButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.AssignmentsBFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AssignmentsBFButton.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AssignmentsBFButton.Location = New System.Drawing.Point(289, 182)
+        Me.AssignmentsBFButton.Name = "AssignmentsBFButton"
+        Me.AssignmentsBFButton.Size = New System.Drawing.Size(101, 41)
+        Me.AssignmentsBFButton.TabIndex = 14
+        Me.AssignmentsBFButton.Text = "My Assignments"
+        Me.AssignmentsBFButton.UseVisualStyleBackColor = True
         '
         'BasicForm
         '
@@ -230,12 +230,12 @@ Partial Class BasicForm
     Friend WithEvents Employee_InformationTableAdapter As Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.Employee_InformationTableAdapter
     Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.ExampleDBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents BasicMenuTitle As System.Windows.Forms.Label
-    Friend WithEvents EMSCertsBFButton As System.Windows.Forms.Button
-    Friend WithEvents FireCertsBFButton As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents AssignmentsBFButton As System.Windows.Forms.Button
-    Friend WithEvents OtherCertsBFButton As System.Windows.Forms.Button
     Friend WithEvents LogoutBFButton As System.Windows.Forms.Button
-    Friend WithEvents MyCertifcatesBFButton As System.Windows.Forms.Button
     Friend WithEvents Personal_InfoBFButton As System.Windows.Forms.Button
+    Friend WithEvents FireCertsBFButton As System.Windows.Forms.Button
+    Friend WithEvents EMSCertsBFButton As System.Windows.Forms.Button
+    Friend WithEvents MyCertifcatesBFButton As System.Windows.Forms.Button
+    Friend WithEvents OtherCertsBFButton As System.Windows.Forms.Button
+    Friend WithEvents AssignmentsBFButton As System.Windows.Forms.Button
 End Class

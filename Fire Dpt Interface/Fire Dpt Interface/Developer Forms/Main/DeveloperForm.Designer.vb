@@ -100,6 +100,7 @@ Partial Class DeveloperForm
         Me.OpenAccessFileDFButton.TabIndex = 23
         Me.OpenAccessFileDFButton.Text = "Open Access DB"
         Me.OpenAccessFileDFButton.UseVisualStyleBackColor = True
+        Me.OpenAccessFileDFButton.Visible = False
         '
         'EMSCertExpButton
         '
@@ -216,7 +217,7 @@ Partial Class DeveloperForm
         Me.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOut_Button.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogOut_Button.ForeColor = System.Drawing.Color.Red
-        Me.LogOut_Button.Location = New System.Drawing.Point(483, 293)
+        Me.LogOut_Button.Location = New System.Drawing.Point(325, 295)
         Me.LogOut_Button.Name = "LogOut_Button"
         Me.LogOut_Button.Size = New System.Drawing.Size(103, 46)
         Me.LogOut_Button.TabIndex = 16

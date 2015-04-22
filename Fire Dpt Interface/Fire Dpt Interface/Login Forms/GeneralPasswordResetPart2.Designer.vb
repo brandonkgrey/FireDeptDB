@@ -61,7 +61,7 @@ Partial Class GeneralPasswordResetPart2
         'NewPasswordLableGPR2
         '
         Me.NewPasswordLableGPR2.AutoSize = True
-        Me.NewPasswordLableGPR2.Location = New System.Drawing.Point(190, 98)
+        Me.NewPasswordLableGPR2.Location = New System.Drawing.Point(176, 98)
         Me.NewPasswordLableGPR2.Name = "NewPasswordLableGPR2"
         Me.NewPasswordLableGPR2.Size = New System.Drawing.Size(78, 13)
         Me.NewPasswordLableGPR2.TabIndex = 19

@@ -89,8 +89,9 @@ Public Class InitialPasswordReset
             Dim newPass As String = NewPassword.Text
             Dim newPassHash As String = getHash(newPass)
 
+            Dim eid As Integer = Convert.ToInt32(Login.sharedUsername)
 
-            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Username]='" + Login.sharedUsername + "'", Dbconn)
+            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Employee_ID]=" + Login.sharedUsername, Dbconn)
             Command.ExecuteScalar()
 
             MsgBox("Password has been changed! Please login with new password.", MsgBoxStyle.Information, "Password Update Success")

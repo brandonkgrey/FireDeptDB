@@ -1,6 +1,7 @@
 ﻿Public Class Developer_Class_Information
 
     Friend Shared class_number As Integer
+    Dim AuthLvl
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click
         ClassInformationBindingSource.MovePrevious()
@@ -19,11 +20,24 @@
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        Dim DevForm As DeveloperForm
-        DevForm = New DeveloperForm()
-        DevForm.Show()
-        DevForm = Nothing
-        Me.Close()
+        If (AuthLVL = 4) Then
+            Dim DevForm As DeveloperForm
+            DevForm = New DeveloperForm()
+            DevForm.Show()
+            DevForm = Nothing
+            Me.Close()
+        ElseIf (AuthLvl = 3) Then
+            Dim Adminform As New AdministratorForm
+            Adminform.show()
+            Adminform = Nothing
+            Me.Close()
+        ElseIf (AuthLvl = 2) Then
+            Dim SupForm As New SupervisorForm
+            SupForm.Show()
+            SupForm = Nothing
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub ReportButton_Click(sender As Object, e As EventArgs) Handles ReportButton.Click
@@ -40,6 +54,8 @@
         Me.Class_Attendance_InformationTableAdapter.FillBy(Me.Training_Records_for_TAMUDataSet.Class_Attendance_Information, TextBox3.Text)
         'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Class_Information' table. You can move, or remove it, as needed.
         Me.Class_InformationTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Class_Information)
+
+        AuthLvl = Login.Authorization_LVL
 
     End Sub
 

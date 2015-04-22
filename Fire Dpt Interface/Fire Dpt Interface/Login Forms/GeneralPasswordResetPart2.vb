@@ -92,7 +92,7 @@ Public Class GeneralPasswordResetPart2
             Dim newPassHash As String = getHash(newPass)
 
             'update the password in database with inputted password after a hash
-            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Employee_ID]='" + GeneralPasswordReset.tempUsername + "'", Dbconn)
+            Dim Command As New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + newPassHash + "'" + "WHERE [Employee_ID]=" + GeneralPasswordReset.tempUsername, Dbconn)
             Command.ExecuteScalar()
 
             MsgBox("Password has been changed! Please login with new password.", MsgBoxStyle.Information, "Password Update Success")
