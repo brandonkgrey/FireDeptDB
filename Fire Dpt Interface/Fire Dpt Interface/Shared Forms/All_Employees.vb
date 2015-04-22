@@ -183,12 +183,12 @@ SaveErr:
 
     Private Sub ALL_EMP_ReportButton_Click(sender As Object, e As EventArgs) Handles ALL_EMP_ReportButton.Click
         currentID = Convert.ToInt32(Emp_Textbox.Text)
-        sender = False
+        sendingForm = True
         Dim IndReport As Indivdual_Employee_Report_View
         IndReport = New Indivdual_Employee_Report_View()
         IndReport.Show()
         IndReport = Nothing
-        sender = True
+        sendingForm = True
     End Sub
 
 End Class

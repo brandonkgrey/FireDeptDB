@@ -158,6 +158,7 @@ Partial Class Developer_CE_Reports
         Me.CEExitButton.FlatAppearance.BorderSize = 2
         Me.CEExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CEExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CEExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CEExitButton.Location = New System.Drawing.Point(623, 244)
         Me.CEExitButton.Name = "CEExitButton"
         Me.CEExitButton.Size = New System.Drawing.Size(81, 25)
