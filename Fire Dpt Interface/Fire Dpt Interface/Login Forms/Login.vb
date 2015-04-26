@@ -141,37 +141,37 @@ Public Class Login
                     command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Employee_ID]=" + username, Dbconn)
                     command.ExecuteScalar()
 
-                    'Check if the update was successful by retrieving username associated with it 
-                    command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                    authobj = command.ExecuteScalar()
+                'Check if the update was successful by retrieving username associated with it 
+                Command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                authobj = Command.ExecuteScalar()
 
-                    'store the user who was retrieved from the query command 
-                    authUser = authobj.ToString()
+                'store the user who was retrieved from the query command 
+                authUser = authobj.ToString()
 
-                    'Get users authorization level Authorization
-                    command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                    accessobj = command.ExecuteScalar()
-                    command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
-                    getName = command.ExecuteScalar()
-                    accesslvl = accessobj.ToString()
-                    Authorization_LVL = CInt(accesslvl)
-                    sharedName = getName.ToString()
+                'Get users authorization level Authorization
+                Command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                accessobj = Command.ExecuteScalar()
+                Command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                getName = Command.ExecuteScalar()
+                accesslvl = accessobj.ToString()
+                Authorization_LVL = CInt(accesslvl)
+                sharedName = getName.ToString()
 
 
                 Else
-                    'the password is already hashed, to we issue a query with the hashed password 
-                    command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                    authobj = command.ExecuteScalar()
-                    command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                    accessobj = command.ExecuteScalar()
-                    command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
-                    getName = command.ExecuteScalar()
+                'the password is already hashed, to we issue a query with the hashed password 
+                Command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                authobj = Command.ExecuteScalar()
+                Command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                accessobj = Command.ExecuteScalar()
+                Command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                getName = Command.ExecuteScalar()
 
-                    'store the user who was retrieved from the query command 
-                    authUser = authobj.ToString()
-                    accesslvl = accessobj.ToString()
-                    Authorization_LVL = accessobj
-                    sharedName = getName.ToString
+                'store the user who was retrieved from the query command 
+                authUser = authobj.ToString()
+                accesslvl = accessobj.ToString()
+                Authorization_LVL = accessobj
+                sharedName = getName.ToString
 
                 End If
 

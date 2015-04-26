@@ -254,6 +254,7 @@ Partial Class All_Employees
         Me.Query_Indivual_Employee = New Fire_Dpt_Interface.Query_Indivual_Employee()
         Me.QueryEmployeeInformationTableAdapter = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager()
+        Me.NewItem = New System.Windows.Forms.Button()
         Me.EmpInfo.SuspendLayout()
         Me.EmployeeInfo.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1097,7 +1098,7 @@ Partial Class All_Employees
         '
         'TextBox19
         '
-        Me.TextBox19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SO Received Date", True))
+        Me.TextBox19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ISO Expiration Date", True))
         Me.TextBox19.Location = New System.Drawing.Point(464, 304)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(100, 20)
@@ -2098,6 +2099,7 @@ Partial Class All_Employees
         Me.ComboBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Level", True))
         Me.ComboBox9.DisplayMember = "EMS Type"
         Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Items.AddRange(New Object() {"EMT-Basic", "EMT-Intermediate", "EMT-Paramedic", "Licensed Paramedic", "N/A"})
         Me.ComboBox9.Location = New System.Drawing.Point(246, 41)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(194, 21)
@@ -2541,7 +2543,7 @@ Partial Class All_Employees
         Me.ALL_EMP_ReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.ALL_EMP_ReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ALL_EMP_ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ALL_EMP_ReportButton.Location = New System.Drawing.Point(775, 446)
+        Me.ALL_EMP_ReportButton.Location = New System.Drawing.Point(815, 446)
         Me.ALL_EMP_ReportButton.Name = "ALL_EMP_ReportButton"
         Me.ALL_EMP_ReportButton.Size = New System.Drawing.Size(82, 25)
         Me.ALL_EMP_ReportButton.TabIndex = 69
@@ -2555,7 +2557,7 @@ Partial Class All_Employees
         Me.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DeleteButton.Location = New System.Drawing.Point(572, 446)
+        Me.DeleteButton.Location = New System.Drawing.Point(639, 446)
         Me.DeleteButton.Name = "DeleteButton"
         Me.DeleteButton.Size = New System.Drawing.Size(82, 25)
         Me.DeleteButton.TabIndex = 68
@@ -2619,7 +2621,7 @@ Partial Class All_Employees
         Me.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.Save_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Save_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Save_Button.Location = New System.Drawing.Point(676, 446)
+        Me.Save_Button.Location = New System.Drawing.Point(727, 446)
         Me.Save_Button.Name = "Save_Button"
         Me.Save_Button.Size = New System.Drawing.Size(82, 25)
         Me.Save_Button.TabIndex = 63
@@ -2680,11 +2682,26 @@ Partial Class All_Employees
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'NewItem
+        '
+        Me.NewItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.NewItem.FlatAppearance.BorderSize = 2
+        Me.NewItem.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.NewItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.NewItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NewItem.Location = New System.Drawing.Point(551, 446)
+        Me.NewItem.Name = "NewItem"
+        Me.NewItem.Size = New System.Drawing.Size(82, 25)
+        Me.NewItem.TabIndex = 70
+        Me.NewItem.Text = "New"
+        Me.NewItem.UseVisualStyleBackColor = True
+        '
         'All_Employees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 483)
+        Me.Controls.Add(Me.NewItem)
         Me.Controls.Add(Me.ALL_EMP_ReportButton)
         Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(Me.Employee_List)
@@ -2963,4 +2980,5 @@ Partial Class All_Employees
     Friend WithEvents Other_CertificationsTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter
     Friend WithEvents AssignmentPayBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Assignment_PayTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter
+    Friend WithEvents NewItem As System.Windows.Forms.Button
 End Class
