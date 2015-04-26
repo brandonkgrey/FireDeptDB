@@ -24,14 +24,12 @@ Partial Class SupervisorEmployeeInformation
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ALL_EMP_ReportButton = New System.Windows.Forms.Button()
-        Me.DeleteButton = New System.Windows.Forms.Button()
         Me.Employee_List = New System.Windows.Forms.ComboBox()
         Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SupervisorFilterDataSet = New Fire_Dpt_Interface.SupervisorFilterDataSet()
         Me.EmployeeSearch = New System.Windows.Forms.Label()
         Me.Next_Button = New System.Windows.Forms.Button()
         Me.Prev_Button = New System.Windows.Forms.Button()
-        Me.Save_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.EmpInfo = New System.Windows.Forms.TabControl()
         Me.EmployeeInfo = New System.Windows.Forms.TabPage()
@@ -280,26 +278,12 @@ Partial Class SupervisorEmployeeInformation
         Me.ALL_EMP_ReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.ALL_EMP_ReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ALL_EMP_ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ALL_EMP_ReportButton.Location = New System.Drawing.Point(774, 445)
+        Me.ALL_EMP_ReportButton.Location = New System.Drawing.Point(652, 445)
         Me.ALL_EMP_ReportButton.Name = "ALL_EMP_ReportButton"
         Me.ALL_EMP_ReportButton.Size = New System.Drawing.Size(82, 25)
         Me.ALL_EMP_ReportButton.TabIndex = 83
         Me.ALL_EMP_ReportButton.Text = "Report"
         Me.ALL_EMP_ReportButton.UseVisualStyleBackColor = True
-        '
-        'DeleteButton
-        '
-        Me.DeleteButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DeleteButton.FlatAppearance.BorderSize = 2
-        Me.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
-        Me.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DeleteButton.Location = New System.Drawing.Point(571, 445)
-        Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(82, 25)
-        Me.DeleteButton.TabIndex = 82
-        Me.DeleteButton.Text = "Delete"
-        Me.DeleteButton.UseVisualStyleBackColor = True
         '
         'Employee_List
         '
@@ -360,20 +344,6 @@ Partial Class SupervisorEmployeeInformation
         Me.Prev_Button.TabIndex = 78
         Me.Prev_Button.Text = "Previous"
         Me.Prev_Button.UseVisualStyleBackColor = True
-        '
-        'Save_Button
-        '
-        Me.Save_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Save_Button.FlatAppearance.BorderSize = 2
-        Me.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
-        Me.Save_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Save_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Save_Button.Location = New System.Drawing.Point(675, 445)
-        Me.Save_Button.Name = "Save_Button"
-        Me.Save_Button.Size = New System.Drawing.Size(82, 25)
-        Me.Save_Button.TabIndex = 77
-        Me.Save_Button.Text = "Save"
-        Me.Save_Button.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -445,6 +415,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.NonOpsCheckbox.AutoSize = True
         Me.NonOpsCheckbox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EmployeeInformationBindingSource, "Ops", True))
+        Me.NonOpsCheckbox.Enabled = False
         Me.NonOpsCheckbox.Location = New System.Drawing.Point(450, 95)
         Me.NonOpsCheckbox.Name = "NonOpsCheckbox"
         Me.NonOpsCheckbox.Size = New System.Drawing.Size(15, 14)
@@ -457,6 +428,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Division_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Division", True))
         Me.Division_Textbox.Location = New System.Drawing.Point(226, 91)
         Me.Division_Textbox.Name = "Division_Textbox"
+        Me.Division_Textbox.ReadOnly = True
         Me.Division_Textbox.Size = New System.Drawing.Size(114, 20)
         Me.Division_Textbox.TabIndex = 83
         '
@@ -466,6 +438,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Shift_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Shift", True))
         Me.Shift_TextBox.Location = New System.Drawing.Point(91, 90)
         Me.Shift_TextBox.Name = "Shift_TextBox"
+        Me.Shift_TextBox.ReadOnly = True
         Me.Shift_TextBox.Size = New System.Drawing.Size(129, 20)
         Me.Shift_TextBox.TabIndex = 82
         '
@@ -475,6 +448,7 @@ Partial Class SupervisorEmployeeInformation
         Me.EndDate_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "End Date", True))
         Me.EndDate_Textbox.Location = New System.Drawing.Point(410, 43)
         Me.EndDate_Textbox.Name = "EndDate_Textbox"
+        Me.EndDate_Textbox.ReadOnly = True
         Me.EndDate_Textbox.Size = New System.Drawing.Size(110, 20)
         Me.EndDate_Textbox.TabIndex = 81
         '
@@ -494,6 +468,7 @@ Partial Class SupervisorEmployeeInformation
         Me.RankDate_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Rank Date", True))
         Me.RankDate_Textbox.Location = New System.Drawing.Point(290, 43)
         Me.RankDate_Textbox.Name = "RankDate_Textbox"
+        Me.RankDate_Textbox.ReadOnly = True
         Me.RankDate_Textbox.Size = New System.Drawing.Size(114, 20)
         Me.RankDate_Textbox.TabIndex = 79
         '
@@ -503,6 +478,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Rank_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Rank", True))
         Me.Rank_Textbox.Location = New System.Drawing.Point(155, 43)
         Me.Rank_Textbox.Name = "Rank_Textbox"
+        Me.Rank_Textbox.ReadOnly = True
         Me.Rank_Textbox.Size = New System.Drawing.Size(129, 20)
         Me.Rank_Textbox.TabIndex = 78
         '
@@ -512,6 +488,7 @@ Partial Class SupervisorEmployeeInformation
         Me.HireDate_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Hire Date", True))
         Me.HireDate_Textbox.Location = New System.Drawing.Point(39, 43)
         Me.HireDate_Textbox.Name = "HireDate_Textbox"
+        Me.HireDate_Textbox.ReadOnly = True
         Me.HireDate_Textbox.Size = New System.Drawing.Size(110, 20)
         Me.HireDate_Textbox.TabIndex = 77
         '
@@ -598,6 +575,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CDL_CheckBox.AutoSize = True
         Me.CDL_CheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EmployeeInformationBindingSource, "CDL", True))
+        Me.CDL_CheckBox.Enabled = False
         Me.CDL_CheckBox.Location = New System.Drawing.Point(297, 78)
         Me.CDL_CheckBox.Name = "CDL_CheckBox"
         Me.CDL_CheckBox.Size = New System.Drawing.Size(15, 14)
@@ -630,6 +608,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "TCFP PIN", True))
         Me.TextBox4.Location = New System.Drawing.Point(157, 91)
         Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(114, 20)
         Me.TextBox4.TabIndex = 69
         '
@@ -639,6 +618,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "TDH ID", True))
         Me.TextBox3.Location = New System.Drawing.Point(22, 91)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(129, 20)
         Me.TextBox3.TabIndex = 68
         '
@@ -658,6 +638,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "DL CLass", True))
         Me.TextBox2.Location = New System.Drawing.Point(156, 50)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(114, 20)
         Me.TextBox2.TabIndex = 65
         '
@@ -677,6 +658,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TDL_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "TDL", True))
         Me.TDL_Textbox.Location = New System.Drawing.Point(22, 50)
         Me.TDL_Textbox.Name = "TDL_Textbox"
+        Me.TDL_Textbox.ReadOnly = True
         Me.TDL_Textbox.Size = New System.Drawing.Size(129, 20)
         Me.TDL_Textbox.TabIndex = 63
         '
@@ -717,6 +699,7 @@ Partial Class SupervisorEmployeeInformation
         Me.DOB_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Date of Birth", True))
         Me.DOB_Textbox.Location = New System.Drawing.Point(138, 119)
         Me.DOB_Textbox.Name = "DOB_Textbox"
+        Me.DOB_Textbox.ReadOnly = True
         Me.DOB_Textbox.Size = New System.Drawing.Size(110, 20)
         Me.DOB_Textbox.TabIndex = 61
         '
@@ -736,6 +719,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Phone_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Phone", True))
         Me.Phone_Textbox.Location = New System.Drawing.Point(18, 119)
         Me.Phone_Textbox.Name = "Phone_Textbox"
+        Me.Phone_Textbox.ReadOnly = True
         Me.Phone_Textbox.Size = New System.Drawing.Size(114, 20)
         Me.Phone_Textbox.TabIndex = 59
         '
@@ -755,6 +739,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Zip_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Zip", True))
         Me.Zip_Textbox.Location = New System.Drawing.Point(254, 78)
         Me.Zip_Textbox.Name = "Zip_Textbox"
+        Me.Zip_Textbox.ReadOnly = True
         Me.Zip_Textbox.Size = New System.Drawing.Size(90, 20)
         Me.Zip_Textbox.TabIndex = 57
         '
@@ -774,6 +759,7 @@ Partial Class SupervisorEmployeeInformation
         Me.State_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "State", True))
         Me.State_Textbox.Location = New System.Drawing.Point(138, 78)
         Me.State_Textbox.Name = "State_Textbox"
+        Me.State_Textbox.ReadOnly = True
         Me.State_Textbox.Size = New System.Drawing.Size(110, 20)
         Me.State_Textbox.TabIndex = 55
         '
@@ -793,6 +779,7 @@ Partial Class SupervisorEmployeeInformation
         Me.City_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "City", True))
         Me.City_Textbox.Location = New System.Drawing.Point(18, 78)
         Me.City_Textbox.Name = "City_Textbox"
+        Me.City_Textbox.ReadOnly = True
         Me.City_Textbox.Size = New System.Drawing.Size(114, 20)
         Me.City_Textbox.TabIndex = 53
         '
@@ -812,6 +799,7 @@ Partial Class SupervisorEmployeeInformation
         Me.Address_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Address", True))
         Me.Address_Textbox.Location = New System.Drawing.Point(18, 37)
         Me.Address_Textbox.Name = "Address_Textbox"
+        Me.Address_Textbox.ReadOnly = True
         Me.Address_Textbox.Size = New System.Drawing.Size(192, 20)
         Me.Address_Textbox.TabIndex = 51
         '
@@ -930,6 +918,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox32.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat ICS Received Date", True))
         Me.TextBox32.Location = New System.Drawing.Point(857, 192)
         Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.ReadOnly = True
         Me.TextBox32.Size = New System.Drawing.Size(100, 20)
         Me.TextBox32.TabIndex = 89
         '
@@ -948,6 +937,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox33.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SO Received Date", True))
         Me.TextBox33.Location = New System.Drawing.Point(857, 162)
         Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.ReadOnly = True
         Me.TextBox33.Size = New System.Drawing.Size(100, 20)
         Me.TextBox33.TabIndex = 88
         '
@@ -956,6 +946,7 @@ Partial Class SupervisorEmployeeInformation
         Me.HazMatICSCheckBox.AutoSize = True
         Me.HazMatICSCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.HazMatICSCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "HazMat ICS", True))
+        Me.HazMatICSCheckBox.Enabled = False
         Me.HazMatICSCheckBox.Location = New System.Drawing.Point(706, 191)
         Me.HazMatICSCheckBox.Name = "HazMatICSCheckBox"
         Me.HazMatICSCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -969,6 +960,7 @@ Partial Class SupervisorEmployeeInformation
         Me.SafetyOffCheckBox.AutoSize = True
         Me.SafetyOffCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.SafetyOffCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Safety Officer", True))
+        Me.SafetyOffCheckBox.Enabled = False
         Me.SafetyOffCheckBox.Location = New System.Drawing.Point(706, 165)
         Me.SafetyOffCheckBox.Name = "SafetyOffCheckBox"
         Me.SafetyOffCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -982,6 +974,7 @@ Partial Class SupervisorEmployeeInformation
         Me.CheckBox13.AutoSize = True
         Me.CheckBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox13.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Aerial Ops", True))
+        Me.CheckBox13.Enabled = False
         Me.CheckBox13.Location = New System.Drawing.Point(706, 141)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -995,6 +988,7 @@ Partial Class SupervisorEmployeeInformation
         Me.RopeAngleCheckBox.AutoSize = True
         Me.RopeAngleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.RopeAngleCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Rope Rescue", True))
+        Me.RopeAngleCheckBox.Enabled = False
         Me.RopeAngleCheckBox.Location = New System.Drawing.Point(706, 98)
         Me.RopeAngleCheckBox.Name = "RopeAngleCheckBox"
         Me.RopeAngleCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1008,6 +1002,7 @@ Partial Class SupervisorEmployeeInformation
         Me.PumpOpsCheckBox.AutoSize = True
         Me.PumpOpsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.PumpOpsCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Pump Ops", True))
+        Me.PumpOpsCheckBox.Enabled = False
         Me.PumpOpsCheckBox.Location = New System.Drawing.Point(706, 120)
         Me.PumpOpsCheckBox.Name = "PumpOpsCheckBox"
         Me.PumpOpsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1021,6 +1016,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TrenchCheckBox.AutoSize = True
         Me.TrenchCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.TrenchCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Trench Rescue", True))
+        Me.TrenchCheckBox.Enabled = False
         Me.TrenchCheckBox.Location = New System.Drawing.Point(706, 75)
         Me.TrenchCheckBox.Name = "TrenchCheckBox"
         Me.TrenchCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1034,6 +1030,7 @@ Partial Class SupervisorEmployeeInformation
         Me.ConfinedSpaceCheckBox.AutoSize = True
         Me.ConfinedSpaceCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ConfinedSpaceCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Confined Space Rescue", True))
+        Me.ConfinedSpaceCheckBox.Enabled = False
         Me.ConfinedSpaceCheckBox.Location = New System.Drawing.Point(706, 55)
         Me.ConfinedSpaceCheckBox.Name = "ConfinedSpaceCheckBox"
         Me.ConfinedSpaceCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1047,6 +1044,7 @@ Partial Class SupervisorEmployeeInformation
         Me.SwiftWaterCheckBox.AutoSize = True
         Me.SwiftWaterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.SwiftWaterCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Swiftwater", True))
+        Me.SwiftWaterCheckBox.Enabled = False
         Me.SwiftWaterCheckBox.Location = New System.Drawing.Point(706, 38)
         Me.SwiftWaterCheckBox.Name = "SwiftWaterCheckBox"
         Me.SwiftWaterCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1072,6 +1070,7 @@ Partial Class SupervisorEmployeeInformation
         Me.FireInvSealsCheckbox.AutoSize = True
         Me.FireInvSealsCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.FireInvSealsCheckbox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC FINV", True))
+        Me.FireInvSealsCheckbox.Enabled = False
         Me.FireInvSealsCheckbox.Location = New System.Drawing.Point(582, 239)
         Me.FireInvSealsCheckbox.Name = "FireInvSealsCheckbox"
         Me.FireInvSealsCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1085,6 +1084,7 @@ Partial Class SupervisorEmployeeInformation
         Me.OfficerIICheckBox.AutoSize = True
         Me.OfficerIICheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.OfficerIICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC FOII", True))
+        Me.OfficerIICheckBox.Enabled = False
         Me.OfficerIICheckBox.Location = New System.Drawing.Point(582, 215)
         Me.OfficerIICheckBox.Name = "OfficerIICheckBox"
         Me.OfficerIICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1098,6 +1098,7 @@ Partial Class SupervisorEmployeeInformation
         Me.OfficerICheckBox.AutoSize = True
         Me.OfficerICheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.OfficerICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC FOI", True))
+        Me.OfficerICheckBox.Enabled = False
         Me.OfficerICheckBox.Location = New System.Drawing.Point(582, 192)
         Me.OfficerICheckBox.Name = "OfficerICheckBox"
         Me.OfficerICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1111,6 +1112,7 @@ Partial Class SupervisorEmployeeInformation
         Me.ARFFSealsCheckBox.AutoSize = True
         Me.ARFFSealsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ARFFSealsCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC ARFF", True))
+        Me.ARFFSealsCheckBox.Enabled = False
         Me.ARFFSealsCheckBox.Location = New System.Drawing.Point(582, 165)
         Me.ARFFSealsCheckBox.Name = "ARFFSealsCheckBox"
         Me.ARFFSealsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1124,6 +1126,7 @@ Partial Class SupervisorEmployeeInformation
         Me.DriveOpCheckBox.AutoSize = True
         Me.DriveOpCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.DriveOpCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC DO", True))
+        Me.DriveOpCheckBox.Enabled = False
         Me.DriveOpCheckBox.Location = New System.Drawing.Point(582, 141)
         Me.DriveOpCheckBox.Name = "DriveOpCheckBox"
         Me.DriveOpCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1137,6 +1140,7 @@ Partial Class SupervisorEmployeeInformation
         Me.HMTechCheckBox.AutoSize = True
         Me.HMTechCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.HMTechCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC HMT", True))
+        Me.HMTechCheckBox.Enabled = False
         Me.HMTechCheckBox.Location = New System.Drawing.Point(582, 116)
         Me.HMTechCheckBox.Name = "HMTechCheckBox"
         Me.HMTechCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1150,6 +1154,7 @@ Partial Class SupervisorEmployeeInformation
         Me.HMOperationsCheckBox.AutoSize = True
         Me.HMOperationsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.HMOperationsCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC HMO", True))
+        Me.HMOperationsCheckBox.Enabled = False
         Me.HMOperationsCheckBox.Location = New System.Drawing.Point(582, 93)
         Me.HMOperationsCheckBox.Name = "HMOperationsCheckBox"
         Me.HMOperationsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1163,6 +1168,7 @@ Partial Class SupervisorEmployeeInformation
         Me.HMAwareCheckBox.AutoSize = True
         Me.HMAwareCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.HMAwareCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC HMA", True))
+        Me.HMAwareCheckBox.Enabled = False
         Me.HMAwareCheckBox.Location = New System.Drawing.Point(581, 70)
         Me.HMAwareCheckBox.Name = "HMAwareCheckBox"
         Me.HMAwareCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1176,6 +1182,7 @@ Partial Class SupervisorEmployeeInformation
         Me.FirefighterIICheckBox.AutoSize = True
         Me.FirefighterIICheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.FirefighterIICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC FII", True))
+        Me.FirefighterIICheckBox.Enabled = False
         Me.FirefighterIICheckBox.Location = New System.Drawing.Point(581, 52)
         Me.FirefighterIICheckBox.Name = "FirefighterIICheckBox"
         Me.FirefighterIICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1189,6 +1196,7 @@ Partial Class SupervisorEmployeeInformation
         Me.FirefighterICheckBox.AutoSize = True
         Me.FirefighterICheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.FirefighterICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "IFSAC FI", True))
+        Me.FirefighterICheckBox.Enabled = False
         Me.FirefighterICheckBox.Location = New System.Drawing.Point(581, 33)
         Me.FirefighterICheckBox.Name = "FirefighterICheckBox"
         Me.FirefighterICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1202,6 +1210,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Wildland FF EDate", True))
         Me.TextBox18.Location = New System.Drawing.Point(464, 325)
         Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ReadOnly = True
         Me.TextBox18.Size = New System.Drawing.Size(100, 20)
         Me.TextBox18.TabIndex = 68
         '
@@ -1210,6 +1219,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ISO Expiration Date", True))
         Me.TextBox19.Location = New System.Drawing.Point(464, 304)
         Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.ReadOnly = True
         Me.TextBox19.Size = New System.Drawing.Size(100, 20)
         Me.TextBox19.TabIndex = 67
         '
@@ -1218,6 +1228,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox20.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Officer II EDate", True))
         Me.TextBox20.Location = New System.Drawing.Point(464, 281)
         Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.ReadOnly = True
         Me.TextBox20.Size = New System.Drawing.Size(100, 20)
         Me.TextBox20.TabIndex = 66
         '
@@ -1226,6 +1237,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox21.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Officer I EDate", True))
         Me.TextBox21.Location = New System.Drawing.Point(464, 256)
         Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.ReadOnly = True
         Me.TextBox21.Size = New System.Drawing.Size(100, 20)
         Me.TextBox21.TabIndex = 65
         '
@@ -1234,6 +1246,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox22.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "D/O Expiration Date", True))
         Me.TextBox22.Location = New System.Drawing.Point(464, 233)
         Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.ReadOnly = True
         Me.TextBox22.Size = New System.Drawing.Size(100, 20)
         Me.TextBox22.TabIndex = 64
         '
@@ -1242,6 +1255,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox23.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat IC Edate", True))
         Me.TextBox23.Location = New System.Drawing.Point(464, 211)
         Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.ReadOnly = True
         Me.TextBox23.Size = New System.Drawing.Size(100, 20)
         Me.TextBox23.TabIndex = 63
         '
@@ -1250,6 +1264,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox24.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat Expiration Date", True))
         Me.TextBox24.Location = New System.Drawing.Point(464, 188)
         Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.ReadOnly = True
         Me.TextBox24.Size = New System.Drawing.Size(100, 20)
         Me.TextBox24.TabIndex = 62
         '
@@ -1258,6 +1273,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox25.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "Fire Inspector Expiration Date", True))
         Me.TextBox25.Location = New System.Drawing.Point(464, 165)
         Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.ReadOnly = True
         Me.TextBox25.Size = New System.Drawing.Size(100, 20)
         Me.TextBox25.TabIndex = 61
         '
@@ -1266,6 +1282,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox26.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FCOI Expiration Date", True))
         Me.TextBox26.Location = New System.Drawing.Point(464, 142)
         Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.ReadOnly = True
         Me.TextBox26.Size = New System.Drawing.Size(100, 20)
         Me.TextBox26.TabIndex = 60
         '
@@ -1274,6 +1291,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox27.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FAI Expiration Date", True))
         Me.TextBox27.Location = New System.Drawing.Point(464, 119)
         Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.ReadOnly = True
         Me.TextBox27.Size = New System.Drawing.Size(100, 20)
         Me.TextBox27.TabIndex = 59
         '
@@ -1282,6 +1300,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox28.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Examiner Edate", True))
         Me.TextBox28.Location = New System.Drawing.Point(464, 96)
         Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.ReadOnly = True
         Me.TextBox28.Size = New System.Drawing.Size(100, 20)
         Me.TextBox28.TabIndex = 58
         '
@@ -1290,6 +1309,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox29.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.FireCertificationsBindingSource, "FI Expiration Date", True))
         Me.TextBox29.Location = New System.Drawing.Point(464, 74)
         Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.ReadOnly = True
         Me.TextBox29.Size = New System.Drawing.Size(100, 20)
         Me.TextBox29.TabIndex = 57
         '
@@ -1298,6 +1318,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox30.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ARFF Expiration Date", True))
         Me.TextBox30.Location = New System.Drawing.Point(464, 53)
         Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.ReadOnly = True
         Me.TextBox30.Size = New System.Drawing.Size(100, 20)
         Me.TextBox30.TabIndex = 56
         '
@@ -1306,6 +1327,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox31.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SF Expiration Date", True))
         Me.TextBox31.Location = New System.Drawing.Point(464, 32)
         Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.ReadOnly = True
         Me.TextBox31.Size = New System.Drawing.Size(100, 20)
         Me.TextBox31.TabIndex = 55
         '
@@ -1336,6 +1358,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Wildland FF RDate", True))
         Me.TextBox17.Location = New System.Drawing.Point(336, 326)
         Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.ReadOnly = True
         Me.TextBox17.Size = New System.Drawing.Size(100, 20)
         Me.TextBox17.TabIndex = 51
         '
@@ -1344,6 +1367,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ISO Received Date", True))
         Me.TextBox16.Location = New System.Drawing.Point(336, 305)
         Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.ReadOnly = True
         Me.TextBox16.Size = New System.Drawing.Size(100, 20)
         Me.TextBox16.TabIndex = 50
         '
@@ -1352,6 +1376,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox15.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Officer II RDate", True))
         Me.TextBox15.Location = New System.Drawing.Point(336, 282)
         Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.ReadOnly = True
         Me.TextBox15.Size = New System.Drawing.Size(100, 20)
         Me.TextBox15.TabIndex = 49
         '
@@ -1360,6 +1385,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Officer I RDate", True))
         Me.TextBox14.Location = New System.Drawing.Point(336, 257)
         Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.ReadOnly = True
         Me.TextBox14.Size = New System.Drawing.Size(100, 20)
         Me.TextBox14.TabIndex = 48
         '
@@ -1368,6 +1394,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "D/O Received Date", True))
         Me.TextBox13.Location = New System.Drawing.Point(336, 234)
         Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ReadOnly = True
         Me.TextBox13.Size = New System.Drawing.Size(100, 20)
         Me.TextBox13.TabIndex = 47
         '
@@ -1376,6 +1403,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat IC Rdate", True))
         Me.TextBox12.Location = New System.Drawing.Point(336, 212)
         Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.ReadOnly = True
         Me.TextBox12.Size = New System.Drawing.Size(100, 20)
         Me.TextBox12.TabIndex = 46
         '
@@ -1384,6 +1412,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat Received Date", True))
         Me.TextBox11.Location = New System.Drawing.Point(336, 189)
         Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(100, 20)
         Me.TextBox11.TabIndex = 45
         '
@@ -1392,6 +1421,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "Fire Inspector Received Date", True))
         Me.TextBox10.Location = New System.Drawing.Point(336, 166)
         Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(100, 20)
         Me.TextBox10.TabIndex = 44
         '
@@ -1400,6 +1430,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FCOI Received Date", True))
         Me.TextBox9.Location = New System.Drawing.Point(336, 143)
         Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(100, 20)
         Me.TextBox9.TabIndex = 43
         '
@@ -1408,6 +1439,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FAI Received Date", True))
         Me.TextBox8.Location = New System.Drawing.Point(336, 120)
         Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(100, 20)
         Me.TextBox8.TabIndex = 42
         '
@@ -1416,6 +1448,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Examiner Rdate", True))
         Me.TextBox7.Location = New System.Drawing.Point(336, 97)
         Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 41
         '
@@ -1424,6 +1457,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FI Received Date", True))
         Me.TextBox6.Location = New System.Drawing.Point(336, 75)
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 40
         '
@@ -1432,6 +1466,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ARFF Received Date", True))
         Me.TextBox5.Location = New System.Drawing.Point(336, 54)
         Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 39
         '
@@ -1440,6 +1475,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SF Received Date", True))
         Me.TextBox1.Location = New System.Drawing.Point(336, 33)
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 38
         '
@@ -1457,6 +1493,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox8
         '
         Me.ComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "TCFP Wildland FF Level", True))
+        Me.ComboBox8.Enabled = False
         Me.ComboBox8.FormattingEnabled = True
         Me.ComboBox8.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox8.Location = New System.Drawing.Point(196, 324)
@@ -1467,6 +1504,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox7
         '
         Me.ComboBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "HazMat Level", True))
+        Me.ComboBox7.Enabled = False
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Items.AddRange(New Object() {"Awareness", "Operations", "Technician", "Specialist"})
         Me.ComboBox7.Location = New System.Drawing.Point(196, 189)
@@ -1477,6 +1515,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox4
         '
         Me.ComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "Fire Inspector Level", True))
+        Me.ComboBox4.Enabled = False
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox4.Location = New System.Drawing.Point(196, 166)
@@ -1487,6 +1526,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox5
         '
         Me.ComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FCOI Level", True))
+        Me.ComboBox5.Enabled = False
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox5.Location = New System.Drawing.Point(196, 141)
@@ -1497,6 +1537,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox6
         '
         Me.ComboBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FAI Level", True))
+        Me.ComboBox6.Enabled = False
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox6.Location = New System.Drawing.Point(196, 116)
@@ -1507,6 +1548,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox3
         '
         Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "FI Level", True))
+        Me.ComboBox3.Enabled = False
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"I", "II", "III", "IV", "Basic", "Intermediate", "Advanced", "Master", "Grandfather"})
         Me.ComboBox3.Location = New System.Drawing.Point(196, 73)
@@ -1517,6 +1559,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox2
         '
         Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "ARFF Level", True))
+        Me.ComboBox2.Enabled = False
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox2.Location = New System.Drawing.Point(196, 52)
@@ -1527,6 +1570,7 @@ Partial Class SupervisorEmployeeInformation
         'ComboBox1
         '
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FireCertificationsBindingSource, "SF Level", True))
+        Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master", "Grandfather", "Associate"})
         Me.ComboBox1.Location = New System.Drawing.Point(196, 31)
@@ -1538,6 +1582,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.WildlandFireCheckBox.AutoSize = True
         Me.WildlandFireCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "TCFP Wildland Firefighter", True))
+        Me.WildlandFireCheckBox.Enabled = False
         Me.WildlandFireCheckBox.Location = New System.Drawing.Point(6, 328)
         Me.WildlandFireCheckBox.Name = "WildlandFireCheckBox"
         Me.WildlandFireCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1550,6 +1595,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.IncidentSafetyCheckBox.AutoSize = True
         Me.IncidentSafetyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Incident Safety Officer", True))
+        Me.IncidentSafetyCheckBox.Enabled = False
         Me.IncidentSafetyCheckBox.Location = New System.Drawing.Point(6, 305)
         Me.IncidentSafetyCheckBox.Name = "IncidentSafetyCheckBox"
         Me.IncidentSafetyCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1562,6 +1608,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireOfficerIICheckBox.AutoSize = True
         Me.FireOfficerIICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "TCFP Officer II", True))
+        Me.FireOfficerIICheckBox.Enabled = False
         Me.FireOfficerIICheckBox.Location = New System.Drawing.Point(6, 282)
         Me.FireOfficerIICheckBox.Name = "FireOfficerIICheckBox"
         Me.FireOfficerIICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1574,6 +1621,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireOfficerICheckBox.AutoSize = True
         Me.FireOfficerICheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "TCFP Officer I", True))
+        Me.FireOfficerICheckBox.Enabled = False
         Me.FireOfficerICheckBox.Location = New System.Drawing.Point(6, 259)
         Me.FireOfficerICheckBox.Name = "FireOfficerICheckBox"
         Me.FireOfficerICheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1586,6 +1634,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.DriverOpCheckBox.AutoSize = True
         Me.DriverOpCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Driver/Operator", True))
+        Me.DriverOpCheckBox.Enabled = False
         Me.DriverOpCheckBox.Location = New System.Drawing.Point(6, 236)
         Me.DriverOpCheckBox.Name = "DriverOpCheckBox"
         Me.DriverOpCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1598,6 +1647,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.HazMatIncCheckBox.AutoSize = True
         Me.HazMatIncCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "HazMat IC", True))
+        Me.HazMatIncCheckBox.Enabled = False
         Me.HazMatIncCheckBox.Location = New System.Drawing.Point(6, 212)
         Me.HazMatIncCheckBox.Name = "HazMatIncCheckBox"
         Me.HazMatIncCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1610,6 +1660,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.HazMatCheckBox.AutoSize = True
         Me.HazMatCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "HazMat", True))
+        Me.HazMatCheckBox.Enabled = False
         Me.HazMatCheckBox.Location = New System.Drawing.Point(6, 189)
         Me.HazMatCheckBox.Name = "HazMatCheckBox"
         Me.HazMatCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1622,6 +1673,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireInspectorCheckBox.AutoSize = True
         Me.FireInspectorCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Fire Inspector", True))
+        Me.FireInspectorCheckBox.Enabled = False
         Me.FireInspectorCheckBox.Location = New System.Drawing.Point(6, 166)
         Me.FireInspectorCheckBox.Name = "FireInspectorCheckBox"
         Me.FireInspectorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1634,6 +1686,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireOriginCheckBox.AutoSize = True
         Me.FireOriginCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Fire Cause and Origin Investigator", True))
+        Me.FireOriginCheckBox.Enabled = False
         Me.FireOriginCheckBox.Location = New System.Drawing.Point(6, 143)
         Me.FireOriginCheckBox.Name = "FireOriginCheckBox"
         Me.FireOriginCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1646,6 +1699,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireArsonCheckBox.AutoSize = True
         Me.FireArsonCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Fire and Arson Investigator", True))
+        Me.FireArsonCheckBox.Enabled = False
         Me.FireArsonCheckBox.Location = New System.Drawing.Point(6, 120)
         Me.FireArsonCheckBox.Name = "FireArsonCheckBox"
         Me.FireArsonCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1658,6 +1712,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.TCFPExaminerCheckBox.AutoSize = True
         Me.TCFPExaminerCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "TCFP Examiner", True))
+        Me.TCFPExaminerCheckBox.Enabled = False
         Me.TCFPExaminerCheckBox.Location = New System.Drawing.Point(6, 97)
         Me.TCFPExaminerCheckBox.Name = "TCFPExaminerCheckBox"
         Me.TCFPExaminerCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1670,6 +1725,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.FireInsCheckBox.AutoSize = True
         Me.FireInsCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Fire Instructor", True))
+        Me.FireInsCheckBox.Enabled = False
         Me.FireInsCheckBox.Location = New System.Drawing.Point(6, 77)
         Me.FireInsCheckBox.Name = "FireInsCheckBox"
         Me.FireInsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1682,6 +1738,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.ARFFCheckBox.AutoSize = True
         Me.ARFFCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "ARFF Cert", True))
+        Me.ARFFCheckBox.Enabled = False
         Me.ARFFCheckBox.Location = New System.Drawing.Point(6, 54)
         Me.ARFFCheckBox.Name = "ARFFCheckBox"
         Me.ARFFCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1705,6 +1762,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.StructuredFirefighterCheckBox.AutoSize = True
         Me.StructuredFirefighterCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.FireCertificationsBindingSource, "Structure Firefighter", True))
+        Me.StructuredFirefighterCheckBox.Enabled = False
         Me.StructuredFirefighterCheckBox.Location = New System.Drawing.Point(6, 33)
         Me.StructuredFirefighterCheckBox.Name = "StructuredFirefighterCheckBox"
         Me.StructuredFirefighterCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1796,6 +1854,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox36.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Instructor Received Date", True))
         Me.TextBox36.Location = New System.Drawing.Point(151, 9)
         Me.TextBox36.Name = "TextBox36"
+        Me.TextBox36.ReadOnly = True
         Me.TextBox36.Size = New System.Drawing.Size(100, 20)
         Me.TextBox36.TabIndex = 24
         '
@@ -1808,6 +1867,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "TDH Instructor", True))
+        Me.CheckBox1.Enabled = False
         Me.CheckBox1.Location = New System.Drawing.Point(16, 12)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(110, 17)
@@ -1820,6 +1880,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox49.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "ACLS I Received Date", True))
         Me.TextBox49.Location = New System.Drawing.Point(152, 166)
         Me.TextBox49.Name = "TextBox49"
+        Me.TextBox49.ReadOnly = True
         Me.TextBox49.Size = New System.Drawing.Size(100, 20)
         Me.TextBox49.TabIndex = 36
         '
@@ -1828,6 +1889,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox47.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "ACLS Received Date", True))
         Me.TextBox47.Location = New System.Drawing.Point(152, 142)
         Me.TextBox47.Name = "TextBox47"
+        Me.TextBox47.ReadOnly = True
         Me.TextBox47.Size = New System.Drawing.Size(100, 20)
         Me.TextBox47.TabIndex = 34
         '
@@ -1836,6 +1898,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox45.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR I/T Received Date", True))
         Me.TextBox45.Location = New System.Drawing.Point(152, 114)
         Me.TextBox45.Name = "TextBox45"
+        Me.TextBox45.ReadOnly = True
         Me.TextBox45.Size = New System.Drawing.Size(100, 20)
         Me.TextBox45.TabIndex = 32
         '
@@ -1844,6 +1907,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox43.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR I Received Date", True))
         Me.TextBox43.Location = New System.Drawing.Point(151, 88)
         Me.TextBox43.Name = "TextBox43"
+        Me.TextBox43.ReadOnly = True
         Me.TextBox43.Size = New System.Drawing.Size(100, 20)
         Me.TextBox43.TabIndex = 30
         '
@@ -1852,6 +1916,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox41.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR Received Date", True))
         Me.TextBox41.Location = New System.Drawing.Point(151, 61)
         Me.TextBox41.Name = "TextBox41"
+        Me.TextBox41.ReadOnly = True
         Me.TextBox41.Size = New System.Drawing.Size(100, 20)
         Me.TextBox41.TabIndex = 28
         '
@@ -1860,6 +1925,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox39.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH C Received Date", True))
         Me.TextBox39.Location = New System.Drawing.Point(151, 35)
         Me.TextBox39.Name = "TextBox39"
+        Me.TextBox39.ReadOnly = True
         Me.TextBox39.Size = New System.Drawing.Size(100, 20)
         Me.TextBox39.TabIndex = 26
         '
@@ -1867,6 +1933,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "ACLS Instructor", True))
+        Me.CheckBox7.Enabled = False
         Me.CheckBox7.Location = New System.Drawing.Point(17, 168)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(100, 17)
@@ -1878,6 +1945,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "ACLS", True))
+        Me.CheckBox6.Enabled = False
         Me.CheckBox6.Location = New System.Drawing.Point(16, 142)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(53, 17)
@@ -1889,6 +1957,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "CPR I/T", True))
+        Me.CheckBox5.Enabled = False
         Me.CheckBox5.Location = New System.Drawing.Point(17, 116)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(66, 17)
@@ -1900,6 +1969,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "CPR Instructor", True))
+        Me.CheckBox4.Enabled = False
         Me.CheckBox4.Location = New System.Drawing.Point(16, 88)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(95, 17)
@@ -1911,6 +1981,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "CPR", True))
+        Me.CheckBox3.Enabled = False
         Me.CheckBox3.Location = New System.Drawing.Point(16, 63)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(73, 17)
@@ -1922,6 +1993,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "TDH Coordinator", True))
+        Me.CheckBox2.Enabled = False
         Me.CheckBox2.Location = New System.Drawing.Point(16, 37)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(120, 17)
@@ -1931,6 +2003,7 @@ Partial Class SupervisorEmployeeInformation
         '
         'TextBox50
         '
+        Me.TextBox50.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox50.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "BTLS Instructor Expiration Date", True))
         Me.TextBox50.Location = New System.Drawing.Point(798, 237)
         Me.TextBox50.Name = "TextBox50"
@@ -1942,11 +2015,13 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox51.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "BTLS Instructor Received Date", True))
         Me.TextBox51.Location = New System.Drawing.Point(623, 237)
         Me.TextBox51.Name = "TextBox51"
+        Me.TextBox51.ReadOnly = True
         Me.TextBox51.Size = New System.Drawing.Size(100, 20)
         Me.TextBox51.TabIndex = 48
         '
         'TextBox52
         '
+        Me.TextBox52.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox52.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "BTLS Provider Expiration Date", True))
         Me.TextBox52.Location = New System.Drawing.Point(798, 211)
         Me.TextBox52.Name = "TextBox52"
@@ -1958,11 +2033,13 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox53.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "BTLS Provider Received Date", True))
         Me.TextBox53.Location = New System.Drawing.Point(623, 211)
         Me.TextBox53.Name = "TextBox53"
+        Me.TextBox53.ReadOnly = True
         Me.TextBox53.Size = New System.Drawing.Size(100, 20)
         Me.TextBox53.TabIndex = 46
         '
         'TextBox54
         '
+        Me.TextBox54.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox54.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PHTLS Instructor Expiration Date", True))
         Me.TextBox54.Location = New System.Drawing.Point(797, 185)
         Me.TextBox54.Name = "TextBox54"
@@ -1974,11 +2051,13 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox55.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PHTLS Received Date", True))
         Me.TextBox55.Location = New System.Drawing.Point(623, 183)
         Me.TextBox55.Name = "TextBox55"
+        Me.TextBox55.ReadOnly = True
         Me.TextBox55.Size = New System.Drawing.Size(100, 20)
         Me.TextBox55.TabIndex = 44
         '
         'TextBox56
         '
+        Me.TextBox56.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox56.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PHTLS Expiration Date", True))
         Me.TextBox56.Location = New System.Drawing.Point(798, 159)
         Me.TextBox56.Name = "TextBox56"
@@ -1990,11 +2069,13 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox57.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PHTLS Received Date", True))
         Me.TextBox57.Location = New System.Drawing.Point(623, 158)
         Me.TextBox57.Name = "TextBox57"
+        Me.TextBox57.ReadOnly = True
         Me.TextBox57.Size = New System.Drawing.Size(100, 20)
         Me.TextBox57.TabIndex = 42
         '
         'TextBox58
         '
+        Me.TextBox58.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox58.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PPPC Expiration Date", True))
         Me.TextBox58.Location = New System.Drawing.Point(798, 131)
         Me.TextBox58.Name = "TextBox58"
@@ -2006,11 +2087,13 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox59.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PPPC Received Date", True))
         Me.TextBox59.Location = New System.Drawing.Point(623, 132)
         Me.TextBox59.Name = "TextBox59"
+        Me.TextBox59.ReadOnly = True
         Me.TextBox59.Size = New System.Drawing.Size(100, 20)
         Me.TextBox59.TabIndex = 40
         '
         'TextBox60
         '
+        Me.TextBox60.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox60.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PALS Expiration Date", True))
         Me.TextBox60.Location = New System.Drawing.Point(798, 107)
         Me.TextBox60.Name = "TextBox60"
@@ -2022,6 +2105,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox61.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "PALS Received Date", True))
         Me.TextBox61.Location = New System.Drawing.Point(623, 107)
         Me.TextBox61.Name = "TextBox61"
+        Me.TextBox61.ReadOnly = True
         Me.TextBox61.Size = New System.Drawing.Size(100, 20)
         Me.TextBox61.TabIndex = 38
         '
@@ -2030,6 +2114,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox48.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "ACLS I Expiration Date", True))
         Me.TextBox48.Location = New System.Drawing.Point(360, 263)
         Me.TextBox48.Name = "TextBox48"
+        Me.TextBox48.ReadOnly = True
         Me.TextBox48.Size = New System.Drawing.Size(100, 20)
         Me.TextBox48.TabIndex = 37
         '
@@ -2038,6 +2123,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox46.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "ACLS Expiration Date", True))
         Me.TextBox46.Location = New System.Drawing.Point(360, 237)
         Me.TextBox46.Name = "TextBox46"
+        Me.TextBox46.ReadOnly = True
         Me.TextBox46.Size = New System.Drawing.Size(100, 20)
         Me.TextBox46.TabIndex = 35
         '
@@ -2046,6 +2132,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox44.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR I/T Expiration Date", True))
         Me.TextBox44.Location = New System.Drawing.Point(360, 211)
         Me.TextBox44.Name = "TextBox44"
+        Me.TextBox44.ReadOnly = True
         Me.TextBox44.Size = New System.Drawing.Size(100, 20)
         Me.TextBox44.TabIndex = 33
         '
@@ -2054,6 +2141,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox42.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR I Expiration Date", True))
         Me.TextBox42.Location = New System.Drawing.Point(360, 185)
         Me.TextBox42.Name = "TextBox42"
+        Me.TextBox42.ReadOnly = True
         Me.TextBox42.Size = New System.Drawing.Size(100, 20)
         Me.TextBox42.TabIndex = 31
         '
@@ -2062,6 +2150,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox40.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "CPR Expiration Date", True))
         Me.TextBox40.Location = New System.Drawing.Point(360, 159)
         Me.TextBox40.Name = "TextBox40"
+        Me.TextBox40.ReadOnly = True
         Me.TextBox40.Size = New System.Drawing.Size(100, 20)
         Me.TextBox40.TabIndex = 29
         '
@@ -2070,6 +2159,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox38.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Instructor Expiration Date", True))
         Me.TextBox38.Location = New System.Drawing.Point(360, 131)
         Me.TextBox38.Name = "TextBox38"
+        Me.TextBox38.ReadOnly = True
         Me.TextBox38.Size = New System.Drawing.Size(100, 20)
         Me.TextBox38.TabIndex = 27
         '
@@ -2078,6 +2168,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox37.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Instructor Expiration Date", True))
         Me.TextBox37.Location = New System.Drawing.Point(360, 106)
         Me.TextBox37.Name = "TextBox37"
+        Me.TextBox37.ReadOnly = True
         Me.TextBox37.Size = New System.Drawing.Size(100, 20)
         Me.TextBox37.TabIndex = 25
         '
@@ -2105,6 +2196,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "BTLS Instructor", True))
+        Me.CheckBox8.Enabled = False
         Me.CheckBox8.Location = New System.Drawing.Point(509, 239)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(100, 17)
@@ -2116,6 +2208,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox9.AutoSize = True
         Me.CheckBox9.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "BTLS Provider", True))
+        Me.CheckBox9.Enabled = False
         Me.CheckBox9.Location = New System.Drawing.Point(509, 213)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(95, 17)
@@ -2127,6 +2220,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox10.AutoSize = True
         Me.CheckBox10.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "PHTLS Instructor", True))
+        Me.CheckBox10.Enabled = False
         Me.CheckBox10.Location = New System.Drawing.Point(509, 185)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(108, 17)
@@ -2138,6 +2232,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox11.AutoSize = True
         Me.CheckBox11.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "PHTLS", True))
+        Me.CheckBox11.Enabled = False
         Me.CheckBox11.Location = New System.Drawing.Point(509, 160)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(61, 17)
@@ -2149,6 +2244,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox12.AutoSize = True
         Me.CheckBox12.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "PPPC", True))
+        Me.CheckBox12.Enabled = False
         Me.CheckBox12.Location = New System.Drawing.Point(509, 134)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(54, 17)
@@ -2160,6 +2256,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox14.AutoSize = True
         Me.CheckBox14.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EMSCertificationsBindingSource, "PALS", True))
+        Me.CheckBox14.Enabled = False
         Me.CheckBox14.Location = New System.Drawing.Point(509, 109)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(53, 17)
@@ -2192,6 +2289,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox35.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Level Expiration Date", True))
         Me.TextBox35.Location = New System.Drawing.Point(734, 41)
         Me.TextBox35.Name = "TextBox35"
+        Me.TextBox35.ReadOnly = True
         Me.TextBox35.Size = New System.Drawing.Size(163, 20)
         Me.TextBox35.TabIndex = 6
         '
@@ -2200,6 +2298,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox34.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Level Received Date", True))
         Me.TextBox34.Location = New System.Drawing.Point(494, 41)
         Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.ReadOnly = True
         Me.TextBox34.Size = New System.Drawing.Size(163, 20)
         Me.TextBox34.TabIndex = 5
         '
@@ -2208,6 +2307,7 @@ Partial Class SupervisorEmployeeInformation
         Me.ComboBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMSCertificationsBindingSource, "TDH Level", True))
         Me.ComboBox9.DataSource = Me.EMSCertificationTypeBindingSource
         Me.ComboBox9.DisplayMember = "EMS Type"
+        Me.ComboBox9.Enabled = False
         Me.ComboBox9.FormattingEnabled = True
         Me.ComboBox9.Location = New System.Drawing.Point(246, 41)
         Me.ComboBox9.Name = "ComboBox9"
@@ -2293,6 +2393,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox68.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "Rescue Expiration Date", True))
         Me.TextBox68.Location = New System.Drawing.Point(686, 121)
         Me.TextBox68.Name = "TextBox68"
+        Me.TextBox68.ReadOnly = True
         Me.TextBox68.Size = New System.Drawing.Size(163, 20)
         Me.TextBox68.TabIndex = 38
         '
@@ -2306,12 +2407,14 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox69.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "Rescue Received Date", True))
         Me.TextBox69.Location = New System.Drawing.Point(465, 119)
         Me.TextBox69.Name = "TextBox69"
+        Me.TextBox69.ReadOnly = True
         Me.TextBox69.Size = New System.Drawing.Size(163, 20)
         Me.TextBox69.TabIndex = 37
         '
         'ComboBox13
         '
         Me.ComboBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "Rescue Level", True))
+        Me.ComboBox13.Enabled = False
         Me.ComboBox13.FormattingEnabled = True
         Me.ComboBox13.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox13.Location = New System.Drawing.Point(217, 119)
@@ -2324,6 +2427,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox66.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA I Expiration Date", True))
         Me.TextBox66.Location = New System.Drawing.Point(686, 92)
         Me.TextBox66.Name = "TextBox66"
+        Me.TextBox66.ReadOnly = True
         Me.TextBox66.Size = New System.Drawing.Size(163, 20)
         Me.TextBox66.TabIndex = 35
         '
@@ -2332,12 +2436,14 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox67.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA I Received Date", True))
         Me.TextBox67.Location = New System.Drawing.Point(465, 92)
         Me.TextBox67.Name = "TextBox67"
+        Me.TextBox67.ReadOnly = True
         Me.TextBox67.Size = New System.Drawing.Size(163, 20)
         Me.TextBox67.TabIndex = 34
         '
         'ComboBox12
         '
         Me.ComboBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA I Level", True))
+        Me.ComboBox12.Enabled = False
         Me.ComboBox12.FormattingEnabled = True
         Me.ComboBox12.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox12.Location = New System.Drawing.Point(217, 92)
@@ -2350,6 +2456,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox64.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA Expiration Date", True))
         Me.TextBox64.Location = New System.Drawing.Point(686, 65)
         Me.TextBox64.Name = "TextBox64"
+        Me.TextBox64.ReadOnly = True
         Me.TextBox64.Size = New System.Drawing.Size(163, 20)
         Me.TextBox64.TabIndex = 32
         '
@@ -2358,12 +2465,14 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox65.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA Received Date", True))
         Me.TextBox65.Location = New System.Drawing.Point(465, 65)
         Me.TextBox65.Name = "TextBox65"
+        Me.TextBox65.ReadOnly = True
         Me.TextBox65.Size = New System.Drawing.Size(163, 20)
         Me.TextBox65.TabIndex = 31
         '
         'ComboBox11
         '
         Me.ComboBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "SCUBA Level", True))
+        Me.ComboBox11.Enabled = False
         Me.ComboBox11.FormattingEnabled = True
         Me.ComboBox11.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox11.Location = New System.Drawing.Point(217, 65)
@@ -2376,6 +2485,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox62.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "TCLEOSE Expiration Date", True))
         Me.TextBox62.Location = New System.Drawing.Point(686, 38)
         Me.TextBox62.Name = "TextBox62"
+        Me.TextBox62.ReadOnly = True
         Me.TextBox62.Size = New System.Drawing.Size(163, 20)
         Me.TextBox62.TabIndex = 29
         '
@@ -2384,12 +2494,14 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox63.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "TCLEOSE Received Date", True))
         Me.TextBox63.Location = New System.Drawing.Point(465, 38)
         Me.TextBox63.Name = "TextBox63"
+        Me.TextBox63.ReadOnly = True
         Me.TextBox63.Size = New System.Drawing.Size(163, 20)
         Me.TextBox63.TabIndex = 28
         '
         'ComboBox10
         '
         Me.ComboBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OtherCertificationsBindingSource, "TCLEOSE Level", True))
+        Me.ComboBox10.Enabled = False
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.Items.AddRange(New Object() {"Basic", "Intermediate", "Advanced", "Master"})
         Me.ComboBox10.Location = New System.Drawing.Point(217, 38)
@@ -2431,6 +2543,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox15.AutoSize = True
         Me.CheckBox15.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.OtherCertificationsBindingSource, "Rescue", True))
+        Me.CheckBox15.Enabled = False
         Me.CheckBox15.Location = New System.Drawing.Point(76, 123)
         Me.CheckBox15.Name = "CheckBox15"
         Me.CheckBox15.Size = New System.Drawing.Size(63, 17)
@@ -2442,6 +2555,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox16.AutoSize = True
         Me.CheckBox16.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.OtherCertificationsBindingSource, "SCUBA Instructor", True))
+        Me.CheckBox16.Enabled = False
         Me.CheckBox16.Location = New System.Drawing.Point(76, 96)
         Me.CheckBox16.Name = "CheckBox16"
         Me.CheckBox16.Size = New System.Drawing.Size(109, 17)
@@ -2453,6 +2567,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox17.AutoSize = True
         Me.CheckBox17.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.OtherCertificationsBindingSource, "SCUBA", True))
+        Me.CheckBox17.Enabled = False
         Me.CheckBox17.Location = New System.Drawing.Point(76, 69)
         Me.CheckBox17.Name = "CheckBox17"
         Me.CheckBox17.Size = New System.Drawing.Size(62, 17)
@@ -2464,6 +2579,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox18.AutoSize = True
         Me.CheckBox18.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.OtherCertificationsBindingSource, "TCLEOSE", True))
+        Me.CheckBox18.Enabled = False
         Me.CheckBox18.Location = New System.Drawing.Point(76, 42)
         Me.CheckBox18.Name = "CheckBox18"
         Me.CheckBox18.Size = New System.Drawing.Size(75, 17)
@@ -2516,6 +2632,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox73.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssignmentPayBindingSource, "HazMat Received Date", True))
         Me.TextBox73.Location = New System.Drawing.Point(177, 62)
         Me.TextBox73.Name = "TextBox73"
+        Me.TextBox73.ReadOnly = True
         Me.TextBox73.Size = New System.Drawing.Size(163, 20)
         Me.TextBox73.TabIndex = 32
         '
@@ -2529,6 +2646,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox72.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssignmentPayBindingSource, "FAA Received Date", True))
         Me.TextBox72.Location = New System.Drawing.Point(177, 114)
         Me.TextBox72.Name = "TextBox72"
+        Me.TextBox72.ReadOnly = True
         Me.TextBox72.Size = New System.Drawing.Size(163, 20)
         Me.TextBox72.TabIndex = 31
         '
@@ -2537,6 +2655,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox71.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssignmentPayBindingSource, "Arson Received Date", True))
         Me.TextBox71.Location = New System.Drawing.Point(177, 88)
         Me.TextBox71.Name = "TextBox71"
+        Me.TextBox71.ReadOnly = True
         Me.TextBox71.Size = New System.Drawing.Size(163, 20)
         Me.TextBox71.TabIndex = 30
         '
@@ -2545,6 +2664,7 @@ Partial Class SupervisorEmployeeInformation
         Me.TextBox70.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssignmentPayBindingSource, "ARFF Received Date", True))
         Me.TextBox70.Location = New System.Drawing.Point(177, 36)
         Me.TextBox70.Name = "TextBox70"
+        Me.TextBox70.ReadOnly = True
         Me.TextBox70.Size = New System.Drawing.Size(163, 20)
         Me.TextBox70.TabIndex = 29
         '
@@ -2562,6 +2682,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox19.AutoSize = True
         Me.CheckBox19.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.AssignmentPayBindingSource, "FAA", True))
+        Me.CheckBox19.Enabled = False
         Me.CheckBox19.Location = New System.Drawing.Point(33, 117)
         Me.CheckBox19.Name = "CheckBox19"
         Me.CheckBox19.Size = New System.Drawing.Size(46, 17)
@@ -2573,6 +2694,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox20.AutoSize = True
         Me.CheckBox20.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.AssignmentPayBindingSource, "Arson", True))
+        Me.CheckBox20.Enabled = False
         Me.CheckBox20.Location = New System.Drawing.Point(33, 91)
         Me.CheckBox20.Name = "CheckBox20"
         Me.CheckBox20.Size = New System.Drawing.Size(53, 17)
@@ -2584,6 +2706,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox21.AutoSize = True
         Me.CheckBox21.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.AssignmentPayBindingSource, "HazMat", True))
+        Me.CheckBox21.Enabled = False
         Me.CheckBox21.Location = New System.Drawing.Point(32, 65)
         Me.CheckBox21.Name = "CheckBox21"
         Me.CheckBox21.Size = New System.Drawing.Size(62, 17)
@@ -2595,6 +2718,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.CheckBox22.AutoSize = True
         Me.CheckBox22.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.AssignmentPayBindingSource, "ARFF", True))
+        Me.CheckBox22.Enabled = False
         Me.CheckBox22.Location = New System.Drawing.Point(33, 39)
         Me.CheckBox22.Name = "CheckBox22"
         Me.CheckBox22.Size = New System.Drawing.Size(53, 17)
@@ -2680,12 +2804,10 @@ Partial Class SupervisorEmployeeInformation
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 483)
         Me.Controls.Add(Me.ALL_EMP_ReportButton)
-        Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(Me.Employee_List)
         Me.Controls.Add(Me.EmployeeSearch)
         Me.Controls.Add(Me.Next_Button)
         Me.Controls.Add(Me.Prev_Button)
-        Me.Controls.Add(Me.Save_Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.EmpInfo)
         Me.Controls.Add(Me.Emp_Textbox)
@@ -2695,7 +2817,7 @@ Partial Class SupervisorEmployeeInformation
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "SupervisorEmployeeInformation"
-        Me.Text = "SupervisorEmployeeInformation"
+        Me.Text = "Employee Information"
         CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SupervisorFilterDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EmpInfo.ResumeLayout(False)
@@ -2727,12 +2849,10 @@ Partial Class SupervisorEmployeeInformation
 
     End Sub
     Friend WithEvents ALL_EMP_ReportButton As System.Windows.Forms.Button
-    Friend WithEvents DeleteButton As System.Windows.Forms.Button
     Friend WithEvents Employee_List As System.Windows.Forms.ComboBox
     Friend WithEvents EmployeeSearch As System.Windows.Forms.Label
     Friend WithEvents Next_Button As System.Windows.Forms.Button
     Friend WithEvents Prev_Button As System.Windows.Forms.Button
-    Friend WithEvents Save_Button As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents EmpInfo As System.Windows.Forms.TabControl
     Friend WithEvents EmployeeInfo As System.Windows.Forms.TabPage

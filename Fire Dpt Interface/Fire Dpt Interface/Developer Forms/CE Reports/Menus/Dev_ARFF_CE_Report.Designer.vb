@@ -22,14 +22,20 @@ Partial Class Dev_ARFF_CE_Report
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SelectEmp_ComboBox = New System.Windows.Forms.ComboBox()
+        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Training_Records_for_TAMUDataSet = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSet()
         Me.ARFF_CE_Report_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Start_Date_DateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.End_Date_DateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -64,11 +70,23 @@ Partial Class Dev_ARFF_CE_Report
         '
         'SelectEmp_ComboBox
         '
+        Me.SelectEmp_ComboBox.DataSource = Me.EmployeeInformationBindingSource
+        Me.SelectEmp_ComboBox.DisplayMember = "Name"
         Me.SelectEmp_ComboBox.FormattingEnabled = True
         Me.SelectEmp_ComboBox.Location = New System.Drawing.Point(194, 27)
         Me.SelectEmp_ComboBox.Name = "SelectEmp_ComboBox"
         Me.SelectEmp_ComboBox.Size = New System.Drawing.Size(297, 21)
         Me.SelectEmp_ComboBox.TabIndex = 96
+        '
+        'EmployeeInformationBindingSource
+        '
+        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
+        'Training_Records_for_TAMUDataSet
+        '
+        Me.Training_Records_for_TAMUDataSet.DataSetName = "Training_Records_for_TAMUDataSet"
+        Me.Training_Records_for_TAMUDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ARFF_CE_Report_Button
         '
@@ -113,6 +131,10 @@ Partial Class Dev_ARFF_CE_Report
         Me.End_Date_DateTimePicker.Size = New System.Drawing.Size(297, 20)
         Me.End_Date_DateTimePicker.TabIndex = 101
         '
+        'Employee_InformationTableAdapter
+        '
+        Me.Employee_InformationTableAdapter.ClearBeforeFill = True
+        '
         'Dev_ARFF_CE_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,6 +153,8 @@ Partial Class Dev_ARFF_CE_Report
         Me.MaximizeBox = False
         Me.Name = "Dev_ARFF_CE_Report"
         Me.Text = "ARFF CE Report Menu"
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -143,4 +167,7 @@ Partial Class Dev_ARFF_CE_Report
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents Start_Date_DateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents End_Date_DateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Training_Records_for_TAMUDataSet As Fire_Dpt_Interface.Training_Records_for_TAMUDataSet
+    Friend WithEvents EmployeeInformationBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Employee_InformationTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter
 End Class

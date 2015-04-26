@@ -217,7 +217,7 @@ Partial Class BasicForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "BasicForm"
-        Me.Text = "Main Menu"
+        Me.Text = "Basic Menu"
         CType(Me.ExampleDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Employee_InformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

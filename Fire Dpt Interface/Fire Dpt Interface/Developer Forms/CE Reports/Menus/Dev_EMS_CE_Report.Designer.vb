@@ -22,6 +22,7 @@ Partial Class Dev_EMS_CE_Report
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,6 +31,11 @@ Partial Class Dev_EMS_CE_Report
         Me.EMS_CE_Report_Button = New System.Windows.Forms.Button()
         Me.EMS_CE_SDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.EMS_CE_EDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Training_Records_for_TAMUDataSet = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSet()
+        Me.EmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter()
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -64,6 +70,8 @@ Partial Class Dev_EMS_CE_Report
         '
         'SelectEmp_ComboBox
         '
+        Me.SelectEmp_ComboBox.DataSource = Me.EmployeeInformationBindingSource
+        Me.SelectEmp_ComboBox.DisplayMember = "Name"
         Me.SelectEmp_ComboBox.FormattingEnabled = True
         Me.SelectEmp_ComboBox.Location = New System.Drawing.Point(192, 25)
         Me.SelectEmp_ComboBox.Name = "SelectEmp_ComboBox"
@@ -112,6 +120,20 @@ Partial Class Dev_EMS_CE_Report
         Me.EMS_CE_EDateTimePicker.Size = New System.Drawing.Size(297, 20)
         Me.EMS_CE_EDateTimePicker.TabIndex = 101
         '
+        'Training_Records_for_TAMUDataSet
+        '
+        Me.Training_Records_for_TAMUDataSet.DataSetName = "Training_Records_for_TAMUDataSet"
+        Me.Training_Records_for_TAMUDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmployeeInformationBindingSource
+        '
+        Me.EmployeeInformationBindingSource.DataMember = "Employee Information"
+        Me.EmployeeInformationBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
+        'Employee_InformationTableAdapter
+        '
+        Me.Employee_InformationTableAdapter.ClearBeforeFill = True
+        '
         'Dev_EMS_CE_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,6 +152,8 @@ Partial Class Dev_EMS_CE_Report
         Me.MaximizeBox = False
         Me.Name = "Dev_EMS_CE_Report"
         Me.Text = "EMS CE Report Menu "
+        CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -142,4 +166,7 @@ Partial Class Dev_EMS_CE_Report
     Friend WithEvents EMS_CE_Report_Button As System.Windows.Forms.Button
     Friend WithEvents EMS_CE_SDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents EMS_CE_EDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Training_Records_for_TAMUDataSet As Fire_Dpt_Interface.Training_Records_for_TAMUDataSet
+    Friend WithEvents EmployeeInformationBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Employee_InformationTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter
 End Class

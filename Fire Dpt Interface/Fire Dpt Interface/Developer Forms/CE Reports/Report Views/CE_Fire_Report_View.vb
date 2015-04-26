@@ -14,10 +14,19 @@ Public Class CE_Fire_Report_View
         Dim timestamp As String = currdate.ToShortDateString
         Dim Timesig As New ReportParameter("TimeStamp", timestamp)
 
-        Me.Query_CE_Fire_ReportTableAdapter.Fill(Me.CE_Fire_Dataset.Query_CE_Fire_Report, 103147821, s_date, e_date)
+        Dim e_id = Dev_Fire_CE_Reports.emp_id
+        Dim e_name = Dev_Fire_CE_Reports.employeeName
+        Dim e_TCFP = Dev_Fire_CE_Reports.TCFP
+
+        Dim NAME As New ReportParameter("NAME", e_name)
+        Dim TCFP As New ReportParameter("TCFP", e_TCFP)
+
+        Me.Query_CE_Fire_ReportTableAdapter.Fill(Me.CE_Fire_Dataset.Query_CE_Fire_Report, e_id, s_date, e_date)
         Me.CE_Fire_ReportViewer.LocalReport.SetParameters(START_DATE)
         Me.CE_Fire_ReportViewer.LocalReport.SetParameters(END_DATE)
         Me.CE_Fire_ReportViewer.LocalReport.SetParameters(Timesig)
+        Me.CE_Fire_ReportViewer.LocalReport.SetParameters(NAME)
+        Me.CE_Fire_ReportViewer.LocalReport.SetParameters(TCFP)
         Me.CE_Fire_ReportViewer.RefreshReport()
     End Sub
 

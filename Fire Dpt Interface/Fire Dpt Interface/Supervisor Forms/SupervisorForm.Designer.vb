@@ -130,7 +130,7 @@ Partial Class SupervisorForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "SupervisorForm"
-        Me.Text = "SupervisorForm"
+        Me.Text = "Supervisor Menu"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

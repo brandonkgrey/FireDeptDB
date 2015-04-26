@@ -191,7 +191,7 @@ Partial Class AdministratorForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "AdministratorForm"
-        Me.Text = "AdministratorForm"
+        Me.Text = "Administrator Menu"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BannerDF.ResumeLayout(False)
         Me.BannerDF.PerformLayout()

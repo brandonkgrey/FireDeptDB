@@ -27,6 +27,11 @@ Partial Class Dev_HazMat_All_Techs_Training_Reports
         '
         'ExitButton
         '
+        Me.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatAppearance.BorderSize = 2
+        Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.Location = New System.Drawing.Point(458, 154)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(81, 25)
@@ -38,8 +43,11 @@ Partial Class Dev_HazMat_All_Techs_Training_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(551, 191)
         Me.Controls.Add(Me.ExitButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Dev_HazMat_All_Techs_Training_Reports"
         Me.Text = "HazMat All Techs Training_Reports Menu"
         Me.ResumeLayout(False)

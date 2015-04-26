@@ -198,8 +198,9 @@ Partial Class Developer_Class_Information
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.StudentInfo = New System.Windows.Forms.TabPage()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.FireDptPpl_label = New System.Windows.Forms.Label()
         Me.Class_Attendance_InformationDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -209,8 +210,8 @@ Partial Class Developer_Class_Information
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.AutoCount_Textbox = New System.Windows.Forms.TextBox()
+        Me.Class_Number_Textbox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -2297,6 +2298,8 @@ Partial Class Developer_Class_Information
         'StudentInfo
         '
         Me.StudentInfo.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.StudentInfo.Controls.Add(Me.Label75)
+        Me.StudentInfo.Controls.Add(Me.FireDptPpl_label)
         Me.StudentInfo.Controls.Add(Me.Class_Attendance_InformationDataGridView)
         Me.StudentInfo.Location = New System.Drawing.Point(4, 22)
         Me.StudentInfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -2305,27 +2308,41 @@ Partial Class Developer_Class_Information
         Me.StudentInfo.TabIndex = 3
         Me.StudentInfo.Text = "Student Information"
         '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(518, 25)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(306, 17)
+        Me.Label75.TabIndex = 2
+        Me.Label75.Text = "Non Fire Department Student Information"
+        '
+        'FireDptPpl_label
+        '
+        Me.FireDptPpl_label.AutoSize = True
+        Me.FireDptPpl_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FireDptPpl_label.Location = New System.Drawing.Point(4, 25)
+        Me.FireDptPpl_label.Name = "FireDptPpl_label"
+        Me.FireDptPpl_label.Size = New System.Drawing.Size(203, 17)
+        Me.FireDptPpl_label.TabIndex = 1
+        Me.FireDptPpl_label.Text = "Fire Department Personnel"
+        '
         'Class_Attendance_InformationDataGridView
         '
         Me.Class_Attendance_InformationDataGridView.AutoGenerateColumns = False
         Me.Class_Attendance_InformationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Class_Attendance_InformationDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.Class_Attendance_InformationDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Class_Attendance_InformationDataGridView.DataSource = Me.Class_Attendance_InformationBindingSource
-        Me.Class_Attendance_InformationDataGridView.Location = New System.Drawing.Point(3, 3)
+        Me.Class_Attendance_InformationDataGridView.Location = New System.Drawing.Point(3, 44)
         Me.Class_Attendance_InformationDataGridView.Name = "Class_Attendance_InformationDataGridView"
-        Me.Class_Attendance_InformationDataGridView.Size = New System.Drawing.Size(433, 249)
+        Me.Class_Attendance_InformationDataGridView.Size = New System.Drawing.Size(426, 208)
         Me.Class_Attendance_InformationDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Class Number"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Class Number"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Employee_ID"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Employee_ID"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Employee ID"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'DataGridViewTextBoxColumn4
@@ -2405,24 +2422,24 @@ Partial Class Developer_Class_Information
         Me.Label4.TabIndex = 73
         Me.Label4.Text = "F-Fire"
         '
-        'TextBox3
+        'AutoCount_Textbox
         '
-        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Number", True))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Red
-        Me.TextBox3.Location = New System.Drawing.Point(1150, 10)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(71, 20)
-        Me.TextBox3.TabIndex = 72
+        Me.AutoCount_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "AutoCount", True))
+        Me.AutoCount_Textbox.ForeColor = System.Drawing.Color.Red
+        Me.AutoCount_Textbox.Location = New System.Drawing.Point(1150, 10)
+        Me.AutoCount_Textbox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.AutoCount_Textbox.Name = "AutoCount_Textbox"
+        Me.AutoCount_Textbox.Size = New System.Drawing.Size(71, 20)
+        Me.AutoCount_Textbox.TabIndex = 72
         '
-        'TextBox2
+        'Class_Number_Textbox
         '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "AutoCount", True))
-        Me.TextBox2.Location = New System.Drawing.Point(950, 38)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(271, 20)
-        Me.TextBox2.TabIndex = 71
+        Me.Class_Number_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Class Number", True))
+        Me.Class_Number_Textbox.Location = New System.Drawing.Point(950, 38)
+        Me.Class_Number_Textbox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Class_Number_Textbox.Name = "Class_Number_Textbox"
+        Me.Class_Number_Textbox.Size = New System.Drawing.Size(271, 20)
+        Me.Class_Number_Textbox.TabIndex = 71
         '
         'Label3
         '
@@ -2536,8 +2553,8 @@ Partial Class Developer_Class_Information
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.AutoCount_Textbox)
+        Me.Controls.Add(Me.Class_Number_Textbox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -2545,7 +2562,7 @@ Partial Class Developer_Class_Information
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "Developer_Class_Information"
-        Me.Text = "Developer_Class_Information"
+        Me.Text = "Class Information"
         CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClassInfoTabControl.ResumeLayout(False)
@@ -2574,6 +2591,7 @@ Partial Class Developer_Class_Information
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
         Me.StudentInfo.ResumeLayout(False)
+        Me.StudentInfo.PerformLayout()
         CType(Me.Class_Attendance_InformationDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Class_Attendance_InformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -2760,8 +2778,8 @@ Partial Class Developer_Class_Information
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents AutoCount_Textbox As System.Windows.Forms.TextBox
+    Friend WithEvents Class_Number_Textbox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -2771,7 +2789,8 @@ Partial Class Developer_Class_Information
     Friend WithEvents Class_Attendance_InformationTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Class_Attendance_InformationTableAdapter
     Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Class_Attendance_InformationDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FireDptPpl_label As System.Windows.Forms.Label
+    Friend WithEvents Label75 As System.Windows.Forms.Label
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn

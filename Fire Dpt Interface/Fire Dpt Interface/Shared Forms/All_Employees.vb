@@ -11,12 +11,13 @@ Public Class All_Employees
     Friend Shared currentID
     Friend Shared sendingForm As Boolean = False
 
-
     Private Sub AuthorizationFix(choice As Integer, AuthLvl As Integer)
         'Basic Authorization
         If (AuthLvl = 1) Then
 
             EmployeeInformationBindingSource.Position = EmployeeInformationBindingSource.Find("Employee_ID", employeeID)
+
+
 
             If choice = 0 Then
                 EmpInfo.TabPages.RemoveAt(6)

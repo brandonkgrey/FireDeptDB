@@ -10,4 +10,8 @@
     Private Sub HazMat_CE_Report_Button_Click(sender As Object, e As EventArgs) Handles HazMat_CE_Report_Button.Click
 
     End Sub
+
+    Private Sub Dev_HazMat_CE_Report_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

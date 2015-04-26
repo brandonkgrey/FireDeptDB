@@ -94,7 +94,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Start_Date.Value</Value>
+                              <Value>=FormatDateTime(Fields!Start_Date.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

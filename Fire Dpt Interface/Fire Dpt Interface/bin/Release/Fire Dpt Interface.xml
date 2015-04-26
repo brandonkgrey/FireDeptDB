@@ -318,6 +318,58 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset.SupervisorEMS_InstructXDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset.SupervisorEMS_InstructXRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset.SupervisorEMS_InstructXRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.SupervisorEMS_InstructXTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.UpdateAll(Fire_Dpt_Interface.SupervisorEMS_Instruct_X_Dataset)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMS_Instruct_X_DatasetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
 </member><member name="T:Fire_Dpt_Interface.EMTB_Certifications_Dataset.Query_EMTB_CertificationsDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -3479,6 +3531,58 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDataset.SupervisorEMSX_FilterDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDataset.SupervisorEMSX_FilterRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDataset.SupervisorEMSX_FilterRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDataset">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.SupervisorEMSX_FilterTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Fire_Dpt_Interface.SupervisorEMSXDataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(Fire_Dpt_Interface.SupervisorEMSXDataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(Fire_Dpt_Interface.SupervisorEMSXDataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.UpdateAll(Fire_Dpt_Interface.SupervisorEMSXDataset)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Fire_Dpt_Interface.SupervisorEMSXDatasetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

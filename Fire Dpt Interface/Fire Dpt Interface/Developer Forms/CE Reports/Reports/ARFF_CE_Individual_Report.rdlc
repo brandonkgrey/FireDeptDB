@@ -192,7 +192,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Start_Date.Value</Value>
+                              <Value>=FormatDateTime(Fields!Start_Date.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -518,7 +518,7 @@
         <Top>0.11807in</Top>
         <Left>2.54167in</Left>
         <Height>0.3125in</Height>
-        <Width>4.01042in</Width>
+        <Width>3.14584in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -551,7 +551,7 @@
         <Top>0.43057in</Top>
         <Left>2.54167in</Left>
         <Height>0.29167in</Height>
-        <Width>4.01042in</Width>
+        <Width>1.60417in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -584,7 +584,7 @@
         <Top>0.77779in</Top>
         <Left>2.54167in</Left>
         <Height>0.30208in</Height>
-        <Width>4.01042in</Width>
+        <Width>2.54167in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -617,7 +617,7 @@
         <Top>1.14932in</Top>
         <Left>2.54167in</Left>
         <Height>0.32193in</Height>
-        <Width>4.01042in</Width>
+        <Width>1.5in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -636,20 +636,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ARFF CE Report For: (Name or ID here)</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Value>ARFF CE Report For: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!NAME.Value</Value>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.72124in</Top>
-        <Left>0.25in</Left>
+        <Top>1.91916in</Top>
         <Height>0.25in</Height>
-        <Width>3.25in</Width>
+        <Width>2.83333in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -669,43 +670,33 @@
             <TextRuns>
               <TextRun>
                 <Value>Reporting Period: </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
               <TextRun>
                 <Value>=Parameters!START.Value</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
               <TextRun>
                 <Value> to </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
               <TextRun>
                 <Value>=Parameters!END.Value</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
               <TextRun>
                 <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.72124in</Top>
-        <Left>4.98613in</Left>
+        <Top>1.91916in</Top>
+        <Left>3.22917in</Left>
         <Height>0.25in</Height>
-        <Width>3.07292in</Width>
+        <Width>2.66667in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -817,13 +808,19 @@
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="END">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
     <ReportParameter Name="START">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="END">
+    <ReportParameter Name="NAME">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>

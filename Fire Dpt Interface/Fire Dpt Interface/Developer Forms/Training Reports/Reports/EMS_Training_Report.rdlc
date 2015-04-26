@@ -37,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Start_Date.Value</Value>
+                              <Value>=FormatDateTime(Fields!Start_Date.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -59,6 +59,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

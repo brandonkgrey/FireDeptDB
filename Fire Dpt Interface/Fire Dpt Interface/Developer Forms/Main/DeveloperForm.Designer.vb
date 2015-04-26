@@ -257,7 +257,7 @@ Partial Class DeveloperForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "DeveloperForm"
-        Me.Text = "Main Menu"
+        Me.Text = "Developer Menu"
         CType(Me.Training_RecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Emp_Info_AllBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EMSCertExpButton.ResumeLayout(False)

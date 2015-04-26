@@ -1,13 +1,13 @@
 ﻿Public Class BasicForm
 
     Friend Shared tabSelect As Integer
-    Dim MyInfoMenu As All_Employees
+    Dim MyInfoMenu As SupervisorEmployeeInformation
 
 
     Private Sub BasicForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Welcome " + Login.sharedUsername + " (Basic)"
 
-        MyInfoMenu = New All_Employees()
+        MyInfoMenu = New SupervisorEmployeeInformation()
 
     End Sub
 

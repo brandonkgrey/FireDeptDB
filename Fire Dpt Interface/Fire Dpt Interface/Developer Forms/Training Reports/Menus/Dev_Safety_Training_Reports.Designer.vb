@@ -63,6 +63,11 @@ Partial Class Dev_Safety_Training_Reports
         '
         'Safety_TR_Report_Button
         '
+        Me.Safety_TR_Report_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Safety_TR_Report_Button.FlatAppearance.BorderSize = 2
+        Me.Safety_TR_Report_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Safety_TR_Report_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Safety_TR_Report_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Safety_TR_Report_Button.Location = New System.Drawing.Point(330, 154)
         Me.Safety_TR_Report_Button.Name = "Safety_TR_Report_Button"
         Me.Safety_TR_Report_Button.Size = New System.Drawing.Size(81, 25)
@@ -72,6 +77,11 @@ Partial Class Dev_Safety_Training_Reports
         '
         'ExitButton
         '
+        Me.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatAppearance.BorderSize = 2
+        Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.Location = New System.Drawing.Point(458, 154)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(81, 25)
@@ -97,6 +107,7 @@ Partial Class Dev_Safety_Training_Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(551, 191)
         Me.Controls.Add(Me.Safety_TR_EDateTimePicker)
         Me.Controls.Add(Me.Safety_TR_SDateTimePicker)
@@ -105,6 +116,8 @@ Partial Class Dev_Safety_Training_Reports
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Dev_Safety_Training_Reports"
         Me.Text = "Safety Training Reports"
         Me.ResumeLayout(False)

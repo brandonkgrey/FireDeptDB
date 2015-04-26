@@ -471,6 +471,12 @@
     <Compile Include="Supervisor Forms\SupervisorEmployeeInformation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Supervisor Forms\SupervisorEMSCertificationExpiration.Designer.vb">
+      <DependentUpon>SupervisorEMSCertificationExpiration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor Forms\SupervisorEMSCertificationExpiration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supervisor Forms\SupervisorForm.Designer.vb">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
     </Compile>
@@ -499,6 +505,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorEMSXDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupervisorEMSXDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorEMS_Instruct_X_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupervisorEMS_Instruct_X_Dataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="SupervisorFilterDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -688,6 +704,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supervisor Forms\SupervisorEmployeeInformation.resx">
       <DependentUpon>SupervisorEmployeeInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supervisor Forms\SupervisorEMSCertificationExpiration.resx">
+      <DependentUpon>SupervisorEMSCertificationExpiration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supervisor Forms\SupervisorForm.resx">
       <DependentUpon>SupervisorForm.vb</DependentUpon>
@@ -925,6 +944,28 @@
     </None>
     <None Include="Developer Forms\Certification Lists\Datasets\TCFP_Wildlife_Certifications_Dataset.xss">
       <DependentUpon>TCFP_Wildlife_Certifications_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorEMSXDataset.xsc">
+      <DependentUpon>SupervisorEMSXDataset.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorEMSXDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupervisorEMSXDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SupervisorEMSXDataset.xss">
+      <DependentUpon>SupervisorEMSXDataset.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorEMS_Instruct_X_Dataset.xsc">
+      <DependentUpon>SupervisorEMS_Instruct_X_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="SupervisorEMS_Instruct_X_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupervisorEMS_Instruct_X_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SupervisorEMS_Instruct_X_Dataset.xss">
+      <DependentUpon>SupervisorEMS_Instruct_X_Dataset.xsd</DependentUpon>
     </None>
     <None Include="SupervisorFilterDataSet.xsc">
       <DependentUpon>SupervisorFilterDataSet.xsd</DependentUpon>

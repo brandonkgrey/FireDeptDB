@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SupervisorEMSXDataset" targetNamespace="http://tempuri.org/SupervisorEMSXDataset.xsd" xmlns:mstns="http://tempuri.org/SupervisorEMSXDataset.xsd" xmlns="http://tempuri.org/SupervisorEMSXDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Training_Records_for_TAMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Training_Records_for_TAMUConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fire_Dpt_Interface.My.MySettings.GlobalReference.Default.Training_Records_for_TAMUConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SupervisorEMSX_FilterTableAdapter" GeneratorDataComponentClassName="SupervisorEMSX_FilterTableAdapter" Name="SupervisorEMSX_Filter" UserDataComponentName="SupervisorEMSX_FilterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Training_Records_for_TAMUConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Employee Information].Name, [EMS Certifications].Employee_ID, [EMS Certifications].[TDH Level], [EMS Certifications].[TDH Level Expiration Date], ROUND([EMS Certifications].[TDH Level Expiration Date] - now, 
+                         0) AS Expr1
+FROM            ([Employee Information] INNER JOIN
+                         [EMS Certifications] ON [Employee Information].Employee_ID = [EMS Certifications].Employee_ID)
+WHERE        ([EMS Certifications].[TDH Level] &lt;&gt; 'N/A') AND (ROUND([EMS Certifications].[TDH Level Expiration Date] - now, 0) &lt;= 90) AND ([Employee Information].[End Date] IS NULL) AND 
+                         ([Employee Information].Ops = False) AND ([Employee Information].[Authorization] = '1' OR
+                         [Employee Information].[Authorization] = '2')
+ORDER BY [EMS Certifications].[TDH Level Expiration Date]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Employee_ID" DataSetColumn="Employee_ID" />
+              <Mapping SourceColumn="TDH Level" DataSetColumn="TDH Level" />
+              <Mapping SourceColumn="TDH Level Expiration Date" DataSetColumn="TDH Level Expiration Date" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SupervisorEMSXDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SupervisorEMSXDataset" msprop:Generator_UserDSName="SupervisorEMSXDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SupervisorEMSX_Filter" msprop:Generator_TableClassName="SupervisorEMSX_FilterDataTable" msprop:Generator_TableVarName="tableSupervisorEMSX_Filter" msprop:Generator_TablePropName="SupervisorEMSX_Filter" msprop:Generator_RowDeletingName="SupervisorEMSX_FilterRowDeleting" msprop:Generator_RowChangingName="SupervisorEMSX_FilterRowChanging" msprop:Generator_RowEvHandlerName="SupervisorEMSX_FilterRowChangeEventHandler" msprop:Generator_RowDeletedName="SupervisorEMSX_FilterRowDeleted" msprop:Generator_UserTableName="SupervisorEMSX_Filter" msprop:Generator_RowChangedName="SupervisorEMSX_FilterRowChanged" msprop:Generator_RowEvArgName="SupervisorEMSX_FilterRowChangeEvent" msprop:Generator_RowClassName="SupervisorEMSX_FilterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TDH_x0020_Level" msprop:Generator_ColumnVarNameInTable="columnTDH_Level" msprop:Generator_ColumnPropNameInRow="TDH_Level" msprop:Generator_ColumnPropNameInTable="TDH_LevelColumn" msprop:Generator_UserColumnName="TDH Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TDH_x0020_Level_x0020_Expiration_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInRow="TDH_Level_Expiration_Date" msprop:Generator_ColumnPropNameInTable="TDH_Level_Expiration_DateColumn" msprop:Generator_UserColumnName="TDH Level Expiration Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
