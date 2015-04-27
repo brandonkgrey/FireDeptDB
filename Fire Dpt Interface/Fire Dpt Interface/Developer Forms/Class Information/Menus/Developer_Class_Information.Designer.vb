@@ -219,6 +219,7 @@ Partial Class Developer_Class_Information
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Class_Attendance_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Class_Attendance_InformationTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager()
+        Me.CINewButton = New System.Windows.Forms.Button()
         CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassInfoTabControl.SuspendLayout()
@@ -322,10 +323,10 @@ Partial Class Developer_Class_Information
         Me.ReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.ReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ReportButton.Location = New System.Drawing.Point(1028, 416)
+        Me.ReportButton.Location = New System.Drawing.Point(1119, 432)
         Me.ReportButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ReportButton.Name = "ReportButton"
-        Me.ReportButton.Size = New System.Drawing.Size(109, 25)
+        Me.ReportButton.Size = New System.Drawing.Size(82, 25)
         Me.ReportButton.TabIndex = 84
         Me.ReportButton.Text = "Report"
         Me.ReportButton.UseVisualStyleBackColor = True
@@ -337,10 +338,10 @@ Partial Class Developer_Class_Information
         Me.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DeleteButton.Location = New System.Drawing.Point(758, 416)
+        Me.DeleteButton.Location = New System.Drawing.Point(939, 432)
         Me.DeleteButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(109, 25)
+        Me.DeleteButton.Size = New System.Drawing.Size(82, 25)
         Me.DeleteButton.TabIndex = 83
         Me.DeleteButton.Text = "Delete"
         Me.DeleteButton.UseVisualStyleBackColor = True
@@ -352,10 +353,10 @@ Partial Class Developer_Class_Information
         Me.Next_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.Next_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Next_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Next_Button.Location = New System.Drawing.Point(512, 416)
+        Me.Next_Button.Location = New System.Drawing.Point(533, 432)
         Me.Next_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Next_Button.Name = "Next_Button"
-        Me.Next_Button.Size = New System.Drawing.Size(141, 25)
+        Me.Next_Button.Size = New System.Drawing.Size(106, 25)
         Me.Next_Button.TabIndex = 82
         Me.Next_Button.Text = "Next"
         Me.Next_Button.UseVisualStyleBackColor = True
@@ -367,10 +368,10 @@ Partial Class Developer_Class_Information
         Me.Prev_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.Prev_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Prev_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Prev_Button.Location = New System.Drawing.Point(338, 416)
+        Me.Prev_Button.Location = New System.Drawing.Point(392, 432)
         Me.Prev_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Prev_Button.Name = "Prev_Button"
-        Me.Prev_Button.Size = New System.Drawing.Size(147, 25)
+        Me.Prev_Button.Size = New System.Drawing.Size(106, 25)
         Me.Prev_Button.TabIndex = 81
         Me.Prev_Button.Text = "Previous"
         Me.Prev_Button.UseVisualStyleBackColor = True
@@ -382,10 +383,10 @@ Partial Class Developer_Class_Information
         Me.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.Save_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Save_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Save_Button.Location = New System.Drawing.Point(896, 416)
+        Me.Save_Button.Location = New System.Drawing.Point(1029, 432)
         Me.Save_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Save_Button.Name = "Save_Button"
-        Me.Save_Button.Size = New System.Drawing.Size(109, 25)
+        Me.Save_Button.Size = New System.Drawing.Size(82, 25)
         Me.Save_Button.TabIndex = 80
         Me.Save_Button.Text = "Save"
         Me.Save_Button.UseVisualStyleBackColor = True
@@ -1076,6 +1077,7 @@ Partial Class Developer_Class_Information
         'CheckBox15
         '
         Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Station FA Involved", True))
         Me.CheckBox15.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox15.Location = New System.Drawing.Point(583, 47)
         Me.CheckBox15.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -1157,6 +1159,7 @@ Partial Class Developer_Class_Information
         'MultiJurCheckbox
         '
         Me.MultiJurCheckbox.AutoSize = True
+        Me.MultiJurCheckbox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClassInformationBindingSource, "Joint Training", True))
         Me.MultiJurCheckbox.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MultiJurCheckbox.Location = New System.Drawing.Point(35, 63)
         Me.MultiJurCheckbox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -1458,6 +1461,7 @@ Partial Class Developer_Class_Information
         '
         'TextBox6
         '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassInformationBindingSource, "Objective 2", True))
         Me.TextBox6.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.Location = New System.Drawing.Point(41, 57)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -2493,10 +2497,10 @@ Partial Class Developer_Class_Information
         Me.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
         Me.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ExitButton.Location = New System.Drawing.Point(1220, 416)
+        Me.ExitButton.Location = New System.Drawing.Point(1238, 432)
         Me.ExitButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(108, 25)
+        Me.ExitButton.Size = New System.Drawing.Size(82, 25)
         Me.ExitButton.TabIndex = 79
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -2531,11 +2535,27 @@ Partial Class Developer_Class_Information
         Me.TableAdapterManager.Training_AgenciesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CINewButton
+        '
+        Me.CINewButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CINewButton.FlatAppearance.BorderSize = 2
+        Me.CINewButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control
+        Me.CINewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CINewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CINewButton.Location = New System.Drawing.Point(849, 432)
+        Me.CINewButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.CINewButton.Name = "CINewButton"
+        Me.CINewButton.Size = New System.Drawing.Size(82, 25)
+        Me.CINewButton.TabIndex = 90
+        Me.CINewButton.Text = "New"
+        Me.CINewButton.UseVisualStyleBackColor = True
+        '
         'Developer_Class_Information
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1345, 489)
+        Me.Controls.Add(Me.CINewButton)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ClassSearchbyNumber)
@@ -2794,4 +2814,5 @@ Partial Class Developer_Class_Information
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CINewButton As System.Windows.Forms.Button
 End Class

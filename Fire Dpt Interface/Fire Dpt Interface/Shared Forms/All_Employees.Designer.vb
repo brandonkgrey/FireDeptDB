@@ -220,6 +220,12 @@ Partial Class All_Employees
         Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.CheckBox18 = New System.Windows.Forms.CheckBox()
         Me.Certificates = New System.Windows.Forms.TabPage()
+        Me.CertificatesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CertificatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Assignment = New System.Windows.Forms.TabPage()
         Me.TypeLabel = New System.Windows.Forms.Label()
         Me.TextBox73 = New System.Windows.Forms.TextBox()
@@ -245,16 +251,18 @@ Partial Class All_Employees
         Me.Prev_Button = New System.Windows.Forms.Button()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
-        Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter()
-        Me.Fire_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Fire_CertificationsTableAdapter()
-        Me.EMS_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.EMS_CertificationsTableAdapter()
-        Me.Other_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter()
-        Me.Assignment_PayTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter()
         Me.QueryEmployeeInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Query_Indivual_Employee = New Fire_Dpt_Interface.Query_Indivual_Employee()
         Me.QueryEmployeeInformationTableAdapter = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.QueryEmployeeInformationTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.Query_Indivual_EmployeeTableAdapters.TableAdapterManager()
         Me.NewItem = New System.Windows.Forms.Button()
+        Me.Employee_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Employee_InformationTableAdapter()
+        Me.Fire_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Fire_CertificationsTableAdapter()
+        Me.EMS_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.EMS_CertificationsTableAdapter()
+        Me.Other_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter()
+        Me.Assignment_PayTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter()
+        Me.CertificatesTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CertificatesTableAdapter()
+        Me.TableAdapterManager1 = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager()
         Me.EmpInfo.SuspendLayout()
         Me.EmployeeInfo.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -269,6 +277,9 @@ Partial Class All_Employees
         CType(Me.EMSCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OtherCertifications.SuspendLayout()
         CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Certificates.SuspendLayout()
+        CType(Me.CertificatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CertificatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Assignment.SuspendLayout()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QueryEmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2361,11 +2372,52 @@ Partial Class All_Employees
         '
         Me.Certificates.AccessibleName = "Certificates"
         Me.Certificates.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Certificates.Controls.Add(Me.CertificatesDataGridView)
         Me.Certificates.Location = New System.Drawing.Point(4, 22)
         Me.Certificates.Name = "Certificates"
         Me.Certificates.Size = New System.Drawing.Size(986, 347)
         Me.Certificates.TabIndex = 4
         Me.Certificates.Text = "Certificates"
+        '
+        'CertificatesDataGridView
+        '
+        Me.CertificatesDataGridView.AutoGenerateColumns = False
+        Me.CertificatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CertificatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.CertificatesDataGridView.DataSource = Me.CertificatesBindingSource
+        Me.CertificatesDataGridView.Location = New System.Drawing.Point(4, 20)
+        Me.CertificatesDataGridView.Name = "CertificatesDataGridView"
+        Me.CertificatesDataGridView.Size = New System.Drawing.Size(462, 275)
+        Me.CertificatesDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Certificate"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Certificate"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Issued by"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Issued by"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Date Issued"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Date Issued"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Credit Hours"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Credit Hours"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'CertificatesBindingSource
+        '
+        Me.CertificatesBindingSource.DataMember = "Certificates"
+        Me.CertificatesBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
         '
         'Assignment
         '
@@ -2642,26 +2694,6 @@ Partial Class All_Employees
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
-        'Employee_InformationTableAdapter
-        '
-        Me.Employee_InformationTableAdapter.ClearBeforeFill = True
-        '
-        'Fire_CertificationsTableAdapter
-        '
-        Me.Fire_CertificationsTableAdapter.ClearBeforeFill = True
-        '
-        'EMS_CertificationsTableAdapter
-        '
-        Me.EMS_CertificationsTableAdapter.ClearBeforeFill = True
-        '
-        'Other_CertificationsTableAdapter
-        '
-        Me.Other_CertificationsTableAdapter.ClearBeforeFill = True
-        '
-        'Assignment_PayTableAdapter
-        '
-        Me.Assignment_PayTableAdapter.ClearBeforeFill = True
-        '
         'QueryEmployeeInformationBindingSource
         '
         Me.QueryEmployeeInformationBindingSource.DataMember = "QueryEmployeeInformation"
@@ -2695,6 +2727,56 @@ Partial Class All_Employees
         Me.NewItem.TabIndex = 70
         Me.NewItem.Text = "New"
         Me.NewItem.UseVisualStyleBackColor = True
+        '
+        'Employee_InformationTableAdapter
+        '
+        Me.Employee_InformationTableAdapter.ClearBeforeFill = True
+        '
+        'Fire_CertificationsTableAdapter
+        '
+        Me.Fire_CertificationsTableAdapter.ClearBeforeFill = True
+        '
+        'EMS_CertificationsTableAdapter
+        '
+        Me.EMS_CertificationsTableAdapter.ClearBeforeFill = True
+        '
+        'Other_CertificationsTableAdapter
+        '
+        Me.Other_CertificationsTableAdapter.ClearBeforeFill = True
+        '
+        'Assignment_PayTableAdapter
+        '
+        Me.Assignment_PayTableAdapter.ClearBeforeFill = True
+        '
+        'CertificatesTableAdapter
+        '
+        Me.CertificatesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.ARFF_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager1.Assignment_PayTableAdapter = Me.Assignment_PayTableAdapter
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.CertificatesTableAdapter = Me.CertificatesTableAdapter
+        Me.TableAdapterManager1.Certification_Name_ListTableAdapter = Nothing
+        Me.TableAdapterManager1.Class_Attendance_InformationTableAdapter = Nothing
+        Me.TableAdapterManager1.Class_InformationTableAdapter = Nothing
+        Me.TableAdapterManager1.CollegeTableAdapter = Nothing
+        Me.TableAdapterManager1.Employee_InformationTableAdapter = Me.Employee_InformationTableAdapter
+        Me.TableAdapterManager1.EMS_Certification_TypeTableAdapter = Nothing
+        Me.TableAdapterManager1.EMS_CertificationsTableAdapter = Me.EMS_CertificationsTableAdapter
+        Me.TableAdapterManager1.EMS_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager1.EMS_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager1.FFIII_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager1.Fire_and_EMS_OrganizationsTableAdapter = Nothing
+        Me.TableAdapterManager1.Fire_CertificationsTableAdapter = Me.Fire_CertificationsTableAdapter
+        Me.TableAdapterManager1.HM_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager1.Non_FD_AttendanceTableAdapter = Nothing
+        Me.TableAdapterManager1.Other_CertificationsTableAdapter = Me.Other_CertificationsTableAdapter
+        Me.TableAdapterManager1.TCFP_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager1.TCLEOSE_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager1.Training_AgenciesTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'All_Employees
         '
@@ -2740,6 +2822,9 @@ Partial Class All_Employees
         Me.OtherCertifications.ResumeLayout(False)
         Me.OtherCertifications.PerformLayout()
         CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Certificates.ResumeLayout(False)
+        CType(Me.CertificatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CertificatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Assignment.ResumeLayout(False)
         Me.Assignment.PerformLayout()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2981,4 +3066,12 @@ Partial Class All_Employees
     Friend WithEvents AssignmentPayBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Assignment_PayTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter
     Friend WithEvents NewItem As System.Windows.Forms.Button
+    Friend WithEvents CertificatesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CertificatesTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CertificatesTableAdapter
+    Friend WithEvents TableAdapterManager1 As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CertificatesDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

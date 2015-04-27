@@ -870,15 +870,10 @@ Public Class All_Employees
     End Sub
 
     Private Sub All_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Assignment_Pay' table. You can move, or remove it, as needed.
         Me.Assignment_PayTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Assignment_Pay)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Other_Certifications' table. You can move, or remove it, as needed.
         Me.Other_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Other_Certifications)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.EMS_Certifications' table. You can move, or remove it, as needed.
         Me.EMS_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.EMS_Certifications)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Fire_Certifications' table. You can move, or remove it, as needed.
         Me.Fire_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Fire_Certifications)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Employee_Information' table. You can move, or remove it, as needed.
         Me.Employee_InformationTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Employee_Information)
 
 
@@ -897,6 +892,7 @@ Public Class All_Employees
         EMSCertificationsBindingSource.Position = EMSCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+        Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
 
 
     End Sub
@@ -961,6 +957,8 @@ Public Class All_Employees
 
         Dbconn.Close()
 
+        MsgBox("Your changes were successfully saved!!", MsgBoxStyle.Information, "Saved Changes")
+
     End Sub
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click
@@ -976,13 +974,7 @@ Public Class All_Employees
 
     Private Sub Next_Button_Click(sender As Object, e As EventArgs) Handles Next_Button.Click
         EmployeeInformationBindingSource.MoveNext()
-        'EmployeeInformationBindingSource2.MoveNext()
-
-        'While AuthText.Text <> Authorization_Level.ToString
-        'EmployeeInformationBindingSource.MoveNext()
-        'EmployeeInformationBindingSource2.MoveNext()
-        'End While
-
+       
         FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         EMSCertificationsBindingSource.Position = EMSCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
@@ -992,8 +984,56 @@ Public Class All_Employees
     End Sub
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
-        'EmployeeInformationBindingSource.RemoveCurrent()
-        MessageBox.Show("Deletion Complete!")
+
+        Dim result As Integer = MessageBox.Show("Are you sure you want to delete the current record from the database?", " Confirm Deletion", MessageBoxButtons.YesNo)
+
+        If result = DialogResult.No Then
+            MessageBox.Show("The record has NOT been deleted")
+        ElseIf result = DialogResult.Yes Then
+
+            Dim Dbconn As New OleDbConnection(Dbstring)
+            Dbconn.Open()
+
+            'Check to see if there is a connection to the database, exit app if there is none 
+            Try
+                If Dbconn.State = ConnectionState.Closed Then
+                    MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
+                    System.Threading.Thread.Sleep(500)
+                    Application.Exit()
+                End If
+            Catch ex As Exception
+            End Try
+
+            Dim emp_id = Emp_Textbox.Text
+
+            Try
+                Dim Command = New OleDbCommand("DELETE FROM [Employee Information] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [Fire Certifications] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [EMS Certifications] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [Other Certifications] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [Assignment Pay] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [Certificates] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+                Command = New OleDbCommand("DELETE FROM [College] WHERE [Employee_ID]= " + emp_id, Dbconn)
+                Command.ExecuteScalar()
+            Catch ex As Exception
+            End Try
+
+            MessageBox.Show("The current record has been deleted.")
+
+            Dim refreshDelete As New All_Employees()
+            refreshDelete.Show()
+            refreshDelete = Nothing
+            Me.Close()
+
+        End If
+
+
     End Sub
 
     Private Sub ALL_EMP_ReportButton_Click(sender As Object, e As EventArgs) Handles ALL_EMP_ReportButton.Click
@@ -1007,12 +1047,53 @@ Public Class All_Employees
     End Sub
 
     Private Sub NewItem_Click(sender As Object, e As EventArgs) Handles NewItem.Click
-        EmployeeInformationBindingSource.AddNew()
-        FireCertificationsBindingSource.AddNew()
-        EMSCertificationsBindingSource.AddNew()
-        OtherCertificationsBindingSource.AddNew()
-        AssignmentPayBindingSource.AddNew()
+        Dim newID As String
+
+        newID = InputBox("Please input the employee ID for the new user.")
+
+        Dim Dbconn As New OleDbConnection(Dbstring)
+        Dbconn.Open()
+
+        'Check to see if there is a connection to the database, exit app if there is none 
+        Try
+            If Dbconn.State = ConnectionState.Closed Then
+                MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
+                System.Threading.Thread.Sleep(500)
+                Application.Exit()
+            End If
+        Catch ex As Exception
+        End Try
+
+        Try
+            Dim Command = New OleDbCommand("INSERT INTO [Employee Information] ([Employee_ID]) VALUES ('" + newID + "')", Dbconn)
+            Command.ExecuteScalar()
+            Command = New OleDbCommand("INSERT INTO [Fire Certifications] ([Employee_ID]) VALUES ('" + newID + "')", Dbconn)
+            Command.ExecuteScalar()
+            Command = New OleDbCommand("INSERT INTO [EMS Certifications] ([Employee_ID]) VALUES ('" + newID + "')", Dbconn)
+            Command.ExecuteScalar()
+            Command = New OleDbCommand("INSERT INTO [Other Certifications] ([Employee_ID]) VALUES ('" + newID + "')", Dbconn)
+            Command.ExecuteScalar()
+            Command = New OleDbCommand("INSERT INTO [Assignment Pay] ([Employee_ID]) VALUES ('" + newID + "')", Dbconn)
+            Command.ExecuteScalar()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
+        MsgBox("Please use the save button to enter information")
+
+        Dbconn.Close()
+
+        Dim refresh As New All_Employees
+        refresh.Show()
+        refresh = Nothing
+        Me.Close()
+
 
     End Sub
 
+    Private Sub Emp_Textbox_TextChanged(sender As Object, e As EventArgs) Handles Emp_Textbox.TextChanged
+        If Emp_Textbox.Text <> "" Then
+            Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+        End If
+    End Sub
 End Class
