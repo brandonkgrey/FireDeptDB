@@ -70,19 +70,14 @@
     End Sub
 
     Private Sub SupervisorEmployeeInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Assignment_Pay' table. You can move, or remove it, as needed.
         Me.Assignment_PayTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Assignment_Pay)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Other_Certifications' table. You can move, or remove it, as needed.
         Me.Other_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Other_Certifications)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.EMS_Certification_Type' table. You can move, or remove it, as needed.
         Me.EMS_Certification_TypeTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.EMS_Certification_Type)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.EMS_Certifications' table. You can move, or remove it, as needed.
         Me.EMS_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.EMS_Certifications)
-        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Fire_Certifications' table. You can move, or remove it, as needed.
         Me.Fire_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Fire_Certifications)
-        'TODO: This line of code loads data into the 'SupervisorFilterDataSet.Employee_Information' table. You can move, or remove it, as needed.
         Me.Employee_InformationTableAdapter.Fill(Me.SupervisorFilterDataSet.Employee_Information)
-
+        Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+        Me.CollegeTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.College, Emp_Textbox.Text)
         EmployeeInformationBindingSource.Sort = "Name"
 
         If Login.Authorization_LVL = 1 Then
@@ -146,5 +141,16 @@
             Me.Close()
         End If
         
+    End Sub
+
+    Private Sub Emp_Textbox_TextChanged(sender As Object, e As EventArgs) Handles Emp_Textbox.TextChanged
+        If Emp_Textbox.Text <> "" Then
+            FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            EMSCertificationsBindingSource.Position = EMSCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+            Me.CollegeTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.College, Emp_Textbox.Text)
+        End If
     End Sub
 End Class

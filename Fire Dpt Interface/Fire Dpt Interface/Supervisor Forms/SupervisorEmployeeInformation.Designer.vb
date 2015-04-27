@@ -251,6 +251,25 @@ Partial Class SupervisorEmployeeInformation
         Me.EMS_Certification_TypeTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.EMS_Certification_TypeTableAdapter()
         Me.Other_CertificationsTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter()
         Me.Assignment_PayTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CertificatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CertificatesTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CertificatesTableAdapter()
+        Me.TableAdapterManager = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager()
+        Me.CertificatesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CollegeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CollegeTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CollegeTableAdapter()
+        Me.CollegeDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.EmployeeInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SupervisorFilterDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EmpInfo.SuspendLayout()
@@ -267,8 +286,14 @@ Partial Class SupervisorEmployeeInformation
         CType(Me.EMSCertificationTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OtherCertifications.SuspendLayout()
         CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Certificates.SuspendLayout()
         Me.Assignment.SuspendLayout()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.College.SuspendLayout()
+        CType(Me.CertificatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CertificatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CollegeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CollegeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ALL_EMP_ReportButton
@@ -2591,6 +2616,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.Certificates.AccessibleName = "Certificates"
         Me.Certificates.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Certificates.Controls.Add(Me.CertificatesDataGridView)
         Me.Certificates.Location = New System.Drawing.Point(4, 22)
         Me.Certificates.Name = "Certificates"
         Me.Certificates.Size = New System.Drawing.Size(986, 347)
@@ -2730,6 +2756,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.College.AccessibleName = "College"
         Me.College.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.College.Controls.Add(Me.CollegeDataGridView)
         Me.College.Location = New System.Drawing.Point(4, 22)
         Me.College.Name = "College"
         Me.College.Size = New System.Drawing.Size(986, 347)
@@ -2740,7 +2767,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.Emp_Textbox.BackColor = System.Drawing.SystemColors.Window
         Me.Emp_Textbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeInformationBindingSource, "Employee_ID", True))
-        Me.Emp_Textbox.Location = New System.Drawing.Point(667, 19)
+        Me.Emp_Textbox.Location = New System.Drawing.Point(636, 20)
         Me.Emp_Textbox.Name = "Emp_Textbox"
         Me.Emp_Textbox.Size = New System.Drawing.Size(208, 20)
         Me.Emp_Textbox.TabIndex = 73
@@ -2768,7 +2795,7 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.Emp_ID.AutoSize = True
         Me.Emp_ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Emp_ID.Location = New System.Drawing.Point(492, 8)
+        Me.Emp_ID.Location = New System.Drawing.Point(461, 9)
         Me.Emp_ID.Name = "Emp_ID"
         Me.Emp_ID.Size = New System.Drawing.Size(169, 31)
         Me.Emp_ID.TabIndex = 71
@@ -2798,11 +2825,155 @@ Partial Class SupervisorEmployeeInformation
         '
         Me.Assignment_PayTableAdapter.ClearBeforeFill = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(857, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(137, 52)
+        Me.Label11.TabIndex = 84
+        Me.Label11.Text = "NOTE: Enterring incorrectly" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "formatted data into a field, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "will prevent any inte" & _
+    "raction" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "until the input format is fixed"
+        '
+        'CertificatesBindingSource
+        '
+        Me.CertificatesBindingSource.DataMember = "Certificates"
+        Me.CertificatesBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
+        'CertificatesTableAdapter
+        '
+        Me.CertificatesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.ARFF_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Assignment_PayTableAdapter = Me.Assignment_PayTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CertificatesTableAdapter = Me.CertificatesTableAdapter
+        Me.TableAdapterManager.Certification_Name_ListTableAdapter = Nothing
+        Me.TableAdapterManager.Class_Attendance_InformationTableAdapter = Nothing
+        Me.TableAdapterManager.Class_InformationTableAdapter = Nothing
+        Me.TableAdapterManager.CollegeTableAdapter = Me.CollegeTableAdapter
+        Me.TableAdapterManager.Employee_InformationTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_Certification_TypeTableAdapter = Me.EMS_Certification_TypeTableAdapter
+        Me.TableAdapterManager.EMS_CertificationsTableAdapter = Me.EMS_CertificationsTableAdapter
+        Me.TableAdapterManager.EMS_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.EMS_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager.FFIII_OrientationTableAdapter = Nothing
+        Me.TableAdapterManager.Fire_and_EMS_OrganizationsTableAdapter = Nothing
+        Me.TableAdapterManager.Fire_CertificationsTableAdapter = Me.Fire_CertificationsTableAdapter
+        Me.TableAdapterManager.HM_Content_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Non_FD_AttendanceTableAdapter = Nothing
+        Me.TableAdapterManager.Other_CertificationsTableAdapter = Me.Other_CertificationsTableAdapter
+        Me.TableAdapterManager.TCFP_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.TCLEOSE_Subject_AreaTableAdapter = Nothing
+        Me.TableAdapterManager.Training_AgenciesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'CertificatesDataGridView
+        '
+        Me.CertificatesDataGridView.AutoGenerateColumns = False
+        Me.CertificatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CertificatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.CertificatesDataGridView.DataSource = Me.CertificatesBindingSource
+        Me.CertificatesDataGridView.Location = New System.Drawing.Point(187, 17)
+        Me.CertificatesDataGridView.Name = "CertificatesDataGridView"
+        Me.CertificatesDataGridView.Size = New System.Drawing.Size(646, 204)
+        Me.CertificatesDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Certificate"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Certificate"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Issued by"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Issued by"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Date Issued"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Date Issued"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Credit Hours"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Credit Hours"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'CollegeBindingSource
+        '
+        Me.CollegeBindingSource.DataMember = "College"
+        Me.CollegeBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
+        'CollegeTableAdapter
+        '
+        Me.CollegeTableAdapter.ClearBeforeFill = True
+        '
+        'CollegeDataGridView
+        '
+        Me.CollegeDataGridView.AutoGenerateColumns = False
+        Me.CollegeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CollegeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13})
+        Me.CollegeDataGridView.DataSource = Me.CollegeBindingSource
+        Me.CollegeDataGridView.Location = New System.Drawing.Point(133, 16)
+        Me.CollegeDataGridView.Name = "CollegeDataGridView"
+        Me.CollegeDataGridView.Size = New System.Drawing.Size(745, 201)
+        Me.CollegeDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Issued by"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Issued by"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Date Issued"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Date Issued"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Credit Hours"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Credit Hours"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Earned Hours"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Earned Hours"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Total Hours"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Total Hours"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "Transcript Type"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Transcript Type"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "Degree Conferred"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Degree Conferred"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
         'SupervisorEmployeeInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 483)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.ALL_EMP_ReportButton)
         Me.Controls.Add(Me.Employee_List)
         Me.Controls.Add(Me.EmployeeSearch)
@@ -2841,9 +3012,15 @@ Partial Class SupervisorEmployeeInformation
         Me.OtherCertifications.ResumeLayout(False)
         Me.OtherCertifications.PerformLayout()
         CType(Me.OtherCertificationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Certificates.ResumeLayout(False)
         Me.Assignment.ResumeLayout(False)
         Me.Assignment.PerformLayout()
         CType(Me.AssignmentPayBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.College.ResumeLayout(False)
+        CType(Me.CertificatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CertificatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CollegeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CollegeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3076,4 +3253,23 @@ Partial Class SupervisorEmployeeInformation
     Friend WithEvents Other_CertificationsTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Other_CertificationsTableAdapter
     Friend WithEvents AssignmentPayBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Assignment_PayTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Assignment_PayTableAdapter
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents CertificatesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CertificatesTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CertificatesTableAdapter
+    Friend WithEvents TableAdapterManager As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CertificatesDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CollegeTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.CollegeTableAdapter
+    Friend WithEvents CollegeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CollegeDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

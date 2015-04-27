@@ -15,34 +15,12 @@ Public Class Developer_Class_Information
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click
         ClassInformationBindingSource.MovePrevious()
-        start_time = TextBox18.Text
-        end_time = TextBox19.Text
-        If start_time <> "" Then
-            strTime = DateTime.Parse(start_time)
-            TextBox18.Text = TimeValue(strTime)
-        End If
-        If end_time <> "" Then
-            endTime = DateTime.Parse(end_time)
-            TextBox19.Text = TimeValue(endTime)
-        End If
 
 
     End Sub
 
     Private Sub Next_Button_Click(sender As Object, e As EventArgs) Handles Next_Button.Click
         ClassInformationBindingSource.MoveNext()
-        start_time = TextBox18.Text
-        end_time = TextBox19.Text
-        If start_time <> "" Then
-            strTime = DateTime.Parse(start_time)
-            TextBox18.Text = TimeValue(strTime)
-        End If
-        If end_time <> "" Then
-            endTime = DateTime.Parse(end_time)
-            TextBox19.Text = TimeValue(endTime)
-        End If
-
-
 
     End Sub
 
@@ -263,7 +241,8 @@ Public Class Developer_Class_Information
         Return strCommand
 
     End Function
-    Function generateCourseContentQuertString() As String
+
+    Function generateCourseContentQuerytString() As String
         Dim commandStr As String
         commandStr = "UPDATE [Class Information] SET "
 
@@ -314,72 +293,71 @@ Public Class Developer_Class_Information
         If ComboBox9.Text <> "" Then
             commandStr += ", [EMS Subject Area] = '" + ComboBox9.Text + "'"
         End If
-
-
         If TextBox10.Text <> "" Then
-            commandStr += "[Structural FF Hours] = '" + TextBox10.Text + "'"
+            commandStr += ", [Structural FF Hours] = " + TextBox10.Text
         End If
         If TextBox11.Text <> "" Then
-            commandStr += "[Driver Hours] = '" + TextBox11.Text + "'"
+            commandStr += ", [Driver Hours] = " + TextBox11.Text
         End If
         If TextBox12.Text <> "" Then
-            commandStr += "[Fire Officer Hours] = '" + TextBox12.Text + "'"
+            commandStr += ", [Fire Officer Hours] = " + TextBox12.Text
         End If
         If TextBox22.Text <> "" Then
-            commandStr += "[HazMat Hours] = '" + TextBox22.Text + "'"
+            commandStr += ", [HazMat Hours] = " + TextBox22.Text
         End If
         If TextBox23.Text <> "" Then
-            commandStr += "[ARFF Hours] = '" + TextBox23.Text + "'"
+            commandStr += ", [ARFF Hours] = " + TextBox23.Text
         End If
         If TextBox24.Text <> "" Then
-            commandStr += "[Rescue Hours] = '" + TextBox24.Text + "'"
+            commandStr += ", [Rescue Hours] = " + TextBox24.Text
         End If
         If TextBox25.Text <> "" Then
-            commandStr += "[Inspector Hours] = '" + TextBox25.Text + "'"
+            commandStr += ", [Inspector Hours] = " + TextBox25.Text
         End If
         If TextBox26.Text <> "" Then
-            commandStr += "[Investigator Hours] = '" + TextBox26.Text + "'"
+            commandStr += ", [Investigator Hours] = " + TextBox26.Text
         End If
         If TextBox27.Text <> "" Then
-            commandStr += "[Wildland Hours] = '" + TextBox27.Text + "'"
+            commandStr += ", [Wildland Hours] = " + TextBox27.Text
         End If
         If TextBox28.Text <> "" Then
-            commandStr += "[Safety Hours] = '" + TextBox28.Text + "'"
+            commandStr += ", [Safety Hours] = " + TextBox28.Text
         End If
         If TextBox29.Text <> "" Then
-            commandStr += "[Instructor Hours] = '" + TextBox29.Text + "'"
+            commandStr += ", [Instructor Hours] = " + TextBox29.Text
         End If
         If TextBox30.Text <> "" Then
-            commandStr += "[Head of Department Hours] = '" + TextBox30.Text + "'"
+            commandStr += ", [Head of Department Hours] = " + TextBox30.Text
         End If
         If TextBox36.Text <> "" Then
-            commandStr += "[Preparatory] = '" + TextBox36.Text + "'"
+            commandStr += ", [Preparatory] = " + TextBox36.Text
         End If
         If TextBox35.Text <> "" Then
-            commandStr += "[Airway Mgmt/Vent] = '" + TextBox35.Text + "'"
+            commandStr += ", [Airway Mgmt/Vent] = " + TextBox35.Text
         End If
         If TextBox34.Text <> "" Then
-            commandStr += "[Patient Assessment] = '" + TextBox34.Text + "'"
+            commandStr += ", [Patient Assessment] = " + TextBox34.Text
         End If
         If TextBox33.Text <> "" Then
-            commandStr += "[Medical] = '" + TextBox33.Text + "'"
+            commandStr += ", [Medical] = " + TextBox33.Text
         End If
         If TextBox32.Text <> "" Then
-            commandStr += "[Trauma] = '" + TextBox32.Text + "'"
+            commandStr += ", [Trauma] = " + TextBox32.Text
         End If
         If TextBox32.Text <> "" Then
-            commandStr += "[Special Considerations] = '" + TextBox32.Text + "'"
+            commandStr += ", [Special Considerations] = " + TextBox32.Text
         End If
         If TextBox38.Text <> "" Then
-            commandStr += "[Clinical Operations] = '" + TextBox38.Text + "'"
+            commandStr += ", [Clinical Operations] = " + TextBox38.Text
         End If
         If TextBox37.Text <> "" Then
-            commandStr += "[Pediatrics] = '" + TextBox37.Text + "'"
+            commandStr += ", [Pediatrics] = " + TextBox37.Text
         End If
 
         commandStr += " WHERE [Class Number] ='" + Class_Number_Textbox.Text + "'"
         Return commandStr
     End Function
+
     Function generateClassInfoQueryString() As String
         Dim commandStr As String
 
@@ -514,12 +492,16 @@ Public Class Developer_Class_Information
 
         Dim cmdString As String = generateClassInfoQueryString()
         Dim trainString As String = generateTrainInfoQueryString()
+        Dim courseString As String = generateCourseContentQuerytString()
 
         Try
             Dim Command = New OleDbCommand(cmdString, Dbconn)
             Command.ExecuteScalar()
 
             Command = New OleDbCommand(trainString, Dbconn)
+            Command.ExecuteScalar()
+
+            Command = New OleDbCommand(courseString, Dbconn)
             Command.ExecuteScalar()
 
         Catch ex As Exception
@@ -561,10 +543,20 @@ Public Class Developer_Class_Information
     End Sub
 
     Private Sub Developer_Class_Information_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Non_FD_Attendance' table. You can move, or remove it, as needed.
+        Me.Non_FD_AttendanceTableAdapter.FillByCN(Me.Training_Records_for_TAMUDataSet.Non_FD_Attendance, Class_Number_Textbox.Text)
         'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Class_Attendance_Information' table. You can move, or remove it, as needed.
         Me.Class_Attendance_InformationTableAdapter.FillBy(Me.Training_Records_for_TAMUDataSet.Class_Attendance_Information, Class_Number_Textbox.Text)
         'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.Class_Information' table. You can move, or remove it, as needed.
         Me.Class_InformationTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Class_Information)
+
+        AuthLvl = Login.Authorization_LVL
+
+        If (AuthLvl <= 2) Then
+            Save_Button.Hide()
+            DeleteButton.Hide()
+            CINewButton.Hide()
+        End If
 
         start_time = TextBox18.Text
         end_time = TextBox19.Text
@@ -577,14 +569,11 @@ Public Class Developer_Class_Information
             TextBox19.Text = TimeValue(endTime)
         End If
 
-
-
-        AuthLvl = Login.Authorization_LVL
-
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles Class_Number_Textbox.TextChanged
         Me.Class_Attendance_InformationTableAdapter.FillBy(Me.Training_Records_for_TAMUDataSet.Class_Attendance_Information, Class_Number_Textbox.Text)
+        Me.Non_FD_AttendanceTableAdapter.FillByCN(Me.Training_Records_for_TAMUDataSet.Non_FD_Attendance, Class_Number_Textbox.Text)
     End Sub
 
     Private Sub CINewButton_Click(sender As Object, e As EventArgs) Handles CINewButton.Click
@@ -626,4 +615,20 @@ Public Class Developer_Class_Information
         
 
     End Sub
+
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        start_time = TextBox18.Text
+        end_time = TextBox19.Text
+        If start_time <> "" Then
+            strTime = DateTime.Parse(start_time)
+            TextBox18.Text = TimeValue(strTime)
+        End If
+        If end_time <> "" Then
+            endTime = DateTime.Parse(end_time)
+            TextBox19.Text = TimeValue(endTime)
+        End If
+    End Sub
+
+    
 End Class

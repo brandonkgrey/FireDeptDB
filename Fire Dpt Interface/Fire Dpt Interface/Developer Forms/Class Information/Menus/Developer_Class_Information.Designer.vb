@@ -198,6 +198,11 @@ Partial Class Developer_Class_Information
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.StudentInfo = New System.Windows.Forms.TabPage()
+        Me.Non_FD_AttendanceDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Non_FD_AttendanceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label75 = New System.Windows.Forms.Label()
         Me.FireDptPpl_label = New System.Windows.Forms.Label()
         Me.Class_Attendance_InformationDataGridView = New System.Windows.Forms.DataGridView()
@@ -220,6 +225,8 @@ Partial Class Developer_Class_Information
         Me.Class_Attendance_InformationTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Class_Attendance_InformationTableAdapter()
         Me.TableAdapterManager = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.TableAdapterManager()
         Me.CINewButton = New System.Windows.Forms.Button()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Non_FD_AttendanceTableAdapter = New Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Non_FD_AttendanceTableAdapter()
         CType(Me.Training_Records_for_TAMUDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassInformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassInfoTabControl.SuspendLayout()
@@ -237,6 +244,8 @@ Partial Class Developer_Class_Information
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.StudentInfo.SuspendLayout()
+        CType(Me.Non_FD_AttendanceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Non_FD_AttendanceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Class_Attendance_InformationDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Class_Attendance_InformationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -2301,7 +2310,9 @@ Partial Class Developer_Class_Information
         '
         'StudentInfo
         '
+        Me.StudentInfo.AutoScroll = True
         Me.StudentInfo.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.StudentInfo.Controls.Add(Me.Non_FD_AttendanceDataGridView)
         Me.StudentInfo.Controls.Add(Me.Label75)
         Me.StudentInfo.Controls.Add(Me.FireDptPpl_label)
         Me.StudentInfo.Controls.Add(Me.Class_Attendance_InformationDataGridView)
@@ -2312,11 +2323,45 @@ Partial Class Developer_Class_Information
         Me.StudentInfo.TabIndex = 3
         Me.StudentInfo.Text = "Student Information"
         '
+        'Non_FD_AttendanceDataGridView
+        '
+        Me.Non_FD_AttendanceDataGridView.AutoGenerateColumns = False
+        Me.Non_FD_AttendanceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Non_FD_AttendanceDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.Non_FD_AttendanceDataGridView.DataSource = Me.Non_FD_AttendanceBindingSource
+        Me.Non_FD_AttendanceDataGridView.Location = New System.Drawing.Point(737, 44)
+        Me.Non_FD_AttendanceDataGridView.Name = "Non_FD_AttendanceDataGridView"
+        Me.Non_FD_AttendanceDataGridView.Size = New System.Drawing.Size(368, 208)
+        Me.Non_FD_AttendanceDataGridView.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CE Hours"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CE Hours"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Grade"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Grade"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'Non_FD_AttendanceBindingSource
+        '
+        Me.Non_FD_AttendanceBindingSource.DataMember = "Non FD Attendance"
+        Me.Non_FD_AttendanceBindingSource.DataSource = Me.Training_Records_for_TAMUDataSet
+        '
         'Label75
         '
         Me.Label75.AutoSize = True
         Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(518, 25)
+        Me.Label75.Location = New System.Drawing.Point(776, 25)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(306, 17)
         Me.Label75.TabIndex = 2
@@ -2326,7 +2371,7 @@ Partial Class Developer_Class_Information
         '
         Me.FireDptPpl_label.AutoSize = True
         Me.FireDptPpl_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FireDptPpl_label.Location = New System.Drawing.Point(4, 25)
+        Me.FireDptPpl_label.Location = New System.Drawing.Point(263, 25)
         Me.FireDptPpl_label.Name = "FireDptPpl_label"
         Me.FireDptPpl_label.Size = New System.Drawing.Size(203, 17)
         Me.FireDptPpl_label.TabIndex = 1
@@ -2338,9 +2383,9 @@ Partial Class Developer_Class_Information
         Me.Class_Attendance_InformationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Class_Attendance_InformationDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Class_Attendance_InformationDataGridView.DataSource = Me.Class_Attendance_InformationBindingSource
-        Me.Class_Attendance_InformationDataGridView.Location = New System.Drawing.Point(3, 44)
+        Me.Class_Attendance_InformationDataGridView.Location = New System.Drawing.Point(194, 44)
         Me.Class_Attendance_InformationDataGridView.Name = "Class_Attendance_InformationDataGridView"
-        Me.Class_Attendance_InformationDataGridView.Size = New System.Drawing.Size(426, 208)
+        Me.Class_Attendance_InformationDataGridView.Size = New System.Drawing.Size(357, 208)
         Me.Class_Attendance_InformationDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn3
@@ -2550,11 +2595,27 @@ Partial Class Developer_Class_Information
         Me.CINewButton.Text = "New"
         Me.CINewButton.UseVisualStyleBackColor = True
         '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.ForeColor = System.Drawing.Color.Red
+        Me.Label76.Location = New System.Drawing.Point(555, 2)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(137, 52)
+        Me.Label76.TabIndex = 91
+        Me.Label76.Text = "NOTE: Enterring incorrectly" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "formatted data into a field, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "will prevent any inte" & _
+    "raction" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "until the input format is fixed"
+        '
+        'Non_FD_AttendanceTableAdapter
+        '
+        Me.Non_FD_AttendanceTableAdapter.ClearBeforeFill = True
+        '
         'Developer_Class_Information
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1345, 489)
+        Me.Controls.Add(Me.Label76)
         Me.Controls.Add(Me.CINewButton)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
@@ -2612,6 +2673,8 @@ Partial Class Developer_Class_Information
         Me.GroupBox8.PerformLayout()
         Me.StudentInfo.ResumeLayout(False)
         Me.StudentInfo.PerformLayout()
+        CType(Me.Non_FD_AttendanceDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Non_FD_AttendanceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Class_Attendance_InformationDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Class_Attendance_InformationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -2815,4 +2878,11 @@ Partial Class Developer_Class_Information
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CINewButton As System.Windows.Forms.Button
+    Friend WithEvents Label76 As System.Windows.Forms.Label
+    Friend WithEvents Non_FD_AttendanceBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Non_FD_AttendanceTableAdapter As Fire_Dpt_Interface.Training_Records_for_TAMUDataSetTableAdapters.Non_FD_AttendanceTableAdapter
+    Friend WithEvents Non_FD_AttendanceDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

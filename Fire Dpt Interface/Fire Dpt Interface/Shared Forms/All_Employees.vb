@@ -103,11 +103,11 @@ Public Class All_Employees
         End If
 
         If TextBox1.Text <> "" Then
-            commandStr += ", [SF Received] ='" + TextBox1.Text + "'"
+            commandStr += ", [SF Received Date] ='" + TextBox1.Text + "'"
         End If
 
         If TextBox31.Text <> "" Then
-            commandStr += ", [SF Expiration] ='" + TextBox31.Text + "'"
+            commandStr += ", [SF Expiration Date] ='" + TextBox31.Text + "'"
         End If
 
         ''''''
@@ -123,11 +123,11 @@ Public Class All_Employees
         End If
 
         If TextBox5.Text <> "" Then
-            commandStr += ", [ARFF Received] ='" + TextBox5.Text + "'"
+            commandStr += ", [ARFF Received Date] ='" + TextBox5.Text + "'"
         End If
 
         If TextBox30.Text <> "" Then
-            commandStr += ", [ARFF Expiration] ='" + TextBox30.Text + "'"
+            commandStr += ", [ARFF Expiration Date] ='" + TextBox30.Text + "'"
         End If
 
         ''''''''
@@ -870,12 +870,14 @@ Public Class All_Employees
     End Sub
 
     Private Sub All_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Training_Records_for_TAMUDataSet.College' table. You can move, or remove it, as needed.
         Me.Assignment_PayTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Assignment_Pay)
         Me.Other_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Other_Certifications)
         Me.EMS_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.EMS_Certifications)
         Me.Fire_CertificationsTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Fire_Certifications)
         Me.Employee_InformationTableAdapter.Fill(Me.Training_Records_for_TAMUDataSet.Employee_Information)
-
+        Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+        Me.CollegeTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.College, Emp_Textbox.Text)
 
         Authorization_Level = Login.Authorization_LVL
         employeeID = Login.sharedUsername
@@ -892,11 +894,10 @@ Public Class All_Employees
         EMSCertificationsBindingSource.Position = EMSCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
-        Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+
 
 
     End Sub
-
 
     Private Sub Emp_Name_Click(sender As Object, e As EventArgs)
         MsgBox("Access Level: " + Authorization_Level.ToString, MsgBoxStyle.Critical)
@@ -947,10 +948,10 @@ Public Class All_Employees
             Command.ExecuteScalar()
             Command = New OleDbCommand(fireString, Dbconn)
             Command.ExecuteScalar()
-            Command = New OleDbCommand(EMSString, Dbconn)
-            Command.ExecuteScalar()
-            Command = New OleDbCommand(OtherString, Dbconn)
-            Command.ExecuteScalar()
+            'Command = New OleDbCommand(EMSString, Dbconn)
+            'Command.ExecuteScalar()
+            'Command = New OleDbCommand(OtherString, Dbconn)
+            'Command.ExecuteScalar()
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -1094,6 +1095,12 @@ Public Class All_Employees
     Private Sub Emp_Textbox_TextChanged(sender As Object, e As EventArgs) Handles Emp_Textbox.TextChanged
         If Emp_Textbox.Text <> "" Then
             Me.CertificatesTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.Certificates, Emp_Textbox.Text)
+            Me.CollegeTableAdapter.FillByID(Me.Training_Records_for_TAMUDataSet.College, Emp_Textbox.Text)
+            FireCertificationsBindingSource.Position = FireCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            EMSCertificationsBindingSource.Position = EMSCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            OtherCertificationsBindingSource.Position = OtherCertificationsBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
+            AssignmentPayBindingSource.Position = AssignmentPayBindingSource.Find("Employee_ID", Emp_Textbox.Text.ToString())
         End If
     End Sub
+
 End Class
