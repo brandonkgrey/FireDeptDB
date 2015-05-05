@@ -552,7 +552,7 @@ Public Class Developer_Class_Information
 
         AuthLvl = Login.Authorization_LVL
 
-        If (AuthLvl <= 2) Then
+        If (AuthLvl <= 1) Then
             Save_Button.Hide()
             DeleteButton.Hide()
             CINewButton.Hide()

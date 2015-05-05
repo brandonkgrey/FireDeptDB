@@ -1,7 +1,7 @@
 ﻿Public Class SupervisorForm
 
     Private Sub SupervisorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Welcome " + Login.sharedUsername
+        Me.Text = "Welcome " + Login.sharedUsername + "  ---  Authorization:  Supervisor (2)"
     End Sub
 
     Private Sub Emp_Info_Button_Click(sender As Object, e As EventArgs) Handles Emp_Info_Button.Click

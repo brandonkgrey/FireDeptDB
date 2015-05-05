@@ -960,6 +960,12 @@ Public Class All_Employees
 
         MsgBox("Your changes were successfully saved!!", MsgBoxStyle.Information, "Saved Changes")
 
+        Dim refresher As New All_Employees()
+        refresher.Show()
+        refresher = Nothing
+        Me.Close()
+
+
     End Sub
 
     Private Sub Prev_Button_Click(sender As Object, e As EventArgs) Handles Prev_Button.Click

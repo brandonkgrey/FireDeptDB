@@ -350,7 +350,6 @@ Partial Class All_Employees
         Me.GroupBox3.Size = New System.Drawing.Size(554, 144)
         Me.GroupBox3.TabIndex = 88
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
         '
         'NonOpsCheckbox
         '
@@ -513,13 +512,12 @@ Partial Class All_Employees
         Me.GroupBox2.Size = New System.Drawing.Size(328, 156)
         Me.GroupBox2.TabIndex = 87
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
         '
         'CDL_CheckBox
         '
         Me.CDL_CheckBox.AutoSize = True
         Me.CDL_CheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.EmployeeInformationBindingSource, "CDL", True))
-        Me.CDL_CheckBox.Location = New System.Drawing.Point(297, 78)
+        Me.CDL_CheckBox.Location = New System.Drawing.Point(295, 78)
         Me.CDL_CheckBox.Name = "CDL_CheckBox"
         Me.CDL_CheckBox.Size = New System.Drawing.Size(15, 14)
         Me.CDL_CheckBox.TabIndex = 84
@@ -630,7 +628,6 @@ Partial Class All_Employees
         Me.GroupBox1.Size = New System.Drawing.Size(359, 156)
         Me.GroupBox1.TabIndex = 86
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'DOB_Textbox
         '
@@ -2889,7 +2886,7 @@ Partial Class All_Employees
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "All_Employees"
-        Me.Text = "Employee Infromation"
+        Me.Text = "Employee Information"
         Me.EmpInfo.ResumeLayout(False)
         Me.EmployeeInfo.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)

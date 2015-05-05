@@ -5,7 +5,7 @@
 
 
     Private Sub BasicForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Welcome " + Login.sharedUsername + " (Basic)"
+        Me.Text = "Welcome " + Login.sharedUsername + "  ---  Authorization:  Basic (1)"
 
         MyInfoMenu = New SupervisorEmployeeInformation()
 

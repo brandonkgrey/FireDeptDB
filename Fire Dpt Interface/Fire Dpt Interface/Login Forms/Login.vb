@@ -86,6 +86,42 @@ Public Class Login
 
         'retrieve the input from the username and password text box 
         Dim username As String = UsernameTextBox.Text  'ERROR: catch strings'
+
+        'For Video DELETE LATER
+        If username = "developer" Then
+            sharedUsername = "developer"
+            sharedName = "Developer"
+            Authorization_LVL = 4
+            Dim DevMainMenu As New DeveloperForm()
+            DevMainMenu.Show()
+            DevMainMenu = Nothing
+            Me.Close()
+        ElseIf username = "administrator" Then
+            sharedUsername = "administrator"
+            sharedName = "Administrator"
+            Authorization_LVL = 3
+            Dim AdminMainMenu As New AdministratorForm
+            AdminMainMenu.Show()
+            AdminMainMenu = Nothing
+            Me.Close()
+        ElseIf username = "supervisor" Then
+            sharedUsername = "supervisor"
+            sharedName = "Supervisor"
+            Authorization_LVL = 2
+            Dim SupMenu As New SupervisorForm
+            SupMenu.Show()
+            SupMenu = Nothing
+            Me.Close()
+        ElseIf username = "basic" Then
+            sharedUsername = 111111111
+            sharedName = "Basic"
+            Authorization_LVL = 1
+            Dim BasicMenu As New BasicForm
+            BasicMenu.Show()
+            BasicMenu = Nothing
+            Me.Close()
+        End If
+
         If Regex.IsMatch(username, "^[0-9 ]+$") Then
 
             Dim password As String = PasswordTextBox.Text
@@ -94,147 +130,147 @@ Public Class Login
             Dim accesslvl As String = "x"
             Dim getName As Object
 
-            'Flags for login in procedure 
-            Dim successLogin As Integer = 0
-            Dim verifyHex As Boolean = False
+                'Flags for login in procedure 
+                Dim successLogin As Integer = 0
+                Dim verifyHex As Boolean = False
 
-            'menu for developers
-            Dim DevMenu As DeveloperForm
-            DevMenu = New DeveloperForm()
+                'menu for developers
+                Dim DevMenu As DeveloperForm
+                DevMenu = New DeveloperForm()
 
-            'share the username with other forms
-            sharedUsername = username
+                'share the username with other forms
+                sharedUsername = username
 
-            'Set up a connection to the access database
-            Dim Dbconn As New OleDbConnection(Dbstring)
-            Dbconn.Open()
+                'Set up a connection to the access database
+                Dim Dbconn As New OleDbConnection(Dbstring)
+                Dbconn.Open()
 
-            'Check to see if there is a connection to the database, exit app if there is none 
-            Try
-                If Dbconn.State = ConnectionState.Closed Then
-                    MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
-                    System.Threading.Thread.Sleep(500)
-                    Application.Exit()
-                End If
-            Catch ex As Exception
-            End Try
+                'Check to see if there is a connection to the database, exit app if there is none 
+                Try
+                    If Dbconn.State = ConnectionState.Closed Then
+                        MsgBox("Failed to connect to the database!", MsgBoxStyle.Critical, "Error")
+                        System.Threading.Thread.Sleep(500)
+                        Application.Exit()
+                    End If
+                Catch ex As Exception
+                End Try
 
-            'Check whether you can access the username and password entered
-            Try
-                Dim authUser As String = "x"
-                Dim authPass As String = "x"
+                'Check whether you can access the username and password entered
+                Try
+                    Dim authUser As String = "x"
+                    Dim authPass As String = "x"
 
 
-                'Checks for authentic password with correspoding username 
-                Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
-                Dim authobj As Object = command.ExecuteScalar()
-                authPass = authobj.ToString()
+                    'Checks for authentic password with correspoding username 
+                    Dim command As New OleDbCommand("SELECT [Password] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                    Dim authobj As Object = command.ExecuteScalar()
+                    authPass = authobj.ToString()
 
-                'check if the password is already hashed
-                'if for some reason there is still a plaintext password in the database, we will hash it!
-                verifyHex = IsHex(authPass)
-                If verifyHex = False And authPass = password Then
-                    Dim hashentry As String = getHash(authPass)
+                    'check if the password is already hashed
+                    'if for some reason there is still a plaintext password in the database, we will hash it!
+                    verifyHex = IsHex(authPass)
+                    If verifyHex = False And authPass = password Then
+                        Dim hashentry As String = getHash(authPass)
 
-                    'Hash the plaintext password and update it in the database 
+                        'Hash the plaintext password and update it in the database 
 
-                    command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Employee_ID]=" + username, Dbconn)
-                    command.ExecuteScalar()
+                        command = New OleDbCommand("UPDATE [Employee Information] SET [Password] ='" + hashentry + "'" + "WHERE [Employee_ID]=" + username, Dbconn)
+                        command.ExecuteScalar()
 
-                'Check if the update was successful by retrieving username associated with it 
-                Command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                authobj = Command.ExecuteScalar()
+                        'Check if the update was successful by retrieving username associated with it 
+                        command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                        authobj = command.ExecuteScalar()
 
-                'store the user who was retrieved from the query command 
-                authUser = authobj.ToString()
+                        'store the user who was retrieved from the query command 
+                        authUser = authobj.ToString()
 
-                'Get users authorization level Authorization
-                Command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                accessobj = Command.ExecuteScalar()
-                Command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
-                getName = Command.ExecuteScalar()
-                accesslvl = accessobj.ToString()
-                Authorization_LVL = CInt(accesslvl)
-                sharedName = getName.ToString()
+                        'Get users authorization level Authorization
+                        command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashentry + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                        accessobj = command.ExecuteScalar()
+                        command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                        getName = command.ExecuteScalar()
+                        accesslvl = accessobj.ToString()
+                        Authorization_LVL = CInt(accesslvl)
+                        sharedName = getName.ToString()
 
+
+                    Else
+                        'the password is already hashed, to we issue a query with the hashed password 
+                        command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                        authobj = command.ExecuteScalar()
+                        command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
+                        accessobj = command.ExecuteScalar()
+                        command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
+                        getName = command.ExecuteScalar()
+
+                        'store the user who was retrieved from the query command 
+                        authUser = authobj.ToString()
+                        accesslvl = accessobj.ToString()
+                        Authorization_LVL = accessobj
+                        sharedName = getName.ToString
+
+                    End If
+
+                    'was the username retrieved the same as the one entered in the form? if they are successful login 
+                    If authUser = username Then
+                        successLogin = 1
+                    End If
+
+                Catch ex As Exception
+                End Try
+
+                Dim firstLogin As Boolean = checkFirst(username)
+
+                'It's the users first login
+                If firstLogin And successLogin = 1 Then
+                    Dim initialReset As InitialPasswordReset = New InitialPasswordReset()
+                    initialReset.Show()
+                    initialReset = Nothing
+                    Me.Close()
+
+                    'correct credentials were entered 
+                ElseIf successLogin And accesslvl = "1" Then
+                    'Successful login, launch the basic menu 
+                    Dim BasicMenu As BasicForm
+                    BasicMenu = New BasicForm()
+                    BasicMenu.Show()
+                    BasicMenu = Nothing
+                    Me.Close()
+                    Dbconn.Close()
+
+                ElseIf successLogin And accesslvl = "2" Then
+                    'Successful login, launch the supervisor menu 
+                    Dim SupervisorMenu As SupervisorForm
+                    SupervisorMenu = New SupervisorForm()
+                    SupervisorMenu.Show()
+                    SupervisorMenu = Nothing
+                    Me.Close()
+                    Dbconn.Close()
+
+                ElseIf successLogin And accesslvl = "3" Then
+                    'Successful login, launch the admin menu 
+                    Dim AdminMenu As AdministratorForm
+                    AdminMenu = New AdministratorForm()
+                    AdminMenu.Show()
+                    AdminMenu = Nothing
+                    Me.Close()
+                    Dbconn.Close()
+
+                ElseIf successLogin And accesslvl = "4" Then
+                    'Successful login, launch the developer menu 
+                    DevMenu.Show()
+                    DevMenu = Nothing
+                    Me.Close()
+                    Dbconn.Close()
 
                 Else
-                'the password is already hashed, to we issue a query with the hashed password 
-                Command = New OleDbCommand("SELECT [Employee_ID] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                authobj = Command.ExecuteScalar()
-                Command = New OleDbCommand("SELECT [Authorization] FROM [Employee Information] WHERE [Password] ='" + hashedPass + "'" + "AND" + "[Employee_ID] =" + username, Dbconn)
-                accessobj = Command.ExecuteScalar()
-                Command = New OleDbCommand("SELECT [Name] FROM [Employee Information] WHERE [Employee_ID] =" + username, Dbconn)
-                getName = Command.ExecuteScalar()
-
-                'store the user who was retrieved from the query command 
-                authUser = authobj.ToString()
-                accesslvl = accessobj.ToString()
-                Authorization_LVL = accessobj
-                sharedName = getName.ToString
-
+                    Invalid_Cred.Visible = True
                 End If
-
-                'was the username retrieved the same as the one entered in the form? if they are successful login 
-                If authUser = username Then
-                    successLogin = 1
-                End If
-
-            Catch ex As Exception
-            End Try
-
-            Dim firstLogin As Boolean = checkFirst(username)
-
-            'It's the users first login
-            If firstLogin And successLogin = 1 Then
-                Dim initialReset As InitialPasswordReset = New InitialPasswordReset()
-                initialReset.Show()
-                initialReset = Nothing
-                Me.Close()
-
-                'correct credentials were entered 
-            ElseIf successLogin And accesslvl = "1" Then
-                'Successful login, launch the basic menu 
-                Dim BasicMenu As BasicForm
-                BasicMenu = New BasicForm()
-                BasicMenu.Show()
-                BasicMenu = Nothing
-                Me.Close()
-                Dbconn.Close()
-
-            ElseIf successLogin And accesslvl = "2" Then
-                'Successful login, launch the supervisor menu 
-                Dim SupervisorMenu As SupervisorForm
-                SupervisorMenu = New SupervisorForm()
-                SupervisorMenu.Show()
-                SupervisorMenu = Nothing
-                Me.Close()
-                Dbconn.Close()
-
-            ElseIf successLogin And accesslvl = "3" Then
-                'Successful login, launch the admin menu 
-                Dim AdminMenu As AdministratorForm
-                AdminMenu = New AdministratorForm()
-                AdminMenu.Show()
-                AdminMenu = Nothing
-                Me.Close()
-                Dbconn.Close()
-
-            ElseIf successLogin And accesslvl = "4" Then
-                'Successful login, launch the developer menu 
-                DevMenu.Show()
-                DevMenu = Nothing
-                Me.Close()
-                Dbconn.Close()
 
             Else
                 Invalid_Cred.Visible = True
+
             End If
-
-        Else
-            Invalid_Cred.Visible = True
-
-        End If
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click

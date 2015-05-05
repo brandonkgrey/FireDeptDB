@@ -3,7 +3,7 @@
     Dim EmpMenu As All_Employees = New All_Employees()
 
     Private Sub AdministratorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Welcome " + Login.sharedUsername + " (Administrator)"
+        Me.Text = "Welcome " + Login.sharedUsername + "  ---  Authorization:  Administrator (3)"
     End Sub
 
     Private Sub Emp_Info_ButtonAF_Click(sender As Object, e As EventArgs) Handles Emp_Info_ButtonAF.Click
